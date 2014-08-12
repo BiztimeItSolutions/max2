@@ -69,6 +69,6 @@
 <a href="deleteemployee.html?id=${employee.id}">Delete</a></td>
 </c:forEach>
 </table>
-<a href="PersonalInfo.html" >back to personal informations page</a><br>
+<a href="employeeinformation.html" >back to personal informations page</a><br>
 </body>
 </html>
