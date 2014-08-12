@@ -30,10 +30,18 @@ public class PersonalInformationsService implements IPersonalInformationsService
 		return personalInformationdao.getPersInfList();
 	}
 	
-	public void deleteEmployeePersonal(PersonalInformationsPojo employeeperso) {
+	public void deleteEmployeePersonal(PersonalInformationsPojo employee) {
 		System.out.println("inside service");
 		
-		personalInformationdao.deleteEmployeePersonal(employeeperso);
+		personalInformationdao.deleteEmployeePersonal(employee);
+	}
+	
+	public void updateEmployeeInfo(PersonalInformationsPojo employee){
+		personalInformationdao.updateEmployeeInfo(employee);
+	}
+	
+	public PersonalInformationsPojo getEmployee(String emp_ID){
+		return personalInformationdao.getEmployee(emp_ID);
 	}
 	
 /*	@Override

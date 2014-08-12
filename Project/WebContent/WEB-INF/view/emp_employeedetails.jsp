@@ -36,7 +36,7 @@
 <td>password</td>
 
 </tr>
-<c:forEach items="${employee}" var="employee">
+<c:forEach items="${employees}" var="employee">
 <tr style="background-color:white;color: black;text-align: center;" height="30px" >
 <td><c:out value="${employee.emp_ID}"/></td>
 <td><c:out value="${employee.first_name}"/></td>
@@ -62,8 +62,8 @@
 <td><c:out value="${employee.user_ID}"/></td>
 <td><c:out value="${employee.password}"/></td>
 <td align="center">
-<a href="edit.html?emp_ID=${employee.emp_ID}">Edit</a> | 
-<a href="delete.html?emp_ID=${employee.emp_ID}">Delete</a></td>
+<a href="editemployee.html?emp_ID=${employee.emp_ID}">Edit</a> | 
+<a href="deleteemployee.html?emp_ID=${employee.emp_ID}">Delete</a></td>
 </c:forEach>
 </table>
 </body>

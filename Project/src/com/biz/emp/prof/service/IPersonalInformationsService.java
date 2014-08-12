@@ -9,7 +9,9 @@ public interface IPersonalInformationsService {
 
 	public void personalInformationsAdd( PersonalInformationsPojo employee);
 	public List<PersonalInformationsPojo>getPersInfList();
-	public void deleteEmployeePersonal(PersonalInformationsPojo employeeperso);
-	//public void insertValues(Object o)throws SQLException;
+	public void deleteEmployeePersonal(PersonalInformationsPojo employee);
+	public void updateEmployeeInfo(PersonalInformationsPojo employee);
+	public PersonalInformationsPojo getEmployee(String emp_ID);
+	
 	
 }

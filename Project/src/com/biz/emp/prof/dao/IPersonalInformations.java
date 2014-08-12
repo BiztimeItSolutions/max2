@@ -8,8 +8,9 @@ import com.biz.emp.prof.domain.PersonalInformationsPojo;
 public interface IPersonalInformations {
 
 	public void personalInformationsSave(PersonalInformationsPojo employee);
-	//public void insertValues(Object o)throws SQLException;
+
 	public List<PersonalInformationsPojo>getPersInfList();
-	public void deleteEmployeePersonal(PersonalInformationsPojo employeeperso);
+	public void deleteEmployeePersonal(PersonalInformationsPojo employee);
+	public void updateEmployeeInfo(PersonalInformationsPojo employee);
 	
 }

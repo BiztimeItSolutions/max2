@@ -45,9 +45,9 @@ public class PersonalInformationsController {
 		 Map<String,Object> model = new HashMap<String, Object>();
 		 System.out.println("inside save controller");
 		 
-		 model.put("employee",personalInformationService.getPersInfList());
+		 model.put("employees",personalInformationService.getPersInfList());
 		 System.out.println("Save User Data");
-				 return new ModelAndView("emp_employeedetails", model);
+				 return new ModelAndView("emp_Personal_Informations", model);
 		
 		//return new ModelAndView("PersonalInf");
 		
@@ -58,7 +58,7 @@ public class PersonalInformationsController {
 		System.out.println("getuserlist1");
 		Map<String, Object> model = new HashMap<String, Object>();
 		System.out.println("getuserlist2");
-		model.put("employee", personalInformationService.getPersInfList());
+		model.put("employees", personalInformationService.getPersInfList());
 		System.out.println("getuserlist3");
 		ArrayList<PersonalInformationsPojo> al=new ArrayList<PersonalInformationsPojo>();
 		Iterator itr=al.iterator();
@@ -70,7 +70,7 @@ public class PersonalInformationsController {
 		return new ModelAndView("emp_employeedetails", model);
 	}
 	
-	@RequestMapping("/delete")
+	@RequestMapping("/deleteemployee")
 	public ModelAndView deleteEmployeePersonal(@ModelAttribute("command") PersonalInformationsPojo employee,
 			BindingResult result){
 		System.out.println("Delete User Data"+employee.getEmp_ID());
@@ -79,66 +79,40 @@ public class PersonalInformationsController {
 		System.out.println("Delete User Data");
 			 Map<String,Object> model = new HashMap<String, Object>();
 			// model.put("employee", null);
-			 model.put("emps", personalInformationService.getPersInfList());
+			 model.put("employees", personalInformationService.getPersInfList());
 			 return new ModelAndView("emp_employeedetails", model);
 	}
 	
 	
 	
-	@RequestMapping(value = "edit", method = RequestMethod.GET)
+	@RequestMapping(value = "editemployee", method = RequestMethod.GET)
 	 public ModelAndView editEmployeePersonal(@ModelAttribute("employee") EmployeePersonalDelete employeebean,
 			 BindingResult result ){
 		 Map<String, Object> model = new HashMap<String, Object>();
 		 System.out.println("edit employee data="+employeebean.getEmp_ID());
+		 
 		 PersonalInformationsPojo employee1= new PersonalInformationsPojo();
-		 employee1=personalInformationService.getEmployee(employeebean)
-	}
-	//editing the values in jsp
-
-		
-		
-		
-		 
-		 Applicant_Register e1=new Applicant_Register();
-		 e1=applicantService.getApplicant(applicantBean.getApplicant_ID());
-		 
-		 System.out.println(e1.getApplicant_ID());
-		 System.out.println(e1.getFirst_Name());
-		 
-		
+		 System.out.println("che ");
+		 employee1=personalInformationService.getEmployee(employeebean.getEmp_ID());
+		 System.out.println("check ");
+		 System.out.println(employeebean.getEmp_ID());
 		 
 		 System.out.println("check after array list");
-		 //Applicant_Edit e2=new Applicant_Edit();
-		 //e2=(Applicant_Edit)e1;
-	     model.put("applicants",e1);
-	     
-	     System.out.println("check after model");
-		 
-		 return new ModelAndView("adm_Edit", model); 
-		 
-		
-		 	
-		 }
-		
-		
-		
-		//updating the values into database
-		
-		@RequestMapping(value = "/updateApplicant", method = RequestMethod.GET)
-		 public ModelAndView UpdateEmployee(@ModelAttribute("applicant") Applicant_Register applicantBean,BindingResult result) 
-		{
-		 Map<String, Object> model = new HashMap<String, Object>();
-		 
-		 System.out.println("applicant id ="+applicantBean.getApplicant_ID());
-		 System.out.println("applicant first name="+applicantBean.getFirst_Name());
-		  
-		 applicantService.updateApp(applicantBean);
-		 
-		 
-		 model.put("applicants",applicantService.getUser());
-			return new ModelAndView("adm_Shortlisted_Applicant", model);
-		 }
+		 model.put("employees",employee1);
+		 System.out.println("check after model");
+		 return new ModelAndView("emp_employeeedit", model);
+	}
 	
+	
+	@RequestMapping(value ="/updateemployee", method = RequestMethod.GET)
+	public ModelAndView UpdateEmployee(@ModelAttribute("employee") PersonalInformationsPojo employeebeans,
+			BindingResult result){
+		 Map<String, Object> model = new HashMap<String, Object>();
+		 System.out.println("edit employee data="+employeebeans.getEmp_ID());
+		 personalInformationService.updateEmployeeInfo(employeebeans);
+		 model.put("employees", personalInformationService.getPersInfList());
+		 return new ModelAndView("emp_employeedetails", model);
+	}
 	
 	
 	

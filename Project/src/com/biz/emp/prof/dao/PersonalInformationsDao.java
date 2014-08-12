@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 
+import com.biz.adm.pojo.Applicant_Register;
 import com.biz.emp.prof.domain.PersonalInformationsPojo;
 
 @Repository("IPersonalInformations")
@@ -32,10 +33,24 @@ public class PersonalInformationsDao implements IPersonalInformations {
 		return employeelist;
 	}
 	
-	public void deleteEmployeePersonal(PersonalInformationsPojo employeeperso) {
+	public void deleteEmployeePersonal(PersonalInformationsPojo employee) {
 		System.out.println("inside delete");
-		sessionfactory.getCurrentSession().createQuery("DELETE FROM employee WHERE emp_ID = "+employeeperso.getEmp_ID()).executeUpdate();
+		sessionfactory.getCurrentSession().createQuery("DELETE FROM employee1 WHERE emp_ID = "+employee.getEmp_ID()).executeUpdate();
 		System.out.println("deleted");
+	}
+	
+	
+	public void updateEmployeeInfo(PersonalInformationsPojo employee)
+	{
+		System.out.println("inside updatre DAO:  "+employee.getEmp_ID());
+		sessionfactory.getCurrentSession().update(employee);
+		sessionfactory.getCurrentSession().flush();
+		System.out.println("updated::::<>>>");
+	}
+	
+	public PersonalInformationsPojo getEmployee(String emp_ID){
+		
+		return (PersonalInformationsPojo) sessionfactory.getCurrentSession().get(PersonalInformationsPojo.class, emp_ID);
 	}
 	/*@Override
 	public void insertValues(Object o) throws SQLException {
