@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-     
+     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
- <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,8 +12,8 @@
 
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
- 
+    <link href="view/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.validate.min.js"></script>
     <!-- Page-Level Plugin CSS - Forms -->
 
     <!-- SB Admin CSS - Include with every page -->
@@ -52,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="WEB-INF/view/img/Biztime_Logo.png" width="200" height="50"></a>
+                <a class="navbar-brand" href="index.html"><img src="view/img/Biztime_Logo.png" width="200" height="50"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -283,7 +280,21 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                         
+                     <li>
+                        <a href="Personal_Informations.jsp"><i class="fa fa-dashboard fa-fw"></i>Personal Informations</a>
+                    </li>
+                    <li>
+                         <a href="Education_Details.jsp"><i class="fa fa-dashboard fa-fw"></i>Education Details</a>
+                    </li>    
+      <li>
+                        <a href="Designation_Details.jsp"><i class="fa fa-dashboard fa-fw"></i>Designation Details</a>
+                    </li>
+                     <li>
+                        <a href="Work_Experience_Details.jsp"><i class="fa fa-dashboard fa-fw"></i>Work Experience Details</a>
+                    </li>
+                     <li>
+                        <a href="Accounts_Details.jsp"><i class="fa fa-dashboard fa-fw"></i>Accounts Details</a>
+                    </li>    
      
                    </ul>
                 <!-- /#side-menu -->
@@ -295,7 +306,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Online Registration Form</h1>
+                    <h1 class="page-header">Employee Details</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -310,206 +321,86 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                
-                              <c:url var="Registration" value="saveApplicant.html"/>
-
-<form id="OnlineApplicationForm" modelAttribute="applicant" method="post" action="${Registration}">
+                                <c:url var="employeePersonalInformation" value="PersonalInfo.html"/>
+                                 <form id="Personal_Informations" modelAttribute="employee" method="post" action="${employeePersonalInformation}">
 		<fieldset>
-	
-			<p>
-				<label for="fname" class="block">First name:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="first_Name" ></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-				
+			<legend>Personal Informations</legend>
 			
-				<label for="lname" class="block">Last name:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="last_Name" ></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-			</p>
-			<fieldset>
-			<label for="fname" class="block">10th Details:</label>
-			
-			
-			
-			    <p>
-				<label for="fname" class="block">Percentage:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="tenth_Percentage" ></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-                                          
-				<label for="mname" class="block">Year of passing:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="tenth_YOP"></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-				
-				<label for="fname" class="block">School Name:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="tenth_School" ></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-			</p>
-
-            
-			</fieldset>
-			<fieldset>
-			<label for="fname" class="block">12th Details:</label>
-			
-			
-			
-			    <p>
-				<label for="fname" class="block">Percentage:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="twelth_Percentage" id="user"></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-                                          
-				<label for="mname" class="block">Year of passing:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="twelth_YOP"></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-				
-				<label for="fname" class="block">School Name:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="twelth_School" ></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-			</p>
-
-             
-			</fieldset>
 			 <p>
+				<label for="fname" class="block">Employee ID:</label>
+				 <span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="emp_ID" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+                                          <p>
+			
+			<p>
+				<label for="fname" class="block">First Name:</label>
+				 <span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="first_name" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+				<label for="mname" class="block">Middle Name:</label>
+				 <span class="style1">                                            </span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="middle_name" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+				<label for="lname" class="block">Last Name:</label>
+				 <span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="last_name" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+			</p>
+			
+			   
 				<label class="block">Gender:</label></br></br>
 				<input type="radio" name="gender" id="man" value="Male" /> <label for="man">Male</label>
 				<input type="radio" name="gender" id="woman" value="Female" /> <label for="woman">Female</label>
 			</p>
-
-			<p>
-				<label for="lname" class="block">Area Of Interest:</label>
-				 <span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                               
-                                                 <div class="form-group"><select name="department">
-                                                 <option value="Computer Science & Engineering">Computer Science & Engineering</option>
-  <option value="Information Science & Engineering">Information Science & Engineering</option>
-  <option value="Electronics & Communication Engineering">Electronics & Communication Engineering</option>
-  <option value="Telecommunication Engineering">Telecommunication Engineering</option>
-  <option value="Electrical & Electronics Engineering">Electrical & Electronics Engineering</option>
-  <option value="Mechanical Engineering">Mechanical Engineering</option>
-  <option value="Civil Engineering">Civil Engineering</option>
-  <option value="Biomedical Engineering">Biomedical Engineering</option>
-  <option value="Instrumentation Technology">Instrumentation Technology</option>
-  <option value="Bio-technology">Bio-technology</option>
-  <option value="Chemical Engineering">Chemical Engineering</option>
-  <option value="Automobile Engineering">Automobile Engineering</option>
-                                                 </select></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
-			</p>
-
-			
-			<p>
-				<label class="block">Date Of Birth:</label>
-				<span class="style1">                                            *</span>
-                                            
-                                          <table width="1015">
-                                              <tr>
-                                               <td width="608">
-                                                 <div class="form-group"><input class="form-control"  name="dob" type="date"></div>
-                                                 
-                                               </td>
-                                               <td width="393"><label id="lbluser"></label></td>
-                                               
-                                             </tr>
-                                          </table> 
 				
-
-			</p>
-			<p>
-			<label for="fname" class="block">Address Line:</label>
+				                
+<p>
+				<label for="fname" class="block">Address Line1:</label>
 				 <span class="style1">                                            *</span>
                                             
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="address" ></div>
+                                                 <div class="form-group"><input class="form-control" name="address_line1" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
@@ -517,13 +408,33 @@
                                              </tr>
                                           </table> 
                                           
+                                          
+                                          <p>
+				<label for="fname" class="block">Address Line2:</label>
+				 <span class="style1">                                            </span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="address_line2" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+ 
+		
+			
+			<p>
 				<label for="fname" class="block">City:</label>
 				 <span class="style1">                                            *</span>
                                             
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="city" ></div>
+                                                 <div class="form-group"><input class="form-control" name="city" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
@@ -537,7 +448,7 @@
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="pincode" ></div>
+                                                 <div class="form-group"><input class="form-control" name="pincode" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
@@ -545,105 +456,13 @@
                                              </tr>
                                           </table> 
 				
-				<p>
 				<label for="lname" class="block">State:</label>
 				 <span class="style1">                                            *</span>
                                             
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                               
-    
-                                                <div class="form-group"><select name="state">
-                                                
-   <!-- India -->                                             
-  <option value="Rajastan">Rajastan</option>
-  <option value="Madhya Pradesh">Madhya Pradesh</option>
-  <option value="Maharashtra">Maharashtra</option>
-  <option value="Uttar Pradesh">Uttar Pradesh</option>
-  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-  <option value="Gujarat">Gujarat</option>
-  <option value="Karnataka">Karnataka</option>
-  <option value="Andhra Pradesh">Andhra Pradesh</option>
-  <option value="Odisha">Odisha</option>
-  <option value="Chhattisgarh">Chhattisgarh</option>
-  <option value="Tamil Nadu">Tamil Nadu</option>
-  <option value="Telangana">Telangana</option>
-  <option value="Bihar">Bihar</option>
-  <option value="West Bengal">West Bengal</option>
-  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-  <option value="Jharkhand">Jharkhand</option>
-  <option value="Assam">Assam</option>
-  <option value="Himachal Pradesh">Himachal Pradesh</option>
-  <option value="Uttarakhand">Uttarakhand</option>
-  <option value="Punjab">Punjab</option>
-  <option value="Haryana">Haryana</option>
-  <option value="Kerala">Kerala</option>
-  <option value="Meghalaya">Meghalaya</option>
-  <option value="Manipur">Manipur</option>
-  <option value="Mizoram">Mizoram</option>
-  <option value="Nagaland">Nagaland</option>
- <option value="Tripura">Tripura</option>
-  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-  <option value="Sikkim">Sikkim</option>
-  <option value="Goa">Goa</option>
-  <option value="Delhi">Delhi</option>
-  <option value="Puducherry">Puducherry</option>
-  <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-  <option value="Chandigarh">Chandigarh</option>
-  <option value="Daman and Diu">Daman and Diu</option>
-  <option value="Lakshadweep Islands">Lakshadweep Islands</option>
-  
-  <!-- Australia -->
- <option value="Capital Territory">Capital Territory</option>
-<option value="New South Wales">New South Wales</option>
-<option value="Northern Territory">Northern Territory</option>
-<option value="Queensland">Queensland</option>
-<option value="South Australia">South Australia</option>
-<option value="Tasmania">Tasmania</option>
-<option value="Victoria">Victoria</option>
-<option value="Western Australia">Western Australia</option>
-  
-  <!-- Bangladesh -->
- <option value="Dhaka">Dhaka</option>
- <option value="Khulna">Khulna</option>
- <option value="Rajshahi">Rajshahi</option>
- <option value="Chittagong">Chittagong</option>
- <option value="Sylhet">Sylhet</option>
- <option value="Barisal">Barisal</option> 
-  
-  <!-- brazil -->
-  <option value="Acre">Acre</option>
-<option value="Alagoas">Alagoas</option>
-<option value="Amapa">Amapa</option>
-<option value="Amazonas">Amazonas</option>
-<option value="Bahia">Bahia</option>
-<option value="Ceara">Ceara</option>
-<option value="Distrito Federal">Distrito Federal</option>
-<option value="Espirito Santo">Espirito Santo</option>
-<option value="Goias">Goias</option>
-<option value="Maranhao">Maranhao</option>
-<option value="Mato Grosso">Mato Grosso</option>
-<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-<option value="Minas Gerais">Minas Gerais</option>
-<option value="Para">Para</option>
-<option value="Paraiba">Paraiba</option>
-<option value="Parana">Parana</option>
-<option value="Pernambuco">Pernambuco</option>
-<option value="Piaui">Piaui</option>
-<option value="Rio de Janeiro">Rio de Janeiro</option>
-<option value="Rio Grande do Norte">Rio Grande do Norte</option>
-<option value="Rio Grande do Sul">Rio Grande do Sul</option>
-<option value="Rondonia">Rondonia</option>
-<option value="Roraima">Roraima</option>
-<option value="Santa Catarina">Santa Catarina</option>
-<option value="Sao Paulo">Sao Paulo</option>
-<option value="Sergipe">Sergipe</option>
-<option value="Tocantins">Tocantins</option>
-
-<!--  -->
-  
-                                                 </select></div>
+                                                 <div class="form-group"><input class="form-control" name="state" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
@@ -651,7 +470,6 @@
                                              </tr>
                                           </table> 
 			</p>
-
 			<p>
 				<label for="fname" class="block">Country:</label>
 				 <span class="style1">                                            *</span>
@@ -1167,7 +985,7 @@
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="email_ID" ></div>
+                                                 <div class="form-group"><input class="form-control" name="email_ID" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
@@ -1183,41 +1001,209 @@
                                           <table width="1015">
                                               <tr>
                                                <td width="608">
-                                                 <div class="form-group"><input class="form-control" name="mobile_No"></div>
+                                                 <div class="form-group"><input class="form-control" name="phone_number" id="user"></div>
                                                  
                                                </td>
                                                <td width="393"><label id="lbluser"></label></td>
                                                
                                              </tr>
                                           </table> 
-                                          
-			
+                                          <p>
+                                          <label for="mname" class="block">Date of Birth:</label>
+				 <span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="dob" id="user" type="date"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+                  <p>
+			<label for="e" class="block">Blood Group: </label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="blood_group" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
 
 			
             
-            
+           
+			<label for="e" class="block">Marital Status: </label>
 			
+			 <span class="style1">                                            </span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                               
+                                                 <div class="form-group"><select name="marital_status">
+                                                 <option>-Select one option-</option>
+                                                  <option>Married</option>
+                                                   <option>Single</option>
+                                                 </select></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+		
+				<label for="e" class="block">Caste: </label>
 			
-			
-			
+			 <span class="style1">                                            </span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                               
+                                                 <div class="form-group"><select name="caste">
+                                                 <option>-Select one option-</option>
+                                                  <option>OBC</option>
+                                                   <option>S/C</option>
+                                                   <option>S/T</option>
+                                                   <option>General</option>
+                                                 </select></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+		
+			<p>
+			<label for="e" class="block">Nationality:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="nationality" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+
 			</p>
 			
+			<p>
+			<label for="e" class="block">ID_Number:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="id_number" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+
+			
+			
+			<p>
+			<label for="e" class="block">Pan_Card_Number:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="pan_card_number" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+
+			</p>
+	
+	<p>
+			<label for="e" class="block">Photo:</label>
+				<span class="style1">                                            </span>
+                                            
+              <input type="file" name="photo"/>                    
+				
+
+			</p>
+			
+			<p>
+			<label for="e" class="block">Parent Employee ID:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="parent_emp_id" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+
+			</p>
+	<p>
+			<label for="e" class="block">User ID:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input class="form-control" name="user_ID" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+				
+
+			</p>
+		<p>
+			<label for="e" class="block">Password:</label>
+				<span class="style1">                                            *</span>
+                                            
+                                          <table width="1015">
+                                              <tr>
+                                               <td width="608">
+                                                 <div class="form-group"><input  type="password" class="form-control" name="password" id="user"></div>
+                                                 
+                                               </td>
+                                               <td width="393"><label id="lbluser"></label></td>
+                                               
+                                             </tr>
+                                          </table> 
+		                    
 			
 		
 		 
-	
+		<p>
 			<input type="submit" value="submit">
-			
-			
-			
-			
-			 <li>       
-                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-                    </li>
-		
-        
-		
-            
+		</p>
+        </fieldset>
+		</form>
+            <a href="persoINFo.html" >Click Here to see User List</a><br>
             
             
 			
@@ -1227,7 +1213,7 @@
                                              
                                                
                                       
-            </form>                            
+                                        
                                                                           </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>
