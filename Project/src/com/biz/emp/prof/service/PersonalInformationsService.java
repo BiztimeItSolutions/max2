@@ -40,8 +40,8 @@ public class PersonalInformationsService implements IPersonalInformationsService
 		personalInformationdao.updateEmployeeInfo(employee);
 	}
 	
-	public PersonalInformationsPojo getEmployee(String emp_ID){
-		return personalInformationdao.getEmployee(emp_ID);
+	public PersonalInformationsPojo getEmployee(int id){
+		return personalInformationdao.getEmployee(id);
 	}
 	
 /*	@Override

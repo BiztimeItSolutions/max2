@@ -1203,7 +1203,7 @@
 		</p>
         </fieldset>
 		</form>
-            <a href="persoINFo.html" >Click Here to see User List</a><br>
+            <a href="persoINFo.html" >Click Here to see Empolyee List</a><br>
             
             
 			

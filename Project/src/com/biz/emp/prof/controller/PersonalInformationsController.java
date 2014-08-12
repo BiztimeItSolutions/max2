@@ -73,7 +73,7 @@ public class PersonalInformationsController {
 	@RequestMapping("/deleteemployee")
 	public ModelAndView deleteEmployeePersonal(@ModelAttribute("command") PersonalInformationsPojo employee,
 			BindingResult result){
-		System.out.println("Delete User Data"+employee.getEmp_ID());
+		System.out.println("Delete User Data"+employee.getId());
 		
 		personalInformationService.deleteEmployeePersonal(employee);
 		System.out.println("Delete User Data");
@@ -89,13 +89,13 @@ public class PersonalInformationsController {
 	 public ModelAndView editEmployeePersonal(@ModelAttribute("employee") EmployeePersonalDelete employeebean,
 			 BindingResult result ){
 		 Map<String, Object> model = new HashMap<String, Object>();
-		 System.out.println("edit employee data="+employeebean.getEmp_ID());
+		 System.out.println("edit employee data="+employeebean.getId());
 		 
 		 PersonalInformationsPojo employee1= new PersonalInformationsPojo();
 		 System.out.println("che ");
-		 employee1=personalInformationService.getEmployee(employeebean.getEmp_ID());
+		 employee1=personalInformationService.getEmployee(employeebean.getId());
 		 System.out.println("check ");
-		 System.out.println(employeebean.getEmp_ID());
+		 System.out.println(employeebean.getId());
 		 
 		 System.out.println("check after array list");
 		 model.put("employees",employee1);
@@ -108,7 +108,7 @@ public class PersonalInformationsController {
 	public ModelAndView UpdateEmployee(@ModelAttribute("employee") PersonalInformationsPojo employeebeans,
 			BindingResult result){
 		 Map<String, Object> model = new HashMap<String, Object>();
-		 System.out.println("edit employee data="+employeebeans.getEmp_ID());
+		 System.out.println("edit employee data="+employeebeans.getId());
 		 personalInformationService.updateEmployeeInfo(employeebeans);
 		 model.put("employees", personalInformationService.getPersInfList());
 		 return new ModelAndView("emp_employeedetails", model);

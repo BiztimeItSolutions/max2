@@ -11,7 +11,7 @@ public interface IPersonalInformationsService {
 	public List<PersonalInformationsPojo>getPersInfList();
 	public void deleteEmployeePersonal(PersonalInformationsPojo employee);
 	public void updateEmployeeInfo(PersonalInformationsPojo employee);
-	public PersonalInformationsPojo getEmployee(String emp_ID);
+	public PersonalInformationsPojo getEmployee(int id);
 	
 	
 }

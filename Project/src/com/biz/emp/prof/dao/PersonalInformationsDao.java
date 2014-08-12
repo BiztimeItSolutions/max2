@@ -35,22 +35,22 @@ public class PersonalInformationsDao implements IPersonalInformations {
 	
 	public void deleteEmployeePersonal(PersonalInformationsPojo employee) {
 		System.out.println("inside delete");
-		sessionfactory.getCurrentSession().createQuery("DELETE FROM employee1 WHERE emp_ID = "+employee.getEmp_ID()).executeUpdate();
+		sessionfactory.getCurrentSession().createQuery("DELETE FROM PersonalInformationsPojo WHERE id = "+employee.getId()).executeUpdate();
 		System.out.println("deleted");
 	}
 	
 	
 	public void updateEmployeeInfo(PersonalInformationsPojo employee)
 	{
-		System.out.println("inside updatre DAO:  "+employee.getEmp_ID());
+		System.out.println("inside updatre DAO:  "+employee.getId());
 		sessionfactory.getCurrentSession().update(employee);
 		sessionfactory.getCurrentSession().flush();
 		System.out.println("updated::::<>>>");
 	}
 	
-	public PersonalInformationsPojo getEmployee(String emp_ID){
+	public PersonalInformationsPojo getEmployee(int id){
 		
-		return (PersonalInformationsPojo) sessionfactory.getCurrentSession().get(PersonalInformationsPojo.class, emp_ID);
+		return (PersonalInformationsPojo) sessionfactory.getCurrentSession().get(PersonalInformationsPojo.class, id);
 	}
 	/*@Override
 	public void insertValues(Object o) throws SQLException {
