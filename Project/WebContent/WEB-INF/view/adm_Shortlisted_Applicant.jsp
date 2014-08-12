@@ -326,19 +326,44 @@
 		                           <th> Applicant_ID</th>
 		                          <th>First Name</th>
 		                           <th>Last Name</th>
-		                           
+		                           <th>Tenth Percentage</th>
+		                           <th>Tenth Yop</th>
+		                           <th>Tenth School</th>
+		                           <th>Twelth Percentage</th>
+		                           <th>Twelth YOP</th>
+		                           <th>Twelth School</th>
 		                           <th>Gender</th>
 		                           <th>Area Of Interest</th>
+		                           <th>Address</th>
+		                           <th>City</th>
+		                           <th>State</th>
+		                           <th>Country</th>
+		                           <th>Pincode</th>
+		                           <th>Mobile_No</th>
+		                           <th>Email_ID</th>
 		                           <th>edit/delete</th>
 		                           </tr>
 
 <c:forEach items="${applicants}" var="applicant">
 <tr style="background-color:white;color: black;text-align: center;" height="30px" >
-<td><c:out value="${applicant.applicant_ID}"/></td>
+<td><a href="fetchApplicant.html?applicant_ID=${applicant.applicant_ID}"><c:out value="${applicant.applicant_ID}"/></a></td>
 <td><c:out value="${applicant.first_Name}"/></td>
 <td><c:out value="${applicant.last_Name}"/></td>
+<td><c:out value="${applicant.tenth_Percentage}"/></td>
+<td><c:out value="${applicant.tenth_YOP}"/></td>
+<td><c:out value="${applicant.tenth_School}"/></td>
+<td><c:out value="${applicant.twelth_Percentage}"/></td>
+<td><c:out value="${applicant.twelth_YOP}"/></td>
+<td><c:out value="${applicant.twelth_School}"/></td>
 <td><c:out value="${applicant.gender}"/></td>
 <td><c:out value="${applicant.department}"/></td>
+<td><c:out value="${applicant.address}"/></td>
+<td><c:out value="${applicant.city}"/></td>
+<td><c:out value="${applicant.state}"/></td>
+<td><c:out value="${applicant.country}"/></td>
+<td><c:out value="${applicant.pincode}"/></td>
+<td><c:out value="${applicant.mobile_No}"/></td>
+<td><c:out value="${applicant.email_ID}"/></td>
 
 <td align="center">
 
