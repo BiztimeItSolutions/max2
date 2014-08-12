@@ -346,7 +346,7 @@
 
 <c:forEach items="${applicants}" var="applicant">
 <tr style="background-color:white;color: black;text-align: center;" height="30px" >
-<td><a href="fetchApplicant.html?applicant_ID=${applicant.applicant_ID}"><c:out value="${applicant.applicant_ID}"/></a></td>
+<td><c:out value="${applicant.applicant_ID}"/></td>
 <td><c:out value="${applicant.first_Name}"/></td>
 <td><c:out value="${applicant.last_Name}"/></td>
 <td><c:out value="${applicant.tenth_Percentage}"/></td>
