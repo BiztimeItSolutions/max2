@@ -1190,44 +1190,20 @@
                                                
                                              </tr>
                                           </table> 
-                                          
-			
-
-			
-            
-            
-			
-			
-			
-			
+    	
 			</p>
-			
-			
 		
-		 
-	
 			<input type="submit" value="submit">
 			
-			
-			
+	                                      
+                                      
+            </form>    
+            
+            
 			
 			 <li>       
                         <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-                    </li>
-		
-        
-		
-            
-            
-            
-			
-                                
-                                  
-                                         
-                                             
-                                               
-                                      
-            </form>                            
+                    </li>                        
                                                                           </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>

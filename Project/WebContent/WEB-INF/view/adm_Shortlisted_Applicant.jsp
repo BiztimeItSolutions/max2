@@ -373,6 +373,13 @@
 </tr>
 </c:forEach>
 		                           </table>
+		                           
+		                           
+		                                                  
+			 <li>       
+                        <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Online Application form</a>
+                    </li>
+                             
                                                
                                       
                                         
