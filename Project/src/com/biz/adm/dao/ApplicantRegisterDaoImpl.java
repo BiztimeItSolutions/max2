@@ -27,8 +27,10 @@ public class ApplicantRegisterDaoImpl {
 	
 	public List<Applicant_Register> getUser() {
 		@SuppressWarnings("unchecked")
-		List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession()
-				.createCriteria(Applicant_Register.class).list();
+		//List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession().createCriteria(Applicant_Register.class).list();
+		
+		List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession().createQuery("from Applicant_Register WHERE tenth_Percentage>=60 AND twelth_Percentage>=60").list();
+		
 		return applicantlist;
 	}
 	
