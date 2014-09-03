@@ -7,6 +7,8 @@ import com.biz.adm.pojo.Applicant_Register;
 
 public interface ApplicantRegisterDao {
 	
+	public boolean checkLogin(String userName, String userPassword);
+	
 	//shortlisted
 	
 	public void saveUser ( Applicant_Register applicant );

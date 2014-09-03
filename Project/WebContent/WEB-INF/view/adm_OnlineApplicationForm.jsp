@@ -286,21 +286,10 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                           <li>       
-                        <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Online Application Form</a>
-             </li>
-                         
-      <li>       
-                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-             </li>
-             
-             
-             <li>       
-                        <a href="applicantInterviewList.html"><i class="fa fa-dashboard fa-fw"></i>Applicant Interview Details</a>
-             </li>
+              
              
               <li>       
-                        <a href="applicantFinalList.html"><i class="fa fa-dashboard fa-fw"></i>Final Applicant List</a>
+                        <a href="adm_mainpage.html"><i class="fa fa-dashboard fa-fw"></i>College Main Page</a>
              </li>
              
                    </ul>

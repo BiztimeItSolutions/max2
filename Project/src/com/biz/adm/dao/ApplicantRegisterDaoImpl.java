@@ -19,6 +19,42 @@ import com.biz.adm.pojo.Applicant_Register;
 public class ApplicantRegisterDaoImpl {
 	@Autowired
 	private SessionFactory sessionfactory;
+
+	
+public void setSessionFactory(SessionFactory sessionFactory)
+	{
+        this.sessionfactory = sessionFactory;
+    }
+
+ protected Session getSession()
+   {
+        return sessionfactory.openSession();
+   }
+
+ public boolean checkLogin(String userName, String userPassword)
+   {
+                  System.out.println("In Check login DAO impl");
+                  Session session = sessionfactory.openSession();
+                  boolean userFound = false;
+                  //Query using Hibernate Query Language
+                  String SQL_QUERY =" from LoginForm as o where o.userName=? and o.userPassword=?";
+                  System.out.println("hello");
+                  Query query = session.createQuery(SQL_QUERY);
+                  query.setParameter(0,userName);
+                  query.setParameter(1,userPassword);
+                  List list = query.list();
+
+                  if ((list != null) && (list.size() > 0))
+                  {
+                          userFound= true;
+                  }
+
+                  session.close();
+                  return userFound;              
+ }
+	
+	
+	
 	
 //save shortlisted
 	

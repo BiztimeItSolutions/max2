@@ -253,7 +253,7 @@
                         <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="adm_mainpage.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -347,6 +347,7 @@
 		                           <th>Email_ID</th>
 		                           <th>counseling1</th>
 		                           <th>counseling2</th>
+		                           <th>sending mail</th>
 		                           </tr>
 
 <c:forEach items="${applicants}" var="applicant">
@@ -373,6 +374,9 @@
 <td><c:out value="${applicant.counseling2}"/></td>
 <td align="center">
 
+
+
+<a href="sending.html">Mail</a> | 
 
 </tr>
 </c:forEach>

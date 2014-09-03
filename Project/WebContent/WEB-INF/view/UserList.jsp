@@ -11,7 +11,7 @@
 
 <form id="UserList" modelAttribute="applicant" method="post" action="${Registration}">
 	 <li>       
-                        <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Anuvidhya</a>
+                        <a href="adm_mainpage.html"><i class="fa fa-dashboard fa-fw"></i>Anuvidhya</a>
                     </li>
                     
                     
@@ -22,6 +22,10 @@
                      
                     	 <li>       
                         <a href="Cetapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Soumya</a>
+                    </li>
+                    
+                    	 <li>       
+                        <a href="indexnew.html"><i class="fa fa-dashboard fa-fw"></i>Gangadhar</a>
                     </li>
 </body>
 </html>

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import com.biz.adm.dao.ApplicantRegisterDaoImpl;
+
 import com.biz.adm.pojo.Applicant_Edit;
 import com.biz.adm.pojo.Applicant_Register;
 import com.biz.adm.service.Applicant_Register_Service;
@@ -22,6 +23,17 @@ public class Applicant_Register_Service_Impl implements Applicant_Register_Servi
 	
 	@Autowired
 	ApplicantRegisterDaoImpl applicantDao;
+	
+	
+	public void setApplicantRegisterDaoImpl(ApplicantRegisterDaoImpl applicantdao) {
+        this.applicantDao = applicantDao;
+ }
+
+ public boolean checkLogin(String userName, String userPassword){
+        System.out.println("In Service class...Check Login");
+        return applicantDao.checkLogin(userName, userPassword);
+ }
+	
 	
 //add shortlisted
 	

@@ -39,4 +39,6 @@ public interface Applicant_Register_Service {
 //sample fetch
 	public Applicant_Register getFetchApplicant(int applicant_ID);
 
+	public boolean checkLogin(String userName, String userPassword);
+
 }

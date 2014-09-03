@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -16,22 +18,67 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.biz.adm.pojo.Applicant_Edit;
 import com.biz.adm.pojo.Applicant_Register;
+import com.biz.adm.pojo.LoginForm;
 import com.biz.adm.service.Applicant_Register_Service;
+
 
 @Controller
 public class ApplicantRegisterController {
 	@Autowired
 	private Applicant_Register_Service applicantService;
 	
-//front page
 	
-	@RequestMapping("/adduser")
-	public ModelAndView getName(@ModelAttribute("applicant") Applicant_Register applicant,BindingResult result) 
+//main page
+		
+		@RequestMapping("/adduser")
+		public ModelAndView getName(@ModelAttribute("applicant") Applicant_Register applicant,BindingResult result) 
+		{
+			
+			return new ModelAndView("UserList");
+		}	
+	
+//front page of admission process
+	
+	@RequestMapping("/adm_mainpage")
+	public ModelAndView getMainPage(@ModelAttribute("applicant") Applicant_Register applicant,BindingResult result) 
 	{
 		
-		return new ModelAndView("UserList");
+		return new ModelAndView("adm_LoginPage");
 	}
 
+	
+//login controller
+	
+	@RequestMapping(value = "/loginform",method = RequestMethod.GET)
+    public String showForm(Map model) {
+            LoginForm loginForm = new LoginForm();
+            model.put("loginForm", loginForm);
+            return "loginform";
+    }
+
+    @RequestMapping(value = "/loginform",method = RequestMethod.POST)
+    public String processForm(@Valid LoginForm loginForm, BindingResult result, Map model) {
+
+            
+            if (result.hasErrors()) {
+                    return "loginform";
+            }
+            
+            boolean userExists = applicantService.checkLogin(loginForm.getUserName(),
+            loginForm.getUserPassword());
+            if(userExists){
+                    model.put("loginForm", loginForm);
+                    return "adm_Home_Page";
+            }else{
+                    result.rejectValue("userName","invaliduser");
+                    return "loginform";
+            }
+
+    }
+	
+	
+	
+	
 	
 //adding values for online application form
 	
@@ -105,7 +152,7 @@ public class ApplicantRegisterController {
 	 System.out.println("applicant first name="+applicant.getFirst_Name()); 
 	 applicantService.updateApp(applicant); 
 	 model.put("applicants",applicantService.getUser());
-	 return new ModelAndView("adm_Shortlisted_Applicant",model);
+	 return new ModelAndView("adm_EmailForm",model);
 	 }
 	
 
@@ -180,6 +227,15 @@ public class ApplicantRegisterController {
 
 	}
 	
+     
+   //sending mail for final list candidates
+ 	
+ 	@RequestMapping("/sending")
+ 	public ModelAndView sentMail(@ModelAttribute("applicant") Applicant_Register applicant,BindingResult result)
+ 	{
+ 		
+ 		return new ModelAndView("adm_EmailForm");
+ 	}
 
 //fetching the values
 

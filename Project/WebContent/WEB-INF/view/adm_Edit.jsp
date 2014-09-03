@@ -32,7 +32,7 @@
 <th>pincode</th>
 <th>Mobile_No</th>
 <th>Email_ID</th>
-<th>mail(pick any value "sent/failed")</th>
+ <th>mail(pick any value "sent/failed")</th>
 	                          
 </tr>
 
@@ -95,7 +95,7 @@
 <td>
 <form:input path="mail" placeholder="sent" value="${applicants.mail}" size="25" maxlength="50" /> 
 </td>
-
+ 
 </tr>
 
 </table>
