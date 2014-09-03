@@ -345,7 +345,7 @@
 		                           <th>Pincode</th>
 		                           <th>Mobile_No</th>
 		                           <th>Email_ID</th>
-		                           <th>edit/delete</th>
+		                           <th>edit</th>
 		                           </tr>
 
 <c:forEach items="${applicants}" var="applicant">
@@ -371,8 +371,8 @@
 
 <td align="center">
 
-<a href="editApplicant.html?applicant_ID=${applicant.applicant_ID}">Edit</a> | 
-<a href="delete.html?applicant_ID=${applicant.applicant_ID}">Delete</a></td>
+<a href="editApplicant.html?applicant_ID=${applicant.applicant_ID}">Edit</a>
+</td>
 
 </tr>
 </c:forEach>
