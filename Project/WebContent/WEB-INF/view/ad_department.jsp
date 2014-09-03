@@ -17,11 +17,11 @@
 <!--	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />-->
 	
 
-    <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script> 
-    <script type="text/javascript" src="js/nagging-menu.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.left.js" charset="utf-8"></script> 
+    <!-- <script type="text/javascript" src="js/nagging-menu.js" charset="utf-8"></script> -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/jquery.ssd-vertical-navigation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/jquery.ssd-leftl-navigation.min.js"></script>
+    <script src="js/leftmain.js"></script>
 
 </head>
 

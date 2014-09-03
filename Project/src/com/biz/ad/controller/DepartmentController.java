@@ -15,8 +15,6 @@ import com.biz.ad.pojo.Department;
 import com.biz.ad.service.DepartmentService;
 
 
-
-
 @Controller
 public class DepartmentController {
 
