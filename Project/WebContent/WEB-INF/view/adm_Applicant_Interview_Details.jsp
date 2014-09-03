@@ -283,9 +283,7 @@
                         <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Online Application Form</a>
              </li>
                          
-      <li>       
-                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-             </li>
+    
              
              
              <li>       
