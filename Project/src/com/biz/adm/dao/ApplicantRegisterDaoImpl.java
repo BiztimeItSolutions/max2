@@ -2,10 +2,13 @@ package com.biz.adm.dao;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 
@@ -17,6 +20,7 @@ public class ApplicantRegisterDaoImpl {
 	@Autowired
 	private SessionFactory sessionfactory;
 	
+//save shortlisted
 	
 	public void saveUser(Applicant_Register applicant)
 	{
@@ -24,25 +28,32 @@ public class ApplicantRegisterDaoImpl {
 		sessionfactory.getCurrentSession().saveOrUpdate(applicant);		
 	}
 
+//display shortlisted
 	
-	public List<Applicant_Register> getUser() {
+	public List<Applicant_Register> getUser()
+	{
 		@SuppressWarnings("unchecked")
-		//List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession().createCriteria(Applicant_Register.class).list();
-		
+	
 		List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession().createQuery("from Applicant_Register WHERE tenth_Percentage>=60 AND twelth_Percentage>=60").list();
 		
+		//List<Applicant_Register> applicantlist = sessionfactory.getCurrentSession().createCriteria(Applicant_Register.class).list();
 		return applicantlist;
 	}
 	
+//edit shortlisted
 
-	public Applicant_Register getApplicant(int applicant_ID) {
-		// TODO Auto-generated method stub
-		
-		 return  (Applicant_Register) sessionfactory.getCurrentSession().get(Applicant_Register.class, applicant_ID);
-		
+	public Applicant_Register getApplicant(int applicant_ID) 
+	{
+	    // TODO Auto-generated method stub
+			
+		return  (Applicant_Register) sessionfactory.getCurrentSession().get(Applicant_Register.class, applicant_ID);
+			
 	}
+		
+//update shortlisted
 
-	public void updateApp(Applicant_Register applicant) {
+	public void updateApp(Applicant_Register applicant) 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("inside updatre DAO:  " +applicant.getFirst_Name());
 		sessionfactory.getCurrentSession().update(applicant);
@@ -50,26 +61,69 @@ public class ApplicantRegisterDaoImpl {
 		System.out.println("updated::::<>>>");
 	}
 	
+
+//delete 
 	
-	
-	//delete
-	
-	public void deleteApplicant(Applicant_Register applicant) {
+	 public void deleteApplicant(Applicant_Register applicant)
+	 {
 		System.out.println("in delete DAO"+applicant.getApplicant_ID());
 		sessionfactory.getCurrentSession().createQuery("DELETE FROM Applicant_Register WHERE applicant_ID = "+applicant.getApplicant_ID()).executeUpdate();
-		 }
+	 }
+
+
+//displaying for interview process details
 	
-	
-	
-	/*public List<Applicant_Register> getUser() {
+	public List<Applicant_Register> getInterviewUser() 
+	{
 		@SuppressWarnings("unchecked")
 		
-		String hql = "FROM applicant_register1 E WHERE E.tenth_Percentage ='s'";
-		Session session=null;
-		Query query = session.createQuery(hql);
-		List<Applicant_Register> applicantlist = query.list();
+		List<Applicant_Register> applicantInterviewlist = sessionfactory.getCurrentSession().createQuery("from Applicant_Register WHERE mail='sent'").list();
 		
-		return applicantlist;
-}*/
+		return applicantInterviewlist;
+	}	
 	
+//edit interview details
+
+	public Applicant_Register getApplicantDetails(int applicant_ID) 
+	{
+		// TODO Auto-generated method stub		
+		return  (Applicant_Register) sessionfactory.getCurrentSession().get(Applicant_Register.class, applicant_ID);
+		
+	}
+			
+//update interview details
+
+	public void updateApplicant(Applicant_Register applicant)
+	{
+		// TODO Auto-generated method stub
+		System.out.println("inside updatre DAO:  " +applicant.getFirst_Name());
+		sessionfactory.getCurrentSession().update(applicant);
+		sessionfactory.getCurrentSession().flush();
+		System.out.println("updated");
+	}
+		
+		
+//displaying for final list details
+		
+	public List<Applicant_Register> getFinalUser()
+	{
+		@SuppressWarnings("unchecked")
+		
+		List<Applicant_Register> applicantfinallist = sessionfactory.getCurrentSession().createQuery("from Applicant_Register WHERE status='selected'").list();
+		
+		return applicantfinallist;
+	}	
+	
+	
+//fetch sample
+	
+	public Applicant_Register getFetchApplicant(int applicant_ID) 
+	{
+		// TODO Auto-generated method stub
+		
+		 return  (Applicant_Register) sessionfactory.getCurrentSession().get(Applicant_Register.class, applicant_ID);
+		
+	}
+	
+		
 }

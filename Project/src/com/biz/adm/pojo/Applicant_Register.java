@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "applicant_register1")
+@Table(name = "applicant_register3")
 public class Applicant_Register {
    
 		@Id
@@ -70,7 +70,55 @@ public class Applicant_Register {
 
 		@Column(name = "mobile_No")
 		String mobile_No;
-	
+		
+
+		@Column(name = "mail")
+		String mail;
+
+		@Column(name = "counseling1")
+		String counseling1;
+		
+
+		@Column(name = "counseling2")
+		String counseling2;
+		
+
+		@Column(name = "status")
+		String status;
+		
+		
+	public String getCounseling1() {
+			return counseling1;
+		}
+
+		public void setCounseling1(String counseling1) {
+			this.counseling1 = counseling1;
+		}
+
+		public String getCounseling2() {
+			return counseling2;
+		}
+
+		public void setCounseling2(String counseling2) {
+			this.counseling2 = counseling2;
+		}
+
+		public String getStatus() {
+			return status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+
+	public String getMail() {
+			return mail;
+		}
+
+		public void setMail(String mail) {
+			this.mail = mail;
+		}
+
 	public String getDob() {
 		return dob;
 	}

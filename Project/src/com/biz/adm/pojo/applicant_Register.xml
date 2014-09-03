@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.pojo" table="applicant_register1">
+	<class name="com.pojo" table="applicant_register3">
 		   <id name="applicant_ID">
            <generator class="identity"/> 
        </id> 
@@ -24,5 +24,9 @@
          <property name="country"/>
          <property name="email_ID"/>
           <property name="mobile_No"/>
+          <property name="mail"/>  
+          <property name="counseling1"></property>
+          <property name="counseling2"></property> 
+          <property name="status"></property>          
 	</class>
 </hibernate-mapping>

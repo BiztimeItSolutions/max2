@@ -1,5 +1,7 @@
 package com.biz.adm.pojo;
 
+import javax.persistence.Column;
+
 
 
 public class Applicant_Edit {
@@ -8,37 +10,55 @@ public class Applicant_Edit {
 	String last_Name;
 	String gender;
 	String department;
-	
-String tenth_Percentage;
-	
-	String tenth_YOP;
-	
+	String tenth_Percentage;
+    String tenth_YOP;
 	String tenth_School;
-	
 	String twelth_Percentage;
-
 	String twelth_YOP;
-	
 	String twelth_School;
-
 	String dob;
-
 	String pincode;
-	
 	String address;
-
 	String city;
-
 	String state;
-
 	String country;
-
 	String email_ID;
+    String mobile_No;
+		
+		
 
-	String mobile_No;
-	
-	
 
+	String mail;
+    String counseling1;
+    String counseling2;
+    String status;
+    
+public String getCounseling1() {
+		return counseling1;
+	}
+	public void setCounseling1(String counseling1) {
+		this.counseling1 = counseling1;
+	}
+	public String getCounseling2() {
+		return counseling2;
+	}
+	public void setCounseling2(String counseling2) {
+		this.counseling2 = counseling2;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+public String getMail() {
+	return mail;
+}
+public void setMail(String mail) {
+	this.mail = mail;
+}
+
+   
 
 	public String getTenth_Percentage() {
 		return tenth_Percentage;

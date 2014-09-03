@@ -23,8 +23,5 @@
                     	 <li>       
                         <a href="Cetapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Soumya</a>
                     </li>
-                     <li>       
-                        <a href="indexnew.html"><i class="fa fa-dashboard fa-fw"></i>Gangadhar</a>
-                    </li>
 </body>
 </html>

@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- 
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-   <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +14,6 @@
 
 <table border="1" bgcolor="black" width="600px">
 <tr style="background-color: teal;color: white;text-align: center;" height="40px">
-<!--  <td>Applicant Id</td> -->
 <td>Applicant Id</td>
 <td>First Name</td>
 <td>Last Name</td>
@@ -34,8 +32,8 @@
 <th>pincode</th>
 <th>Mobile_No</th>
 <th>Email_ID</th>
-		                          
-
+<th>mail(pick any value "sent/failed")</th>
+	                          
 </tr>
 
 <tr style="background-color: teal;color: white;text-align: center;" height="40px">
@@ -93,9 +91,12 @@
 <td>
 <form:input path="email_ID" value="${applicants.email_ID}" size="25" maxlength="50" /> 
 </td>
+
+<td>
+<form:input path="mail" placeholder="sent" value="${applicants.mail}" size="25" maxlength="50" /> 
+</td>
+
 </tr>
-
-
 
 </table>
 <input type="submit" value="Submit">

@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-     
+      <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
- <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
+<%@ page  language="java" %>
+<%
+ String hiddenFieldValue="";
+%>
 <html>
 
 <head>
@@ -52,7 +55,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="WEB-INF/view/img/Biztime_Logo.png" width="200" height="50"></a>
+                <a class="navbar-brand" href="index.html"><img src="img/Biztime_Logo.png" width="200" height="50"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -283,8 +286,23 @@
                         </div>
                         <!-- /input-group -->
                     </li>
+                           <li>       
+                        <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Online Application Form</a>
+             </li>
                          
-     
+      <li>       
+                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
+             </li>
+             
+             
+             <li>       
+                        <a href="applicantInterviewList.html"><i class="fa fa-dashboard fa-fw"></i>Applicant Interview Details</a>
+             </li>
+             
+              <li>       
+                        <a href="applicantFinalList.html"><i class="fa fa-dashboard fa-fw"></i>Final Applicant List</a>
+             </li>
+             
                    </ul>
                 <!-- /#side-menu -->
             </div>
@@ -1189,21 +1207,47 @@
                                                <td width="393"><label id="lbluser"></label></td>
                                                
                                              </tr>
-                                          </table> 
-    	
+        
+                                                                      
+                                          </table> 	
+			
 			</p>
 		
+		<p>
+		<table>
+		<input type="hidden" name="mail" value="<%=hiddenFieldValue%>" />
+		</table>
+		</p>
+		
+		<p>
+		<table>
+		<input type="hidden" name=counseling1" value="<%=hiddenFieldValue%>" />
+		</table>
+		</p>
+		
+			<p>
+		<table>
+		<input type="hidden" name=counseling2" value="<%=hiddenFieldValue%>" />
+		</table>
+		</p>
+		
+		
+			<p>
+		<table>
+		<input type="hidden" name="status" value="<%=hiddenFieldValue%>" />
+		</table>
+		</p>
+		
+		
+		
+              
 			<input type="submit" value="submit">
 			
-	                                      
-                                      
-            </form>    
+		                                     
+            </form>  
             
             
-			
-			 <li>       
-                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-                    </li>                        
+                         
                                                                           </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>

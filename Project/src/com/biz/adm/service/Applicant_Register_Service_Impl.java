@@ -23,37 +23,83 @@ public class Applicant_Register_Service_Impl implements Applicant_Register_Servi
 	@Autowired
 	ApplicantRegisterDaoImpl applicantDao;
 	
-	public void addUser(Applicant_Register applicant) {
+//add shortlisted
+	
+	public void addUser(Applicant_Register applicant) 
+	{
 		// TODO Auto-generated method stub
 		applicantDao.saveUser(applicant);
 		
 	}
 
-	public List<Applicant_Register> getUser() {
+//display shortlisted
+	
+	public List<Applicant_Register> getUser()
+	{
 		// TODO Auto-generated method stub
 		return applicantDao.getUser();
 	}
 	
+//edit shortlisted
 	
-	public Applicant_Register getApplicant(int Applicant_ID) {
+	public Applicant_Register getApplicant(int Applicant_ID)
+	{
 		 return applicantDao.getApplicant(Applicant_ID);
-		 }
+	}
 
-	public void updateApp(Applicant_Register applicant) {
-		// TODO Auto-generated method stub
-		applicantDao.updateApp(applicant);	
-}
+//update shortlisted
+	
+	public void updateApp(Applicant_Register applicant)
+	{
+		 // TODO Auto-generated method stub
+		 applicantDao.updateApp(applicant);	
+    }
+	
+//delete
 	
 	public void deleteApplicant(Applicant_Register applicant)
 	{
-		System.out.println("inside service");
-	        applicantDao.deleteApplicant(applicant);
+		 System.out.println("inside service");
+	     applicantDao.deleteApplicant(applicant);
     }
 
 	
-
-
-
+//display interview details
+		
+	public List<Applicant_Register> getInterviewUser() 
+	{
+		 // TODO Auto-generated method stub
+		 return applicantDao.getInterviewUser();
+	}	
 	
+//edit interview details
+	
+	public Applicant_Register getApplicantDetails(int Applicant_ID)
+	{
+		 return applicantDao.getApplicant(Applicant_ID);
+	}
+
+//update interview details
+	
+	public void updateApplicant(Applicant_Register applicant) 
+	{
+		// TODO Auto-generated method stub
+		applicantDao.updateApplicant(applicant);	
+    }
+	
+//display final list
+	
+	public List<Applicant_Register> getFinalUser() 
+	{
+		// TODO Auto-generated method stub
+		return applicantDao.getFinalUser();
+	}
+	
+//fetch sample
+
+	public Applicant_Register getFetchApplicant(int Applicant_ID)
+	{
+		return applicantDao.getFetchApplicant(Applicant_ID);
+	}
 	
 }
