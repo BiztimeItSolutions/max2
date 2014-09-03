@@ -53,7 +53,7 @@ public class ApplicantRegisterController {
     public String showForm(Map model) {
             LoginForm loginForm = new LoginForm();
             model.put("loginForm", loginForm);
-            return "loginform";
+            return "adm_loginform";
     }
 
     @RequestMapping(value = "/loginform",method = RequestMethod.POST)
@@ -61,7 +61,7 @@ public class ApplicantRegisterController {
 
             
             if (result.hasErrors()) {
-                    return "loginform";
+                    return "adm_loginform";
             }
             
             boolean userExists = applicantService.checkLogin(loginForm.getUserName(),
@@ -71,7 +71,7 @@ public class ApplicantRegisterController {
                     return "adm_Home_Page";
             }else{
                     result.rejectValue("userName","invaliduser");
-                    return "loginform";
+                    return "adm_loginform";
             }
 
     }
@@ -102,7 +102,7 @@ public class ApplicantRegisterController {
 		 
 		model.put("applicants", applicantService.getUser());
 		
-		return new ModelAndView("Success");
+		return new ModelAndView("adm_Success");
 	}	
 	
 	
@@ -171,7 +171,7 @@ public class ApplicantRegisterController {
 			System.out.println(itr.next());
 		}
 		
-		return new ModelAndView("Applicant_Interview_Details", model);
+		return new ModelAndView("adm_Applicant_Interview_Details", model);
 	}
 
      
@@ -203,7 +203,7 @@ public class ApplicantRegisterController {
 		  
 		 applicantService.updateApplicant(applicant);
 		 model.put("applicants",applicantService.getUser());
-		 return new ModelAndView("Applicant_Interview_Details",model);
+		 return new ModelAndView("adm_Applicant_Interview_Details",model);
 	  }
 		
 	
@@ -259,7 +259,7 @@ public class ApplicantRegisterController {
 	     
 	     System.out.println("check after model");
 	     
-		 return new ModelAndView("Applicant_Details", model); 	
+		 return new ModelAndView("adm_Applicant_Details", model); 	
 		 }
 	
 	
