@@ -1,0 +1,50 @@
+/* Created by http://freehtml5templates.com */
+
+
+
+#footer-area {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #426d9c), color-stop(40%, #0f67a1), color-stop(100%, #1384d1));
+color: #333;
+font-size: 90%;
+padding: 18px 0;
+overflow: hidden;
+}
+
+.footer-segment {
+float: left;
+margin-right: 35px;
+margin-left: 35px;
+width: 190px;
+}
+
+footer aside h4 {
+color: #333;
+font-size: 16px;
+line-height: 1.0em;
+}
+
+footer p {
+margin-top: 2px;
+}
+
+
+#footer{
+position:fixed;
+right:0px;
+bottom:0px;
+width:82%;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #426d9c), color-stop(40%, #0f67a1), color-stop(100%, #1384d1));
+height:90px;
+text-align:center
+
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+box-shadow: 0 5px 20px #888;
+-webkit-box-shadow: 0 5px 20px #888;
+-moz-box-shadow: 0 5px 20px #888;
+
+
+
+}
+

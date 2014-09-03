@@ -64,6 +64,7 @@ public class ApplicantRegisterController {
 		System.out.println("getuserlist");
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("applicants", applicantService.getUser());
+
 		ArrayList<Applicant_Register> al=new ArrayList<Applicant_Register>();
 		Iterator itr=al.iterator();
 		while(itr.hasNext())
