@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/Biztime_Logo.png" width="200" height="50"></a>
+                <a class="navbar-brand" href="index.html"><img src="Biztime_Logo.png" width="200" height="50"></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -253,7 +253,7 @@
                         <li><a href="settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="adm_mainpage.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -279,20 +279,19 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                     
-      <li>       
-                        <a href="applicantList.html"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
-             </li>
-             
-             
-             <li>       
-                        <a href="applicantInterviewList.html"><i class="fa fa-dashboard fa-fw"></i>Applicant Interview Details</a>
-             </li>
-             
-              <li>       
-                        <a href="applicantFinalList.html"><i class="fa fa-dashboard fa-fw"></i>Final Applicant List</a>
-             </li>
-             
+                      <li>       
+                        <a href="Shortlisted_Applicant.jsp"><i class="fa fa-dashboard fa-fw"></i>Shortlist Candidate</a>
+                    </li>
+                    
+                    <li>       
+                        <a href="Interview_Applicant_Process.jsp"><i class="fa fa-dashboard fa-fw"></i>Interview_Process_Details</a>
+                    </li>
+                      <li>       
+                        <a href="Final_Applicant_List.jsp"><i class="fa fa-dashboard fa-fw"></i>Final_List_Candidate</a>
+                    </li> 
+                    <li>       
+                        <a href="AdminHomePage.jsp"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>  
      
                    </ul>
                 <!-- /#side-menu -->
@@ -342,12 +341,12 @@
 		                           <th>Pincode</th>
 		                           <th>Mobile_No</th>
 		                           <th>Email_ID</th>
-		                           <th>Mail</th>
+		                           <th>edit/delete</th>
 		                           </tr>
 
 <c:forEach items="${applicants}" var="applicant">
 <tr style="background-color:white;color: black;text-align: center;" height="30px" >
-<td><c:out value="${applicant.applicant_ID}"/></a></td>
+<td><c:out value="${applicant.applicant_ID}"/></td>
 <td><c:out value="${applicant.first_Name}"/></td>
 <td><c:out value="${applicant.last_Name}"/></td>
 <td><c:out value="${applicant.tenth_Percentage}"/></td>
@@ -368,16 +367,19 @@
 
 <td align="center">
 
-<a href="sending.html">mail</a>
-</td>
+<a href="editApplicant.html?applicant_ID=${applicant.applicant_ID}">Edit</a> | 
+<a href="delete.html?applicant_ID=${applicant.applicant_ID}">Delete</a></td>
 
 </tr>
 </c:forEach>
 		                           </table>
 		                           
 		                           
-		                           
-			
+		                                                  
+			 <li>       
+                        <a href="addapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Online Application form</a>
+                    </li>
+                             
                                                
                                       
                                         

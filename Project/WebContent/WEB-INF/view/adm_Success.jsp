@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-submitted successfully
-
-      
-                        <a href="addapplicant.html.html"><i class="fa fa-dashboard fa-fw"></i>Go Back</a>
- 
-
+<form id="Success"  method="post" action="${Registration}">
+successful;
 </body>
 </html>

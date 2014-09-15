@@ -21,7 +21,7 @@
                     
                      
                     	 <li>       
-                        <a href="Cetapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Soumya</a>
+                        <a href="addCetapplicant.html"><i class="fa fa-dashboard fa-fw"></i>Soumya</a>
                     </li>
                     
                     	 <li>       

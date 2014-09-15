@@ -40,6 +40,10 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 			<value>com.biz.emp.prof.domain.PersonalInformationsPojo</value>
 			<value>com.biz.ad.pojo.Department</value>	
 				
+
+				<value>com.biz.adm.pojo.CetAddmissionPojo</value>
+				
+
 			</list>
 		</property>
 		<property name="hibernateProperties">
