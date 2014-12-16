@@ -1419,7 +1419,7 @@ th {
 }
 .table {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -1427,9 +1427,8 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 6px;
-/*  line-height: 1.428571429;*/
-  line-height:1.0;
+  padding: 8px;
+  line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
@@ -1669,7 +1668,7 @@ input[type="search"] {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 0 0 0;
+  margin: 4px 0 0;
   margin-top: 1px \9;
   /* IE8-9 */
   line-height: normal;
@@ -4480,8 +4479,8 @@ a.thumbnail.active {
   color: #333;
 }
 .alert {
-  padding: 6px;
-  margin-bottom: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -4819,8 +4818,8 @@ a.list-group-item-danger.active:focus {
 .panel-body {
 	/*width:975px;*/
 	widows:100%;
-  	padding: 3px;
-	overflow-x: auto;
+  	padding: 15px;
+	overflow-x: scroll;
 
 }
 .panel > .list-group {
@@ -4964,10 +4963,10 @@ a.list-group-item-danger.active:focus {
   border: 0;
 }
 .panel-heading {
-  /*padding: 7px 10px;*/
+  padding: 7px 10px;
   border-bottom: 1px solid transparent;
- /* border-top-left-radius: 3px;
-  border-top-right-radius: 3px;*/
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   text-color:#3c763d;
 
 }
@@ -5913,130 +5912,6 @@ float:right;
 	padding: 9px;
 
 }
-
-.end{
-padding-bottom:40px;
-}
-
-.form-control-email1 {
-float:right;
- 
-  width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 12px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-}
-
-.form-control-email {
-float:left;
-  
-  width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-  
-}
-
-.form-control-emailhome {
-float:left;
-  
-  width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-  
-}
-.form-control-emailhome1 {
-  float:right;
-  width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-  
-}
-
-.form-control-emailhome2 {
-float:right;
-  
-  width: 30%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-}
-
-.form-control-sendemail{
-	
-	float:right;
-	width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-}
-
-.form-control-sendemail1{
-	
-float:left;
-width: 50%;
-  height: 50px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-}
-
-.color{
-	background-color:#555 ;
-	display:block;
-	
-}
-.form-control-emailhomefinance {
-float:right;
-  
-  width: 50%;
-  height: 30px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  
-  
-}
-
-/*# sourceMappingURL=bootstrap.css.map */
-
 
 
 /*# sourceMappingURL=bootstrap.css.map */
