@@ -564,6 +564,16 @@
                         <!-- <div class="panel-body"> -->
                             <div class="row">
                                 <div class="col-lg-12"> 
+                                <ul class="nav nav-pills">
+                                <li class="active"><a href="AdmissionStudentDetails.html" data-toggle="tab">Student Personal Details</a>
+                                </li>
+                                <li><a href="AdmissionStudentParentGuardianDetails.html">Parent|Guardian Details</a>
+                                </li>
+                                <li><a href="AdmissionStudentEmergencyContact.html">Emergency Contact</a>
+                                </li>
+                                <li><a href="AdmissionStudentAdditionalDetails.html">Additional Details</a>
+                                </li>
+                            </ul>
 <div class="form-group">                             
 <label>Fields Marked with <span class="style1">*</span> must be filled</label></div>
 <br /><br /><br />
@@ -577,19 +587,30 @@
                                           </td>  <td><input type="date" class="form-control" name=""/> </td></tr></table>
   </div></td></tr></table>
   <br></br>
-  <a href="#"><button type="" class="btn btn-primary">Personal Details</button></a>
-                            	       <a href="#"><button type="" class="btn btn-primary">Contact Details</button></a>
-                            	       <a href="#"><button type="" class="btn btn-primary">Settings</button></a>
-                            	       <a href="#"><button type="" class="btn btn-primary">Upload User Photo</button></a>
-                            	       <br></br>
+  <ul class="nav nav-pills">
+                                <li class="active"><a href="#PersonalDetails" data-toggle="tab">Personal Details</a>
+                                </li>
+                                <li><a href="#ContactDetails" data-toggle="tab">Contact Details</a>
+                                </li>
+                                <li><a href="#Settings" data-toggle="tab">Settings</a>
+                                </li>
+                                <li><a href="#UploadPhoto" data-toggle="tab">Upload Photo</a>
+                                </li>
+                            </ul>
+ 
                             	       
-  Personal Details
+                            	       
+                            	       
+                            	        <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="PersonalDetails">
+                                 Personal Details
 	<div class="dividerall"></div>
 			
 		
 				<br>
   
-  </div>
+  
 <div class="col-lg-6">
 
 									<!-- <form role="" id="" method="" action=""> -->
@@ -672,9 +693,12 @@
                                         </div>
                                         
                                            
-                                       </div></div>
-								 <br /><br /><br />
-								 Contact Details
+                                       </div>
+                                    
+                                
+                                </div>
+                                <div class="tab-pane fade" id="ContactDetails">
+                                    Contact Details
                                 <div class="dividerall"></div><br /><br /><br />
                                 
                                 <div class="row">
@@ -732,10 +756,12 @@
                                          <div class="form-group">
                                             <label class="label1">Email</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="">  
-                                        </div>
-                                        
-                                        <br/><br/><br/></div></div>
-                                        Settings
+                                        </div> </div>
+                                        </div></div>
+                                       
+                                <div class="tab-pane fade" id="Settings">
+                                    
+                                    Settings
                                         
                                         <div class="dividerall"></div>
 			
@@ -754,7 +780,12 @@
                                             <label class="label1">Enable Email Features</label><span class="style1"></span>
                                            <span></span><span></span> <input  type="checkbox" name="">  
                                         </div>
-                                        </div></div>
+                                        </div></div> </div>
+                           
+                            	       
+ 
+                                        <div class="tab-pane fade" id="UploadPhoto">
+                                    
                                         Upload User Photo
                                         
                                         <div class="dividerall"></div>
@@ -769,17 +800,17 @@
                                             <label class="label1">Upload User Photo(500KB Max)</label><span class="style1"></span>     
               						<input class="form-control"type="file" name=""/>                    
                                         </div>
-                                        
-                                      
+                                        </div>
+                                      </div>
                                         <a href="AdmissionStudentParentGuardianDetails.html"><button type="" class="btn btn-primary">Save&Proceed</button></a>
                             	       
-                           
-                                <!-- /.col-lg-6 (nested) -->
-                              </div>
-                            <!-- /.row (nested) -->
+                           </div>
+                               
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.Tab upload -->
                     </div>
+                    <!-- /.Tab -->
+                  </div>  
                     <!-- /.panel -->
                 
         </div>
