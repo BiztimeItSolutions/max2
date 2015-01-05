@@ -564,16 +564,7 @@
                         <!-- <div class="panel-body"> -->
                             <div class="row">
                                 <div class="col-lg-12"> 
-                                <ul class="nav nav-pills">
-                                <li class="active"><a href="AdmissionStudentDetails.html" data-toggle="tab">Student Personal Details</a>
-                                </li>
-                                <li><a href="AdmissionStudentParentGuardianDetails.html">Parent|Guardian Details</a>
-                                </li>
-                                <li><a href="AdmissionStudentEmergencyContact.html">Emergency Contact</a>
-                                </li>
-                                <li><a href="AdmissionStudentAdditionalDetails.html">Additional Details</a>
-                                </li>
-                            </ul>
+                                
 <div class="form-group">                             
 <label>Fields Marked with <span class="style1">*</span> must be filled</label></div>
 <br /><br /><br />
@@ -587,7 +578,7 @@
                                           </td>  <td><input type="date" class="form-control" name=""/> </td></tr></table>
   </div></td></tr></table>
   <br></br>
-  <ul class="nav nav-pills">
+  <ul class="nav nav-tabs">
                                 <li class="active"><a href="#PersonalDetails" data-toggle="tab">Personal Details</a>
                                 </li>
                                 <li><a href="#ContactDetails" data-toggle="tab">Contact Details</a>
@@ -604,8 +595,7 @@
                             	        <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane fade in active" id="PersonalDetails">
-                                 Personal Details
-	<div class="dividerall"></div>
+                                 
 			
 		
 				<br>
@@ -691,16 +681,19 @@
                                             <label class="label1">Religion</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="">  
                                         </div>
-                                        
-                                           
+                                       <div class="form-group">
+                                            <label class="label1">Caste</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="caste">  
+                                        </div>  
+                                          <a href="#ContactDetails" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                            	     
                                        </div>
-                                    
+                                       
                                 
                                 </div>
                                 <div class="tab-pane fade" id="ContactDetails">
-                                    Contact Details
-                                <div class="dividerall"></div><br /><br /><br />
-                                
+                                   
+                                </br>
                                 <div class="row">
                                <div class="col-lg-6">
                                
@@ -757,17 +750,17 @@
                                             <label class="label1">Email</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="">  
                                         </div> </div>
-                                        </div></div>
+                                        </div>
+                                        <a href="#Settings" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                            	       </div>
                                        
                                 <div class="tab-pane fade" id="Settings">
                                     
-                                    Settings
-                                        
-                                        <div class="dividerall"></div>
+                                   
 			
 		
-				<br>
-                                        <br/><br/><br/>
+				</br>
+                                        
                                          <div class="row">
                                <div class="col-lg-6">
                                
@@ -780,19 +773,18 @@
                                             <label class="label1">Enable Email Features</label><span class="style1"></span>
                                            <span></span><span></span> <input  type="checkbox" name="">  
                                         </div>
-                                        </div></div> </div>
+                                        </div></div>
+                                        <a href="#UploadPhoto" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                            	        </div>
                            
                             	       
  
                                         <div class="tab-pane fade" id="UploadPhoto">
                                     
-                                        Upload User Photo
-                                        
-                                        <div class="dividerall"></div>
-			
+                                      			
 		
-				<br>
-                                        <br/><br/><br/>
+				</br>
+                                       
                                          <div class="row">
                                <div class="col-lg-6">
                                         
@@ -810,6 +802,7 @@
                         <!-- /.Tab upload -->
                     </div>
                     <!-- /.Tab -->
+                    </div>
                   </div>  
                     <!-- /.panel -->
                 
