@@ -567,7 +567,7 @@
                                 
 <div class="form-group">                             
 <label>Fields Marked with <span class="style1">*</span> must be filled</label></div>
-<br /><br /><br />
+<br />
 
 <table><tr><td><div class="form-group">
                    <table> <tr><td><label class="label1">Admission No:</label><span class="style1">*</span></td><td>
@@ -577,15 +577,19 @@
               <table> <tr><td>      <label class="label1">Admission Date:</label><span class="style1">*</span>
                                           </td>  <td><input type="date" class="form-control" name=""/> </td></tr></table>
   </div></td></tr></table>
-  <br></br>
+  <br>
   <ul class="nav nav-tabs">
                                 <li class="active"><a href="#PersonalDetails" data-toggle="tab">Personal Details</a>
                                 </li>
                                 <li><a href="#ContactDetails" data-toggle="tab">Contact Details</a>
                                 </li>
+                                <li><a href="#EducationalDetails" data-toggle="tab">Educational Details</a>
+                                </li>
                                 <li><a href="#Settings" data-toggle="tab">Settings</a>
                                 </li>
                                 <li><a href="#UploadPhoto" data-toggle="tab">Upload Photo</a>
+                                </li>
+                                <li><a href="#MedicalCertificate" data-toggle="tab">Medical Certificate </a>
                                 </li>
                             </ul>
  
@@ -697,7 +701,9 @@
                                 <div class="row">
                                <div class="col-lg-6">
                                
-                               
+                               <div class="form-group">
+                               <label class="label1"><b>Present Address</b></label><span class="style1"></span>
+                               </div>
                                <div class="form-group">
                                             <label class="label1">Address Line1</label><span class="style1"></span>
                                             <input class="form-control" name="address_line1" id="user">    
@@ -734,6 +740,46 @@
    
  
                                
+                               <div class="form-group">
+                               <label class="label1"><b>Permanent Address</b></label><span class="style1"></span>
+                               </div>
+                               <div class="form-group">
+                                            <label class="label1">Address Line1</label><span class="style1"></span>
+                                            <input class="form-control" name="address_line1" id="user">    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Address Line2</label><span class="style1"></span>
+                                            <input class="form-control" name="address_line2" id="user">    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">City</label><span class="style1"></span>
+                                            <input class="form-control" name="city" id="user">    
+                                        </div>
+                               <div class="form-group">
+                                            <label class="label1">Pincode</label><span class="style1"></span>
+                                            <input class="form-control" name="pincode" id="user">    
+                                        </div>
+              <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1"></span>
+                                          <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="country">
+<option >Select Country</option>
+</select>
+
+                                                                              
+                                        
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1"></span>
+                                           <select class="form-control" name ="state" id ="state">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("country");</script> 
+                               
+                               
+                               
+                               
                                
                                
                                
@@ -751,9 +797,91 @@
                                             <input type="text" class="form-control" name="">  
                                         </div> </div>
                                         </div>
-                                        <a href="#Settings" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                                        <a href="#EducationalDetails" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
                             	       </div>
-                                       
+                            	       
+                            	       
+                                   <div class="tab-pane fade" id="EducationalDetails">
+                                    </br>
+                                <div class="row">
+                               <div class="col-lg-6">
+                               
+                               <div class="form-group">
+                                            <label class="label1">Last College/School Attended</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="">  
+                                        </div>
+                               <div class="form-group">
+                                            <label class="label1">Date of Entering the Institution</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Leaving the Institution</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Name of Board/University Last Studied</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Entering the Board/University</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Leaving the Board/University</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        
+                               <div class="form-group">
+                                            <label class="label1">Details of Qualifying Examination Passed</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="">  
+                                        </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                        <div class="panel-body">
+                                        <div class="form-group"> <table class="table table-striped table-bordered table-hover">
+										<th> Examination</th><th>Name of the University/Institution</th><th>No. of Attempts to Pass the Examination</th>
+										 <th> Year of Passing</th><th> Register No.</th><th> Optional Subjects Studied</th>
+										<th colspan="3"> Marks Obtained in Optional Subjects</th></tr><tr><th>Max Marks</th><th>Marks Obtained</th><th>Percentage</th>
+										 
+										<tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Physics" readonly></td><td><input type="text" class="form-control" name=""></td></tr>
+										<tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Mathematics" readonly></td><td><input type="text" class="form-control" name=""></td></tr>
+										 <tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><textarea rows="3" cols="25" style="background:#eee" readonly> Chemistry/Bio-Technology/Computer science/Electronics/Biology</textarea></td><td><input type="text" class="form-control" name=""></td></tr>
+										 
+										  <tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Average Percentage" readonly></td><td><input type="text" class="form-control" name=""></td></tr>
+										 
+										 </table></div> 
+										 
+										
+										 
+										 </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                        <br></br>
+                                            <label class="label1"><br></br>Institutions at which the applicant studied during the last five years(Reasonds of break in continuity may be stated in the remarks column commencing from VII Standard to XII Standard)</label><span class="style1"></span>
+                                             
+                                        </div>
+                               
+                               <div class="col-lg-12">
+                                        <div class="panel-body">
+                                        <div class="form-group"> <table class="table table-striped table-bordered table-hover">
+										 <tr><th> </th><th>Year</th><th>Institution</th>
+										 <th>Class</th><th> Remarks</th></tr>
+										<tr><td>1</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										<tr><td>2</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										 <tr><td>3</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										 
+										  <tr><td>4</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										  <tr><td>5</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										 
+										 </table></div> 
+										 </div>
+                                        </div>
+                                   <div class="col-lg-6">
+                                   <a href="#Settings" data-toggle="tab"><br></br><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                            	       </div>
+                            	       </div>
+                                   </div>    
                                 <div class="tab-pane fade" id="Settings">
                                     
                                    
@@ -792,11 +920,58 @@
                                             <label class="label1">Upload User Photo(500KB Max)</label><span class="style1"></span>     
               						<input class="form-control"type="file" name=""/>                    
                                         </div>
+                                        <div class="form-group">
+                    <label class="label1">Place</label><span class="style1">*</span>
+						<input class="form-control" type="text" name="name"/>
+         </div>
+         <div class="form-group">
+                    <label class="label1">Date</label><span class="style1">*</span>
+						<input class="form-control" type="date" name="name"/>
+         </div>
+                                        
                                         </div>
                                       </div>
                                         <a href="AdmissionStudentParentGuardianDetails.html"><button type="" class="btn btn-primary">Save&Proceed</button></a>
                             	       
                            </div>
+                               
+                               
+                                     <div class="tab-pane fade" id="MedicalCertificate">
+                                    
+                                      			
+		
+				</br>
+                                       
+                                         <div class="row">
+                               <div class="col-lg-6">
+                                        
+                                          <div class="form-group">
+                                        <br></br>
+                                            <label class="label1"><br></br>1. I do hereby certify that I have examined Sri/Kumari.........................<br></br>a candidate seeking admission to B.E. degree course in the H.K.B.K. College of Engineering,Bangalore.<br></br>i) heiht ........................  iv) Eye sight ......................<br></br>ii) Weight ........................  Power of glasses, if used..................
+                                            <br></br>iii) Blood Group ........................     <br></br> <br></br>
+                                            2. I find him/her to be healthy and fit to take admission in Engineering Course.<br></br>
+                                            3. I am also satisfied by personal examination, that he/she has been vaccinated or bears marks of small pox vaccination.<br></br>
+                                            4. The applicant's age, according to his/her own statement is .............. years and by appearance about ................ years.<br></br>
+                                            5. Personal Marks Identification.   i)..........................<br></br>ii)....................
+                                            <br></br>
+                                            <align="right">Signature,Qualification and Designation of the Medical Examiners</align><br></br>
+                                            <br></br>
+                                            Station ..........<br>
+                                            </br>Date ............<br></br>
+                                            (To be examined by an Assistant Surgon or Practitioner who is a graduate or Licentiate in Medicine of 5 years standing and registered in the Medical Council)
+                       
+                                            </label><span class="style1"></span>
+                                             
+                                        </div>
+                                      
+        
+                                        
+                                        </div>
+                                      </div>
+                                        <a href="AdmissionStudentParentGuardianDetails.html"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                            	       
+                           </div>  
+                               
                                
                         </div>
                         <!-- /.Tab upload -->
