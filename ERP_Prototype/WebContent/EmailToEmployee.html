@@ -525,12 +525,7 @@
                                 </ul></li>
                                 
                                 </ul></li>
-                    
-                    
-                  
-                    
-                    
-				</ul>
+                                </ul>
             </div>
             <!-- /.sidebar-collapse -->
         </nav>
@@ -538,9 +533,10 @@
        
 
         <div id="page-wrapper">
+        <div class="column">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="page-header"><b>@Email</b>|<span class="style2">Email</span></h4>
+                    <h4 class="page-header"><b>@Email</b></h4>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -550,7 +546,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
                             </div>
                         	-->
-							<h6>Home>Email><b>Send email to emloyee</b></h6>
+							<h6>Home >Email ><b> Send email to emloyee</b></h6>
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
                         	
@@ -562,9 +558,8 @@
 							   <form role="" id="" method="" action="">
                                 <div class="form-control-sendemail1">       
 								<div class="form-group">
-                                            <label class="label1">Select Department</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                        </br>
+                                            <label class="label1">Select Department:<span class="astrik">*</span></label>
+                                         <span class="style1"></span>
 										    <select class="form-control" name="graduation">
 												<option>  Select a Department  </option>
 												<option>Computer Science and Engineering </option>
@@ -575,47 +570,45 @@
                                 </div>	
                                     </br></br>    
 							<div class="form-group">
-                                            <label class="label1">Select Recipient</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                           	</br>
+                                            <label class="label1">Select Recipient :<a class="astrik">*</a></label>
+                                           	<span class="style1"></span>
                                            	<select class="form-control" name="graduation">
 											<option>Select a Recipient  </option>
 											<option>Admin User </option>
 									        </select>
                              </div>
                                  </div>
-                                          &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
-                                          &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  
-                                          &nbsp; &nbsp;
-                                           &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; 
-                                          &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  
-                                          &nbsp; &nbsp;    
-                                         
+                                          
                                         <div class="form-control-sendemail">	
                                        
                                        <div>
-									   <label class="label1">Recipient</label>
+									   <label class="label1">Recipient:<span class="astrik">*</span></label>
                                        <span class="style1"></span>
-                                       <input type ="text" id="recipient" name="recipient" class="recipient"/>
+                                       <input type ="text" id="recipient" name="recipient" class="form-control"/>
 										
                                        </div>
                                       &nbsp; &nbsp; &nbsp;
 										<div>
 									     
-										<label class="label1">Subject</label>
+										<label class="label1">Subject:</label><span class="style1"></span>
                                        <span class="style1"></span>
-                                       <input type ="text" id="subject" name="recipient" class="subject"/>
+                                       <input type ="text" id="subject" name="recipient" class="form-control"/>
 										
                                        </div>
                                        
                                         &nbsp; &nbsp; &nbsp;
 										<div>
 									     
-										<label class="label1">Message</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<label class="label1">Message:<span class="astrik">*</span></label>
                                        <span class="style1"></span>
-                                       <textarea rows="4" cols="10"></textarea>
+                                       <textarea rows="4" cols="10" class="form-control"></textarea>
 										</div>
-										<a href="MailToSuccess.jsp" class="btn btn-primary">Send</a>
+										
 										<!--  <button><a href="MailToSuccess.jsp">Send</a></button> -->
+										
+                                       </div>
+                                        <div class="bar">
+                                       <a href="MailToSuccess.jsp" class="btn btn-primary" align="center">Send</a>
                                        </div>
                                        </form>
                                 
@@ -625,6 +618,10 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+           
+           
+           
+            </div>
         </div>
         <!-- /#page-wrapper -->
 

@@ -19,9 +19,9 @@
 
 <body>
 
-
     <div id="wrapper">
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 		
            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -525,105 +525,105 @@
                                 </ul></li>
                                 
                                 </ul></li>
-                    
-                    
-                  
-                    
-                    
-				</ul>
+                                </ul>
             </div>
             <!-- /.sidebar-collapse -->
         </nav>
         <!-- /.navbar-static-side -->
-
+       
 
         <div id="page-wrapper">
+        <div class="column">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="page-header"><b>@Email</b>|<span class="style2">Email</span></h4>
+                    <h4 class="page-header"><b>@Email</b></h4>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-							<!--
+            							<!--
 							<div class="alert alert-success">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
                             </div>
                         	-->
-							<h6>Home>Email><b>Send email to student</b></h6>
+							<h6>Home > Email ><b> Send email to students</b></h6>
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
                         	
-                     
+                        
                             <div class="row">
                                 <div class="col-lg-6">
                               
 
-									<form role="" id="" method="" action="">
-                                   <div class="form-control-sendemail1">       
-								
+							   <form role="" id="" method="" action="">
+                                <div class="form-control-sendemail1">       
 								<div class="form-group">
-                                            <label class="label1">Select Batch:</label><span class="style1"></span>
-                                              <span class="style1"></span>
-                                        </br>
-										     <select class="form-control" name="graduation">
-												<option>  Select a Batch  </option>
-												<option>2009-2013 </option>
-												<option>2010-2014</option>
-												<option>2011-2015</option>
+                                            <label class="label1">Select Batcht:<span class="astrik">*</span></label>
+                                         <span class="style1"></span>
+										    <select class="form-control" name="graduation">
+												<option>  Select a Department  </option>
+												<option>Computer Science and Engineering </option>
+												<option>Electrical and electronics</option>
+												<option>Electronics and communications</option>
 											</select>
                                             
-                                        </div>	
-                                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-										    										    
-                                           </div>
-                                           
-                                           <div class="form-control-sendemail">	
+                                </div>	
+                                    </br></br>    
+							<!-- <div class="form-group">
+                                            <label class="label1">Select Recipient :<a class="astrik">*</a></label>
+                                           	<span class="style1"></span>
+                                           	<select class="form-control" name="graduation">
+											<option>Select a Recipient  </option>
+											<option>Admin User </option>
+									        </select>
+                             </div> -->
+                                 </div>
+                                          
+                                        <div class="form-control-sendemail">	
                                        
-                                       <div>
-									   <label class="label1">Recipient:</label><span class="style1"></span>
-                                       <span class="style1"></span>
-                                       <input type ="text" id="recipient" name="recipient" class="recipient"/>
-										
-                                       </div>
-                                      &nbsp; &nbsp; &nbsp;
+                                      
+                                    
 										<div>
 									     
-										<label class="label1">Subject:</label><span class="style1"></span>&nbsp; &nbsp;
+										<label class="label1">Subject:</label><span class="style1"></span>
                                        <span class="style1"></span>
-                                       
-                                        <input type ="text" id="subject" name="recipient" class="subject"/>
+                                       <input type ="text" id="subject" name="recipient" class="form-control"/>
 										
                                        </div>
                                        
                                         &nbsp; &nbsp; &nbsp;
 										<div>
 									     
-										<label class="label1">Message</label><span class="style1"></span>&nbsp; &nbsp;
+										<label class="label1">Message:<span class="astrik">*</span></label>
                                        <span class="style1"></span>
-                                       
-                                        <textarea rows="4" cols="10"></textarea>
+                                       <textarea rows="4" cols="10" class="form-control"></textarea>
 										</div>
-										 
-										<a href="MailToSuccess.jsp" class="btn btn-primary">Send</a>
+										
 										<!--  <button><a href="MailToSuccess.jsp">Send</a></button> -->
-                                      </div>
+										
+                                       </div>
+                                        <div class="bar">
+                                       <a href="MailToSuccess.jsp" class="btn btn-primary" align="center">Send</a>
+                                       </div>
                                        </form>
-                              </div>
-                              </div>
-                              
-                              </div>
+                                
+                                <!-- /.col-lg-6 (nested) -->
+                           </div>   
+                </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+           
+           
+           
+            </div>
         </div>
         <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
+    </div>
+    
 
     <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
