@@ -17,6 +17,24 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     
       <script type= "text/javascript" src = "script/countries.js"></script>
+      
+      
+
+      
+           <!--  <style>
+#admissionstudentdetails label.error {
+        color: red;
+		
+		  padding-top: .3em;
+		  vertical-align: middle;  
+position: top;		  
+}
+#admissionstudentdetails input.error {
+        border: 1px solid red;
+}
+</style>
+  -->
+       
     
 </head>
 
@@ -541,8 +559,9 @@
         <!-- /.navbar-static-side -->
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
+        <form role="" id="admissionstudentdetails" method="" action="">
+            <div class="row">             
+              <div class="col-lg-12">
                    
                      <h4 class="page-header">Admission | <span class="style2">Step 1 - Student Details</span></h4>
                 </div>
@@ -561,7 +580,7 @@
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
                         	</div></div>
-                        <!-- <div class="panel-body"> -->
+                       
                             <div class="row">
                                 <div class="col-lg-12"> 
                                 
@@ -571,11 +590,11 @@
 
 <table><tr><td><div class="form-group">
                    <table> <tr><td><label class="label1">Admission No:</label><span class="style1">*</span></td><td>
-						<input class="form-control" type="text" name="name"/></td></tr></table>
+						<input class="form-control-admission" type="text" name="admission_no"/></td></tr></table>
          </div>   </td><td></td><td></td><td>        
 <div class="form-group">
               <table> <tr><td>      <label class="label1">Admission Date:</label><span class="style1">*</span>
-                                          </td>  <td><input type="date" class="form-control" name=""/> </td></tr></table>
+                                          </td>  <td><input type="date" class="form-control-admission" name="admission_date"/> </td></tr></table>
   </div></td></tr></table>
   <br>
   <ul class="nav nav-tabs">
@@ -593,7 +612,7 @@
                                 </li>
                             </ul>
  
-                            	       
+                            	      
                             	       
                             	       
                             	        <!-- Tab panes -->
@@ -605,7 +624,7 @@
 				<br>
   
   
-<div class="col-lg-6">
+                          <div class="col-lg-6">
 
 									<!-- <form role="" id="" method="" action=""> -->
                                 	
@@ -613,17 +632,17 @@
                                         
                                      <div class="form-group">
                                             <label class="label1">First Name</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="first_name">  
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="label1">Middle Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="middle_name">  
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="label1">Last Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="last_name">  
                                         </div>
                                         
                                         <div class="form-group">
@@ -638,12 +657,12 @@
                                         
                                          <div class="form-group">
                                             <label class="label1">Date Of Birth</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="">  
+                                            <input type="date" class="form-control" name="date_of_birth">  
                                         </div>
                                         <div class="form-group">
-                                        <label class="label1">Gender:</label><span class="style1"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-										<input type="radio" name="gender" id="man" value="Male" /> <label for="label">Male</label>
-										<input type="radio" name="gender" id="woman" value="Female" /> <label for="label">Female</label>
+                                        <label class="label1">Gender:</label><span class="style1">*</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+										<input type="radio" class="form-control-gender" name="gender" id="man" value="Male" /> <label for="label">Male</label>
+										<input type="radio"  class="form-control-gender" name="gender" id="woman" value="Female" /> <label for="label">Female</label>
                                         </div>
                                         
                                         
@@ -663,10 +682,8 @@
                                         </div>
                                           <div class="form-group">
                                             <label class="label1">Nationality </label>
-                                            <span class="style1"></span>
-											<select class="form-control" name="">
-												<option> select </option>
-											</select>     
+                                            <span class="style1">*</span>
+											<input type="text" class="form-control" name="nationality">
                                         </div>
                                           <div class="form-group">
                                             <label class="label1">Mother Tounge</label>
@@ -689,40 +706,40 @@
                                             <label class="label1">Caste</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="caste">  
                                         </div>  
-                                          <a href="#ContactDetails" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
-                            	     
+                                          <!-- <a href="#ContactDetails" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button>
+                            	     </div>
                                        </div>
                                        
                                 
-                                </div>
+                                
                                 <div class="tab-pane fade" id="ContactDetails">
                                    
-                                </br>
-                                <div class="row">
+                                <br>
+                                
                                <div class="col-lg-6">
                                
                                <div class="form-group">
                                <label class="label1"><b>Present Address</b></label><span class="style1"></span>
                                </div>
                                <div class="form-group">
-                                            <label class="label1">Address Line1</label><span class="style1"></span>
-                                            <input class="form-control" name="address_line1" id="user">    
+                                            <label class="label1">Address Line1</label><span class="style1">*</span>
+                                            <input class="form-control" name="present_address_line1" id="user">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">Address Line2</label><span class="style1"></span>
-                                            <input class="form-control" name="address_line2" id="user">    
+                                            <input class="form-control" name="present_address_line2" id="user">    
                                         </div>
                                         <div class="form-group">
-                                            <label class="label1">City</label><span class="style1"></span>
-                                            <input class="form-control" name="city" id="user">    
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="present_city" id="user">    
                                         </div>
                                <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1"></span>
-                                            <input class="form-control" name="pincode" id="user">    
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
+                                            <input class="form-control" name="present_pincode" id="user">    
                                         </div>
               <div class="form-group">
-                                            <label class="label1">Country</label><span class="style1"></span>
-                                          <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="country">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="present_country">
 <option >Select Country</option>
 </select>
 
@@ -730,8 +747,8 @@
                                         
   </div>
    <div class="form-group">
-                                            <label class="label1">State</label><span class="style1"></span>
-                                           <select class="form-control" name ="state" id ="state">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="present_state" id ="state">
 <option >Select State</option>
 </select>
 </div>
@@ -744,23 +761,23 @@
                                <label class="label1"><b>Permanent Address</b></label><span class="style1"></span>
                                </div>
                                <div class="form-group">
-                                            <label class="label1">Address Line1</label><span class="style1"></span>
-                                            <input class="form-control" name="address_line1" id="user">    
+                                            <label class="label1">Address Line1</label><span class="style1">*</span>
+                                            <input class="form-control" name="permanent_address_line1" id="user">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">Address Line2</label><span class="style1"></span>
-                                            <input class="form-control" name="address_line2" id="user">    
+                                            <input class="form-control" name="permanent_address_line2" id="user">    
                                         </div>
                                         <div class="form-group">
-                                            <label class="label1">City</label><span class="style1"></span>
-                                            <input class="form-control" name="city" id="user">    
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="permanent_city" id="user">    
                                         </div>
                                <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1"></span>
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
                                             <input class="form-control" name="pincode" id="user">    
                                         </div>
               <div class="form-group">
-                                            <label class="label1">Country</label><span class="style1"></span>
+                                            <label class="label1">Country</label><span class="style1">*</span>
                                           <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="country">
 <option >Select Country</option>
 </select>
@@ -769,7 +786,7 @@
                                         
   </div>
    <div class="form-group">
-                                            <label class="label1">State</label><span class="style1"></span>
+                                            <label class="label1">State</label><span class="style1">*</span>
                                            <select class="form-control" name ="state" id ="state">
 <option >Select State</option>
 </select>
@@ -789,26 +806,30 @@
                                             <input type="text" class="form-control" name="">  
                                         </div>
                                          <div class="form-group">
-                                            <label class="label1">Mobile</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <label class="label1">Mobile</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="mobile">  
                                         </div>
                                          <div class="form-group">
-                                            <label class="label1">Email</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
-                                        </div> </div>
+                                            <label class="label1">Email</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="email">  
+                                        </div> 
+                                        
+                                        
+                                        <!-- <a href="EducationalDetails" data-toggle="tab"> -->
+                                        <button type="submit" class="btn btn-primary">Save&Proceed</button>
+                                        <!-- </a> -->
                                         </div>
-                                        <a href="#EducationalDetails" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
                             	       </div>
                             	       
                             	       
                                    <div class="tab-pane fade" id="EducationalDetails">
                                     </br>
-                                <div class="row">
+                                
                                <div class="col-lg-6">
                                
                                <div class="form-group">
                                             <label class="label1">Last College/School Attended</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="last_college">  
                                         </div>
                                <div class="form-group">
                                             <label class="label1">Date of Entering the Institution</label><span class="style1"></span>
@@ -867,21 +888,21 @@
                                         <div class="form-group"> <table class="table table-striped table-bordered table-hover">
 										 <tr><th> </th><th>Year</th><th>Institution</th>
 										 <th>Class</th><th> Remarks</th></tr>
-										<tr><td>1</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										<tr><td>2</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 <tr><td>3</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										<tr><td>1</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										<tr><td>2</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										 <tr><td>3</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
 										 
-										  <tr><td>4</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										  <tr><td>5</td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										  <tr><td>4</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
+										  <tr><td>5</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
 										 
 										 </table></div> 
 										 </div>
                                         </div>
                                    <div class="col-lg-6">
-                                   <a href="#Settings" data-toggle="tab"><br></br><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                                   <!-- <a href="#Settings" data-toggle="tab"> --><br></br><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
                             	       </div>
-                            	       </div>
-                                   </div>    
+                            	      </div>
+                                      
                                 <div class="tab-pane fade" id="Settings">
                                     
                                    
@@ -902,7 +923,7 @@
                                            <span></span><span></span> <input  type="checkbox" name="">  
                                         </div>
                                         </div></div>
-                                        <a href="#UploadPhoto" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                                       <!--  <a href="#UploadPhoto" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
                             	        </div>
                            
                             	       
@@ -931,7 +952,7 @@
                                         
                                         </div>
                                       </div>
-                                       <a href="#MedicalCertificate" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                                       <a href="#MedicalCertificate" data-toggle="tab"><button type="submit" class="btn btn-primary">Save&Proceed</button></a>
                             	        
                            </div>
                                
@@ -970,19 +991,20 @@
                                       </div>
                                         <a href="AdmissionStudentParentGuardianDetails.html"><button type="" class="btn btn-primary">Save&Proceed</button></a>
                             	       
-                           </div>  
+                           </div> 
+                           
+                           </div>
+                           </div>
+                            </div>
+                           </form>
+                           </div>
+                           
+                           
                                
                                
-                        </div>
-                        <!-- /.Tab upload -->
-                    </div>
-                    <!-- /.Tab -->
-                    </div>
-                  </div>  
-                    <!-- /.panel -->
-                
-        </div>
-        <!-- /#page-wrapper -->
+                               
+                               
+                    
 
     
 
@@ -990,6 +1012,11 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    
+    
+          
+  
+    
 
     <!-- Page-Level Plugin Scripts - Blank -->
 
@@ -999,6 +1026,12 @@
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
     
      <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+     
+     
+     
+     
+         
+     
     
 <!--     <script>
     $(document).ready(function(){
@@ -1009,5 +1042,8 @@
     });
 </script>
  -->
+ 
+ 
+     
 </body>
 </html>
