@@ -17,23 +17,41 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     
       <script type= "text/javascript" src = "script/countries.js"></script>
-      
+    <script>  
+      /*  $(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+}; 
+
+ */
+
+
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+</script>
       
 
-      
-           <!--  <style>
-#admissionstudentdetails label.error {
-        color: red;
-		
-		  padding-top: .3em;
-		  vertical-align: middle;  
-position: top;		  
-}
-#admissionstudentdetails input.error {
-        border: 1px solid red;
-}
-</style>
-  -->
+ 
        
     
 </head>
@@ -559,7 +577,7 @@ position: top;
         <!-- /.navbar-static-side -->
 
         <div id="page-wrapper">
-        <form role="" id="admissionstudentdetails" method="" action="">
+        <form role="" id="admissionstudentdetails" method="post" action="">
             <div class="row">             
               <div class="col-lg-12">
                    
@@ -643,7 +661,7 @@ position: top;
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label class="label1">Last Name</label><span class="style1"></span>
+                                            <label class="label1">Last Name</label><span class="style1">*</span>
                                             <input type="text" class="form-control" name="last_name">  
                                         </div>
                                         
@@ -661,11 +679,12 @@ position: top;
                                             <label class="label1">Date Of Birth</label><span class="style1">*</span>
                                             <input type="date" class="form-control" name="date_of_birth">  
                                         </div>
-                                        <div class="form-group">
-                                        <label class="label1">Gender:</label><span class="style1">*</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-										<input type="radio" class="form-control-gender" vertical-align: middle; name="gender" id="woman" value="Female" /> <label class="form-control-gender">Female</label>
-										<input type="radio"  class="form-control-gender" vertical-align: middle; name="gender" id="man" value="Male" /> <label class="form-control-gender">Male</label>
+                                         <div class="form-group">
+                                        <label class="label1">Gender:</label><span class="style1">*</span>
+                                        <input type="radio" class="form-control-gender"  name="gender" id="woman" value="Female" /> <label class="form-control-gender">Female</label>
+										<input type="radio"  class="form-control-gender"  name="gender" id="man" value="Male" /> <label class="form-control-gender">Male</label>
                                         </div>
+
                                         
                                         
                                          <div class="form-group">
@@ -725,7 +744,7 @@ position: top;
                                </div>
                                <div class="form-group">
                                             <label class="label1">Address Line1</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_address_line1" id="user">    
+                                            <input class="form-control" name="present_address_line1" id="present_address_line1">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">Address Line2</label><span class="style1"></span>
@@ -733,15 +752,15 @@ position: top;
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_city" id="user">    
+                                            <input class="form-control" name="present_city" id="present_city">    
                                         </div>
                                <div class="form-group">
                                             <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_pincode" id="user">    
+                                            <input class="form-control" name="present_pincode" id="present_pincode">    
                                         </div>
               <div class="form-group">
                                             <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="present_country">
+                                          <select class="form-control" onchange="print_state('present_state',this.selectedIndex);" id="present_country" name ="present_country">
 <option >Select Country</option>
 </select>
 
@@ -750,12 +769,12 @@ position: top;
   </div>
    <div class="form-group">
                                             <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="present_state" id ="state">
+                                           <select class="form-control" name ="present_state" id ="present_state">
 <option >Select State</option>
 </select>
 </div>
   
-		<script language="javascript">print_country("country");</script> 
+		<script language="javascript">print_country("present_country");</script> 
    
  
                                
@@ -764,23 +783,23 @@ position: top;
                                </div>
                                <div class="form-group">
                                             <label class="label1">Address Line1</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_line1" id="user">    
+                                            <input class="form-control" name="permanent_address_line1" id="permanent_address_line1">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">Address Line2</label><span class="style1"></span>
-                                            <input class="form-control" name="permanent_address_line2" id="user">    
+                                            <input class="form-control" name="permanent_address_line2" id="permanent_address_line2">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_city" id="user">    
+                                            <input class="form-control" name="permanent_city" id="permanent_city">    
                                         </div>
                                <div class="form-group">
                                             <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="pincode" id="user">    
+                                            <input class="form-control" name="permanent_pincode" id="permanent_pincode">    
                                         </div>
               <div class="form-group">
                                             <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onchange="print_state('state',this.selectedIndex);" id="country" name ="country">
+                                          <select class="form-control" onchange="print_state('permanent_state',this.selectedIndex);" id="permanent_country" name ="permanent_country">
 <option >Select Country</option>
 </select>
 
@@ -789,12 +808,12 @@ position: top;
   </div>
    <div class="form-group">
                                             <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="state" id ="state">
+                                           <select class="form-control" name ="permanent_state" id ="permanent_state">
 <option >Select State</option>
 </select>
 </div>
   
-		<script language="javascript">print_country("country");</script> 
+		<script language="javascript">print_country("permanent_country");</script> 
                                
                                
                                
@@ -941,20 +960,23 @@ position: top;
                                         
                                           <div class="form-group">
                                             <label class="label1">Upload User Photo(500KB Max)</label><span class="style1"></span>     
-              						<input class="form-control"type="file" name=""/>                    
+              					  <input type='file' />
+<img id="myImg" src="#" alt="your image"/>
+              						     
                                         </div>
+                                        
                                         <div class="form-group">
                     <label class="label1">Place</label><span class="style1">*</span>
-						<input class="form-control" type="text" name="name"/>
+						<input class="form-control" type="text" name="place" id="place"/>
          </div>
          <div class="form-group">
                     <label class="label1">Date</label><span class="style1">*</span>
-						<input class="form-control" type="date" name="name"/>
+						<input class="form-control" type="date" name="date" id="date"/>
          </div>
                                         
                                         </div>
                                       </div>
-                                       <a href="#AdditionalDetails" data-toggle="tab"><button type="submit" class="btn btn-primary">Save&Proceed</button></a>
+                                      <!--  <a href="#AdditionalDetails" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
                             	        
                            </div>
                                
@@ -968,8 +990,8 @@ position: top;
                                <div class="col-lg-6">
                                         
                                            <div class="form-group">
-                                            <label class="label1">Extra Carricular</label><span class="style1">*</span>
-                                            <select class="form-control" name="course&batch">
+                                            <label class="label1">Extra Carricular</label><span class="style1"></span>
+                                            <select class="form-control" name="extra_carricular">
 												<option>  Select Extra carricular </option>
 												<option>Athletics</option>
 												</select>
@@ -977,7 +999,7 @@ position: top;
                                         
                                         </div>
                                       </div>
-                                       <a href="#MedicalCertificate" data-toggle="tab"><button type="submit" class="btn btn-primary">Save&Proceed</button></a>
+                                       <!-- <a href="#MedicalCertificate" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button></a>
                             	        
                            </div>
                                      <div class="tab-pane fade" id="MedicalCertificate">
@@ -1049,9 +1071,10 @@ position: top;
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
     
      <!-- Page-Level Demo Scripts - Blank - Use for reference -->
-     
-     
-     
+  <nav>
+   
+ 
+  </nav>    
      
          
      
@@ -1069,4 +1092,13 @@ position: top;
  
      
 </body>
+
+  <!-- Validation jquery plugin -->
+ 
+<script type="text/javascript" src="jquery/jquery.validate.js">
+</script>
+<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>
+<script type="text/javascript" src="jquery/admissionstudent.js">
+</script>
 </html>

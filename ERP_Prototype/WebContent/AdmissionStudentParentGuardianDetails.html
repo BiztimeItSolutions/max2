@@ -17,6 +17,9 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     
       <script type= "text/javascript" src = "script/countries.js"></script>
+      
+      
+      
     
 </head>
 
@@ -541,6 +544,7 @@
         <!-- /.navbar-static-side -->
 
         <div id="page-wrapper">
+         <form role="" id="admissionparentdetails" method="" action="">	
             <div class="row">
                 <div class="col-lg-12">
                    
@@ -565,16 +569,17 @@
                             <div class="row">
                                 <div class="col-lg-6"> 
                                 
-                                
+                               
  <div class="form-group">                             
 <label>Fields Marked with <span class="style1">*</span> must be filled</label></div>
 </br>
 
 <div class="form-group">
                     <label class="label1">Student Admission No:</label><span class="style1">*</span>
-						<input class="form-control" type="text" name="name"/>
+						<input class="form-control" type="text" name="student_admission_no"/>
          </div> 
  </br>
+
    </div>
     <div class="col-lg-12">
   <ul class="nav nav-tabs">
@@ -591,29 +596,29 @@
 <div class="row">
 <div class="col-lg-6">
 
-									<!-- <form role="" id="" method="" action=""> -->
-                                	
+								<br/>
+                               <!--  	<form role="" id="form" method="" action="">  -->
 										 
                                         
                                      <div class="form-group">
                                             <label class="label1">First Name</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="first_name" id="first_name">  
                                         </div>
                                         
                                                                     
                                         <div class="form-group">
                                             <label class="label1">Last Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="last_name" id="last_name">  
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">Relation</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="relation" id="relation">  
                                         </div>
                                         
                                         
                                          <div class="form-group">
                                             <label class="label1">Date Of Birth</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="">  
+                                            <input type="date" class="form-control" name="date" id="date">  
                                         </div>
                                         
                                         
@@ -622,24 +627,28 @@
                                           <div class="form-group">
                                             <label class="label1">Education</label>
                                             <span class="style1"></span>
-											<input type="text" class="form-control" name="">  
+											<input type="text" class="form-control" name="education" id="education">  
                                         </div>
                                           
                                           <div class="form-group">
                                             <label class="label1">Profession</label>
                                             <span class="style1"></span>
-											<input type="text" class="form-control" name="">  
+											<input type="text" class="form-control" name="profession" id="">  
                                         </div>
                                                                              
                                           <div class="form-group">
                                             <label class="label1">Annual Income</label>
                                             <span class="style1"></span>
-											<input type="text" class="form-control" name="">  
+											<input type="text" class="form-control" name="income" id="">  
                                         </div>
                                           
-                                           
+                                          <!--   <a href="#ContactDetails" data-toggle="tab"> -->
+                                          <button type="submit" class="btn btn-primary">Save&Proceed</button>
+                                         
                                        </div></div>
-                                       <a href="#ContactDetails" data-toggle="tab"><button type="" class="btn btn-primary">Save&Proceed</button></a>
+                                      <!--  -->
+                                      
+                                   
                             	       </div>
                                        
 								<div class="tab-pane fade" id="ContactDetails">
@@ -711,7 +720,7 @@
                             	       </div></div>
                                        </div>
                                       </div>
-                                        	       
+                                       </form> 	       
                             
                                 <!-- /.col-lg-6 (nested) -->
                               </div>
@@ -727,6 +736,18 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    
+     <!-- Validation jquery plugin -->
+ 
+<script type="text/javascript" src="jquery/jquery.validate.js">
+</script>
+<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>
+<script type="text/javascript" src="jquery/admissionparent.js">
+</script>
+ 
+
+ 
 
     <!-- Page-Level Plugin Scripts - Blank -->
 
@@ -735,16 +756,7 @@
 
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
     
-     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
-    
-<!--     <script>
-    $(document).ready(function(){
-        $("#Button1").click(function(event){
-            $(".message").show();
-            $(".message").fadeOut(500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
-        });
-    });
-</script>
- -->
+
+
 </body>
 </html>
