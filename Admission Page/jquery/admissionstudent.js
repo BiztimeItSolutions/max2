@@ -14,7 +14,7 @@
 	 $.validator.addMethod("fld2", function(value, element) {
 	        return /^\d{6}$/i.test(value);
 	    },  "Please Enter 6 digits");
-	 $.validator.addMethod("fld1", function(value, element) {
+	 $.validator.addMethod("alphabetsonly", function(value, element) {
 	        return /[A-Za-z]{1,}$/i.test(value);
 	    },  "Please enter alphabets");
 	 
@@ -25,226 +25,331 @@ $(function() {
         rules : {
         	
         	
-        	nationality:"nation",
-        	mobile:"num",
-        	email:"email",
-        	present_pincode:"fld2",
-        	permanent_pincode:"fld2",
-        	first_name:"fld1",
-        	last_name:"fld1",
+        	Nationality:"nation",
+        	Mobile:"num",
+        	Email:"email",
+        	PresentPincode:"fld2",
+        	PermanentPincode:"fld2",
+        	EmergencyPincode:"fld2",
+        	FirstName:"alphabetsonly",
+        	LastName:"alphabetsonly",
+        	GuardianFirstName:"alphabetsonly",
+        	GuardianLastName:"alphabetsonly",
+        	MotherFirstName:"alphabetsonly",
         	
-        	admission_no : 
-			{
-                    required : true     
-            },
-            admission_date:
-            	{
-            	
-            	   required :true
-            	
-            	},
-                first_name : 
+        	
+        	
+            	FirstName : 
 				{
                         required : true,
-                        fld1: true
+                        alphabetsonly: true
                 },
-                last_name : 
+                LastName : 
 				{
                         required : true,
-                        fld1: true
+                        alphabetsonly: true
                 },
-                date_of_birth : 
+                DateOFBirth : 
 				{
                         required : true     
                 },
-                gender :{
+                Gender :{
                 	
                 	required : true
                 },
-                nationality :{
+                Nationality :{
                 	
                 	required : true,
                 	nation: true
                 },
-                present_address_line1 :{
+                PresentAddressLine1 :{
                 	
                 	required : true
                 
                 },
-                present_city :{
+                PresentCity :{
                 	
                 	required : true
                 	
                 },
-                present_pincode :{
+                PresentPincode :{
                 	
                 	required : true,
                 	fld2:true
                 },
-                present_country :{
+                PresentCountry :{
                 	
                 	required : true
                 },
-                present_state :{
+                PresentState :{
                 	required : true
                 },
                 
                 
-                permanent_address_line1 :
+                PermanentAddressLine1 :
                 	{
                 	
                 	required : true
                 	
                 	},
-                permanent_city :{
+                	PermanentCity :{
                 	
                 	required :true
                 	
                 },
-                permanent_pincode :
+                PermanentPincode :
                 	{
                 	
                 	required : true,
                 	fld2:true
                 	},
-                	permanent_country :
+                	PermanentCountry :
                 	{
                 	
                 	required : true
                 	
                 	},
            
-                	permanent_state :
+                	PermanentState :
                 		{
                 		
                 		required : true
                 		
                 		},
                 	
-                mobile : 
+                		               		
+                   		EmergencyAddressLine1 :
+                     	{
+                     	
+                     	required : true
+                     	
+                     	},
+                     	EmergencyCity :{
+                     	
+                     	required :true
+                     	
+                     },
+                     EmergencyPincode :
+                     	{
+                     	
+                     	required : true,
+                     	fld2:true
+                     	},
+                     	EmergencyCountry :
+                     	{
+                     	
+                     	required : true
+                     	
+                     	},
+                
+                     	EmergencyState :
+                     		{
+                     		
+                     		required : true
+                     		
+                     		},
+                     	
+                     		Mobile : 
 				{
                         required : true, 
                         num : true
                 },
 				
-				email: 
-          {
-            required: true,
-            email: true
-          },
-                place :
-        		{
-        		
-        		required : true
-        		
-        		},
-        		date :
-        		{
-        		
-        		required : true
-        		
-        		},
+                Email: 
+                {
+                	required: true,
+                	email: true
+                },
+                
+                GuardianFirstName : 
+				{
+                        required : true,
+                        alphabetsonly: true
+                },
+                GuardianLastName : 
+				{
+                        required : true,
+                        alphabetsonly: true
+                },
+                Relation : 
+				{
+                        required : true
+                        
+                },
+                MotherFirstName : 
+				{
+                        required : true,
+                        alphabetsonly: true
+                },
+                ParentOccupation : 
+				{
+                        required : true
+                        
+                },
+                ParentAnnualIncome : 
+				{
+                        required : true
+                        
+                },
+                
+                
+                
+                
+                
+              
         		
 				
         },
         messages : {
-        	admission_no : 
-			{
-			required : "Please enter an Admission Number", 
-			},
-			admission_date :
-				{
-				required : "Please enter an Admission Date",
-				},
-				first_name : 
+        	
+				FirstName : 
 				{
 					required : "Please enter a First Name",     
                 },
-                last_name : 
+                LastName : 
 				{
                 	required : "Please enter a Last Name", 
                 },
-                date_of_birth : 
+                DateOFBirth : 
 				{
                         required : "Please enter a Date of Birth ",   
                 },
-                gender :{
+                Gender :{
                 	
                 	required :"Please enter a Gender",
                 },
-                nationality :{
+                Nationality :{
                 	
                 	required : "Please enter a Nationality",
                 	
                 },
-                present_address_line1 :{
+                PresentAddressLine1 :{
                 	
                 	required : "Please enter a Address Line1",
                 
                 },
 
-                present_city :{
+                PresentCity :{
                 	
                 	required : "Please enter a City",
                 	
                 },
-                present_pincode :{
+                PresentPincode :{
                 	
                 	required : "Please enter a Pincode",
                 },
-                present_country :{
+                PresentCountry :{
                 	
                 	required : "Please enter a Country",
                 },
-                present_state :{
+                PresentState :{
                 	required : "Please enter a State",
                 },
                 
                 
-                permanent_address_line1 :
+                PermanentAddressLine1 :
                 	{
                 	
                 	required : "Please enter a Address Line1",
                 	
                 	},
-                permanent_city :{
+                	PermanentCity :{
                 	
                 	required :"Please enter a City",
                 	
                 },
-                permanent_pincode :
+                PermanentPincode :
                 	{
                 	
                 	required : "Please enter a Pincode",
                 	
                 	},
-                permanent_country :
+                	PermanentCountry :
                 	{
                 	
                 	required : "Please enter a Country",
                 	
                 	},
            
-                	permanent_state :
+                	PermanentState :
                 		{
                 		
                 		required : "Please enter a State",
                 		
                 		},
                 	
-                mobile : 
+                		
+                		EmergencyAddressLine1 :
+                     	{
+                     	
+                     	required : "Please enter a Address Line1",
+                     	
+                     	},
+                     	EmergencyCity :{
+                     	
+                     	required :"Please enter a City",
+                     	
+                     },
+                     EmergencyPincode :
+                     	{
+                     	
+                     	required : "Please enter a Pincode",
+                     	
+                     	},
+                     	EmergencyCountry :
+                     	{
+                     	
+                     	required : "Please enter a Country",
+                     	
+                     	},
+                
+                     	EmergencyState :
+                     		{
+                     		
+                     		required : "Please enter a State",
+                     		
+                     		},
+                     	                		               		
+                		              	               		
+                		
+                     		Mobile : 
 				{
                         required : "Please enter a Valid Mobile Number",     
                 },
 				
-                place : 
+                Email : 
 				{
-                        required : "Please enter a Place",     
+                        required : "Please enter a Valid Email ID",     
                 },
-                date : 
+                
+                GuardianFirstName : 
 				{
-                        required : "Please enter a Date",     
+					required : "Please enter a First Name",     
                 },
+                GuardianLastName : 
+				{
+                	required : "Please enter a Last Name", 
+                },
+                Relation : 
+				{
+                	required : "Please enter a Relation", 
+                },
+                MotherFirstName : 
+				{
+					required : "Please enter a First Name",     
+                },
+                ParentOccupation : 
+				{
+                	required : "Please enter a ParentOccupation", 
+                },
+                ParentAnnualIncome : 
+				{
+                	required : "Please enter a Parent Annual Income", 
+                },
+                
+                
+                
+               
                
 				
 				
