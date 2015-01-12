@@ -6115,6 +6115,31 @@ input.error {
 	margin:0;
 	
 }
+
+
+label.error{ 
+	width: 80%; 
+	display: inline; 
+	float: right; 
+	color: red; 
+	padding-right: 10px;
+	list-style:none;
+	text-align:right;
+	font-family:Arial, Helvetica, sans-serif;
+	} 
+.elementRow input{ width:96%;}
+
+input.error {
+	border:1px solid red;
+	background:#FEEFEB;
+	color:#A60707;
+}
+.error-message p{
+	color:#F00;
+	text-align:right;
+	font-weight:normal;
+	margin:0;
+}
 /*validation ends*/
 
 .form-control-smallbox {
