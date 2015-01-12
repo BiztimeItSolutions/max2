@@ -6111,11 +6111,27 @@ input.error {
 .error-message p{
 	color:#F00;
 	text-align:right;
-	font-weight:normal;
-	margin-bottom: 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
 	
 }
 /*validation ends*/
+
+.form-control-smallbox {
+  float:right;
+  display: block;
+  width: 67px;
+  height: 25px;
+  padding: 0px 0px;
+  font-size: 12px;
+ 
+  color: #555;
+ 
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
 

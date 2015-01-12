@@ -19,6 +19,7 @@
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
+
 </head>
 
 
@@ -57,17 +58,66 @@
                   </div>
 				  
 				   <div class="form-group">
-                   		<label class="label1">Description:</label><span class="style1"></span>
-                	    <input type="text" class="form-control" name="FirstName" placeholder="Write the description">  
-		    	   </div>
+                    	                        <label class="label1">Description</label><span class="style1"></span>
+                	                            <input type="text" class="form-control" name="Descripton" placeholder="Write Descripton">  
+		    	                        </div>
 				   
 				   <div class="form-group">
                    		<label class="label1">Course Duration:</label><span class="style1"></span>
-                	    <input type="text" class="form-control" name="FirstName" placeholder="First Name">  
+                	     
+                	   <input type="text" class="form-control-smallbox" id="date" name="startDate" placeholder="Year">
+                	   
+                                            
+                                            <select class="form-control-smallbox" name="BloodGroup">
+												<option>Month</option>
+												<option>Jan</option>
+												<option>Feb</option>
+												<option>Mar</option>
+												<option>Apr</option>
+												<option>May</option>
+												<option>Jun</option>
+												<option>Jul</option>
+												<option>Aug</option>
+												<option>Sep</option>
+												<option>Oct</option>
+												<option>Nov</option>
+												<option>Dec</option>
+												
+											</select>  
+                                        
+                	    
+                	    <input type="text" class="form-control-smallbox" name="Semester" placeholder="Semester"> 
 		    	   </div>
-				  
-				   
-					
+				  <div class="form-group">
+                   		<label class="label1">Course Duration:</label><span class="style1"></span>
+                   		<input name="date_of_birth"  value="" class="dropdate" class="form-control"> 
+                	    </div>
+				    <div class="form-group">
+                   		<label class="label1">Eligibility:</label><span class="style1"></span>
+                	     
+                	   
+                	    <input type="text" class="form-control-smallbox" name="Marks" placeholder="%/Marks">
+                                            
+                                            <select class="form-control-smallbox" name="Eligibility">
+												<option>Eligibility</option>
+												<option>Degree</option>
+												<option>PG</option>
+												<option>!0th</option>
+												
+												
+											</select>  
+                                        
+                	   
+		    	   </div>
+				  <div class="form-group">
+                   		<label class="label1">Subjects:</label><span class="style1"></span>
+                	    <input type="text" class="form-control" name="Subjects" placeholder="Write the Subjects">  
+		    	   </div>
+		    	   <div class="form-group">
+                   		<label class="label1">Remarks:</label><span class="style1"></span>
+                	    <textarea class="form-control"></textarea>  
+		    	   </div>
+					<button type="submit" class="btn btn-primary">Save</button>
 				</div>
                 <!-- /.col-lg-5 -->
          </div>
@@ -92,7 +142,19 @@
     <script src="js/sb-admin.js"></script>
 
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
-	
+	<script src="jquery/date.format.js"></script>
+<script src="jquery/jquery-dropdate.js"></script>
+<script>
+$(document).ready(function(){
+    $('.dropdate').dropdate({
+        dateFormat:'mm/dd/yyyy'
+    });
+});
+$(document).on('click', '.show', function(e){
+    alert('Result: ' + $('.dropdate').val());
+});
+</script>
+
 </body>
 
 </html>

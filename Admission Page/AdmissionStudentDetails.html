@@ -561,7 +561,31 @@
                                     </div>
 									<hr>
 						
-									<button type="submit" class="btn btn-primary">SaveAndProceed</button>
+									<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">SaveAndProceed</button>
+									
+									
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Do you really want to save!
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+									
+									
 
 							   </div><!--Col-5  -->
 							</div><!--row -->										
@@ -994,7 +1018,7 @@
 var rowCount = 1;
 function addMoreRows(frm) {
 rowCount ++;
-var recRow = '<p id="rowCount'+rowCount+'"><tr><td></td><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /></td></tr><a href="javascript:void(0);" onclick="removeRow('+rowCount+');">Delete</a></p>';
+var recRow = '<table><p id="rowCount'+rowCount+'"><a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><tr><td></td><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /></td></tr>Delete</a></table></p>';
 
 jQuery('#addedRows').append(recRow);
 }
