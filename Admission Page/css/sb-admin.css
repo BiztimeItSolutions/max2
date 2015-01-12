@@ -26,13 +26,9 @@
 	
 }
 /*for onlyform page start*/
-#page-wrapper1 {
-    padding: 0 5px;
-    min-height: 568px;
-	/*height:300px;*/
-    background-color: #fff;
-	
-}
+
+
+
 /*for onlyform page end*/
 @media(min-width:768px) {
     #page-wrapper {
