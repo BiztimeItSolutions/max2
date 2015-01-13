@@ -797,22 +797,103 @@
 											
 										</div>
 									</div>
-									
+									<div class="row">
+									<div class="col-lg-5">
+										<div class="form-group">
+				                               <label class="label1"><b>Guardian Contact Address</b></label><span class="style1"></span>                               
+											 </div>
+			                               <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="GuardianAddressLine1" id="GuardianAddressLine1" placeholder="Guardian address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="GuardianAddressLine2" id="GuardianAddressLine2" placeholder="Guardian address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="GuardianCity" id="GuardianCity" placeholder="Guardian address city">    
+                	                        </div>
+                    			           <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="GuardianPincode" id="GuardianPincode" placeholder="Guardian address pincode">    
+			                               </div>
+            							                 <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onChange="print_state('GuardianState',this.selectedIndex);" id="GuardianCountry" name ="GuardianCountry">
+<option >Select Country</option>
+</select>
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="GuardianState" id ="GuardianState">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("GuardianCountry");</script> 
+		</div>
+		
+		
+		<div class="col-lg-5">
+			<div class="form-group">
+				                               <label class="label1"><b>Father/Mother Contact Address</b></label><span class="style1"></span>                               
+											 </div>
+			                               <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="FatherAddressLine1" id="FatherAddressLine1" placeholder="Father/Mother address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherAddressLine2" id="FatherAddressLine2" placeholder="Father/Mother address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="FatherCity" id="FatherCity" placeholder="Father/Mother address city">    
+                	                        </div>
+                    			           <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="FatherPincode" id="FatherPincode" placeholder="Father/Mother address pincode">    
+			                               </div>
+            							                 <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onChange="print_state('FatherState',this.selectedIndex);" id="FatherCountry" name ="FatherCountry">
+<option >Select Country</option>
+</select>
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="FatherState" id ="FatherState">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("FatherCountry");</script>
+		</div>
+		</div>
+		<br><br>
 									<div class="row">		
 										<div class="col-lg-5">
 											<div class="form-group">
         	                                    <label class="label1">Parent Occupation</label><span class="style1">*</span>
             	                                <input class="form-control" name="ParentOccupation" id="ParentOccupation" placeholder="Enter parent occupation">    
                 	                        </div>
-											<div class="form-group">
+
+													<div class="form-group">
         	                                    <label class="label1">Annual Income</label><span class="style1">*</span>
             	                                <input class="form-control" name="ParentAnnualIncome" id="ParentAnnualIncome" placeholder="Enter parent annual income">    
                 	                        </div>
 
                     			        	<hr>
 									   </div><!-- Col 5-->
+							<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="ParentOfficePhone" id="ParentOfficePhone" placeholder="Parent Office Phone Number">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
 									  </div><!--row-->
 									  
+										
 									  <button type="submit" class="btn btn-primary">SaveAndProceed</button>
                                 </div>
 								
@@ -955,7 +1036,7 @@
 <p><b>Institutions at which the applicatn studied during the last five years(Reasons of break in continuity may be stated in the remarks column commencing from VIII Standard to XII Standart</b></p>				
                       
 				  
-<table class="table table-striped table-bordered table-hover" rules="all">
+<table class="table table-striped table-bordered table-hover" id="dataTable">
 
 	<tr>
    		<td><span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onClick="addMoreRows(this.form);">Add More</span></td>
@@ -965,6 +1046,7 @@
 		<td>Remarks</td>
 
 	</tr>
+	
 	<tr id="rowId">
 	     <td></td>
 		<td><input name="" type="text"  value="" class="form-control" /></td>
@@ -972,10 +1054,11 @@
 		<td><input name="" type="text"  value="" class="form-control" /></td>
 		<td><input name="" type="text"  value="" class="form-control" /></td>
 
-	</tr>
 	
-	</table>
-	<tr><div id="addedRows"></div></tr>
+	
+	</tr></table>
+	
+	<div id="addedRows"></div>
 	
 		
 	
@@ -1013,13 +1096,20 @@
     <script src="js/sb-admin.js"></script>
 
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    
+    
 	
+<script language="javascript">function addRow(tableID){var table=document.getElementById(tableID);var rowCount=table.rows.length;var row=table.insertRow(rowCount);var colCount=table.rows[0].cells.length;for(var i=0;i<colCount;i++){var newcell=row.insertCell(i);newcell.innerHTML=table.rows[0].cells[i].innerHTML;switch(newcell.childNodes[0].type){case"text":newcell.childNodes[0].value="";break;case"checkbox":newcell.childNodes[0].checked=false;break;case"select-one":newcell.childNodes[0].selectedIndex=0;break;}}}
+function deleteRow(tableID){try{var table=document.getElementById(tableID);var rowCount=table.rows.length;for(var i=0;i<rowCount;i++){var row=table.rows[i];var chkbox=row.cells[0].childNodes[0];if(null!=chkbox&&true==chkbox.checked){if(rowCount<=1){alert("Cannot delete all the rows.");break;}
+table.deleteRow(i);rowCount--;i--;}}}catch(e){alert(e);}}</script>
+
+
 
 <script type="text/javascript">
 var rowCount = 1;
 function addMoreRows(frm) {
 rowCount ++;
-var recRow = '<table><p id="rowCount'+rowCount+'"><a href="javascript:void(0);" onclick="removeRow('+rowCount+');"><tr><td></td><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /></td></tr>Delete</a></table></p>';
+var recRow = '<p id="rowCount'+rowCount+'"><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /><a href="javascript:void(0);" onclick="removeRow('+rowCount+');">Delete</a></p>';
 
 jQuery('#addedRows').append(recRow);
 }
