@@ -64,45 +64,69 @@
 				   
 				   <div class="form-group">
                    		<label class="label1">Course Duration:</label><span class="style1"></span>
-                	     
-                	   <input type="text" class="form-control-smallbox" id="date" name="startDate" placeholder="Year">
-                	   
-                                            
-                                            <select class="form-control-smallbox" name="BloodGroup">
+                	      <select class="form-control-3smallbox" name="Semester">
+												<option>Semester</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+												
+											</select> 
+											
+											 <select class="form-control-3smallbox" name="Month">
 												<option>Month</option>
-												<option>Jan</option>
-												<option>Feb</option>
-												<option>Mar</option>
-												<option>Apr</option>
-												<option>May</option>
-												<option>Jun</option>
-												<option>Jul</option>
-												<option>Aug</option>
-												<option>Sep</option>
-												<option>Oct</option>
-												<option>Nov</option>
-												<option>Dec</option>
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+												<option>9</option>
+												<option>10</option>
+												<option>11</option>
+												<option>12</option>
+											</select>  
+                                       
+                	   <select class="form-control-3smallbox" name="Year">
+                	   							<option>Year</option>
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												
 												
 											</select>  
-                                        
-                	    
-                	    <input type="text" class="form-control-smallbox" name="Semester" placeholder="Semester"> 
+                	   
+                                            
+                                           
+                	  
+                	     
 		    	   </div>
-				  <div class="form-group">
+				 <!--  <div class="form-group">
                    		<label class="label1">Course Duration:</label><span class="style1"></span>
                    		<input name="date_of_birth"  value="" class="dropdate" class="form-control"> 
-                	    </div>
+                	    </div> -->
 				    <div class="form-group">
                    		<label class="label1">Eligibility:</label><span class="style1"></span>
                 	     
                 	   
-                	    <input type="text" class="form-control-smallbox" name="Marks" placeholder="%/Marks">
+                	    <input type="text" class="form-control-2smallbox" name="Marks" placeholder="%/Marks">
                                             
-                                            <select class="form-control-smallbox" name="Eligibility">
+                                            <select class="form-control-2smallbox" name="Eligibility">
 												<option>Eligibility</option>
-												<option>Degree</option>
-												<option>PG</option>
-												<option>!0th</option>
+												<option>PUC(min 45%,cleared K-Mat/COMED-K/Mat/CAT/PGCET)</option>
+												<option>BE(cleared GATE or PGCET)</option>
+												<option>Bachelors Degree(min 50%, cleared K-Mat/COMED-K/Mat/CAT/PGCET)</option>
 												
 												
 											</select>  
@@ -115,7 +139,7 @@
 		    	   </div>
 		    	   <div class="form-group">
                    		<label class="label1">Remarks:</label><span class="style1"></span>
-                	    <textarea class="form-control"></textarea>  
+                	    <textarea class="form-control" placeholder="Write the Remarks"></textarea>  
 		    	   </div>
 					<button type="submit" class="btn btn-primary">Save</button>
 				</div>
