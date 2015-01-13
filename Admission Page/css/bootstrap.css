@@ -6092,18 +6092,18 @@ float:right;
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
 .form-control-gender {
   float:right;
-  width: 50px;
-  height: 20px;
-  padding: 6px 12px;
-  font-size: 12px;
+  /* display: block; */
+  width: 200px;
+  height: 22px;
+  padding: 2px 0px;
+  font-size: 15px;
+  line-height: 1.428571429;
   color: #555;
-  background-color: white;
-    
-  
+   
 }
-
 /*validation starts*/
 
 label.error{ 
