@@ -6119,7 +6119,7 @@ input.error {
 
 label.error{ 
 	width: 80%; 
-	display: compact; 
+	display: grid; 
 	float: right; 
 	color: red; 
 	padding-right: 5px;
@@ -6132,12 +6132,12 @@ label.error{
 input.error {
 	border:1px solid red;
 	background:#FEEFEB;
-	color:#A60707;
+	/* color:#A60707; */
 }
 .error-message p{
 	color:#F00;
 	text-align:right;
-	font-size: 2px;
+	font-size-adjust: 0.100;
 	/* font-weight:normal; */
 	margin:0;
 }
@@ -6146,7 +6146,7 @@ input.error {
 .form-control-3smallbox {
   float:right;
   display: compact;
-  width: 67px;
+  width: 64px;
   height: 25px;
   padding: 0px 0px;
   font-size: 12px;
@@ -6161,7 +6161,7 @@ input.error {
 .form-control-2smallbox {
   float:right;
   display: compact;
-  width: 100px;
+  width: 95px;
   height: 25px;
   padding: 0px 0px;
   font-size: 12px;
