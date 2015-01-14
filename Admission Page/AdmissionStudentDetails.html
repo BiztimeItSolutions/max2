@@ -16,7 +16,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
-	 <script type= "text/javascript" src = "script/countries.js"></script>
+	 <script type= "text/javascript" src = "js/validate/countries.js"></script>
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
@@ -501,11 +501,12 @@
                                             <input type="date" class="form-control" name="DateOFBirth">  
 										</div>
 										
-										                                       		<div class="form-group">
-                                        <label class="label1">Gender</label><span class="style1">*</span><div class="form-control-gender">&nbsp;
-                                       <label1 for="male">Male</label1> <input type="radio"   name="Gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									 <label1 for="female">Female</label1>	<input type="radio"   name="Gender" id="woman" value="Female" />
-                                        </div>
+										<div class="form-group">
+                                            	<label class="label1">Gender</label><span class="style1">*</span>
+											<div class="form-control-gender">&nbsp;
+	                                        	 <label1 for="male">Male</label1> <input type="radio"   name="Gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      								 	<label1 for="female">Female</label1>	<input type="radio"   name="Gender" id="woman" value="Female" />
+                                        	</div>
                                         </div>	
                                         							
 										 <div class="form-group">
@@ -1111,8 +1112,11 @@
 
     <!-- Core Scripts - Include with every page -->
    
-    <script src="js/jquery-1.10.2.js"></script>
-     <script type="text/javascript" src="jquery/jquery-1.7.min.js"></script>
+
+     <script type="text/javascript" src="js/jquery-1.7.min.js"></script> 
+<!--	     <script src="js/jquery-1.10.2.js"></script>
+	     <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+	-->	 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -1143,11 +1147,11 @@
 		</script>
 				
 <!-- Validation jquery plugin -->
-<script type="text/javascript" src="jquery/jquery.validate.js">
+<script type="text/javascript" src="js/validate/jquery.validate.js">
 </script>
-<script type="text/javascript" src="jquery/jquery.validate.min.js">
-</script>
-<script type="text/javascript" src="jquery/admissionstudent.js">
+<!--<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>-->
+<script type="text/javascript" src="js/validate/admissionstudent.js">
 </script>
 </body>
 

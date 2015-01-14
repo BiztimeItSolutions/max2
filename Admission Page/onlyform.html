@@ -15,7 +15,7 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
-	 <script type= "text/javascript" src = "script/countries.js"></script>
+	<script type= "text/javascript" src = "js/validate/countries.js"></script>
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
@@ -99,11 +99,13 @@
 										</div>
 										
 										<div class="form-group">
-	                                        <label class="label1">Gender:</label><span class="style1">*</span>
-    		                                    <input type="radio" class="form-control-gender"  name="Gender" id="woman" value="Female" /> <label class="form-control-gender">Female</label>
-												<input type="radio"  class="form-control-gender"  name="Gender" id="man" value="Male" /> <label class="form-control-gender">Male</label>
-                                        </div>
-										
+                                            	<label class="label1">Gender</label><span class="style1">*</span>
+											<div class="form-control-gender">&nbsp;
+	                                        	 <label1 for="male">Male</label1> <input type="radio"   name="Gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      								 	<label1 for="female">Female</label1>	<input type="radio"   name="Gender" id="woman" value="Female" />
+                                        	</div>
+                                        </div>	
+																				
 										 <div class="form-group">
                                             <label class="label1">Blood Group</label>
                                             <select class="form-control" name="BloodGroup">
@@ -370,22 +372,103 @@
 											
 										</div>
 									</div>
-									
+									<div class="row">
+									<div class="col-lg-5">
+										<div class="form-group">
+				                               <label class="label1"><b>Guardian Contact Address</b></label><span class="style1"></span>                               
+											 </div>
+			                               <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="GuardianAddressLine1" id="GuardianAddressLine1" placeholder="Guardian address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="GuardianAddressLine2" id="GuardianAddressLine2" placeholder="Guardian address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="GuardianCity" id="GuardianCity" placeholder="Guardian address city">    
+                	                        </div>
+                    			           <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="GuardianPincode" id="GuardianPincode" placeholder="Guardian address pincode">    
+			                               </div>
+            							                 <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onChange="print_state('GuardianState',this.selectedIndex);" id="GuardianCountry" name ="GuardianCountry">
+<option >Select Country</option>
+</select>
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="GuardianState" id ="GuardianState">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("GuardianCountry");</script> 
+		</div>
+		
+		
+		<div class="col-lg-5">
+			<div class="form-group">
+				                               <label class="label1"><b>Father/Mother Contact Address</b></label><span class="style1"></span>                               
+											 </div>
+			                               <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="FatherAddressLine1" id="FatherAddressLine1" placeholder="Father/Mother address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherAddressLine2" id="FatherAddressLine2" placeholder="Father/Mother address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="FatherCity" id="FatherCity" placeholder="Father/Mother address city">    
+                	                        </div>
+                    			           <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="FatherPincode" id="FatherPincode" placeholder="Father/Mother address pincode">    
+			                               </div>
+            							                 <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onChange="print_state('FatherState',this.selectedIndex);" id="FatherCountry" name ="FatherCountry">
+<option >Select Country</option>
+</select>
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="FatherState" id ="FatherState">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("FatherCountry");</script>
+		</div>
+		</div>
+		<br><br>
 									<div class="row">		
 										<div class="col-lg-5">
 											<div class="form-group">
         	                                    <label class="label1">Parent Occupation</label><span class="style1">*</span>
             	                                <input class="form-control" name="ParentOccupation" id="ParentOccupation" placeholder="Enter parent occupation">    
                 	                        </div>
-											<div class="form-group">
+
+													<div class="form-group">
         	                                    <label class="label1">Annual Income</label><span class="style1">*</span>
             	                                <input class="form-control" name="ParentAnnualIncome" id="ParentAnnualIncome" placeholder="Enter parent annual income">    
                 	                        </div>
 
                     			        	<hr>
 									   </div><!-- Col 5-->
+							<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="ParentOfficePhone" id="ParentOfficePhone" placeholder="Parent Office Phone Number">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
 									  </div><!--row-->
 									  
+										
 									  <button type="submit" class="btn btn-primary">SaveAndProceed</button>
                                 </div>
 								
@@ -527,28 +610,30 @@
                 <div class="col-lg-12">
 <p><b>Institutions at which the applicatn studied during the last five years(Reasons of break in continuity may be stated in the remarks column commencing from VIII Standard to XII Standart</b></p>				
                       
-				  
-<table class="table table-striped table-bordered table-hover" rules="all">
-
-	<tr>
-   		<td><span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onClick="addMoreRows(this.form);">Add More</span></td>
-		<td>year</td>
+					  
+<table id="options-table" class="table table-striped table-bordered table-hover">					
+			<tr>
+				<td>Year</td>
 		<td>Institution</td>
 		<td>Class</td>
 		<td>Remarks</td>
-
-	</tr>
-	<tr id="rowId">
-	     <td></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-
-	</tr>
-	
-	</table>
-	<tr><div id="addedRows"></div></tr>
+				<td>Add/Delete</td>
+			</tr>
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text" 	 name="input_box_two[]" class="form-control"/></td>                        
+				<td><input type="button" class='del' value='Delete' /></td>
+			</tr>                  
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_two[]" class="form-control"/></td>
+				<td><input type="button" class="add" value="Add More" /></td>
+			</tr>
+		</table>
 	
 		
 	
@@ -574,8 +659,12 @@
 
 <!--End of Main page-->
 
-    <!-- Core Scripts - Include with every page -->
-    <script src="js/jquery-1.10.2.js"></script>
+
+
+     <script type="text/javascript" src="js/jquery-1.7.min.js"></script> 
+<!--	     <script src="js/jquery-1.10.2.js"></script>
+	     <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+	-->	 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -585,27 +674,32 @@
     <script src="js/sb-admin.js"></script>
 
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    
+    
 	
 
 <script type="text/javascript">
-var rowCount = 1;
-function addMoreRows(frm) {
-rowCount ++;
-var recRow = '<p id="rowCount'+rowCount+'"><tr><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /></td></tr><a href="javascript:void(0);" onclick="removeRow('+rowCount+');">Delete</a></p>';
-
-jQuery('#addedRows').append(recRow);
-}
-
-function removeRow(removeNum) {
-jQuery('#rowCount'+removeNum).remove();
-}
-</script>
+			$(document).ready(function(){		
+				
+				$('.del').live('click',function(){
+					$(this).parent().parent().remove();
+				});
+				
+				$('.add').live('click',function(){
+					$(this).val('Delete');
+					$(this).attr('class','del');
+					var appendTxt = "<tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>";
+					$("tr:last").after(appendTxt);			
+				});        
+			});
+		</script>
+				
 <!-- Validation jquery plugin -->
-<script type="text/javascript" src="jquery/jquery.validate.js">
+<script type="text/javascript" src="js/validate/jquery.validate.js">
 </script>
-<script type="text/javascript" src="jquery/jquery.validate.min.js">
-</script>
-<script type="text/javascript" src="jquery/admissionstudent.js">
+<!--<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>-->
+<script type="text/javascript" src="js/validate/admissionstudent.js">
 </script>
 </body>
 
