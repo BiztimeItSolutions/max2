@@ -564,29 +564,7 @@
                                     </div>
 									<hr>
 						
-									<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">SaveAndProceed</button>
-									
-									
-									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            Do you really want to save!
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
-                                </div>
-                                <!-- /.modal-dialog -->
-                            </div>
-                            <!-- /.modal -->
+									<button type="submit" class="btn btn-primary">SaveAndProceed</button>
 									
 									
 
@@ -1063,36 +1041,49 @@
 		</table>
 		
 		
-		<!-- <td><span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onClick="addMoreRows(this.form);">Add More</span></td>
-		
-		<td>year</td>
-		<td>Institution</td>
-		<td>Class</td>
-		<td>Remarks</td>
-
-	</tr>
-	
-	<tr id="rowId">
-	     <td></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-		<td><input name="" type="text"  value="" class="form-control" /></td>
-
-	
-	
-	</tr></table>
-	
-	<div id="addedRows"></div> -->
-	
-		
-	
-
-	
+			<div class="form-group">
+                                  
+                                   <input type="checkbox" class="form-control-checkbox" name="option-5" id="option-5"> <label for="option-1" class="label1">I agreed the</label><span class="style1"></span>
+                                 
+                                 
+                                <span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" data-toggle="modal" data-target="#myModal1">Terms & Conditions</span>   
+	                         
+	                         
+	                          <!-- Modal -->
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">INSTRUCTIONS TO THE CANDIDATES SEEKING ADMISSION</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            1.The application form should be correctly filled. Enclose 4 Colour PP size Photographs and send to the Principal,<br>H.K.B.K. College of Engineering,Bangalore,Karnataka,India,with a Crossed demand Draft for Rs.500/-<br>(Rupees Five Hundred Only) Drawn in favour of H.K.B.K. College of Engineering,Bangalore, towards<br>Registration fee of application and with documents securely fastened to the application,so as to reach him on or <br>
+                                            before the due date. The registration fee is not refundable.<br>2. a) MINIMUM QUALIFICATION: Two years Pre University Examination of the Karnataka Pre University Education Board or any other equivalent examination with a minimum of 45 percent marks on the aggregate on<br>the science group i.e., Physics, Mathematics and Chemistry/Biology/Bio-Technology/Electronics/Computer Science int the Final Examination, with Engish as one of the Subject of study.<br><br> b) As per Government norms,the above qualified student should have taken CET/KRLMPCA - CET or any<br>
+                                            other Entrance Test approved by the Government of Karnataka.<br>3. Students from other University / Board should produce the ELIGIBILTY  CERTIFICATE from REGISTRAR,<br>V.T.U.,Belgaum along with the application.<br><br>4. Students coming from other Universities should also produce Migration Certificate at the time of adission.<br><br>5. Applications with incomplete information are liable to be rejected.<br><br>6. Application received after the due date will not be entertained.<br><br>7. Only attested copies of the required certificated are to be enclosed  
+                                             with the application and the Original Certificates should be produced at the time of Selection/Admission.<br><br>8. Candidates called for interview,should appear before the selection committee,at their own cost.<br><br>9. Candidates selected for admission would be intimated by ordinary post.<br><br>10. The Management reserves the right to cancel the admission of a candidate at any stage, if and when is detected that admission is against the rules.<br><br><br><br>Note:  i)The branch once allotted will not be changed later.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) All admissions are subject to final
+                                             approval of the Visvesvaraya Technological University(VTU)<br>Belgaum and the Institute shall not be responsible for any loss to the candidate if the admission is not <br>approved by the University.<br><br><br>Principal<br>H.K.B.K. College of Engineering 
+                                             
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+	                      
+                            <!-- /.modal -->
+	                         
+	            </div>
 					  </div> 
+					  
+					  
                 </div><!-- /.col-lg-12 -->
 				<hr>
-				<button type="submit" class="btn btn-primary">SaveAndProceed</button>
+				 <input type="submit" value="SaveAndProceed " class="btn btn-primary" disabled> 
 			</div><!--row-->
 									 
 									 
@@ -1152,6 +1143,14 @@
 <!--<script type="text/javascript" src="jquery/jquery.validate.min.js">
 </script>-->
 <script type="text/javascript" src="js/validate/admissionstudent.js">
+</script>
+<script>
+var checkboxes = $("input[type='checkbox']"),
+    submitButt = $("input[type='submit']");
+
+checkboxes.click(function() {
+    submitButt.attr("disabled", !checkboxes.is(":checked"));
+});
 </script>
 </body>
 
