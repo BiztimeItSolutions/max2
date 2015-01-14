@@ -32,15 +32,19 @@
     <div id="wrapper">
 
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
+		
+           <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand1" href="index.jsp"><!--SB Admin v2.0--><img src="images/Biztime_Logo.png" width="250" height="60"></a>
+                <a class="navbar-brand" href="index.html"></a>
+					      <div><img src="images/Biztime_Logo.png" width="250" height="50"></div>
             </div>
+
+			
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
@@ -97,7 +101,6 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-
                         <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
@@ -164,6 +167,7 @@
                                 </div>
                             </a>
                         </li>
+
                         <li class="divider"></li>
                         <li>
                             <a class="text-center" href="#">
@@ -245,7 +249,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.jsp"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -259,447 +263,417 @@
 
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
+			
+<!--			<div><img src="images/Biztime_Logo.png" width="250" height="60"></div>-->
+			
                 <ul class="nav" id="side-menu">
-<!--                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-
-                    </li>-->   <!-- /input-group -->
-                    <li  class="active">
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
+                
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-					
-					<li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Academics <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                   
-                   
-				   
-				    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Data and Exports <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="#">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="#">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="#">Typography</a>
-                            </li>
-                            <li>
-                                <a href="#">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
+                        <a href="indexnew.html"><i class="fa fa-dashboard fa-fw"></i>Home</a>
                     </li>
                     
-					
-					
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Configuration<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manage Course/Batch<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="ManageCourse.html">Manage Course</a>
+                            </li>
+                            	<li>
+                                <a href="ManageBatch.html">Manage Batch</a>
+                            </li>
+                           </ul>
+                           </li>
+							 <li>
+                                <a href="#">Add Admission Additional Details</a>
+                            </li>
+							 <li>
+                                <a href="#">Management clients</a>
+                            </li>
+                             <li>
+                                <a href="#">Management Subject</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="StudentCategories.html">Manage Student Category</a>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
+                                <a href="#">SMS Module</a>
+                            </li>
+                            <li>
+                                <a href="GeneralSettings.html">General Settings</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-					
-
-
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations_1 <span class="fa arrow"></span></a>
+                     
+                         <li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>General<span class="fa arrow"></span></a></li>
+                       
+                        <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Search User</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Add User</a>
+                            </li> 
+                            </ul>
+                            </li>
+                       
+                       <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Event<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Event Creation</a>
+                            </li>
+                            <li>
+                                <a href="#">Calender</a>
+                            </li> 
+                            </ul>
+                            </li>
+                          <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Finance<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">   
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Create Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Create Particulars</a>
+                            </li>
+                            	<li>
+                                <a href="#">Create Discount</a>
+                            </li>
+                            <li>
+                                <a href="#">Generate Fine</a>
+                            </li>
+                           </ul>
+                           </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Schedule Fees Collection<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Create Fee Collection</a>
+                            </li>
+                            <li>
+                                <a href="#">View</a>
+                            </li>   
+                           </ul>  
+                           </li>  
+                             <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Collect Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Fees Submission By Course</a>
+                            </li>
+                            <li>
+                                <a href="#">Fees Submission For Each Student</a>
+                            </li>
+                            <li>
+                                <a href="#">Particular wise Fees Payment</a>
+                            </li>   
+                           </ul>  
+                           </li> 
+                          <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees Structure<span class="fa arrow"></span></a></li>
+                    
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees Defaulters<span class="fa arrow"></span></a></li>
+                        <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Fees Refunds<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">View Refund</a>
+                            </li>
+                            <li>
+                                <a href="#">Create Refund Rule</a>
+                            </li>
+                            <li>
+                                <a href="#">Apply Refund</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                      <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fee Imports<span class="fa arrow"></span></a>
+                                </li>
+                      <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Instant Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Manage Instant Fee</a>
+                            </li>
+                            <li>
+                                <a href="#">Pay Fees</a>
+                            </li>
+                            <li>
+                                <a href="#">Transcation</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Categories<span class="fa arrow"></span></a>
+                                </li>
+                    
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Transcation<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Add Expense</a>
+                            </li>
+                            <li>
+                                <a href="#">Expense</a>
+                            </li>
+                            <li>
+                               <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Income<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+		<li>
+                                <a href="#">Add Income</a>
                             </li>
 							<li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Income List</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                           	<li>
+                                <a href="#">Reverted Transcations</a>
+                            </li>
+                    </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Donation<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Donors</a>
+                            </li>
+                            </ul></li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Automatic Transcation<span class="fa arrow"></span></a></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Payslip<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">View Payslip</a>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fourth Level Item<span class="fa arrow"></span></a>
-										<ul class="nav nav-fourth-level">
-                                   		 	<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-										</ul>
-										<!-- /.nav-fourth-level -->										
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
+                                <a href="#">One Click Approved Payslip</a>
                             </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-					
-					
-					
-					<li>
-                    <!--<li class="active">-->
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Extra <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                            </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Finance Reports<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">  
+                              <li>
+                                <a href="#">Report</a>
+                            </li>   
                             <li>
-                                <a href="#">Blank Page</a>
+                                <a href="#">Compare Transcation</a>
                             </li>
+                            </ul></li>
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Asset Liability Management<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">  
+                              <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Asset<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create</a>
+                            </li>  
+                             <li>
+                                <a href="#">View</a>
+                            </li>
+                           </ul> </li>   
                             <li>
-                                <a href="#">Login Page</a>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Liability<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create</a>
+                            </li>  
+                             <li>
+                                <a href="#">View</a>
                             </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                </ul>
-                <!-- /#side-menu -->
+                           </ul> </li> 
+                            </ul></li>
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Tally Export<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">General Setting</a>
+                            </li> 
+                            <li>
+                                <a href="#">Companies</a>
+                            </li>  
+                            <li>
+                                <a href="#">Vochers</a>
+                            </li> 
+                            <li>
+                                <a href="#">Accounts</a>
+                            </li> 
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manage Legendary Tally<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create Legenders</a>
+                            </li> 
+                             <li>
+                                <a href="#">View Legenders</a>
+                            </li>    
+                            </ul></li> 
+                          <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manual Sync<span class="fa arrow"></span></a> </li>                 
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Bulk Expert<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Schedule Exports</a>
+                            </li> 
+                             <li>
+                                <a href="#">Downloads</a>
+                            </li> 
+                            </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Failed Sync<span class="fa arrow"></span></a></li>
+                                </ul></li>
+                                
+                                </ul></li>
+                    
+                    
+                  
+                    
+                    
+				</ul>
             </div>
             <!-- /.sidebar-collapse -->
         </nav>
         <!-- /.navbar-static-side -->
 
 
-<!--Start of Main page-->
-
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
                   
-				    <h4 class="page-header">Donation | <span class="style2">Donors</span></h4> 
+				    <h4 class="page-header">Donation | <span class="style2">Donors</span>
+ <div class="bar">
+				  		<a href="FinanceReportHome.jsp" class="btn btn-primary">List of Donors</a>
+					</div>
+					</h4> 
 				</div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-			
-			<div class="row">
+				<div class="row">
                 <div class="col-lg-6">
                   
-				    <h6>Home > Finance > Donation > <b>Donors</b></h6>
+				    <h6>Home > Finance  > Donation >  <b>Donor</b></h6>
+					
+				</div>
+				
+				<div class="col-lg-6">
+				
+                	
 					
 				</div>
                 <!-- /.col-lg-6 -->
 				
-				<div class="col-lg-6">
-                		
-				</div>
+				
                 <!-- /.col-lg-6 -->
 				
             </div>
-            <!-- /.row -->
-			
-			<br>
 			<div class="row">
-				<div class="col-lg-4">
-					
-			 		
-
-				</div>
-			</div>
-			
-			
-			
-			<div class="row">
-			 <div class="col-lg-12">
-			 	
+				<div class="col-lg-12">
+				
                     <div class="panel panel-default">
+                    
                         <div class="panel-heading">
-                            
-                        </div>
-                        <!-- /.panel-heading -->
+                        
+                           <div class="panel panel-default">
                        
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                    <tbody>
-                                        <tr>
-                                        <tr>
-                                            <td>Name</td>
-                                            
-                                           <td>Description</td>
-                                            <td>Amount</td>
-                                             <td>Credited Date</td>
-                                        </tr>
-                                    </thead>
-                                    </tbody>
-                                      
-                                </table>
-                                </br>
-                                </div>
-					
-                            </div>
-                            <div class="bar">
-				  		<a href="FinanceDonatioAddNewDonation.jsp" class="btn btn-primary">Done</a>
-					</div>
-                            <!-- /.table-responsive -->
-                        </div>
-                     
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-			</div>
-			<!-- /.row -->
-			
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="alert alert-success">
-					Input criterias to be used in search
-                     </div>
-				</div>
-			</div>
-			
-
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="alert alert-success">
-					Select and order the fields to be shown in the report
-                     </div>
-				</div>
-			</div>
-			
-						<div class="row">
-			 <div class="col-lg-4">
-			 	
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            
-                        </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table">
-									<thead>
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
                                         <tr>
-                                            <td> Admission Date</td>
+                                           <th>Liability</th>
+                                            <th>Created Date</th>
+                                            <th>Total Amount</th>
+                                            <th></th>
+                                            
                                         </tr>
                                     </thead>
-									<thead>
-                                        <tr>
-                                            <td> Date of Birth</td>
-                                        </tr>
-                                    </thead>
-
-									<thead>
-                                        <tr>
-                                            <td>Country</td>
-                                        </tr>
-                                    </thead>
-
                                     <tbody>
-                                        
-										<tr>
-                                            <td> Nationality</td>
-                                         </tr>
-                                        <tr>
-											<td>Student Category</td> 
+                                        <tr class="odd gradeX">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td>Edit/Delet</td>
+											
                                         </tr>
-										<tr>
-                                            <td> Batch</td>
-                                         </tr>
-                                        <tr>
-											<td> Course</td> 
-                                        </tr>
-										<tr>
-                                            <td> Admission No</td>
-                                         </tr>
-                                        <tr>
-											<td> First Name</td> 
-                                        </tr>
-										<tr>
-                                            <td> Middle Name</td>
-                                         </tr>
-                                        <tr>
-											<td> Last Name</td> 
-                                        </tr>
-										<tr>
-                                            <td> Gender</td>
-                                         </tr>
-                                        <tr>
-											<td> Blood Group</td> 
-                                        </tr>
-										<tr>
-                                            <td> Language</td>
-                                         </tr>
-                                        <tr>
-											<td> Religion</td> 
-                                        </tr>
-										<tr>
-                                            <td> Address Line 1</td>
-                                         </tr>
-                                        <tr>
-											<td> Address Line 2</td> 
-                                        </tr>
-										<tr>
-                                            <td> City</td>
-                                         </tr>
-                                        <tr>
-											<td> State</td> 
-                                        </tr>
-										<tr>
-                                            <td>Pin Code</td>
-                                         </tr>
-                                        <tr>
-											<td> Birth Place </td> 
-                                        </tr>
-										<tr>
-											<td> Phone </td> 
-                                        </tr>
-										<tr>
-											<td> Mobile</td> 
-                                        </tr>
-										<tr>
-                                            <td> Email</td>
-                                         </tr>
-                                        <tr>
-											<td> Immediate Contact</td> 
-                                        </tr>
-										<tr>
-                                            <td>Parent First Name</td>
-                                         </tr>
-                                        <tr>
-											<td> Parent Last Name </td> 
-                                        </tr>
-										<tr>
-											<td> Parent Relation </td> 
-                                        </tr>
-										<tr>
-											<td> Parent Date of birth</td> 
-                                        </tr>
-										<tr>
-                                            <td> Parent Education</td>
-                                         </tr>
-                                        <tr>
-											<td> Parent Occupation</td> 
-                                        </tr>
-										<tr>
-                                            <td>Parent Income</td>
-                                         </tr>
-                                        <tr>
-											<td> Parent Email </td> 
-                                        </tr>
-										<tr>
-											<td> Parent Office address 1 </td> 
-                                        </tr>
-										<tr>
-											<td> Parent Office address 2 </td> 
-                                        </tr>
-										<tr>
-											<td> Parent city</td> 
-                                        </tr>
-										<tr>
-                                            <td> Parent State</td>
-                                         </tr>
-                                        <tr>
-											<td> Parent Office phone</td> 
-                                        </tr>
-										<tr>
-                                            <td>Parent Mpbile phone</td>
-                                         </tr>
-                                        <tr>
-										
-											<td> Extracurricular</td> 
-                                        </tr>
-										
+                                      
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.table-responsive -->
-                        </div>
+                            <!-- /.table-responsive -->	</div>
+					
+                            </div>
+                            </div>
+                            </div>
+				</div>
+			</div>
+		
+		
+		
+                           
                         <!-- /.panel-body -->
+                        <div class="row">
+			 <div class="col-lg-12">
+			 	 <!--  <h6><b> Report for the period from --- to ----</b></h6></br>
+                    <div class="panel panel-default">
+                    
+                        <div class="panel-heading">
+                        
+                           <div class="panel panel-default">
+                       
+                        /.panel-heading
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                           <th>Sl.no</th>
+                                            <th>Particulars</th>
+                                            <th>Expenses</th>
+                                            <th>Income</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td>Edit/Delet</td>
+											
+                                        </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            /.table-responsive	</div>
+					
+                            </div>
+                            </div>
+                            </div> -->
+                           
                     </div>
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
 			</div>
 			<!-- /.row -->
-
-		<div class="row">
-			<div  class="col-lg-7">
-				<div class="bar">
-						<button type="button" class="btn btn-default">Save</button>
-				</div><!--.bar -->
-			</div><!--.col-lg-12 -->
-		</div><!--.row -->
-	
-	<div class="end"></div>
-	
-        </div>
-        <!-- /#page-wrapper -->
-
-<!--End of Main page-->
-
-
-    </div>
+			p
+    
     <!-- /#wrapper -->
     <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
@@ -719,3 +693,5 @@
         $('#dataTables-example').dataTable();
     });
     </script>
+</body>
+</html>

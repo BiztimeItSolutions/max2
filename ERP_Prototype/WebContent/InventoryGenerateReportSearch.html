@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Campus-G</title>
 </head><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,7 +26,7 @@
 
     <div id="wrapper">
 
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 		
            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -542,9 +542,10 @@
         <!-- /.navbar-static-side -->
 
         <div id="page-wrapper">
+        <div class="column">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="page-header"><b>Reports</b> | <span class="style2">Generate Report</span></h4>
+                    <h4 class="page-header"><b>Reports</b> | <span class="style2">Generate Reports</span></h4>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -557,65 +558,89 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
                             </div>
                         	-->
-							<h6>Home > Inventory > Report > <b>Generate Report</b></h6>
+							<h6>Home > Inventory > Reports >   <b>Generate  Reports</b></h6>
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
-                        	
-                       
+                        	</br></br>
+                        
                             <div class="row">
                                 <div class="col-lg-6">
-                              <div class="form-group">
-                                            <label class="label1">Select Category:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                            
-                                             <select class="form-control" name="storetype" id=""storetype"">
-												<option> Select a category  </option>
-												<option>A </option>
-												<option>B</option>
-												<option>C</option>
+                              
+							   <form role="" id="" method="" action="">
+                                <div class="form-control-sendemail1">       
+								<div class="form-group">
+                                            <label class="label1">Select Category:</label>
+                                         <span class="style1"></span>
+										    <select class="form-control" name="graduation">
+												<option>  Indent  </option>
+												<option>Computer Science and Engineering </option>
+												<option>Electrical and electronics</option>
+												<option>Electronics and communications</option>
 											</select>
-											</br></br>
-											<label class="label1">Sort Type:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
                                             
-                                             <select class="form-control" name="storetype" id=""storetype"">
-												<option> Select type  </option>
-												<option>A </option>
-												<option>B</option>
-												<option>C</option>
+                                </div>	
+                                    </br></br>    
+							<div class="form-group">
+                                            <label class="label1">From :</label>
+                                           	<span class="style1"></span> 
+                                           	<input type="date" class="form-control">
+                             </div>
+                             </br>
+                             
+                                 </div>
+                                          
+                                        <div class="form-control-sendemail">	
+                                       
+                                       
+                                     
+										<!-- <div>
+									     
+										<label class="label1">Subject:</label><span class="style1"></span>
+                                       <span class="style1"></span>
+                                       <input type ="text" id="subject" name="recipient" class="form-control"/>
+										
+                                       </div> -->
+                                       <div class="form-group">
+                                            <label class="label1">Sort Type:</label>
+                                         <span class="style1"></span>
+										    <select class="form-control" name="graduation">
+												<option>  All </option>
+												<option>Computer Science and Engineering </option>
+												<option>Electrical and electronics</option>
+												<option>Electronics and communications</option>
 											</select>
-											</br></br>
-											<label class="label1">Start Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                            <input type="date" name="inventoryreportstartdate" id="inventoryreporstarttdate">
-											
-											</br></br>
-											<label class="label1">End Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                            <input type="date" name="inventoryreportenddate" id="inventoryreportenddate">
-											
-                                        </div>   
-                                        <a href="InventoryGenerateReportSearch.jsp" class="btn btn-primary">Search</a> 
-                                        </form>    
-                                        </br></br>
+                                            
+                                </div>	
                                         
-                                
-                <div class="row">
+                                        </br></br>
+										<div>
+									     
+										<label class="label1">To :</label>
+                                           	<span class="style1"></span> 
+                                           	<input type="date" class="form-control">
+										</div></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<div class="bar">
+                                       <a href="MailToSuccess.jsp" class="btn btn-primary" align="center">Search</a>
+                                       </div>
+										
+										<!--  <button><a href="MailToSuccess.jsp">Send</a></button> -->
+										 
+                                       </div>
+                                      
+                                       </form>
+                                       <div class="row">
 				<div class="col-lg-12">
-					<div class="alert alert-success">
-					Report Not ound
+					<div class="alert-success">
+					<h6 align="center">Not Found</h6> 
                      </div>
 				</div>
 			</div>
-			
+                                
+                                <!-- /.col-lg-6 (nested) -->
+                           </div> 
+                             
+                </div>
+								
                                 <!-- /.col-lg-6 (nested) -->
                               </div>
                             <!-- /.row (nested) -->
@@ -623,13 +648,11 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
-    
+            
+
     <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -656,7 +679,8 @@
 </body>
 </html>
 
-<body>
 
-</body>
-</html>
+
+                   
+                
+			

@@ -536,7 +536,12 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-6">
-                     <h4 class="page-header"><b>Donations</b> | <span class="style2">Add new Donations</span></h4>
+                     <h4 class="page-header"><b>Donations</b> | <span class="style2">Add new Donations</span>
+                     <div class="bar">
+				  		<a href="FinanceDonationListDonor.jsp" class="btn btn-primary">Show All Donors</a>
+					</div>	
+                     
+                     </h4>
                 </div>
                 
                 <!-- /.col-lg-12 -->
@@ -550,13 +555,11 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
                             </div>
                         	-->
-							<h6>Home > Donation > <b>Add New Donation</b></h6>
+							<h6>Home > Finance > <b>Add New Donation</b></h6>
 							
 							</div>
 							<div class="col-lg-6">
-                	<div class="bar">
-				  		<a href="FinanceDonationListDonor.jsp" class="btn btn-primary">Show All Donors</a>
-					</div>	
+                	
 				</div>
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
@@ -570,22 +573,22 @@
 									<form role="" id="" method="" action="">
                                         
 								<div class="form-group">
-                                            <label class="label1">Titel:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="label1">Donor Name:<span class="astrik">*</span></label>
                                              <span class="style1"></span>
-                                            <input type="text" name="donorname" id="donorname"></input>
+                                            <input type="text" name="donorname" id="donorname" class="form-control"></input>
                                             </br></br></br>
-                                            <label class="label1">Description:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                             <span class="style1"></span>
-                                            <input type="text" name="donordescription" id="donordescription"></input>
+                                            <label class="label1">Description:</label>
+                                            <input type="text" name="donordescription" id="donordescription" class="form-control"></input>
                                             </br></br></br>
-                                             <label class="label1">Transaction Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             <label class="label1">Transaction Date:</label>
                                               <span class="style1"></span>
-                                            <input type="date" name="donordate" id="donordate"></input>
+                                            <input type="date" name="donordate" id="donordate" class="form-control"></input>
                                             </br></br></br>
-                                            <label class="label1">Amount:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="label1">Amount:<span class="astrik" >*</span></label>
                                              <span class="style1"></span>
-                                            <input type="text" name="donordescription" id="donordescription"></input>
-                                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+                                            <input type="text" name="donordescription" id="donordescription" class="form-control"></input>
+                                        </div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 										 <a href="FinanceDonationAddNewDonation.jsp" class="btn btn-primary">Add</a>
                                     </form>
                                 
