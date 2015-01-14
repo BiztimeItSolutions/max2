@@ -35,9 +35,9 @@ $(function() {
         	LastName:"alphabetsonly",
         	GuardianFirstName:"alphabetsonly",
         	GuardianLastName:"alphabetsonly",
-        	MotherFirstName:"alphabetsonly",
-        	
-        	
+        	MotherName:"alphabetsonly",
+        	GuardianPincode:"fld2",
+        	FatherPincode:"fld2",
         	
             	FirstName : 
 				{
@@ -176,11 +176,65 @@ $(function() {
                         required : true
                         
                 },
-                MotherFirstName : 
+                MotherName : 
 				{
                         required : true,
                         alphabetsonly: true
                 },
+                
+                
+                
+                GuardianAddressLine1 :{
+                	
+                	required : true
+                
+                },
+                GuardianCity :{
+                	
+                	required : true
+                	
+                },
+                GuardianPincode :{
+                	
+                	required : true,
+                	fld2:true
+                },
+                GuardianCountry :{
+                	
+                	required : true
+                },
+                GuardianState :{
+                	required : true
+                },
+                
+                
+                FatherAddressLine1 :{
+                	
+                	required : true
+                
+                },
+                FatherCity :{
+                	
+                	required : true
+                	
+                },
+                FatherPincode :{
+                	
+                	required : true,
+                	fld2:true
+                },
+                FatherCountry :{
+                	
+                	required : true
+                },
+                FatherState :{
+                	required : true
+                },
+                
+                
+                
+                
+                
                 ParentOccupation : 
 				{
                         required : true
@@ -334,10 +388,59 @@ $(function() {
 				{
                 	required : "Please enter a Relation", 
                 },
-                MotherFirstName : 
+                MotherName : 
 				{
 					required : "Please enter a First Name",     
                 },
+                
+                
+                
+                GuardianAddressLine1 :{
+                	
+                	required : "Please enter a Address Line1",
+                
+                },
+
+                GuardianCity :{
+                	
+                	required : "Please enter a City",
+                	
+                },
+                GuardianPincode :{
+                	
+                	required : "Please enter a Pincode",
+                },
+                GuardianCountry :{
+                	
+                	required : "Please enter a Country",
+                },
+                GuardianState :{
+                	required : "Please enter a State",
+                },
+                
+                FatherAddressLine1 :{
+                	
+                	required : "Please enter a Address Line1",
+                
+                },
+
+                FatherCity :{
+                	
+                	required : "Please enter a City",
+                	
+                },
+                FatherPincode :{
+                	
+                	required : "Please enter a Pincode",
+                },
+                FatherCountry :{
+                	
+                	required : "Please enter a Country",
+                },
+                FatherState :{
+                	required : "Please enter a State",
+                },
+                
                 ParentOccupation : 
 				{
                 	required : "Please enter a ParentOccupation", 

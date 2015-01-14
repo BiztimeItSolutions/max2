@@ -20,6 +20,7 @@
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
+
 </head>
 
 <body>
@@ -1036,10 +1037,33 @@
 <p><b>Institutions at which the applicatn studied during the last five years(Reasons of break in continuity may be stated in the remarks column commencing from VIII Standard to XII Standart</b></p>				
                       
 				  
-<table class="table table-striped table-bordered table-hover" id="dataTable">
-
-	<tr>
-   		<td><span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onClick="addMoreRows(this.form);">Add More</span></td>
+<table id="options-table" class="table table-striped table-bordered table-hover">					
+			<tr>
+				<td>Year</td>
+		<td>Institution</td>
+		<td>Class</td>
+		<td>Remarks</td>
+				<td>Add/Delete</td>
+			</tr>
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text" 	 name="input_box_two[]" class="form-control"/></td>                        
+				<td><input type="button" class='del' value='Delete' /></td>
+			</tr>                  
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_two[]" class="form-control"/></td>
+				<td><input type="button" class="add" value="Add More" /></td>
+			</tr>
+		</table>
+		
+		
+		<!-- <td><span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" onClick="addMoreRows(this.form);">Add More</span></td>
+		
 		<td>year</td>
 		<td>Institution</td>
 		<td>Class</td>
@@ -1058,7 +1082,7 @@
 	
 	</tr></table>
 	
-	<div id="addedRows"></div>
+	<div id="addedRows"></div> -->
 	
 		
 	
@@ -1086,7 +1110,9 @@
 <!--End of Main page-->
 
     <!-- Core Scripts - Include with every page -->
+   
     <script src="js/jquery-1.10.2.js"></script>
+     <script type="text/javascript" src="jquery/jquery-1.7.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -1099,25 +1125,23 @@
     
     
 	
-<script language="javascript">function addRow(tableID){var table=document.getElementById(tableID);var rowCount=table.rows.length;var row=table.insertRow(rowCount);var colCount=table.rows[0].cells.length;for(var i=0;i<colCount;i++){var newcell=row.insertCell(i);newcell.innerHTML=table.rows[0].cells[i].innerHTML;switch(newcell.childNodes[0].type){case"text":newcell.childNodes[0].value="";break;case"checkbox":newcell.childNodes[0].checked=false;break;case"select-one":newcell.childNodes[0].selectedIndex=0;break;}}}
-function deleteRow(tableID){try{var table=document.getElementById(tableID);var rowCount=table.rows.length;for(var i=0;i<rowCount;i++){var row=table.rows[i];var chkbox=row.cells[0].childNodes[0];if(null!=chkbox&&true==chkbox.checked){if(rowCount<=1){alert("Cannot delete all the rows.");break;}
-table.deleteRow(i);rowCount--;i--;}}}catch(e){alert(e);}}</script>
-
-
 
 <script type="text/javascript">
-var rowCount = 1;
-function addMoreRows(frm) {
-rowCount ++;
-var recRow = '<p id="rowCount'+rowCount+'"><td><input name="" type="text" class="form-control" /></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control"/></td><td><input name="" type="text" class="form-control" /><a href="javascript:void(0);" onclick="removeRow('+rowCount+');">Delete</a></p>';
-
-jQuery('#addedRows').append(recRow);
-}
-
-function removeRow(removeNum) {
-jQuery('#rowCount'+removeNum).remove();
-}
-</script>
+			$(document).ready(function(){		
+				
+				$('.del').live('click',function(){
+					$(this).parent().parent().remove();
+				});
+				
+				$('.add').live('click',function(){
+					$(this).val('Delete');
+					$(this).attr('class','del');
+					var appendTxt = "<tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>";
+					$("tr:last").after(appendTxt);			
+				});        
+			});
+		</script>
+				
 <!-- Validation jquery plugin -->
 <script type="text/javascript" src="jquery/jquery.validate.js">
 </script>
