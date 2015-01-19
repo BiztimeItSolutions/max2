@@ -6169,6 +6169,14 @@ input.error {
 padding-bottom:15px;
 padding-top:15px;
 }
+
+/*Medical certificate*/
+.dotbox{
+    border:none;
+    border-bottom:thin dashed black;
+    padding-bottom:0;
+    outline:none;
+}
 /*# sourceMappingURL=bootstrap.css.map */
 
 
