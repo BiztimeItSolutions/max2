@@ -111,11 +111,14 @@
                                             <label class="label1">Blood Group</label>
                                             <select class="form-control" name="BloodGroup">
 												<option>  Select Blood Group   </option>
-												<option>Unknown</option>
-												<option>A</option>
-												<option>B</option>
-												<option>O +ve</option>
-												<option>O -ve</option>
+												<option>A+</option>
+												<option>A-</option>
+												<option>B+</option>
+												<option>B-</option>
+												<option>O+</option>
+												<option>O-</option>
+												<option>AB+</option>
+												<option>AB-</option>
 											</select>  
                                         </div>
                                         
@@ -163,7 +166,7 @@
 									<hr>
 						
 									<!--<button type="submit" class="btn btn-primary">SaveAndProceed</button>-->
-									<input type="submit" class="btn btn-primary" href="#Contact" data-toggle="tab" value="SaveAndProceed"/>
+									<input type="submit" class="btn btn-primary" href="#Contact" data-toggle="tab" value="Save & Proceed"/>
 									
 									<!--<a href="#Contact" data-toggle="tab">SaveAndProceed</a>-->
 									
@@ -176,6 +179,31 @@
 	                            <div class="tab-pane fade" id="Contact">
 								<br/>
 									<div class="row">
+									<div class="col-lg-5">
+									
+									  <div class="form-group">
+            			                   		<label class="label1"><b>Comman Details</b></label><span class="style1"></span>   
+										   </div>
+									
+                               		     <div class="form-group">
+                                    	        <label class="label1">Land Phone</label><span class="style1"></span>
+                                        	    <input type="text" class="form-control" name="" placeholder="Enter your land line number">  
+                                       	 </div>
+                                         <div class="form-group">
+                                            <label class="label1">Mobile</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="Mobile" placeholder="Enter your mobile number">  
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label1">Email</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="Email" placeholder="Enter your email">  
+                                        </div> 
+
+
+										</div><!--Col-5 -->
+									
+									
+									
+									
 										<div class="col-lg-5">
 											
 											<div class="form-group">
@@ -214,7 +242,50 @@
 
    											<hr>
 									   </div><!-- Col 5-->
+									  </div><!-- row-->
+									  
+										<div class="row">
+																			<div class="col-lg-5">
+										      <div class="form-group">
+            			                   		<label class="label1"><b>Emergency Contact Address</b></label><span class="style1"></span>   
+										   </div>
+                        			       <div class="form-group">
+                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="EmergencyAddressLine1" id="EmergencyAddressLine1" placeholder="Emergency address line1">    
+		                                 </div>
+        	                             <div class="form-group">
+            	                                <label class="label1">Address Line2</label><span class="style1"></span>
+                	                            <input class="form-control" name="EmergencyAddressLine2" id="EmergencyAddressLine2" placeholder="Emergency address line2">    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="EmergencyCity" id="EmergencyCity" placeholder="Emergency address city">    
+                                        </div>
+                    		           <div class="form-group">
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
+                                            <input class="form-control" name="EmergencyPincode" id="EmergencyPincode" placeholder="Emergency address  pincode">    
+                            		     </div>
+							              <div class="form-group">
+                            	                <label class="label1">Country</label><span class="style1">*</span>
+                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="EmergencyCountry" name ="EmergencyCountry">
+												<option >Select Country</option>
+												</select>
+										  </div>
+										   <div class="form-group">
+                                        	    <label class="label1">State</label><span class="style1">*</span>
+	                                           <select class="form-control" name ="EmergencyState" id ="EmergencyState">
+													<option >Select State</option>
+											   </select>
+										  </div>
+  
+											<script language="javascript">print_country("EmergencyCountry");</script> 
+                               		<hr>
+									</div><!--col 5-->
+								
 
+										
+										
+										
 										<div class="col-lg-5">
    
  			                              <div class="form-group">
@@ -252,71 +323,14 @@
 											<script language="javascript">print_country("PermanentCountry");</script> 
                                		<hr>
 									</div><!--col 5 -->
-								</div><!--row-->
-								
-								
-								<div class="row">
-									<div class="col-lg-5">
-										      <div class="form-group">
-            			                   		<label class="label1"><b>Emergency Contact Address</b></label><span class="style1"></span>   
-										   </div>
-                        			       <div class="form-group">
-                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
-                                        	    <input class="form-control" name="EmergencyAddressLine1" id="EmergencyAddressLine1" placeholder="Emergency address line1">    
-		                                 </div>
-        	                             <div class="form-group">
-            	                                <label class="label1">Address Line2</label><span class="style1"></span>
-                	                            <input class="form-control" name="EmergencyAddressLine2" id="EmergencyAddressLine2" placeholder="Emergency address line2">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="EmergencyCity" id="EmergencyCity" placeholder="Emergency address city">    
-                                        </div>
-                    		           <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="EmergencyPincode" id="EmergencyPincode" placeholder="Emergency address  pincode">    
-                            		     </div>
-							              <div class="form-group">
-                            	                <label class="label1">Country</label><span class="style1">*</span>
-                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="EmergencyCountry" name ="EmergencyCountry">
-												<option >Select Country</option>
-												</select>
-										  </div>
-										   <div class="form-group">
-                                        	    <label class="label1">State</label><span class="style1">*</span>
-	                                           <select class="form-control" name ="EmergencyState" id ="EmergencyState">
-													<option >Select State</option>
-											   </select>
-										  </div>
-  
-											<script language="javascript">print_country("EmergencyCountry");</script> 
-                               		<hr>
-									</div><!--col 5-->
-								
-									<div class="col-lg-5">
-									
-									  <div class="form-group">
-            			                   		<label class="label1"><b>Comman Details</b></label><span class="style1"></span>   
-										   </div>
-									
-                               		     <div class="form-group">
-                                    	        <label class="label1">Land Phone</label><span class="style1"></span>
-                                        	    <input type="text" class="form-control" name="" placeholder="Enter your land line number">  
-                                       	 </div>
-                                         <div class="form-group">
-                                            <label class="label1">Mobile</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="Mobile" placeholder="Enter your mobile number">  
-                                        </div>
-                                         <div class="form-group">
-                                            <label class="label1">Email</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="Email" placeholder="Enter your email">  
-                                        </div> 
-										<hr>
 
-										</div><!--Col-5 -->
+								
+								
+
+									
 									</div><!--row-->
 
-									<button type="submit" class="btn btn-primary" href="#Parent" data-toggle="tab">SaveAndProceed</button>
+									<button type="submit" class="btn btn-primary" href="#Parent" data-toggle="tab">Save & Proceed</button>
 									<!--<a href="#Parent" data-toggle="tab">SaveAndProceed</a>-->
                                 
      
@@ -387,7 +401,7 @@
 									</div><!--row-->
 									
 									
-																		<div class="row">
+									<div class="row">
 										<div class="col-lg-5">	
 			                               <div class="form-group">
             	                                <label class="label1">Father Information</label><span class="style1"></span>
@@ -506,7 +520,7 @@
 
 									  
 
-									  <button type="submit" class="btn btn-primary" href="#Educational" data-toggle="tab">SaveAndProceed</button>
+									  <button type="submit" class="btn btn-primary" href="#Educational" data-toggle="tab">Save & Proceed</button>
 									  <!--<a href="#Educational" data-toggle="tab">Educational</a>-->
                                 </div>
 								
@@ -569,15 +583,7 @@
         							   </div><!-- Col 5-->	
 									   
 									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Max Marks">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Marks Obtained">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Click For Avg">   
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
 									   </div>  
 									 </div><!--row-->
 									 
@@ -591,15 +597,7 @@
         							   </div><!-- Col 5-->	
 									   
 									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Max Marks">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Marks Obtained">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Click For Avg">   
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
 									   </div>  
 									 </div><!--row-->
 									 
@@ -617,16 +615,9 @@
 	    	                                </div>
         							   </div><!-- Col 5-->	
 									   
+									  
 									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Max Marks">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Marks Obtained">   
-									   </div>
-									   
-									   <div class="col-lg-11">
-										   <input type="text" class="form-control-marks" name="" placeholder="Click For Avg">   
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
 									   </div>  
 									 </div><!--row-->
 									 
@@ -639,8 +630,8 @@
         							   </div><!-- Col 5-->	
 									   
 									   
-									   <div class="col-lg-44">
-										   <input type="text" class="form-control" name="" placeholder="Click For Avg Percentage">   
+									   <div class="col-lg-11">
+										   <input type="text" class="form-control-marks" name="" placeholder="">   
 									   </div>  
 									 </div><!--row-->
 									 
@@ -756,7 +747,7 @@
 					  
                 </div><!-- /.col-lg-12 -->
 				<hr>
-				 <input type="submit" value="SaveAndProceed " class="btn btn-primary" disabled> 
+				 <input type="submit" value="Save & Proceed " class="btn btn-primary" disabled> 
 			</div><!--row-->
 									 
 									 
