@@ -4861,7 +4861,7 @@ a.list-group-item-danger.active:focus {
 .panel-body {
 	/*width:975px;*/
 	widows:100%;
-  	padding: 3px;
+  	padding: 10px;
 	overflow-x: auto;
 
 }
