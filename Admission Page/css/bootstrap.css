@@ -6163,6 +6163,15 @@ input.error {
   border-radius: 4px;
   
 }
+
+/*medical*/
+
+.dotbox{
+    border:none;
+    border-bottom:thin dashed black;
+    padding-bottom:0;
+    outline:none;
+}
 /*# sourceMappingURL=bootstrap.css.map */
 
 
