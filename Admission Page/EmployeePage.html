@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>campus_G</title>
+
+
+    <!-- Core CSS - Include with every page -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Blank -->
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+	<script type= "text/javascript" src = "js/validate/countries.js"></script>
+	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
+    <script>  
+-->
+<style>ul { list-style-type: lower-alpha;}</style>
+</head>
+
+<body>
+<!--Start of Main page-->
+
+        <div id="page-wrapper1">
+       	 <form role="" id="admissionstudentdetails" method="post" action="">
+            <div class="row">             
+              <div class="col-lg-12">
+                   
+                     <h4 class="page-header">Admission | <span class="style2"> Employee Details</span></h4>
+              </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                  		<h6><a href="">Home</a> > <b>Employee Admission</b></h6>
+                  
+           	  	</div><!--col 6 -->
+			 </div><!--row -->
+                   <br />
+             <div class="row">
+                <div class="col-lg-12"> 
+                                
+					<div class="form-group">                             
+						<label>Fields Marked with <span class="style1">*</span> must be filled</label>
+					</div>
+
+				</div><!--col-12 -->
+			</div><!--col row -->
+
+             <div class="row">
+		         <div class="col-lg-12">
+				 
+				    <ul class="nav nav-tabs">
+                               
+							   <li class="active"><a href="#General" data-toggle="tab">General</a></li>
+                                <li><a href="#Personal" data-toggle="tab">Personal Details</a></li>
+								<li><a href="#Contact" data-toggle="tab">Contact</a></li>
+                                <li><a href="#Bank" data-toggle="tab">Bank Details</a></li>
+								<li><a href="#Settings" data-toggle="tab">Settings</a></li>
+                    </ul>
+					
+					<!-- Tab panes -->
+                            <div class="tab-content">
+                              
+							  <div class="tab-pane fade in active" id="General">
+								<br/>
+								<div class="row">
+								
+							        <div class="col-lg-5">
+										 <div class="form-group">
+                    	                        <label class="label1">Full Name</label><span class="style1">*</span>
+                	                            <input type="text" class="form-control" name="first_name" placeholder="First Name">  
+		    	                         </div>
+									 </div><!--Col-5  -->
+									 
+									 <div class="col-lg-33">
+										 <div class="form-group">
+                	                            <input type="text" class="form-control" name="middle_name" placeholder="Middle Name">  
+		    	                         </div>
+									 </div><!--Col-3 -->
+									 
+									 <div class="col-lg-33">
+										 <div class="form-group">
+                	                            <input type="text" class="form-control" name="last_name" placeholder="Last Name">  
+		    	                        </div>
+									 </div><!--Col-3 -->
+									 									 
+								</div><!--row -->
+								
+							    <div class="row">
+								
+								    <div class="col-lg-5">
+								        <div class="form-group">
+                                            <label class="label1">Employee Number</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="" placeholder="Employee Number">  
+										</div>
+										<div class="form-group">
+                                            <label class="label1">Joining Date</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="date_of_birth">  
+										</div>
+								        <div class="form-group">
+                                            <label class="label1">Email</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="email" placeholder="Enter Email Id">  
+										</div>
+										<div class="form-group">
+                                            <label class="label1">Date of Birth</label><span class="style1">*</span>
+                                            <input type="date" class="form-control" name="date_of_birth">  
+										</div>
+										 <div class="form-group">
+                                            <label class="label1">Department</label><span class="style1">*</span>
+                                            <select class="form-control" name="department">
+												<option> select </option>
+										    </select> 
+                                        </div>
+										<div class="form-group">
+                                            <label class="label1">Category</label><span class="style1">*</span>
+                                            <select class="form-control" name="category">
+												<option> select </option>
+										    </select> 
+                                        </div>
+										<div class="form-group">
+                                            <label class="label1">Position</label><span class="style1">*</span>
+                                            <select class="form-control" name="position">
+												<option> select </option>
+										  </select> 
+                                        </div>
+										<div class="form-group">
+                                            <label class="label1">Grade</label><span class="style1"></span>
+                                            <select class="form-control" name="grade">
+												<option> select </option>
+										    </select> 
+                                        </div>
+										<div class="form-group">
+                                            <label class="label1">Job Title</label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="birth_place" placeholder="Enter your Job Title">  
+                                        </div>
+                                          <div class="form-group">
+                                            <label class="label1">Qualification </label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="Qualification" placeholder="Enter your Qualification">
+                                        </div>
+                                       <div class="form-group">
+                                            <label class="label1">Experience Information</label>
+                                            <textarea class="form-control" rows="5" name="extra_curricular" placeholder="Enter your Experience information"></textarea>
+                                       </div>
+							           <br><br><br><br>
+									   <div class="form-group">
+                                            <label class="label1">Total Experience</label>
+                                            <span class="style1"></span>
+											<input type="date" class="form-control" name="Total Experience">  
+                                        </div>
+									    <hr>
+						
+									    <button type="submit" class="btn btn-primary" href="#Personal" data-toggle="tab">Save & Proceed</button>
+								
+
+							        </div><!--Col-5  -->
+							     </div><!--row -->										
+						     </div><!-- tab-pane-->
+    
+	                   <!-- personal details-->
+					   
+	                            <div class="tab-pane fade" id="Personal">
+								  <br/>
+									 <div class="row">
+									 
+										<div class="col-lg-5">	
+			                               <div class="form-group">
+                                            <label class="label1">Marital Status</label><span class="style1"></span>
+                                            <select class="form-control" name="marital">
+												<option> select </option>
+												<option> single </option>
+												<option> married </option>
+										    </select> 
+                                            </div>
+										   <div class="form-group">
+                                              <label class="label1">No of Children</label>
+                                              <span class="style1"></span>
+											  <input type="text" class="form-control" name="birth_place" placeholder=" Enter No of Children">  
+                                           </div>
+                                           <div class="form-group">
+                                            <label class="label1">Father Name</label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="birth_place" placeholder="Enter Father Name">  
+                                           </div>
+										   <div class="form-group">
+                                            <label class="label1">Mother Name</label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="birth_place" placeholder="Enter Mother Name">  
+                                           </div>
+										   <div class="form-group">
+                                            <label class="label1">Spouse Name</label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="birth_place" placeholder="Enter spouse Name">  
+                                           </div>
+										   <div class="form-group">
+                                             <label class="label1">Blood Group</label>
+                                             <select class="form-control" name="blood_group">
+												<option>  Select Blood Group   </option>
+												<option>A+</option>
+												<option>A-</option>
+												<option>B+</option>
+												<option>B-</option>
+												<option>O+</option>
+												<option>O-</option>
+												<option>AB+</option>
+												<option>AB-</option>
+											 </select>  
+                                           </div>
+                                          <div class="form-group">
+                                            <label class="label1">Nationality </label>
+                                            <span class="style1"></span>
+											<input type="text" class="form-control" name="nationality" placeholder="Enter nationality">
+                                          </div>
+										
+										</div><!--col-lg-5-->
+									</div><!--row -->
+
+									<button type="submit" class="btn btn-primary" href="#Contact" data-toggle="tab">Save & Proceed</button>
+									
+	                             </div>
+								 
+	                            <!--Contact details-->
+	
+								<div class="tab-pane fade" id="Contact">
+								<br/>
+									<div class="row">
+									
+									   <div class="col-lg-5">
+									        <div class="form-group">
+            			                   		<label class="label1"><b>Home Address</b></label><span class="style1"></span>   
+										    </div>
+									        <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="present_address_line1" id="address_line1" placeholder="Enter address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="present_address_line2" id="address_line2" placeholder="Enter address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="present_address_city" id="address_city" placeholder="Enter city">    
+                	                        </div>
+                    			            <div class="form-group">
+                                                <label class="label1">Country</label><span class="style1">*</span>
+                                                <select class="form-control" onChange="print_state('State',this.selectedIndex);" id="country" name ="Enter country">
+                                                <option >Select Country</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="label1">State</label><span class="style1">*</span>
+                                                <select class="form-control" name ="state" id ="state">
+                                                <option >Select State</option>
+                                                </select>
+                                            </div>
+                                                <script language="javascript">print_country("Country");</script> 
+										    <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="present_address_pincode" id="address_pincode" placeholder="Enter pincode">    
+			                                </div>
+
+										</div><!--Col-5 -->
+									
+									    <div class="col-lg-5">
+											<div class="form-group">
+				                               <label class="label1"><b>Office Address</b></label><span class="style1"></span>                               
+											</div>
+			                                <div class="form-group">
+            	                               <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                           <input class="form-control" name="present_address_line1" id="address_line1" placeholder="Enter address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="present_address_line2" id="address_line2" placeholder="Enter address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="present_address_city" id="address_city" placeholder="Enter city">    
+                	                        </div>
+                    			            <div class="form-group">
+                                                <label class="label1">Country</label><span class="style1">*</span>
+                                                <select class="form-control" onChange="print_state('State',this.selectedIndex);" id="country" name ="Enter country">
+                                                <option >Select Country</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="label1">State</label><span class="style1">*</span>
+                                                <select class="form-control" name ="state" id ="state">
+                                                <option >Select State</option>
+                                                </select>
+                                            </div>
+											    <script language="javascript">print_country("Country");</script> 
+                                            <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="present_address_pincode" id="address_pincode" placeholder="Enter pincode">    
+			                                </div>
+   											  <hr>
+											  
+									    </div><!-- Col 5-->
+										
+									</div><!-- row-->
+									  
+									<div class="row">
+											
+										<div class="col-lg-5">
+										
+										    <div class="form-group">
+            			                   		<label class="label1"><b>Contact Details</b></label><span class="style1"></span>   
+										    </div>
+                        			        <div class="form-group">
+                                    	        <label class="label1">Office Phone 1</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="" id="" placeholder="Enter Office Phone 1">    
+		                                    </div>
+        	                                <div class="form-group">
+            	                                <label class="label1">Office phone 2</label><span class="style1"></span>
+                	                            <input class="form-control" name="" id="" placeholder="Enter Office Phone 2">    
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="label1">Mobile</label><span class="style1">*</span>
+                                                <input class="form-control" name="" id="" placeholder="Enter Mobile">    
+                                            </div>
+                    		                <div class="form-group">
+                                                <label class="label1">Home Phone</label><span class="style1">*</span>
+                                                <input class="form-control" name="" id="" placeholder="Enter home phone">    
+                            		        </div>
+							                <div class="form-group">
+                                                <label class="label1">Fax</label><span class="style1">*</span>
+                                                <input class="form-control" name="" id="" placeholder="Enter Fax details">    
+                            		        </div>   
+                               		          <hr>
+											  
+									    </div><!--col 5-->
+								
+									</div><!--row-->
+
+									  <button type="submit" class="btn btn-primary" href="#Bank" data-toggle="tab">Save & Proceed</button>
+									  
+                                </div>
+								
+								
+						<!--Bank details-->	
+						
+						            <div class="tab-pane fade" id="Bank">
+								     <br/>
+							            <div class="row">
+							
+								         <div class="col-lg-5">	
+			                        
+									        <div class="form-group">
+            	                                <label class="label1">Name</label><span class="style1"></span>
+                	                            <input class="form-control" name="" id="" placeholder="">    
+                    		    	        </div>
+											<div class="form-group">
+                                                <label class="label1">Additional Bank Details</label>
+                                                <textarea class="form-control" rows="5" name="" placeholder=""></textarea>
+                                            </div>
+											
+										</div><!--col-lg-5-->
+										
+									</div><!--row -->	
+									
+									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
+									  
+                                    </div>		
+				<!--Settings-->
+			
+						<div class="tab-pane fade" id="Settings">
+								<br/>
+									<div class="row">
+										<div class="col-lg-5">	
+			                               <div class="form-group">
+                                              <label class="label1">Biometric ID</label>
+                                              <input type="text" class="form-control" name="" placeholder=""/>
+                                           </div>
+									       <div class="form-group">
+                                               <label class="label1">Upload Photo</label>
+                                               <input type="file" class="form-control-gender" name="photo">
+                                           </div>
+										</div><!--col-lg-5-->
+									</div><!--row -->
+								
+									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
+									  
+                        </div>
+						 
+									 
+						</div><!--Tab Main-->
+				 
+				</div><!--Col 12-->
+			</div><!-- Col row-->
+			
+			
+								
+
+        </div>
+        <!-- /#page-wrapper -->
+
+<!--End of Main page-->
+
+    <!-- Core Scripts - Include with every page -->
+   
+
+     <script type="text/javascript" src="js/jquery-1.7.min.js"></script> 
+<!--	     <script src="js/jquery-1.10.2.js"></script>
+	     <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+	-->	 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Blank -->
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    
+
+				
+<!-- Validation jquery plugin -->
+
+<script type="text/javascript" src="js/validate/jquery.validate.js"></script>
+<script type="text/javascript" src="js/validate/admissionstudent.js"></script>
+
+
+</body>
+
+</html>
+
+				 
