@@ -5265,7 +5265,6 @@ button.close {
   position: relative;
   padding: 20px;
 }
-
 .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
@@ -5284,7 +5283,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 900px;
+    width: 600px;
     margin: 30px auto;
   }
   .modal-content {
@@ -6163,19 +6162,6 @@ input.error {
   border: 1px solid #ccc;
   border-radius: 4px;
   
-}
-
-.br-parent {
-padding-bottom:15px;
-padding-top:15px;
-}
-
-/*Medical certificate*/
-.dotbox{
-    border:none;
-    border-bottom:thin dashed black;
-    padding-bottom:0;
-    outline:none;
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
