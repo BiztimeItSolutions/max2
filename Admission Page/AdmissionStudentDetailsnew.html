@@ -569,473 +569,815 @@ requireLazy(["Bootloader"], function(Bootloader) {Bootloader.configurePage(["237
 
 
         <div id="page-wrapper">
-        <form role="" id="admissionstudentdetails" method="post" action="">
+       	 <form role="" id="admissionstudentdetails" method="post" action="">
             <div class="row">             
               <div class="col-lg-12">
                    
-                     <h4 class="page-header">Admission | <span class="style2">Step 1 - Student Details</span></h4>
-                </div>
+                     <h4 class="page-header">Admission | <span class="style2"> Candidate Details</span></h4>
+              </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-6">
-                    
-							<!--
-							<div class="alert alert-success">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
-                            </div>
-                        	-->
-							<h6><a href="">Home</a> > <b>Student Admission</b></h6>
-                            	<!--Basic Form Elements-->
-                            	<!-- <div class="message">Your update was successful.</div> -->
-                        	</div></div>
-                       
-                            <div class="row">
-                                <div class="col-lg-12"> 
+                  		<h6><a href="">Home</a> > <b>Student Admission</b></h6>
+                  
+           	  	</div><!--col 6 -->
+			 </div><!--row -->
+                   <br />
+             <div class="row">
+                <div class="col-lg-12"> 
                                 
-<div class="form-group">                             
-<label>Fields Marked with <span class="style1">*</span> must be filled</label></div>
-<br />
+					<div class="form-group">                             
+						<label>Fields Marked with <span class="style1">*</span> must be filled</label>
+					</div>
 
-<table><tr><td><div class="form-group">
-                   <table> <tr><td><label class="label1">Admission No:</label><span class="style1">*</span></td><td>
-						<input class="form-control-admission" type="text" name="admission_no"/></td></tr></table>
-         </div>   </td><td></td><td></td><td>        
-<div class="form-group">
-              <table> <tr><td>      <label class="label1">Admission Date:</label><span class="style1">*</span>
-                                          </td>  <td><input type="date" class="form-control-admission" name="admission_date"/> </td></tr></table>
-  </div></td></tr></table>
-  <br>
-  <ul class="nav nav-tabs">
-                                <li class="active"><a href="#PersonalDetails" data-toggle="tab">Personal Details</a>
-                                </li>
-                                <li><a href="#ContactDetails" data-toggle="tab">Contact Details</a>
-                                </li>
-                                <li><a href="#EducationalDetails" data-toggle="tab">Educational Details</a>
-                                </li>
-                                <li><a href="#Settings" data-toggle="tab">Settings</a>
-                                </li>
-                                <li><a href="#UploadPhoto" data-toggle="tab">Upload Photo</a>
-                                </li>
-                                <li><a href="#AdditionalDetails" data-toggle="tab">Additional Details </a>
-                                </li>
-                                 <li><a href="#MedicalCertificate" data-toggle="tab">Medical Certificate </a>
-                                </li>
-                            </ul>
- 
-                            	      
-                            	       
-                            	       
-                            	        <!-- Tab panes -->
+				</div><!--col-12 -->
+			</div><!--col row -->
+
+             <div class="row">
+		         <div class="col-lg-12">
+				 
+				 <ul class="nav nav-tabs">
+                                <li class="active"><a href="#Personal" data-toggle="tab">Personal</a></li>
+                                <li><a href="#Contact" data-toggle="tab">Contact</a></li>
+								<li><a href="#Parent" data-toggle="tab">Parent</a></li>
+                                <li><a href="#Educational" data-toggle="tab">Educational</a></li>
+								<li><a href="#Medical" data-toggle="tab">Medical Certificate</a></li>
+
+                    </ul>
+					
+					<!-- Tab panes -->
                             <div class="tab-content">
-                                <div class="tab-pane fade in active" id="PersonalDetails">
-                                 
-			
-		
-				<br>
-  
-  
-                          <div class="col-lg-6">
-
-									<!-- <form role="" id="" method="" action=""> -->
-                                	
-										 
-                                        
-                                     <div class="form-group">
-                                            <label class="label1">First Name</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="first_name">  
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label class="label1">Middle Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="middle_name">  
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label class="label1">Last Name</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="last_name">  
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label class="label1">Course & Batch</label><span class="style1"></span>
-                                            <select class="form-control" name="course&batch">
-												<option>  Select Course & Batch  </option>
-												<option>BE-CSE BE-CSE-2014-18</option>
-												<option>BE-IT BE-IT-2014-18</option>
-												<option>BE-ECE BE-ECE-2014-18</option>
-											</select>
-                                        </div>
-                                        
-                                         <div class="form-group">
-                                            <label class="label1">Date Of Birth</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="date_of_birth">  
-                                        </div>
-                                         <div class="form-group">
-                                        <label class="label1">Gender:</label><span class="style1">*</span>
-                                        <input type="radio" class="form-control-gender"  name="gender" id="woman" value="Female" /> <label class="form-control-gender">Female</label>
-										<input type="radio"  class="form-control-gender"  name="gender" id="man" value="Male" /> <label class="form-control-gender">Male</label>
-                                        </div>
-
-                                        
-                                        
-                                         <div class="form-group">
+                                <div class="tab-pane fade in active" id="Personal">
+								<br/>
+								
+								<div class="row">
+							        
+									 <div class="col-lg-5">
+										 <div class="form-group">
+                    	                        <label class="label1">Full Name</label><span class="style1">*</span>
+                	                            <input type="text" class="form-control" name="FirstName" placeholder="First Name">  
+		    	                        </div>
+									 </div><!--Col-5  -->
+									 
+									 <div class="col-lg-33">
+										 <div class="form-group">
+                	                            <input type="text" class="form-control" name="MiddleName" placeholder="Middle Name">  
+		    	                        </div>
+									 </div><!--Col-3 -->
+									 
+									 <div class="col-lg-33">
+										 <div class="form-group">
+                	                            <input type="text" class="form-control" name="LastName" placeholder="Last Name">  
+		    	                        </div>
+									 </div><!--Col-3 -->
+									 									 
+								</div><!--row -->
+								
+							<div class="row">
+								<div class="col-lg-5">
+										<div class="form-group">
+                                            <label class="label1">Date of Birth</label><span class="style1">*</span>
+                                            <input type="date" class="form-control" name="DateOFBirth">  
+										</div>
+										
+										<div class="form-group">
+                                            	<label class="label1">Gender</label><span class="style1">*</span>
+											<div class="form-control-gender">&nbsp;
+	                                        	 <label1 for="male">Male</label1> <input type="radio"   name="Gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      								 	<label1 for="female">Female</label1>	<input type="radio"   name="Gender" id="woman" value="Female" />
+                                        	</div>
+                                        </div>	
+                                        							
+										 <div class="form-group">
                                             <label class="label1">Blood Group</label>
-                                            <select class="form-control" name="course&batch">
+                                            <select class="form-control" name="BloodGroup">
 												<option>  Select Blood Group   </option>
-												<option>Unknown</option>
-												<option>A</option><option>B</option><option>O</option>
+												<option>A+</option>
+												<option>A-</option>
+												<option>B+</option>
+												<option>B-</option>
+												<option>O+</option>
+												<option>O-</option>
+												<option>AB+</option>
+												<option>AB-</option>
 											</select>  
                                         </div>
                                         
                                           <div class="form-group">
                                             <label class="label1">Birth Place</label>
                                             <span class="style1"></span>
-											<input type="text" class="form-control" name="">  
+											<input type="text" class="form-control" name="BirthPlace" placeholder="Enter your birth place">  
                                         </div>
                                           <div class="form-group">
                                             <label class="label1">Nationality </label>
                                             <span class="style1">*</span>
-											<input type="text" class="form-control" name="nationality">
+											<input type="text" class="form-control" name="Nationality" placeholder="Enter your nationality">
                                         </div>
                                           <div class="form-group">
                                             <label class="label1">Mother Tounge</label>
                                             <span class="style1"></span>
-											<input type="text" class="form-control" name="">  
+											<input type="text" class="form-control" name="" placeholder="Enter your mother tounge" >  
                                         </div>
                                         
                                         <div class="form-group">
                                             <label class="label1">Category</label><span class="style1"></span>
                                            <select class="form-control" name="">
 												<option> select </option>
-											</select> 
+										  </select> 
                                         </div>
                                         
                                            <div class="form-group">
                                             <label class="label1">Religion</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
+                                            <input type="text" class="form-control" name="" placeholder="Enter your  religion">  
                                         </div>
                                        <div class="form-group">
                                             <label class="label1">Caste</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="caste">  
-                                        </div>  
-                                          <!-- <a href="#ContactDetails" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button>
-                            	     </div>
-                                       </div>
-                                       
-                                
-                                
-                                <div class="tab-pane fade" id="ContactDetails">
-                                   
-                                <br>
-                                
-                               <div class="col-lg-6">
-                               
-                               <div class="form-group">
-                               <label class="label1"><b>Present Address</b></label><span class="style1"></span>
-                               </div>
-                               <div class="form-group">
-                                            <label class="label1">Address Line1</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_address_line1" id="present_address_line1">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">Address Line2</label><span class="style1"></span>
-                                            <input class="form-control" name="present_address_line2" id="user">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_city" id="present_city">    
-                                        </div>
-                               <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="present_pincode" id="present_pincode">    
-                                        </div>
-              <div class="form-group">
-                                            <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onchange="print_state('present_state',this.selectedIndex);" id="present_country" name ="present_country">
-<option >Select Country</option>
-</select>
+                                            <input type="text" class="form-control" name="caste" placeholder="Enter your  caste">  
+                            		</div>  
 
-                                                                              
-                                        
-  </div>
-   <div class="form-group">
-                                            <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="present_state" id ="present_state">
-<option >Select State</option>
-</select>
-</div>
-  
-		<script language="javascript">print_country("present_country");</script> 
-   
- 
-                               
-                               <div class="form-group">
-                               <label class="label1"><b>Permanent Address</b></label><span class="style1"></span>
-                               </div>
-                               <div class="form-group">
-                                            <label class="label1">Address Line1</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_line1" id="permanent_address_line1">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">Address Line2</label><span class="style1"></span>
-                                            <input class="form-control" name="permanent_address_line2" id="permanent_address_line2">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_city" id="permanent_city">    
-                                        </div>
-                               <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_pincode" id="permanent_pincode">    
-                                        </div>
-              <div class="form-group">
-                                            <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onchange="print_state('permanent_state',this.selectedIndex);" id="permanent_country" name ="permanent_country">
-<option >Select Country</option>
-</select>
+									<div class="form-group">
+                                            <label class="label1">Extra Curricular</label>
+                                            <textarea class="form-control" rows="5" placeholder="Enter your extra curricular activities"></textarea>
+                                    </div>
+							<br><br><br><br>
+									<div class="form-group">
+                                            <label class="label1">Upload Photo</label>
+                                            <input type="file" name="UploadPhoto">
+                                    </div>
+									<hr>
+						
+									<!--<button type="submit" class="btn btn-primary">SaveAndProceed</button>-->
+									<input type="submit" class="btn btn-primary" href="#Contact" data-toggle="tab" value="Save & Proceed"/>
+									
+									<!--<a href="#Contact" data-toggle="tab">SaveAndProceed</a>-->
+									
 
-                                                                              
-                                        
-  </div>
-   <div class="form-group">
-                                            <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="permanent_state" id ="permanent_state">
-<option >Select State</option>
-</select>
-</div>
-  
-		<script language="javascript">print_country("permanent_country");</script> 
-                               
-                               
-                               
-                               
-                               
-                               
-                               
-                                
-                                         <div class="form-group">
-                                            <label class="label1">Phone</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
-                                        </div>
+							   </div><!--Col-5  -->
+							</div><!--row -->										
+						</div><!-- tab-pane-->
+    
+	
+	                            <div class="tab-pane fade" id="Contact">
+								<br/>
+									<div class="row">
+									<div class="col-lg-5">
+									
+									  <div class="form-group">
+            			                   		<label class="label1"><b>Comman Details</b></label><span class="style1"></span>   
+										   </div>
+									
+                               		     <div class="form-group">
+                                    	        <label class="label1">Land Phone</label><span class="style1"></span>
+                                        	    <input type="text" class="form-control" name="" placeholder="Enter your land line number">  
+                                       	 </div>
                                          <div class="form-group">
                                             <label class="label1">Mobile</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="mobile">  
+                                            <input type="text" class="form-control" name="Mobile" placeholder="Enter your mobile number">  
                                         </div>
                                          <div class="form-group">
                                             <label class="label1">Email</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="email">  
+                                            <input type="text" class="form-control" name="Email" placeholder="Enter your email">  
                                         </div> 
-                                        
-                                        
-                                        <!-- <a href="EducationalDetails" data-toggle="tab"> -->
-                                        <button type="submit" class="btn btn-primary">Save&Proceed</button>
-                                        <!-- </a> -->
-                                        </div>
-                            	       </div>
-                            	       
-                            	       
-                                   <div class="tab-pane fade" id="EducationalDetails">
-                                    </br>
-                                
-                               <div class="col-lg-6">
-                               
-                               <div class="form-group">
-                                            <label class="label1">Last College/School Attended</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="last_college">  
-                                        </div>
-                               <div class="form-group">
-                                            <label class="label1">Date of Entering the Institution</label><span class="style1"></span>
-                                            <input type="date" class="form-control" name="">  
+
+
+										</div><!--Col-5 -->
+									
+									
+									
+									
+										<div class="col-lg-5">
+											
+											<div class="form-group">
+				                               <label class="label1"><b>Present Contact Address</b></label><span class="style1"></span>                               
+											 </div>
+			                               <div class="form-group">
+            	                                <label class="label1">Address Line1</label><span class="style1">*</span>
+                	                            <input class="form-control" name="PresentAddressLine1" id="PresentAddressLine1" placeholder="Present address line1">    
+                    		    	        </div>
+                            	            <div class="form-group">
+                                    	        <label class="label1">Address Line2</label><span class="style1"></span>
+                                        	    <input class="form-control" name="PresentAddressLine2" id="PresentAddressLine2" placeholder="Present address line2">    
+	                                        </div>
+    	                                    <div class="form-group">
+        	                                    <label class="label1">City</label><span class="style1">*</span>
+            	                                <input class="form-control" name="PresentCity" id="PresentCity" placeholder="Present address city">    
+                	                        </div>
+                    			           <div class="form-group">
+                                	            <label class="label1">Pincode</label><span class="style1">*</span>
+                                    	        <input class="form-control" name="PresentPincode" id="PresentPincode" placeholder="Present address pincode">    
+			                               </div>
+            							                 <div class="form-group">
+                                            <label class="label1">Country</label><span class="style1">*</span>
+                                          <select class="form-control" onChange="print_state('PresentState',this.selectedIndex);" id="PresentCountry" name ="PresentCountry">
+<option >Select Country</option>
+</select>
+  </div>
+   <div class="form-group">
+                                            <label class="label1">State</label><span class="style1">*</span>
+                                           <select class="form-control" name ="PresentState" id ="PresentState">
+<option >Select State</option>
+</select>
+</div>
+  
+		<script language="javascript">print_country("PresentCountry");</script> 
+
+   											<hr>
+									   </div><!-- Col 5-->
+									  </div><!-- row-->
+									  
+										<div class="row">
+																			<div class="col-lg-5">
+										      <div class="form-group">
+            			                   		<label class="label1"><b>Emergency Contact Address</b></label><span class="style1"></span>   
+										   </div>
+                        			       <div class="form-group">
+                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="EmergencyAddressLine1" id="EmergencyAddressLine1" placeholder="Emergency address line1">    
+		                                 </div>
+        	                             <div class="form-group">
+            	                                <label class="label1">Address Line2</label><span class="style1"></span>
+                	                            <input class="form-control" name="EmergencyAddressLine2" id="EmergencyAddressLine2" placeholder="Emergency address line2">    
                                         </div>
                                         <div class="form-group">
-                                            <label class="label1">Date of Leaving the Institution</label><span class="style1"></span>
-                                            <input type="date" class="form-control" name="">  
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="EmergencyCity" id="EmergencyCity" placeholder="Emergency address city">    
                                         </div>
-                                        <div class="form-group">
-                                            <label class="label1">Name of Board/University Last Studied</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">Date of Entering the Board/University</label><span class="style1"></span>
-                                            <input type="date" class="form-control" name="">  
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">Date of Leaving the Board/University</label><span class="style1"></span>
-                                            <input type="date" class="form-control" name="">  
-                                        </div>
-                                        
-                               <div class="form-group">
-                                            <label class="label1">Details of Qualifying Examination Passed</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
-                                        </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                        <div class="panel-body">
-                                        <div class="form-group"> <table class="table table-striped table-bordered table-hover">
-										<th> Examination</th><th>Name of the University/Institution</th><th>No. of Attempts to Pass the Examination</th>
-										 <th> Year of Passing</th><th> Register No.</th><th> Optional Subjects Studied</th>
-										<th colspan="3"> Marks Obtained in Optional Subjects</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><th>Max Marks</th><th>Marks Obtained</th><th>Percentage</th>
-										 
-										<tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Physics" readonly></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										<tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Mathematics" readonly></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 <tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><textarea rows="3" cols="25" style="background:#eee" readonly> Chemistry/Bio-Technology/Computer science/Electronics/Biology</textarea></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 
-										  <tr><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name="" value="Average Percentage" readonly></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 
-										 </table></div> 
-										 
-										
-										 
-										 </div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                        <br></br>
-                                            <label class="label1"><br></br>Institutions at which the applicant studied during the last five years(Reasonds of break in continuity may be stated in the remarks column commencing from VII Standard to XII Standard)</label><span class="style1"></span>
-                                             
-                                        </div>
-                               
-                               <div class="col-lg-12">
-                                        <div class="panel-body">
-                                        <div class="form-group"> <table class="table table-striped table-bordered table-hover">
-										 <tr><th> </th><th>Year</th><th>Institution</th>
-										 <th>Class</th><th> Remarks</th></tr>
-										<tr><td>1</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										<tr><td>2</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 <tr><td>3</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 
-										  <tr><td>4</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										  <tr><td>5</td><td><input type="date" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td><td><input type="text" class="form-control" name=""></td></tr>
-										 
-										 </table></div> 
-										 </div>
-                                        </div>
-                                   <div class="col-lg-6">
-                                   <!-- <a href="#Settings" data-toggle="tab"> --><br></br><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
-                            	       </div>
-                            	      </div>
-                                      
-                                <div class="tab-pane fade" id="Settings">
-                                    
-                                   
-			
-		
-				</br>
-                                        
-                                         <div class="row">
-                               <div class="col-lg-6">
-                               
-                                        <div class="form-group">
-                                            <label class="label1">Biometric ID</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="">  
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label class="label1">Enable Email Features</label><span class="style1"></span>
-                                           <span></span><span></span> <input  type="checkbox" name="">  
-                                        </div>
-                                        </div></div>
-                                       <!--  <a href="#UploadPhoto" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
-                            	        </div>
-                           
-                            	       
- 
-                                        <div class="tab-pane fade" id="UploadPhoto">
-                                    
-                                      			
-		
-				</br>
-                                       
-                                         <div class="row">
-                               <div class="col-lg-6">
-                                        
-                                          <div class="form-group">
-                                            <label class="label1">Upload User Photo(500KB Max)</label><span class="style1"></span>     
-              					  <input type='file' />
-<img id="myImg" src="#" alt="your image"/>
-              						     
-                                        </div>
-                                        
-                                        <div class="form-group">
-                    <label class="label1">Place</label><span class="style1">*</span>
-						<input class="form-control" type="text" name="place" id="place"/>
-         </div>
-         <div class="form-group">
-                    <label class="label1">Date</label><span class="style1">*</span>
-						<input class="form-control" type="date" name="date" id="date"/>
-         </div>
-                                        
-                                        </div>
-                                      </div>
-                                      <!--  <a href="#AdditionalDetails" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button><!-- </a> -->
-                            	        
-                           </div>
-                               
-                                <div class="tab-pane fade" id="AdditionalDetails">
-                                    
-                                      			
-		
-				</br>
-                                       
-                                         <div class="row">
-                               <div class="col-lg-6">
-                                        
-                                           <div class="form-group">
-                                            <label class="label1">Extra Carricular</label><span class="style1"></span>
-                                            <select class="form-control" name="extra_carricular">
-												<option>  Select Extra carricular </option>
-												<option>Athletics</option>
+                    		           <div class="form-group">
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
+                                            <input class="form-control" name="EmergencyPincode" id="EmergencyPincode" placeholder="Emergency address  pincode">    
+                            		     </div>
+							              <div class="form-group">
+                            	                <label class="label1">Country</label><span class="style1">*</span>
+                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="EmergencyCountry" name ="EmergencyCountry">
+												<option >Select Country</option>
 												</select>
+										  </div>
+										   <div class="form-group">
+                                        	    <label class="label1">State</label><span class="style1">*</span>
+	                                           <select class="form-control" name ="EmergencyState" id ="EmergencyState">
+													<option >Select State</option>
+											   </select>
+										  </div>
+  
+											<script language="javascript">print_country("EmergencyCountry");</script> 
+                               		<hr>
+									</div><!--col 5-->
+								
+
+										
+										
+										
+										<div class="col-lg-5">
+   
+ 			                              <div class="form-group">
+            			                   		<label class="label1"><b>Permanent Contact Address</b></label><span class="style1"></span>   
+										   </div>
+                        			       <div class="form-group">
+                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="PermanentAddressLine1" id="PermanentAddressLine1" placeholder="Permanent address line1">    
+		                                 </div>
+        	                             <div class="form-group">
+            	                                <label class="label1">Address Line2</label><span class="style1"></span>
+                	                            <input class="form-control" name="PermanentAddressLine2" id="PermanentAddressLine2" placeholder="Permanent address line2">    
                                         </div>
-                                        
+                                        <div class="form-group">
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="PermanentCity" id="PermanentCity" placeholder="Permanent address city">    
                                         </div>
-                                      </div>
-                                       <!-- <a href="#MedicalCertificate" data-toggle="tab"> --><button type="submit" class="btn btn-primary">Save&Proceed</button></a>
-                            	        
-                           </div>
-                                     <div class="tab-pane fade" id="MedicalCertificate">
-                                    
-                                      			
+                    		           <div class="form-group">
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
+                                            <input class="form-control" name="PermanentPincode" id="PermanentPincode" placeholder="Permanent address pincode">    
+                            		     </div>
+							              <div class="form-group">
+                            	                <label class="label1">Country</label><span class="style1">*</span>
+                                	          <select class="form-control" onChange="print_state('PermanentState',this.selectedIndex);" id="PermanentCountry" name ="PermanentCountry">
+												<option >Select Country</option>
+												</select>
+										  </div>
+										   <div class="form-group">
+                                        	    <label class="label1">State</label><span class="style1">*</span>
+	                                           <select class="form-control" name ="PermanentState" id ="PermanentState">
+													<option >Select State</option>
+											   </select>
+										  </div>
+  
+											<script language="javascript">print_country("PermanentCountry");</script> 
+                               		<hr>
+									</div><!--col 5 -->
+
+								
+								
+
+									
+									</div><!--row-->
+
+									<button type="submit" class="btn btn-primary" href="#Parent" data-toggle="tab">Save & Proceed</button>
+									<!--<a href="#Parent" data-toggle="tab">SaveAndProceed</a>-->
+                                
+     
+	                                 </div>
+	
+	
+								<div class="tab-pane fade" id="Parent">
+								<br/>
+									<div class="row">
+										<div class="col-lg-5">	
+			                               <div class="form-group">
+            	                                <label class="label1">Guardian Information</label><span class="style1"></span>
+                	                            <input class="form-control" name="GuardianFirstName" id="GuardianFirstName" placeholder="First name">    
+                    		    	        </div>
+										</div><!--col-lg-5-->
+										
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianMiddleName" id="GuardianMiddleName" placeholder="Middle name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianLastName" id="GuardianLastName" placeholder="Last name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="Relation" id="Relation" placeholder="Relation">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+									</div><!--row -->
+											
+											
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Profession">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Tel(Res)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherlastName" id="FatherLastName" placeholder="Tel(Off)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Mobile">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Email">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+									
+									
+									<div class="row">
+										<div class="col-lg-5">	
+			                               <div class="form-group">
+            	                                <label class="label1">Father Information</label><span class="style1"></span>
+                	                            <input class="form-control" name="GuardianFirstName" id="GuardianFirstName" placeholder="First name">    
+                    		    	        </div>
+										</div><!--col-lg-5-->
+										
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianMiddleName" id="GuardianMiddleName" placeholder="Middle name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianLastName" id="GuardianLastName" placeholder="Last name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row -->
+											
+											
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Profession">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Tel(Res)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherlastName" id="FatherLastName" placeholder="Tel(Off)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Mobile">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Email">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+
+
+									<div class="row">
+										<div class="col-lg-5">	
+			                               <div class="form-group">
+            	                                <label class="label1">Mother Information</label><span class="style1"></span>
+                	                            <input class="form-control" name="GuardianFirstName" id="GuardianFirstName" placeholder="First name">    
+                    		    	        </div>
+										</div><!--col-lg-5-->
+										
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianMiddleName" id="GuardianMiddleName" placeholder="Middle name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="GuardianLastName" id="GuardianLastName" placeholder="Last name">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row -->
+											
+											
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Profession">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Tel(Res)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherlastName" id="FatherLastName" placeholder="Tel(Off)">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+
+									<div class="row">		
+										<div class="col-lg-5">
+                            	            <div class="form-group">
+                                    	        <label class="label1">.</label><span class="style1"></span>
+                                        	    <input class="form-control" name="FatherFirstName" id="FatherFirstName" placeholder="Mobile">    
+	                                        </div>
+										</div><!--lg-5-->
+										<div class="col-lg-33">	
+			                               <div class="form-group">
+                	                            <input class="form-control" name="FatherrMiddleName" id="FatherMiddleName" placeholder="Email">    
+                    		    	        </div>
+										</div><!--col-lg-33-->
+
+									</div><!--row-->
+
+
+
+									  
+
+									  <button type="submit" class="btn btn-primary" href="#Educational" data-toggle="tab">Save & Proceed</button>
+									  <!--<a href="#Educational" data-toggle="tab">Educational</a>-->
+                                </div>
+								
+								
+								
+                                <div class="tab-pane fade" id="Educational">
+								<br/>
+									<div class="row">
+										<div class="col-lg-5">
+											  <div class="form-group">
+                                            <label class="label1">College/School</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="last_college" placeholder="College/School Last Studied">  
+                                		 </div>
+		                                <div class="form-group">
+                                            <label class="label1">Date of Entering</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+         		                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Leaving</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Board/University</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="" placeholder="Board/University Last Studied">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Entering</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">Date of Leaving</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="">  
+                                        </div>                                        
+                		               <div class="form-group">
+                                            <label class="label1">Qualifying Examination Passed</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="" placeholder="Details of Exam">  
+	                                   </div>
+									    <div class="form-group">
+                                            <label class="label1">Attempts</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="Attempts" placeholder="Number of attempts to pass">  
+	                                   </div>
+									   <div class="form-group">
+                                            <label class="label1">Year</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="" placeholder="Enter the year of passing">  
+	                                   </div>
+									   <div class="form-group">
+                                            <label class="label1">Registrer Number</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="" placeholder="Enter Register Number">  
+	                                   </div>
+									   
+									   </div><!-- Col 5-->
+									  </div><!--row-->
+									  
+ 									<div class="row">
+										<div class="col-lg-5">
+											 <div class="form-group">
+	                                            <label class="label1">Optional Subjects</label><span class="style1"></span>
+   		                                        <input type="text" class="form-control" value="PHYSICS" name="" placeholder="" disabled>   
+	    	                                </div>
+        							   </div><!-- Col 5-->	
+									   
+									   <div class="col-lg-11">
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
+									   </div>  
+									 </div><!--row-->
+									 
+									 
+									 <div class="row">
+										<div class="col-lg-5">
+											 <div class="form-group">
+	                                            <label class="label1">.</label><span class="style1"></span>											 	
+   		                                        <input type="text" class="form-control" value="MATHEMATICS" name="" placeholder="" disabled>   
+	    	                                </div>
+        							   </div><!-- Col 5-->	
+									   
+									   <div class="col-lg-11">
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
+									   </div>  
+									 </div><!--row-->
+									 
+									 <div class="row">
+										<div class="col-lg-5">
+											 <div class="form-group">
+	                                            <label class="label1">.</label><span class="style1"></span>
+   		                                        <select class="form-control" name ="emergency_state" id ="emergency_state">
+													<option>CHEMISTRY</option>
+													<option>BIO-TECHNOLOGY</option>
+													<option>COMPUTER SCIENCE</option>
+													<option>ELECTRONICS</option>
+													<option>BIOLOGY</option>
+											   </select>
+	    	                                </div>
+        							   </div><!-- Col 5-->	
+									   
+									  
+									   <div class="col-lg-11">
+										   <input type="text" class="form-control-marks" name="" placeholder="Avg Marks">   
+									   </div>  
+									 </div><!--row-->
+									 
+									 <div class="row">
+										<div class="col-lg-5">
+											 <div class="form-group">
+	                                            <label class="label1">.</label><span class="style1"></span>
+   		                                        <input type="text" class="form-control" value="AVG PERCENTAGE" name="" placeholder="" disabled>   
+	    	                                </div>
+        							   </div><!-- Col 5-->	
+									   
+									   
+									   <div class="col-lg-11">
+										   <input type="text" class="form-control-marks" name="" placeholder="">   
+									   </div>  
+									 </div><!--row-->
+									 
+			 <div class="row">
+                <div class="col-lg-12">
+<p><b>Institutions at which the applicatn studied during the last five years(Reasons of break in continuity may be stated in the remarks column commencing from VIII Standard to XII Standart</b></p>				
+                      
+				  
+<table id="options-table" class="table table-striped table-bordered table-hover">					
+			<tr>
+				<td>Year</td>
+		<td>Institution</td>
+		<td>Class</td>
+		<td>Remarks</td>
+				<td>Add/Delete</td>
+			</tr>
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text" 	 name="input_box_two[]" class="form-control"/></td>                        
+				<td><input type="button" class='del' value='Delete' /></td>
+			</tr>                  
+			<tr>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+			<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_one[]" class="form-control"/></td>
+				<td><input type="text"   name="input_box_two[]" class="form-control"/></td>
+				<td><input type="button" class="add" value="Add More" /></td>
+			</tr>
+		</table>
+		<br>
 		
-				</br>
-                                       
-                                         <div class="row">
-                               <div class="col-lg-6">
-                                        
-                                          <div class="form-group">
-                                        <br></br>
-                                            <label class="label1"><br></br>1. I do hereby certify that I have examined Sri/Kumari.........................<br></br>a candidate seeking admission to B.E. degree course in the H.K.B.K. College of Engineering,Bangalore.<br></br>i) heiht ........................  iv) Eye sight ......................<br></br>ii) Weight ........................  Power of glasses, if used..................
-                                            <br></br>iii) Blood Group ........................     <br></br> <br></br>
-                                            2. I find him/her to be healthy and fit to take admission in Engineering Course.<br></br>
-                                            3. I am also satisfied by personal examination, that he/she has been vaccinated or bears marks of small pox vaccination.<br></br>
-                                            4. The applicant's age, according to his/her own statement is .............. years and by appearance about ................ years.<br></br>
-                                            5. Personal Marks Identification.   i)..........................<br></br>ii)....................
-                                            <br></br>
-                                            <align="right">Signature,Qualification and Designation of the Medical Examiners</align><br></br>
-                                            <br></br>
-                                            Station ..........<br>
-                                            </br>Date ............<br></br>
-                                            (To be examined by an Assistant Surgon or Practitioner who is a graduate or Licentiate in Medicine of 5 years standing and registered in the Medical Council)
-                       
-                                            </label><span class="style1"></span>
-                                             
+		<div class="form-group">
+        <input type="checkbox" class="form-control-checkbox" name="option-5" id="option-5"> <label for="option-1" class="label1">I agreed the</label><span class="style1"></span>
+        <span style="font:normal 14px agency, arial; color:blue; text-decoration:underline; cursor:pointer;" data-toggle="modal" data-target="#myModal1">Terms & Conditions</span>									        <!-- Modal -->
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">INSTRUCTIONS TO THE CANDIDATES SEEKING ADMISSION</h4>
                                         </div>
-                                      
-        
-                                        
+                                        <div class="modal-body">
+                                            <ol>
+                                         <li>The application form should be correctly filled.
+											Enclose 4 Colour PP size Photographs and send to the Principal,H.K.B.K. College of
+											Engineering,Bangalore,Karnataka,India,with a Crossed demand Draft for Rs.500/-(
+											Rupees Five Hundred Only) Drawn in favour of H.K.B.K. College of 
+											Engineering,Bangalore, towards Registration fee of application and with documents
+											securely fastened to the application,so as to reach him on or before the due date.
+											The registration fee is not refundable.</li>
+											<br/>
+											<li> <ul><li>MINIMUM QUALIFICATION:&nbsp;&nbsp;
+											Two years Pre University Examination of the Karnataka Pre University Education Board 
+											or any other equivalent examination with a minimum of 45 percent marks on the 
+											aggregate on the science group
+											i.e., Physics, Mathematics and Chemistry/Biology/Bio-Technology/Electronics/Computer 
+											Science in the Final Examination, with Engish as one of the Subject of study.</li>
+											
+											<li>As per Government norms,the above qualified student should have taken 
+											CET/KRLMPCA - CET or any other Entrance Test approved by the Government of
+											Karnataka.</li></ul></li>
+											<br/>
+											<li>Students from other University / Board should produce the ELIGIBILTY  CERTIFICATE 
+											from REGISTRAR,V.T.U.,Belgaum along with the application.</li>
+											<br/>
+											<li>Students coming from other Universities should also produce Migration Certificate at
+											the time of adission.</li>
+											<br/>
+											<li>Applications with incomplete information are liable to be rejected.</li>
+											<br/>
+											<li>Application received after the due date will not be entertained.</li>
+											<br/>
+											<li>Only attested copies of the required certificated are to be enclosed.with the
+											application and the Original Certificates should be produced at the time of 
+										Selection/Admission.</li>
+										<br/>
+											 <li>Candidates called for interview,should appear before the selection committee,at their
+											 own cost.</li>
+											 <br/>
+											 <li>Candidates selected for admission would be intimated by ordinary post.</li></br>
+											 <br/>
+											 <li>The Management reserves the right to cancel the admission of a candidate at any 
+											 stage, if and when is detected that admission is against the rules.</li>
+											 
+											 </ol><ol>
+											 <b>Note:</b> 
+											 <br/><br/>
+										<li>The branch once allotted will not be changed later.</li></br>
+										
+										<li>All admissions are subject to final approval of the Visvesvaraya Technological
+										University(VTU)
+										Belgaum and the Institute shall not be responsible for any loss to the candidate if the 
+										admission is not approved by the University.
+									    Principal
+										H.K.B.K. College of Engineering</li></ol> 
                                         </div>
-                                      </div>
-                                        <a href="AdmissionStudentParentGuardianDetails.html"><button type="" class="btn btn-primary">Save&Proceed</button></a>
-                            	       
-                           </div> 
-                           
-                           </div>
-                           </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
                             </div>
-                           </form>
-                           </div>
-                           
+ <!-- /.modal -->
+	                         
+	            </div>
+					  </div> 
+					  
+					  
+                </div><!-- /.col-lg-12 -->
+				<hr>
+				 <input type="submit" value="Save & Proceed " class="btn btn-primary" disabled> 
+			</div><!--row-->
+						
+						<!--Medical Start-->
+						
+ <div class="tab-pane fade" id="Medical">
+								<br/>
+									<div class="row">
+									<ol> <div class="modal-body">
+										
+										<div class="col-lg-12">
+											
+                                         <li>I do hereby certify that I have examined Sri/Kumari&nbsp;&nbsp;
+                                            <input type="text"   class="dotbox" name=""  style="width: 30%" />  
+	                                    a candidate seeking admission to B.E. degree course in the H.K.B.K. College of Engineering,Bangalore. </li>
+										<br/>
+										</div>
+										
+										<ul>
+										<div class="col-lg-6">
+										
+										<li>height&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 80%">  </li> 
+									    <li>weight&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 80%"></li>
+										<li>Blood Group&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 80%"></li>
+										
+										</div>
+										
+										<div class="col-lg-6">
+										    <li>Eye Sight&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 80%"><br/>
+											 Power of glasses,if used<br/>
+											 <input type="text" class="dotbox" name=""  style="width: 80%">
+											 <input type="text" class="dotbox" name=""  style="width: 80%"></li>
+											 										 <br/>
+									   </div>
+									   </ul>
+
+											<div class="col-lg-12">
+											 <li>I find him/her to be healthy and fit to take admission in Engineering Course. </li>
+										 <br/>
+										 <li>I am also satisfied by personal examination,that he/she has been vaccinated or bears marks of small pox vaccination. </li>
+										 <br/>
+										 <li>The applicant's age,according to his/her own statement is&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 20%"> 
+										 years and by appearance about&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 20%"> years. </li>
+											<br/>
+											
+											<div class="col-lg-6">
+										 <li>Personal Marks Identification</li>
+                                       </div>
+											<ul>
+										<div class="col-lg-6">
+										<li><input type="text" class="dotbox" name=""  style="width: 80%">  </li> 
+									    <li><input type="text" class="dotbox" name=""  style="width: 80%"></li>
+										<br/>
+										<br/>
+										Signature,Qualification and Designation of the Medical Examiners
+										</div></ul>
+											<br/>
+											Station:&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 20%"><br/>
+											Date:&nbsp;&nbsp;<input type="text" class="dotbox" name=""  style="width: 20%"><br/>
+											(To be examined by an Assistant Surgeon or Practitioner who is graduate or Licentiate in Medicine of 5 years
+											standing and registered in the medical council)
+									<br/>
+											<br/>
+											 <br/>
+											</div>
+			                           <hr>
+									   </div><!-- Col 5-->
+</ol>
+									
+     </div><button type="submit" class="btn btn-primary" href="" data-toggle="tab">SaveAndProceed</button>
+	                                 </div>
+
+								<!--Medical End-->
+
+								<!--Medical End-->	 
+									 
+						</div><!--Tab Main-->
+				 
+				</div><!--Col 12-->
+			</div><!-- Col row-->
+			
+			
+								
+
+        </div>
+        <!-- /#page-wrapper -->
+
+<!--End of Main page-->
                            
                                
                                
