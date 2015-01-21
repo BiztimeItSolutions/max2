@@ -557,49 +557,60 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
                             </div>
                         	-->
-							<h6>Home > Inventory > Report > Generate Sales Report > <b>Invoice Report</b></h6>
+							<h6>Home > Inventory > Reports > Sales Reports > <b>Generate Invoice Report</b></h6>
                             	<!--Basic Form Elements-->
                             	<!-- <div class="message">Your update was successful.</div> -->
                         
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
+								<br>
                               <div class="form-group">
-                                            <label class="label1">Select Store:</label>
-                                           
-                                            <span class="style1"></span>
-                                            
+                                            <label class="label1">Select Store</label>
+                                                                                                                                  
                                              <select class="form-control" name="daywisereportstore" id=""daywisereportstore"">
 												<option> Select a category  </option>
 												<option>A </option>
 												<option>B</option>
 												<option>C</option>
 											</select>
-											
-											</br></br>
-											<label class="label1">From:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                            <input type="date" name="inventoryreportstartdate" id="inventoryreporstarttdate">
-											
-											</br></br>
-											<label class="label1">To:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span class="style1"></span>
-                                            <input type="date" name="inventoryreportenddate" id="inventoryreportenddate">
+											</div>
+											</div>
+											<div class="col-lg-5">
+											<br>
+											<div class="form-group">
+											<table><tr><td>
+											<label class="label1">Payment status</label></td>
+                                          <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                             
-                                            </br></br>
-											<label class="label1">Payment status:</label>
-                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                           <td>
+                                            <input type="radio" value="Paid">&nbsp;Paid</input></td><td>&nbsp;&nbsp;</td>
+                                            <td><input type="radio">&nbsp;Unpaid</input></td><td>&nbsp;&nbsp;</td>
+											<td><input type="radio">&nbsp;All</input></td><td>&nbsp;&nbsp;</td>
+											</tr></table>
+                                        </div> 
+										</div>
+										</div>
+										<div class="row">
+										<div class="col-lg-5">
+											<div class="form-group">
+											<label class="label1">From</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <span class="style1"></span>
-                                           
-                                            <input type="radio" value="Paid">Paid</input>&nbsp;&nbsp;&nbsp;
-                                            <input type="radio">Unpaid</input>&nbsp;&nbsp;&nbsp;
-											<input type="radio">All</input>&nbsp;&nbsp;&nbsp;
-											
-                                        </div>   
+                                            <input type="date" class="form-control" name="inventoryreportstartdate" id="inventoryreporstarttdate">
+											</div>
+											</div>
+											<div class="col-lg-5">
+											<div class="form-group">
+											<label class="label1">To</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span class="style1"></span>
+                                            <input type="date" class="form-control" name="inventoryreportenddate" id="inventoryreportenddate">
+                                            </div>
+                                          </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="InventoryGenerateInvoiceReportSearch.jsp" class="btn btn-primary">Search</a> 
-                                        </form>    
-                                        
+                                           
+                                      <div class="page-header">
+                                      </div>									  
                                
-                                </div>  
+                                 
                               
                                                               
                                </div>

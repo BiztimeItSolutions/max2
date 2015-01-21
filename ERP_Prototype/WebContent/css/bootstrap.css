@@ -4513,6 +4513,12 @@ a.thumbnail.active {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
+.alert-success-yellow {
+  color: #000000;
+  background-color: #eee8aa;
+  border-color: #fo86ec;
+}
+
 .alert-success hr {
   border-top-color: #c9e2b3;
 }
