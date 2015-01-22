@@ -426,7 +426,6 @@
 
 
 <!--Start of Main page-->
-
         <div id="page-wrapper">
         <form role="" id="admissionstudentdetails" method="post" action="">
             <div class="row">             
@@ -564,9 +563,9 @@
                                     </div>
 									<hr>
 						
-									<button type="submit" class="btn btn-primary">SaveAndProceed</button>
+								
 									
-									
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
 
 							   </div><!--Col-5  -->
 							</div><!--row -->										
@@ -716,7 +715,7 @@
 										</div><!--Col-5 -->
 									</div><!--row-->
 
-									<button type="submit" class="btn btn-primary">SaveAndProceed</button>
+									<button type="submit" id="nxt1" class="btn btn-primary">SaveAndProceed</button>
      
 	                                 </div>
 	
@@ -874,7 +873,7 @@
 									  </div><!--row-->
 									  
 										
-									  <button type="submit" class="btn btn-primary">SaveAndProceed</button>
+									  <button type="submit" id="nxt2" class="btn btn-primary">SaveAndProceed</button>
                                 </div>
 								
 								
@@ -1151,6 +1150,64 @@ var checkboxes = $("input[type='checkbox']"),
 checkboxes.click(function() {
     submitButt.attr("disabled", !checkboxes.is(":checked"));
 });
+</script>
+ <!-- tab -->
+    
+<script>
+$('#nxt').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt1').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt2').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt3').on('click', function () {
+    moveTab("Next");
+});
+
+$('#prv').on('click', function () {
+    moveTab("Previous");
+});
+
+
+function moveTab(nextOrPrev)
+ {
+    
+    var currentTab = "";
+    $('.nav-tabs li').each(function () 
+	{
+        if ($(this).hasClass('active')) 
+		{
+            currentTab = $(this);
+            //currentTab.removeClass('active');
+            //alert($(this).text());
+        }
+    });
+
+    if (nextOrPrev == "Next") {
+     
+        if (currentTab.next().length) 
+        {
+            currentTab.removeClass('active');
+         currentTab.next().addClass('active');}
+        else {} // do nothing for now
+
+    } 
+	else {
+        
+        if (currentTab.prev().length) 
+        {
+           // currentTab.removeClass('active');
+            currentTab.removeClass('active');
+            currentTab.prev().addClass('active');
+        }
+        else {} //do nothing for now 
+
+    }
+}
+
 </script>
 </body>
 
