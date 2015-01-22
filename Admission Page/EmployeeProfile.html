@@ -20,14 +20,14 @@
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
-<style>ul { list-style-type: lower-alpha;}</style>
+
 </head>
 
 <body>
 <!--Start of Main page-->
 
         <div id="page-wrapper1">
-       	 <form role="" id="employeedetails" method="post" action="">
+       	
             <div class="row">             
               <div class="col-lg-12">
                    
@@ -72,6 +72,7 @@
 								<br/>
 								<div class="row">
 								
+								<form id="emp" action="post">
 							        <div class="col-lg-5">
 										 <div class="form-group">
                     	                        <label class="label1">Full Name</label><span class="style1">*</span>
@@ -158,10 +159,12 @@
                                         </div>
 									    <hr>
 						
-									    <button type="submit" class="btn btn-primary" href="#Personal" data-toggle="tab">Save & Proceed</button>
+                    <button type="submit" id="nxt" class="btn btn-primary" href="#Personal" data-toggle="tab">Save & Proceed</button>
+									    
 								
 
 							        </div><!--Col-5  -->
+									</form>
 							     </div><!--row -->										
 						     </div><!-- tab-pane-->
     
@@ -222,9 +225,10 @@
 										
 										</div><!--col-lg-5-->
 									</div><!--row -->
+									 <button type="submit" id="nxt1" class="btn btn-primary" href="#Contact" data-toggle="tab">Save & Proceed</button>
 
-									<button type="submit" class="btn btn-primary" href="#Contact" data-toggle="tab">Save & Proceed</button>
 									
+									  
 	                             </div>
 								 
 	                            <!--Contact details-->
@@ -341,7 +345,7 @@
 								
 									</div><!--row-->
 
-									  <button type="submit" class="btn btn-primary" href="#Bank" data-toggle="tab">Save & Proceed</button>
+							 <button type="submit" id="nxt2" class="btn btn-primary" href="#Bank" data-toggle="tab">Save & Proceed</button>
 									  
                                 </div>
 								
@@ -367,7 +371,7 @@
 										
 									</div><!--row -->	
 									
-									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
+									  <button type="submit" id="nxt3" class="btn btn-primary" href="#Settings" data-toggle="tab">Save & Proceed</button>
 									  
                                     </div>		
 				<!--Settings-->
@@ -387,7 +391,7 @@
 										</div><!--col-lg-5-->
 									</div><!--row -->
 								
-									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
+									  <button type="submit" class="btn btn-primary"  data-toggle="tab">Save & Proceed</button>
 									  
                         </div>
 						 
@@ -418,14 +422,69 @@
     <!-- SB Admin Scripts - Include with every page -->
     <script src="js/sb-admin.js"></script>
 
-    <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    <!-- tab -->
     
+<script>
+$('#nxt').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt1').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt2').on('click', function () {
+    moveTab("Next");
+});
+$('#nxt3').on('click', function () {
+    moveTab("Next");
+});
 
+$('#prv').on('click', function () {
+    moveTab("Previous");
+});
+
+
+function moveTab(nextOrPrev)
+ {
+    
+    var currentTab = "";
+    $('.nav-tabs li').each(function () 
+	{
+        if ($(this).hasClass('active')) 
+		{
+            currentTab = $(this);
+            //currentTab.removeClass('active');
+            //alert($(this).text());
+        }
+    });
+
+    if (nextOrPrev == "Next") {
+     
+        if (currentTab.next().length) 
+        {
+            currentTab.removeClass('active');
+         currentTab.next().addClass('active');}
+        else {} // do nothing for now
+
+    } 
+	else {
+        
+        if (currentTab.prev().length) 
+        {
+           // currentTab.removeClass('active');
+            currentTab.removeClass('active');
+            currentTab.prev().addClass('active');
+        }
+        else {} //do nothing for now 
+
+    }
+}
+
+</script>
 				
 <!-- Validation jquery plugin -->
 
 <script type="text/javascript" src="js/validate/jquery.validate.js"></script>
-<script type="text/javascript" src="js/validate/employeepage.js"></script>
+<script type="text/javascript" src="js/validate/emp.js"></script>
 
 
 </body>
