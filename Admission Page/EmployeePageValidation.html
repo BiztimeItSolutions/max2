@@ -99,7 +99,7 @@
 								    <div class="col-lg-5">
 								        <div class="form-group">
                                             <label class="label1">Government Id Number</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="" placeholder="Government Id Number">  
+                                            <input type="text" class="form-control" name="government_id" placeholder="Government Id Number">  
 										</div>
 										
 										<div class="form-group">
@@ -158,13 +158,13 @@
                                            </div>
                                           <div class="form-group">
                                             <label class="label1">Nationality </label>
-                                            <span class="style1"></span>
+                                            <span class="style1">*</span>
 											<input type="text" class="form-control" name="nationality" placeholder="Enter nationality">
                                           </div>
 										
                                      
 										<div class="form-group">
-                                            <label class="label1">Category</label><span class="style1">*</span>
+                                            <label class="label1">Category</label><span class="style1"></span>
                                             <select class="form-control" name="category">
 												<option> select </option>
 										    </select> 
@@ -179,7 +179,7 @@
                                            </div>
                                       
 									    <hr>
-						                    <button type="submit" id="nxt" class="btn btn-primary" href="#Contact" data-toggle="tab">Save & Proceed</button>
+						                   <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
 									    
 									   
 								
@@ -235,21 +235,21 @@
 	                                        </div>
     	                                    <div class="form-group">
         	                                    <label class="label1">City</label><span class="style1">*</span>
-            	                                <input class="form-control" name="present_address_city" id="present_address_city" placeholder="Present address city">    
+            	                                <input class="form-control" name="present_city" id="present_address_city" placeholder="Present address city">    
                 	                        </div>
                     			           <div class="form-group">
                                 	            <label class="label1">Pincode</label><span class="style1">*</span>
-                                    	        <input class="form-control" name="present_address_pincode" id="present_address_pincode" placeholder="Present address pincode">    
+                                    	        <input class="form-control" name="present_pincode" id="present_address_pincode" placeholder="Present address pincode">    
 			                               </div>
             							                 <div class="form-group">
                                             <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onChange="print_state('PresentState',this.selectedIndex);" id="present_address_country" name ="present_address_country">
+                                          <select class="form-control" onChange="print_state('PresentState',this.selectedIndex);" id="present_address_country" name ="present_country">
 <option >Select Country</option>
 </select>
   </div>
    <div class="form-group">
                                             <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="present_address_state" id ="present_address_state">
+                                           <select class="form-control" name ="present_address_state" id ="present_state">
 <option >Select State</option>
 </select>
 </div>
@@ -267,37 +267,37 @@
 										   </div>
                         			       <div class="form-group">
                                     	        <label class="label1">Address Line1</label><span class="style1">*</span>
-                                        	    <input class="form-control" name="emergency_address_line1" id="emergency_address_line1" placeholder="Office address line1">    
+                                        	    <input class="form-control" name="office_address_line1" id="office_address_line1" placeholder="Office address line1">    
 		                                 </div>
         	                             <div class="form-group">
             	                                <label class="label1">Address Line2</label><span class="style1"></span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
+                	                            <input class="form-control" name="office_address_line2" id="office_address_line2" placeholder="Office address line2">    
                                         </div>
                                         <div class="form-group">
             	                                <label class="label1">Office Phone1</label><span class="style1">*</span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
+                	                            <input class="form-control" name="office_phone1" id="office_phone1" placeholder="Office address line2">    
                                         </div>
                                         <div class="form-group">
             	                                <label class="label1">Office Phone2</label><span class="style1"></span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
+                	                            <input class="form-control" name="office_phone2" id="office_phone2" placeholder="Office address line2">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="emergency_address_city" id="emergency_address_city" placeholder="Office address city">    
+                                            <input class="form-control" name="office_city" id="office_city" placeholder="Office address city">    
                                         </div>
                     		           <div class="form-group">
                                             <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="emergency_address_pincode" id="emergency_address_pincode" placeholder="Office address  pincode">    
+                                            <input class="form-control" name="office_pincode" id="office_pincode" placeholder="Office address  pincode">    
                             		     </div>
 							              <div class="form-group">
                             	                <label class="label1">Country</label><span class="style1">*</span>
-                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="emergency_address_country" name ="emergency_address_country">
+                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="emergency_address_country" name ="office_country">
 												<option >Select Country</option>
 												</select>
 										  </div>
 										   <div class="form-group">
                                         	    <label class="label1">State</label><span class="style1">*</span>
-	                                           <select class="form-control" name ="emergency_address_state" id ="emergency_address_state">
+	                                           <select class="form-control" name ="office_state" id ="emergency_address_state">
 													<option >Select State</option>
 											   </select>
 										  </div>
@@ -325,11 +325,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_city" id="permanent_address_city" placeholder="Permanent address city">    
+                                            <input class="form-control" name="permanent_city" id="permanent_address_city" placeholder="Permanent address city">    
                                         </div>
                     		           <div class="form-group">
                                             <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_pincode" id="permanent_address_pincode" placeholder="Permanent address pincode">    
+                                            <input class="form-control" name="permanent_pincode" id="permanent_address_pincode" placeholder="Permanent address pincode">    
                             		     </div>
 							              <div class="form-group">
                             	                <label class="label1">Country</label><span class="style1">*</span>
@@ -354,7 +354,7 @@
 									
 									</div><!--row-->
 
-									<button type="submit" id="nxt1" class="btn btn-primary" href="#Experience" data-toggle="tab">Save & Proceed</button>
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
      
 	                                 </div>
 	
@@ -376,23 +376,23 @@
                                        	 </div>
                                          <div class="form-group">
                                             <label class="label1">Organization Name</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="mobile" placeholder="Enter Organization name">  
+                                            <input type="text" class="form-control" name="organization_name" placeholder="Enter Organization name">  
                                         </div>
                                          <div class="form-group">
-                                            <label class="label1">Designation</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="email" placeholder="Enter Designation">  
+                                            <label class="label1">Designation</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="designation1" placeholder="Enter Designation">  
                                         </div> 
                                           <div class="form-group">
-                                            <label class="label1">Start Date</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="email" >  
+                                            <label class="label1">Start Date</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="start_date" >  
                                         </div> 
                                           <div class="form-group">
-                                            <label class="label1">End Date</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="email">  
+                                            <label class="label1">End Date</label><span class="style1"></span>
+                                            <input type="date" class="form-control" name="end_date">  
                                         </div> 
                                          <div class="form-group">
                                             <label class="label1">Years Of Experience</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="email" placeholder="Enter Year of passing">  
+                                            <input type="text" class="form-control" name="years_of_experience" placeholder="Enter Year of passing">  
                                         </div> 
 
 										
@@ -401,23 +401,23 @@
 				                               <label class="label1"><b>Employee Designation</b></label><span class="style1"></span>                               
 											 </div>
 			                               <div class="form-group">
-            	                                <label class="label1">Employee ID</label><span class="style1">*</span>
+            	                                <label class="label1">Employee ID</label><span class="style1"></span>
                 	                            <input class="form-control" name="" id="" placeholder="Enter employee id">    
                     		    	        </div>
                             	            <div class="form-group">
-                                    	        <label class="label1">Designation</label><span class="style1"></span>
-                                        	    <input class="form-control" name="" id="" placeholder="Enter Designation ">    
+                                    	        <label class="label1">Designation</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="designation" id="" placeholder="Enter Designation ">    
 	                                        </div>
     	                                    <div class="form-group">
         	                                    <label class="label1">Department</label><span class="style1">*</span>
-            	                                <input class="form-control" name="" id="" placeholder="Enter Department">    
+            	                                <input class="form-control" name="department" id="" placeholder="Enter Department">    
                 	                        </div>
                     			           <div class="form-group">
-                                	            <label class="label1">Effective Date</label><span class="style1">*</span>
+                                	            <label class="label1">Effective Date</label><span class="style1"></span>
                                     	        <input class="form-control" type="date"name="" id="" >    
 			                               </div>
             							    <div class="form-group">
-                                            <label class="label1">Joining Date</label><span class="style1"></span>
+                                            <label class="label1">Joining Date</label><span class="style1">*</span>
                                             <input type="date" class="form-control" name="date_of_joining">  
 										</div>             
 
@@ -426,10 +426,7 @@
 									  </div><!-- row-->
 									 <br/>
 									 
-									<button type="submit"   id="nxt2" class="btn btn-primary" href="#Educational" data-toggle="tab">Save & Proceed</button>
-									<!--<a href="#Parent" data-toggle="tab">SaveAndProceed</a>-->
-                                
-     
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>     
 	                                 </div>
 								
 						<!--Bank details-->	
@@ -482,7 +479,7 @@
 										
 									</div><!--row -->	
 									
-									  <button type="submit" id="nxt3" class="btn btn-primary" href="#Account" data-toggle="tab">Save & Proceed</button>
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
 									  
                                     </div>		
 				<!--Settings-->
@@ -493,28 +490,28 @@
 										<div class="col-lg-5">	
 			                               <div class="form-group">
                                             <label class="label1">Account Number</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Account Number">  
+                                            <input type="text" class="form-control" name="account_number" placeholder="Enter Account Number">  
 	                                   </div>
 	                                    <div class="form-group">
                                             <label class="label1">Account Type</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Account Type">  
+                                            <input type="text" class="form-control" name="account_type" placeholder="Enter Account Type">  
 	                                   </div>
 	                                    <div class="form-group">
                                             <label class="label1">Bank Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Bank Name">  
+                                            <input type="text" class="form-control" name="bank_name" placeholder="Enter Bank Name">  
 	                                   </div>
 	                                    <div class="form-group">
                                             <label class="label1">Branch Name</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Branch Name">  
+                                            <input type="text" class="form-control" name="branch_name" placeholder="Enter Branch Name">  
 	                                   </div>
 	                                    <div class="form-group">
                                             <label class="label1">Ifsc Code</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Ifsc code">  
+                                            <input type="text" class="form-control" name="ifsc_code" placeholder="Enter Ifsc code">  
 	                                   </div>
 										</div><!--col-lg-5-->
 									</div><!--row -->
 								
-									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
 									  
                         </div>
 						 
@@ -550,10 +547,12 @@
 
 				
 <!-- Validation jquery plugin -->
-
-<script type="text/javascript" src="js/validate/jquery.validate.js"></script>
-<script type="text/javascript" src="js/validate/employeepage.js"></script>
-
+<script type="text/javascript" src="js/validate/jquery.validate.js">
+</script>
+<!--<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>-->
+<script type="text/javascript" src="js/validate/employeeprofile.js">
+</script>
     <!-- tab -->
     
 <script>
