@@ -1459,7 +1459,10 @@ th {
 .table-condensed > tfoot > tr > td {
   padding: 5px;
 }
-.table-bordered {
+.table-bordered{
+  border: 1px solid #ddd;
+}
+.table-bordered1{
   border: 8px solid #add8e6;
 }
 .table-bordered > thead > tr > th,
