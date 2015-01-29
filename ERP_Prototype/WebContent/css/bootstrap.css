@@ -6118,6 +6118,207 @@ input.error {
   
 }
 
+/*Soumya*/
+
+.form-control-email1 {
+float:right;
+ 
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+}
+
+
+
+
+
+.form-control-email {
+float:left;
+  
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+  
+}
+
+.form-control-emailhome {
+float:left;
+  
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+  
+}
+.form-control-emailhome1 {
+  float:right;
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+  
+}
+
+.form-control-emailhome2 {
+float:right;
+  
+  width: 30%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+}
+.form-control-sendemaila{
+	
+	float:right;
+	width: 270px;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+.form-control-sendemailb{
+	
+	float:right;
+	width: 270px;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+.form-control-sendemailc{
+	
+	float:right;
+	width: 270px;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+.form-control-sendemail{
+	
+	float:right;
+	width: 40%;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+
+.form-control-sendemail1{
+	
+  float:left;
+  width:60% ;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+
+.form-control-sendemailGeneral{
+	
+	float:right;
+	width: 10%;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+
+.form-control-sendemailGeneral1{
+	
+  float:left;
+  width:90% ;
+  height: 250px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+.color{
+	background-color:#555 ;
+	display:block;
+	
+}
+.form-control-emailhomefinance {
+float:right;
+  
+  width: 50%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  
+  
+}
+
+.home{
+	height:200px;
+	
+	
+}
+
+.astrik {
+
+  color: red;
+
+}
+
+.column {
+	margin-right: -15px;
+	margin-left: -15px;
+	height:400px;
+	width:1900px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
 
 
