@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>campus_G</title>
+    <title>Biztime EduERP</title>
 
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,15 +15,6 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
-
-    <style type="text/css">
-<!--
-
-.style1 {color: #FF0000}
-.style2 {font-size: 12px}
--->
-    </style>
-	
 </head>
 
 <body>
@@ -32,15 +22,19 @@
     <div id="wrapper">
 
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
+		
+           <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand1" href="index.html"><!--SB Admin v2.0--><img src="images/Biztime_Logo.png" width="250" height="60"></a>
+                <a class="navbar-brand" href="index.html"></a>
+					      <div><img src="images/Biztime_Logo.png" width="250" height="50"></div>
             </div>
+
+			
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
@@ -97,7 +91,6 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-
                         <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
@@ -164,6 +157,7 @@
                                 </div>
                             </a>
                         </li>
+
                         <li class="divider"></li>
                         <li>
                             <a class="text-center" href="#">
@@ -259,309 +253,471 @@
 
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
+			
+<!--			<div><img src="images/Biztime_Logo.png" width="250" height="60"></div>-->
+			
                 <ul class="nav" id="side-menu">
-<!--                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-
-                    </li>-->   <!-- /input-group -->
-                    <li  class="active">
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
+                
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-					
-					<li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Academics <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                   
-                   
-				   
-				    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Data and Exports <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="#">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="#">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="#">Typography</a>
-                            </li>
-                            <li>
-                                <a href="#">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
+                        <a href="indexnew.html"><i class="fa fa-dashboard fa-fw"></i>Home</a>
                     </li>
                     
-					
-					
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Configuration<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manage Course/Batch<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="ManageCourse.html">Manage Course</a>
+                            </li>
+                            	<li>
+                                <a href="ManageBatch.html">Manage Batch</a>
+                            </li>
+                           </ul>
+                           </li>
+							 <li>
+                                <a href="#">Add Admission Additional Details</a>
+                            </li>
+							 <li>
+                                <a href="#">Management clients</a>
+                            </li>
+                             <li>
+                                <a href="#">Management Subject</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="StudentCategories.html">Manage Student Category</a>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
+                                <a href="#">SMS Module</a>
+                            </li>
+                            <li>
+                                <a href="GeneralSettings.html">General Settings</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-					
-
-
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations_1 <span class="fa arrow"></span></a>
+                     
+                         <li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>General<span class="fa arrow"></span></a></li>
+                       
+                        <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Search User</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Add User</a>
+                            </li> 
+                            </ul>
+                            </li>
+                       
+                       <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Event<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Event Creation</a>
+                            </li>
+                            <li>
+                                <a href="#">Calender</a>
+                            </li> 
+                            </ul>
+                            </li>
+                          <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Finance<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">   
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Create Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Create Particulars</a>
+                            </li>
+                            	<li>
+                                <a href="#">Create Discount</a>
+                            </li>
+                            <li>
+                                <a href="#">Generate Fine</a>
+                            </li>
+                           </ul>
+                           </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Schedule Fees Collection<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Create Fee Collection</a>
+                            </li>
+                            <li>
+                                <a href="#">View</a>
+                            </li>   
+                           </ul>  
+                           </li>  
+                             <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Collect Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Fees Submission By Course</a>
+                            </li>
+                            <li>
+                                <a href="#">Fees Submission For Each Student</a>
+                            </li>
+                            <li>
+                                <a href="#">Particular wise Fees Payment</a>
+                            </li>   
+                           </ul>  
+                           </li> 
+                          <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees Structure<span class="fa arrow"></span></a></li>
+                    
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fees Defaulters<span class="fa arrow"></span></a></li>
+                        <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Fees Refunds<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">View Refund</a>
+                            </li>
+                            <li>
+                                <a href="#">Create Refund Rule</a>
+                            </li>
+                            <li>
+                                <a href="#">Apply Refund</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                      <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Fee Imports<span class="fa arrow"></span></a>
+                                </li>
+                      <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Instant Fees<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Manage Instant Fee</a>
+                            </li>
+                            <li>
+                                <a href="#">Pay Fees</a>
+                            </li>
+                            <li>
+                                <a href="#">Transcation</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Categories<span class="fa arrow"></span></a>
+                                </li>
+                    
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Transcation<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Add Expense</a>
+                            </li>
+                            <li>
+                                <a href="#">Expense</a>
+                            </li>
+                            <li>
+                               <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Income<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+		<li>
+                                <a href="#">Add Income</a>
                             </li>
 							<li>
-                                <a href="#">Second Level Item</a>
+                                <a href="#">Income List</a>
+                            </li>   
+                           </ul>  
+                           </li>
+                           	<li>
+                                <a href="#">Reverted Transcations</a>
+                            </li>
+                    </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Donation<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">Donors</a>
+                            </li>
+                            </ul></li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Automatic Transcation<span class="fa arrow"></span></a></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Payslip<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">View Payslip</a>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fourth Level Item<span class="fa arrow"></span></a>
-										<ul class="nav nav-fourth-level">
-                                   		 	<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-										</ul>
-										<!-- /.nav-fourth-level -->										
-                                    </li>
+                                <a href="#">One Click Approved Payslip</a>
+                            </li>
+                            </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Finance Reports<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">  
+                              <li>
+                                <a href="#">Report</a>
+                            </li>   
+                            <li>
+                                <a href="#">Compare Transcation</a>
+                            </li>
+                            </ul></li>
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Asset Liability Management<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">  
+                              <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Asset<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create</a>
+                            </li>  
+                             <li>
+                                <a href="#">View</a>
+                            </li>
+                           </ul> </li>   
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Liability<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create</a>
+                            </li>  
+                             <li>
+                                <a href="#">View</a>
+                            </li>
+                           </ul> </li> 
+                            </ul></li>
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Tally Export<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">General Setting</a>
+                            </li> 
+                            <li>
+                                <a href="#">Companies</a>
+                            </li>  
+                            <li>
+                                <a href="#">Vochers</a>
+                            </li> 
+                            <li>
+                                <a href="#">Accounts</a>
+                            </li> 
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manage Legendary Tally<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Create Legenders</a>
+                            </li> 
+                             <li>
+                                <a href="#">View Legenders</a>
+                            </li>    
+                            </ul></li> 
+                          <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Manual Sync<span class="fa arrow"></span></a> </li>                 
+                    <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Bulk Expert<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level"> 
+                               <li>
+                                <a href="#">Schedule Exports</a>
+                            </li> 
+                             <li>
+                                <a href="#">Downloads</a>
+                            </li> 
+                            </ul></li>
+                     <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Failed Sync<span class="fa arrow"></span></a></li>
+                                </ul></li>
+                                
+                                </ul></li>
                                 </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-					
-					
-					
-					<li>
-                    <!--<li class="active">-->
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Extra <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="#">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                </ul>
-                <!-- /#side-menu -->
             </div>
             <!-- /.sidebar-collapse -->
         </nav>
         <!-- /.navbar-static-side -->
-
-
-<!--Start of Main page-->
+       
 
         <div id="page-wrapper">
+        <div class="column">
             <div class="row">
                 <div class="col-lg-12">
-                  
-				    <h4 class="page-header">Inventory | <span class="style2">Home</span></h4> 
-				</div>
+                    <h4 class="page-header"><b>Configurtion</b> | <span class="style2">General settings</span></h4>
+                </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-			
-			<div class="row">
-                <div class="col-lg-6">
-                  
-				    <h6>Home > <b>General</b></h6>
-					
-				</div>
-                <!-- /.col-lg-6 -->
-				
-				<div class="col-lg-6">
-                		
-				</div>
-                <!-- /.col-lg-6 -->
-				
+            							<!--
+							<div class="alert alert-success">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                            </div>
+                        	-->
+							<h6>Home > Configiration> <b> Settings</b></h6>
+                            	<!--Basic Form Elements-->
+                            	<!-- <div class="message">Your update was successful.</div> -->
+                        	
+                        
+                            <div class="row">
+                                <div class="col-lg-6">
+                              
+
+							   <form role="" id="" method="" action="">
+                                <div class="form-control-sendemailGeneral1">       
+								
+                                      
+                                         <div class="form-group">
+                                            <label class="label1">Currency Type:</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="">  
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label class="label1">Precision Count:</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="">  
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="label1">Upload Logo:</br>
+                                            (500KB max,150x110)
+                                            </label><span class="style1"></span>     
+              						<input class="form-control"type="file" name=""/>                    
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="label1">Include Grading Systems</label>
+                                           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                                <label>
+                                                    <input type="checkbox" value="" align="right">GPA
+                                                </label>
+                                          
+                                            
+                                                <label class="label1">
+                                                    <input type="checkbox" value="">CWA
+                                                </label>
+                                            
+                                            
+                                                <label class="label1">
+                                                    <input type="checkbox" value="">CCE
+                                                </label>
+                                            
+                                                <label class="label1">
+                                                    <input type="checkbox" value="">ICSE
+                                                </label>
+                                            </div>
+                                       
+                                        
+                                          <div class="form-group">
+                                            <label class="label1">Moodle URL:</br>
+                                            (eg:http://domain.com/moodle)
+                                            </label><span class="style1"></span>     
+              						<input class="form-control"type="text" name=""/>                    
+                                        </div>
+                                        
+                                          <div class="form-group">
+                                            <label class="label1">Select Theme</label>
+                                            <span class="style1"></span>
+											<select class="form-control" name="">
+												<option>theme</option>
+												
+											</select>     
+                                        </div>
+                                        
+                                          <div class="form-group">
+                                            <label class="label1">Select Font</label>
+                                            <span class="style1"></span>
+											<select class="form-control" name="">
+												<option>Arial</option>
+												
+											</select>     
+                                        </div>
+                                        
+                                           <div class="form-group">
+                                            <label class="label1">Enable Auto increment Student Admission no</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label class="label1">Enable Auto increment Employee no</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label1">Enable News Comment Moderation</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                           
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label1">Enable Sibling</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <label class="label1">Enable First Time Login Change Password</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                        <div class="bar">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        </div>
+                                 </div>
+                                          
+                                        	
+                                       
+                                       
+                                     
+                                        
+                                       </form>
+                                
+                                <!-- /.col-lg-6 (nested) -->
+                           </div>   
+                </div>
+                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-			
-			<br>
-			<div class="row">
-				<div class="col-lg-4">
-					
-			 		
+           
+           
+           
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
 
-				</div>
-			</div>
-			
-			
-			
-			<div class="row">
-			 <div class="col-lg-12">
-			 	
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            
-                        </div>
-                        <!-- /.panel-heading -->
-                        
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                    <tbody>
-                                        <tr>
+    </div>
+    <!-- /#wrapper -->
+    </div>
+    
 
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Absent Students</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Examinations</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Relieved Students</label></td>
-                                        </tr>
-                                    
-                                    
-                                        <tr>
-
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Blogs</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">News</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Time Table</label></td>
-                                        </tr>
-                                        <tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">Events</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Polls</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Birthdays</label></td>
-                                        </tr>
-                                        <tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">Leave Applications</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Tasks Due</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Employees On Leave</label></td>
-                                        </tr>
-										<tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">Placements</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Admitted Students</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Finance</label></td>
-                                        </tr>
-										<tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">SMS Sent</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Discussion</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Photos Added</label></td>
-                                        </tr>
-										<tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">Admitted Employees</label></td>
-                                            <td> <label class="checkbox-inline"><input type="checkbox">Fee Due</label></td>
-                                            <td><label class="checkbox-inline"><input type="checkbox">Releaved Employees</label></td>
-                                        </tr>
-										<tr>
-											<td> <label class="checkbox-inline"><input type="checkbox">Book Return Due</label></td>
-											<td> <label class="checkbox-inline"><input type="checkbox">Online Meetings</label></td>
-											
-                                        </tr>
-                                        <tbody>
-                                    </tbody>
-                                </table>
-                                </br>
-                                <div class="bar">
-				  		<button type="button" class="btn btn-primary">Cancel </button>
-				  		</div>
-				  		<div class="bar">
-				  		<button type="button" class="btn btn-primary">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</div>
-					</div>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-			</div>
-			<!-- /.row -->
-			
-	<!-- Core Scripts - Include with every page -->
+    <!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
-    <!-- Page-Level Plugin Scripts - Tables -->
-    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <!-- Page-Level Plugin Scripts - Blank -->
 
     <!-- SB Admin Scripts - Include with every page -->
     <script src="js/sb-admin.js"></script>
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').dataTable();
+    <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    
+     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
+    
+<!--     <script>
+    $(document).ready(function(){
+        $("#Button1").click(function(event){
+            $(".message").show();
+            $(".message").fadeOut(500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+        });
     });
-    </script>
+</script>
+ -->
+</body>
+</html>
