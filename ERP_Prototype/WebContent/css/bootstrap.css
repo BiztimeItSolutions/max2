@@ -1734,7 +1734,8 @@ output {
   font-size: 12px;
   line-height: 1.428571429;
   color: #555;
-  background-color: #E8E8E8;
+  /*background-color: #E8E8E8; */
+  background-color: #ffffff;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
