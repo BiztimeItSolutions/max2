@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
         e.preventDefault();
         
         // Clone next child, append to container, position absolute and animate left
-        jQuery(this).next().clone(true, true).appendTo(".subnav").css({position: "absolute", left:"300px", top:"0", display:"block"}).animate({
+        jQuery(this).next().clone(true, true).appendTo(".subnav").css({position: "absolute", left:"", top:"0", display:""}).animate({
             left:"0"
         }, 300);
         
@@ -28,13 +28,13 @@ jQuery(document).ready(function() {
         // Animate the previous hidden element so it comes back
         jQuery(this).closest("ul").prev().animate({
             left:"0",
-        }, 300);
+        });
         
         // Animate current menu out of sight to the right
         // and remove after animation is completed
         jQuery(this).closest("ul").animate({
-            left:"250px",
-        }, 300, "linear",function(){jQuery(this).remove()});
+        	/*left:"250px",*/
+        }, /*300*/ "linear",function(){jQuery(this).remove()});
         return false;
     });
 });
