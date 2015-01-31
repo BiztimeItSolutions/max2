@@ -1,0 +1,3 @@
+For Dropdown multi select check box.
+
+Scripts to be add the dropdown folder which has the js and css files.
