@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
         
         // Animate current menu out sight
         jQuery(this).closest("ul").animate({
-          left:"-300px",
+            left:"-300px",
         }, 300);
         
         return false;
@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
         
         // Animate the previous hidden element so it comes back
         jQuery(this).closest("ul").prev().animate({
-            
+            left:"0",
         }, 300);
         
         // Animate current menu out of sight to the right
