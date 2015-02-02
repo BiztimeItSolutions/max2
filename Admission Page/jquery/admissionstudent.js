@@ -33,11 +33,11 @@ $(function() {
         	EmergencyPincode:"fld2",
         	FirstName:"alphabetsonly",
         	LastName:"alphabetsonly",
-        	GuardianFirstName:"alphabetsonly",
+        	/* GuardianFirstName:"alphabetsonly",
         	GuardianLastName:"alphabetsonly",
         	MotherName:"alphabetsonly",
         	GuardianPincode:"fld2",
-        	FatherPincode:"fld2",
+        	FatherPincode:"fld2", */
         	
             	FirstName : 
 				{
@@ -62,6 +62,22 @@ $(function() {
                 	required : true,
                 	nation: true
                 },
+				
+				
+				
+				Mobile : 
+				{
+                        required : true, 
+                        num : true
+                },
+				
+                Email: 
+                {
+                	required: true,
+                	email: true
+                },
+				
+				
                 PresentAddressLine1 :{
                 	
                 	required : true
@@ -149,19 +165,9 @@ $(function() {
                      		
                      		},
                      	
-                     		Mobile : 
-				{
-                        required : true, 
-                        num : true
-                },
-				
-                Email: 
-                {
-                	required: true,
-                	email: true
-                },
+                     		
                 
-                GuardianFirstName : 
+               /*  GuardianFirstName : 
 				{
                         required : true,
                         alphabetsonly: true
@@ -244,7 +250,7 @@ $(function() {
 				{
                         required : true
                         
-                },
+                }, */
                 
                 
                 
@@ -277,6 +283,20 @@ $(function() {
                 	required : "Please enter a Nationality",
                 	
                 },
+				
+				
+				Mobile : 
+				{
+                        required : "Please enter a Valid Mobile Number",     
+                },
+				
+                Email : 
+				{
+                        required : "Please enter a Valid Email ID",     
+                },
+				
+				
+				
                 PresentAddressLine1 :{
                 	
                 	required : "Please enter a Address Line1",
@@ -366,17 +386,9 @@ $(function() {
                      	                		               		
                 		              	               		
                 		
-                     		Mobile : 
-				{
-                        required : "Please enter a Valid Mobile Number",     
-                },
-				
-                Email : 
-				{
-                        required : "Please enter a Valid Email ID",     
-                },
+                     		
                 
-                GuardianFirstName : 
+                /* GuardianFirstName : 
 				{
 					required : "Please enter a First Name",     
                 },
@@ -449,7 +461,7 @@ $(function() {
 				{
                 	required : "Please enter a Parent Annual Income", 
                 },
-                
+                 */
                 
                 
                
