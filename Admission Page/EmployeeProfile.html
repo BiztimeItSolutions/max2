@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>campus_G</title>
-
 
     <!-- Core CSS - Include with every page -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,29 +16,429 @@
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="css/sb-admin.css" rel="stylesheet">
-	<script type= "text/javascript" src = "js/validate/countries.js"></script>
+	 <script type= "text/javascript" src = "js/validate/countries.js"></script>
 	<!-- <script type= "text/javascript" src = "script/countries.js"></script>
     <script>  
 -->
-<style>ul { list-style-type: lower-alpha;}</style>
+
 </head>
 
 <body>
-<!--Start of Main page-->
 
-        <div id="page-wrapper1">
-       	 <form role="" id="employeedetails" method="post" action="">
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand1" href="index.html"><!--SB Admin v2.0--><img src="images/Biztime_Logo.png" width="250" height="60"></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+        </nav>
+        <!-- /.navbar-static-top -->
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+<!--                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+
+                    </li>-->   <!-- /input-group -->
+                    <li  class="active">
+                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="#">Morris.js Charts</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+					
+					<li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Academics <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="#">Morris.js Charts</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                   
+                   
+				   
+				    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Data and Exports <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Panels and Wells</a>
+                            </li>
+                            <li>
+                                <a href="#">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="#">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="#">Typography</a>
+                            </li>
+                            <li>
+                                <a href="#">Grid</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    
+					
+					
+					<li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+					
+
+
+					<li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations_1 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+							<li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Fourth Level Item<span class="fa arrow"></span></a>
+										<ul class="nav nav-fourth-level">
+                                   		 	<li>
+                                        		<a href="#">Fourth Level Item</a>
+                                    		</li>
+                                    		<li>
+                                        		<a href="#">Fourth Level Item</a>
+                                    		</li>
+                                    		<li>
+                                        		<a href="#">Fourth Level Item</a>
+                                    		</li>
+										</ul>
+										<!-- /.nav-fourth-level -->										
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+					
+					
+					
+					<li>
+                    <!--<li class="active">-->
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Extra <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Blank Page</a>
+                            </li>
+                            <li>
+                                <a href="#">Login Page</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+                <!-- /#side-menu -->
+            </div>
+            <!-- /.sidebar-collapse -->
+        </nav>
+        <!-- /.navbar-static-side -->
+
+
+<!--Start of Main page-->
+        <div id="page-wrapper">
+        <form role="" id="admissionstudentdetails" method="post" action="">
             <div class="row">             
               <div class="col-lg-12">
                    
-                     <h4 class="page-header">Admission | <span class="style2"> Employee Details</span></h4>
+                     <h4 class="page-header">Admission | <span class="style2"> Candidate Details</span></h4>
               </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-6">
-                  		<h6><a href="">Home</a> > <b>Employee Admission</b></h6>
+                  		<h6><a href="">Home</a> > <b>Student Admission</b></h6>
                   
            	  	</div><!--col 6 -->
 			 </div><!--row -->
@@ -55,66 +455,72 @@
 
              <div class="row">
 		         <div class="col-lg-12">
-				 
-				    <ul class="nav nav-tabs">
-                               
-							   <li class="active"><a href="#General" data-toggle="tab">General</a></li>
+				 	
+					
+					<ul class="nav nav-tabs">
+                               <li class="active"><a href="#General" data-toggle="tab">General</a></li>
                                <li><a href="#Contact" data-toggle="tab">Contact</a></li>
 								 <li><a href="#Experience" data-toggle="tab">Experience</a></li>
 								 <li><a href="#Educational" data-toggle="tab">Educational</a></li>
                                 <li><a href="#Account" data-toggle="tab">Account Details</a></li>
-								
+
                     </ul>
 					
 					<!-- Tab panes -->
                             <div class="tab-content">
-                              
-							  <div class="tab-pane fade in active" id="General">
+                                <div class="tab-pane fade in active" id="General">
 								<br/>
-								<div class="row">
 								
-							        <div class="col-lg-5">
+								<div class="row">
+							        
+									 <div class="col-lg-5">
 										 <div class="form-group">
                     	                        <label class="label1">Full Name</label><span class="style1">*</span>
-                	                            <input type="text" class="form-control" name="first_name" placeholder="First Name">  
-		    	                         </div>
+                	                            <input type="text" class="form-control" name="FirstName" placeholder="First Name">  
+		    	                        </div>
 									 </div><!--Col-5  -->
 									 
 									 <div class="col-lg-33">
 										 <div class="form-group">
-                	                            <input type="text" class="form-control" name="middle_name" placeholder="Middle Name">  
-		    	                         </div>
+                	                            <input type="text" class="form-control" name="MiddleName" placeholder="Middle Name">  
+		    	                        </div>
 									 </div><!--Col-3 -->
 									 
 									 <div class="col-lg-33">
 										 <div class="form-group">
-                	                            <input type="text" class="form-control" name="last_name" placeholder="Last Name">  
+                	                            <input type="text" class="form-control" name="LastName" placeholder="Last Name">  
 		    	                        </div>
 									 </div><!--Col-3 -->
 									 									 
 								</div><!--row -->
 								
-							    <div class="row">
-								
-								    <div class="col-lg-5">
-								        <div class="form-group">
-                                            <label class="label1">Government Id Number</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="" placeholder="Government Id Number">  
+							<div class="row">
+								<div class="col-lg-5">
+										<div class="form-group">
+                                            <label class="label1">Date of Birth</label><span class="style1">*</span>
+                                            <input type="date" class="form-control" name="DateOFBirth">  
 										</div>
 										
 										<div class="form-group">
                                             	<label class="label1">Gender</label><span class="style1">*</span>
 											<div class="form-control-gender">&nbsp;
-	                                        	 <label1 for="male">Male</label1> <input type="radio"   name="gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		      								 	<label1 for="female">Female</label1>	<input type="radio"   name="gender" id="woman" value="Female" />
+	                                        	 <label1 for="male">Male</label1> <input type="radio"   name="Gender" id="man" value="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      								 	<label1 for="female">Female</label1>	<input type="radio"   name="Gender" id="woman" value="Female" />
                                         	</div>
                                         </div>	
-								       
-										<div class="form-group">
-                                            <label class="label1">Date of Birth</label><span class="style1">*</span>
-                                            <input type="date" class="form-control" name="date_of_birth">  
-										</div>
-										<div class="form-group">
+                                        							
+										 <div class="form-group">
+                                            <label class="label1">Blood Group</label>
+                                            <select class="form-control" name="BloodGroup">
+												<option>  Select Blood Group   </option>
+												<option>Unknown</option>
+												<option>A</option>
+												<option>B</option>
+												<option>O +ve</option>
+												<option>O -ve</option>
+											</select>  
+                                        </div>
+                                        <div class="form-group">
                                             <label class="label1">Marital Status</label><span class="style1"></span>
                                             <select class="form-control" name="marital">
 												<option> select </option>
@@ -122,86 +528,48 @@
 												<option> married </option>
 										    </select> 
                                             </div>
-										   
-                                          
-										   
-										  
-										   <div class="form-group">
-                                             <label class="label1">Blood Group</label>
-                                             <select class="form-control" name="blood_group">
-												<option>  Select Blood Group   </option>
-												<option>A+</option>
-												<option>A-</option>
-												<option>B+</option>
-												<option>B-</option>
-												<option>O+</option>
-												<option>O-</option>
-												<option>AB+</option>
-												<option>AB-</option>
-											 </select>  
-                                           </div>
+                                         
                                           <div class="form-group">
                                             <label class="label1">Nationality </label>
-                                            <span class="style1"></span>
-											<input type="text" class="form-control" name="nationality" placeholder="Enter nationality">
-                                          </div>
-									<div class="form-group">
-                                              <label class="label1">caste</label>
-                                              <input type="text" class="form-control" name="" placeholder="Enter Biometric Id"/>
-                                           </div>
+                                            <span class="style1">*</span>
+											<input type="text" class="form-control" name="Nationality" placeholder="Enter your nationality">
+                                        </div>
+                                        
+                                       
+                                       <div class="form-group">
+                                            <label class="label1">Caste</label><span class="style1"></span>
+                                            <input type="text" class="form-control" name="caste" placeholder="Enter your  caste">  
+                            		</div>  
+
+									    <div class="form-group">
+                                            <label class="label1">Government Id Number</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="" placeholder="Government Id Number">  
+										</div>
+                                          
+										   
 										<div class="form-group">
                                               <label class="label1">Pan Card Number</label>
                                               <input type="text" class="form-control" name="" placeholder="Enter Biometric Id"/>
                                            </div>
-										   
-										
-									       <div class="form-group">
+									 <div class="form-group">
                                                <label class="label1">Upload Photo</label>
                                                <input type="file" class="form-control-gender" name="photo">
                                            </div>
                                       
-									    <hr>
-						                    <button type="submit" id="nxt" class="btn btn-primary" href="#Contact" data-toggle="tab">Save & Proceed</button>
-									    
-									   
+									<hr>
+						
 								
+									
+									 <button type="submit"  class="btn btn-primary" >Save & Proceed</button>
 
-							        </div><!--Col-5  -->
-							     </div><!--row -->										
-						     </div><!-- tab-pane-->
+							   </div><!--Col-5  -->
+							</div><!--row -->										
+						</div><!-- tab-pane-->
     
-	                  
-								 
-	                            <!--Contact details-->
 	
-								 <div class="tab-pane fade" id="Contact">
+	                            <div class="tab-pane fade" id="Contact">
 								<br/>
 									<div class="row">
-									<div class="col-lg-5">
-									
-									  <div class="form-group">
-            			                   		<label class="label1"><b>Comman Details</b></label><span class="style1"></span>   
-										   </div>
-									
-                               		     <div class="form-group">
-                                    	        <label class="label1">Land Phone</label><span class="style1"></span>
-                                        	    <input type="text" class="form-control" name="phone" placeholder="Enter land line number">  
-                                       	 </div>
-                                         <div class="form-group">
-                                            <label class="label1">Mobile</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="mobile" placeholder="Enter mobile number">  
-                                        </div>
-                                         <div class="form-group">
-                                            <label class="label1">Email</label><span class="style1">*</span>
-                                            <input type="text" class="form-control" name="email" placeholder="Enter email">  
-                                        </div> 
-
-
-										</div><!--Col-5 -->
-									
-									
-									
-									
 										<div class="col-lg-5">
 											
 											<div class="form-group">
@@ -209,29 +577,29 @@
 											 </div>
 			                               <div class="form-group">
             	                                <label class="label1">Address Line1</label><span class="style1">*</span>
-                	                            <input class="form-control" name="present_address_line1" id="present_address_line1" placeholder="Present address line1">    
+                	                            <input class="form-control" name="PresentAddressLine1" id="PresentAddressLine1" placeholder="Present address line1">    
                     		    	        </div>
                             	            <div class="form-group">
                                     	        <label class="label1">Address Line2</label><span class="style1"></span>
-                                        	    <input class="form-control" name="present_address_line2" id="present_address_line2" placeholder="Present address line2">    
+                                        	    <input class="form-control" name="PresentAddressLine2" id="PresentAddressLine2" placeholder="Present address line2">    
 	                                        </div>
     	                                    <div class="form-group">
         	                                    <label class="label1">City</label><span class="style1">*</span>
-            	                                <input class="form-control" name="present_address_city" id="present_address_city" placeholder="Present address city">    
+            	                                <input class="form-control" name="PresentCity" id="PresentCity" placeholder="Present address city">    
                 	                        </div>
                     			           <div class="form-group">
                                 	            <label class="label1">Pincode</label><span class="style1">*</span>
-                                    	        <input class="form-control" name="present_address_pincode" id="present_address_pincode" placeholder="Present address pincode">    
+                                    	        <input class="form-control" name="PresentPincode" id="PresentPincode" placeholder="Present address pincode">    
 			                               </div>
             							                 <div class="form-group">
                                             <label class="label1">Country</label><span class="style1">*</span>
-                                          <select class="form-control" onChange="print_state('PresentState',this.selectedIndex);" id="present_address_country" name ="present_address_country">
+                                          <select class="form-control" onChange="print_state('PresentState',this.selectedIndex);" id="PresentCountry" name ="PresentCountry">
 <option >Select Country</option>
 </select>
   </div>
    <div class="form-group">
                                             <label class="label1">State</label><span class="style1">*</span>
-                                           <select class="form-control" name ="present_address_state" id ="present_address_state">
+                                           <select class="form-control" name ="PresentState" id ="PresentState">
 <option >Select State</option>
 </select>
 </div>
@@ -240,58 +608,7 @@
 
    											<hr>
 									   </div><!-- Col 5-->
-									  </div><!-- row-->
-									  
-										<div class="row">
-																			<div class="col-lg-5">
-										      <div class="form-group">
-            			                   		<label class="label1"><b>Office Address</b></label><span class="style1"></span>   
-										   </div>
-                        			       <div class="form-group">
-                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
-                                        	    <input class="form-control" name="emergency_address_line1" id="emergency_address_line1" placeholder="Office address line1">    
-		                                 </div>
-        	                             <div class="form-group">
-            	                                <label class="label1">Address Line2</label><span class="style1"></span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
-                                        </div>
-                                        <div class="form-group">
-            	                                <label class="label1">Office Phone1</label><span class="style1">*</span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
-                                        </div>
-                                        <div class="form-group">
-            	                                <label class="label1">Office Phone2</label><span class="style1"></span>
-                	                            <input class="form-control" name="emergency_address_line2" id="emergency_address_line2" placeholder="Office address line2">    
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="emergency_address_city" id="emergency_address_city" placeholder="Office address city">    
-                                        </div>
-                    		           <div class="form-group">
-                                            <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="emergency_address_pincode" id="emergency_address_pincode" placeholder="Office address  pincode">    
-                            		     </div>
-							              <div class="form-group">
-                            	                <label class="label1">Country</label><span class="style1">*</span>
-                                	          <select class="form-control" onChange="print_state('EmergencyState',this.selectedIndex);" id="emergency_address_country" name ="emergency_address_country">
-												<option >Select Country</option>
-												</select>
-										  </div>
-										   <div class="form-group">
-                                        	    <label class="label1">State</label><span class="style1">*</span>
-	                                           <select class="form-control" name ="emergency_address_state" id ="emergency_address_state">
-													<option >Select State</option>
-											   </select>
-										  </div>
-  
-											<script language="javascript">print_country("EmergencyCountry");</script> 
-                               		<hr>
-									</div><!--col 5-->
-								
 
-										
-										
-										
 										<div class="col-lg-5">
    
  			                              <div class="form-group">
@@ -299,29 +616,29 @@
 										   </div>
                         			       <div class="form-group">
                                     	        <label class="label1">Address Line1</label><span class="style1">*</span>
-                                        	    <input class="form-control" name="permanent_address_line1" id="permanent_address_line1" placeholder="Permanent address line1">    
+                                        	    <input class="form-control" name="PermanentAddressLine1" id="PermanentAddressLine1" placeholder="Permanent address line1">    
 		                                 </div>
         	                             <div class="form-group">
             	                                <label class="label1">Address Line2</label><span class="style1"></span>
-                	                            <input class="form-control" name="permanent_address_line2" id="permanent_address_line2" placeholder="Permanent address line2">    
+                	                            <input class="form-control" name="PermanentAddressLine2" id="PermanentAddressLine2" placeholder="Permanent address line2">    
                                         </div>
                                         <div class="form-group">
                                             <label class="label1">City</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_city" id="permanent_address_city" placeholder="Permanent address city">    
+                                            <input class="form-control" name="PermanentCity" id="PermanentCity" placeholder="Permanent address city">    
                                         </div>
                     		           <div class="form-group">
                                             <label class="label1">Pincode</label><span class="style1">*</span>
-                                            <input class="form-control" name="permanent_address_pincode" id="permanent_address_pincode" placeholder="Permanent address pincode">    
+                                            <input class="form-control" name="PermanentPincode" id="PermanentPincode" placeholder="Permanent address pincode">    
                             		     </div>
 							              <div class="form-group">
                             	                <label class="label1">Country</label><span class="style1">*</span>
-                                	          <select class="form-control" onChange="print_state('PermanentState',this.selectedIndex);" id="permanent_address_country" name ="permanent_address_country">
+                                	          <select class="form-control" onChange="print_state('PermanentState',this.selectedIndex);" id="PermanentCountry" name ="PermanentCountry">
 												<option >Select Country</option>
 												</select>
 										  </div>
 										   <div class="form-group">
                                         	    <label class="label1">State</label><span class="style1">*</span>
-	                                           <select class="form-control" name ="permanent_address_state" id ="permanent_address_state">
+	                                           <select class="form-control" name ="PermanentState" id ="PermanentState">
 													<option >Select State</option>
 											   </select>
 										  </div>
@@ -329,21 +646,77 @@
 											<script language="javascript">print_country("PermanentCountry");</script> 
                                		<hr>
 									</div><!--col 5 -->
-
+								</div><!--row-->
 								
 								
-
+								<div class="row">
+									<div class="col-lg-5">
+										      <div class="form-group">
+            			                   		<label class="label1"><b>Office Contact Address</b></label><span class="style1"></span>   
+										   </div>
+                        			       <div class="form-group">
+                                    	        <label class="label1">Address Line1</label><span class="style1">*</span>
+                                        	    <input class="form-control" name="" id="" placeholder="Emergency address line1">    
+		                                 </div>
+        	                             <div class="form-group">
+            	                                <label class="label1">Address Line2</label><span class="style1"></span>
+                	                            <input class="form-control" name="" id="" placeholder="Emergency address line2">    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label1">City</label><span class="style1">*</span>
+                                            <input class="form-control" name="" id="" placeholder="Emergency address city">    
+                                        </div>
+                    		           <div class="form-group">
+                                            <label class="label1">Pincode</label><span class="style1">*</span>
+                                            <input class="form-control" name="" id="" placeholder="Emergency address  pincode">    
+                            		     </div>
+							              <div class="form-group">
+                            	                <label class="label1">Country</label><span class="style1">*</span>
+                                	          <select class="form-control" onChange="print_state('OfficeState',this.selectedIndex);" id="OfficeCountry" name ="OfficeCountry">
+												<option >Select Country</option>
+												</select>
+										  </div>
+										   <div class="form-group">
+                                        	    <label class="label1">State</label><span class="style1">*</span>
+	                                           <select class="form-control" name ="OfficeState" id ="OfficeState">
+													<option >Select State</option>
+											   </select>
+										  </div>
+  
+											<script language="javascript">print_country("OfficeCountry");</script> 
+                               		<hr>
+									</div><!--col 5-->
+								
+									<div class="col-lg-5">
 									
-									</div><!--row-->
+									  <div class="form-group">
+            			                   		<label class="label1"><b>Common Details</b></label><span class="style1"></span>   
+										   </div>
+									
+                               		     <div class="form-group">
+                                    	        <label class="label1">Land Phone</label><span class="style1"></span>
+                                        	    <input type="text" class="form-control" name="" placeholder="Enter your land line number">  
+                                       	 </div>
+                                         <div class="form-group">
+                                            <label class="label1">Mobile</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="Mobile" placeholder="Enter your mobile number">  
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="label1">Email</label><span class="style1">*</span>
+                                            <input type="text" class="form-control" name="Email" placeholder="Enter your email">  
+                                        </div> 
+										<hr>
 
-									<button type="submit" id="nxt1" class="btn btn-primary" href="#Experience" data-toggle="tab">Save & Proceed</button>
+										</div><!--Col-5 -->
+									</div><!--row-->
+              
+									<hr>
+									<button type="submit" id="nxt1" class="btn btn-primary">SaveAndProceed</button>
      
 	                                 </div>
 	
-								 <!--Educational and Experience details-->
-					   
-	                            
-								 <div class="tab-pane fade" id="Experience">
+	
+								<div class="tab-pane fade" id="Experience">
 								<br/>
 									<div class="row">
 									<div class="col-lg-5">
@@ -386,10 +759,7 @@
 											<div class="form-group">
 				                               <label class="label1"><b>Employee Designation</b></label><span class="style1"></span>                               
 											 </div>
-			                               <div class="form-group">
-            	                                <label class="label1">Employee ID</label><span class="style1">*</span>
-                	                            <input class="form-control" name="" id="" placeholder="Enter employee id">    
-                    		    	        </div>
+			                             
                             	            <div class="form-group">
                                     	        <label class="label1">Designation</label><span class="style1"></span>
                                         	    <input class="form-control" name="" id="" placeholder="Enter Designation ">    
@@ -411,25 +781,18 @@
 									   </div><!-- Col 5-->
 									  </div><!-- row-->
 									 <br/>
-									 
+									               
+									<hr>
 									<button type="submit"   id="nxt2" class="btn btn-primary" href="#Educational" data-toggle="tab">Save & Proceed</button>
-									<!--<a href="#Parent" data-toggle="tab">SaveAndProceed</a>-->
-                                
-     
-	                                 </div>
+                                </div>
 								
-						<!--Bank details-->	
-						
-						            <div class="tab-pane fade" id="Educational">
-								     <br/>
-							            <div class="row">
-							
-								         <div class="col-lg-5">	
-			                         <div class="form-group">
-                                            <label class="label1">Employee ID</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="college_name" placeholder="employee ID">  
-                                		 </div>
-									       <div class="form-group">
+								
+								
+                                <div class="tab-pane fade" id="Educational">
+								<br/>
+									<div class="row">
+										<div class="col-lg-5">
+											 <div class="form-group">
                                             <label class="label1">College/School</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="college_name" placeholder="College/School Last Studied">  
                                 		 </div>
@@ -456,23 +819,19 @@
                                             <input type="text" class="form-control" name="year_of_passing" placeholder="Enter the percentage">  
 	                                   </div>
 									   
-										</div><!--col-lg-5-->
-										
-									</div><!--row -->	
-									
-									  <button type="submit" id="nxt3" class="btn btn-primary" href="#Account" data-toggle="tab">Save & Proceed</button>
-									  
-                                    </div>		
-				<!--Settings-->
-			
-						<div class="tab-pane fade" id="Account">
+									   
+									   </div><!-- Col 5-->
+									  </div><!--row-->
+				
+				<hr>
+				 <button type="submit" id="nxt3" class="btn btn-primary" href="#Account" data-toggle="tab">Save & Proceed</button>
+			</div><!--row-->
+									 
+							<div class="tab-pane fade" id="Account">
 								<br/>
 									<div class="row">
 										<div class="col-lg-5">	
-										 <div class="form-group">
-                                            <label class="label1">Employee ID</label><span class="style1"></span>
-                                            <input type="text" class="form-control" name="register_number" placeholder="Enter Employee Id">  
-	                                   </div>
+										
 			                               <div class="form-group">
                                             <label class="label1">Account Number</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="register_number" placeholder="Enter Account Number">  
@@ -490,24 +849,25 @@
                                             <input type="text" class="form-control" name="register_number" placeholder="Enter Branch Name">  
 	                                   </div>
 	                                    <div class="form-group">
-                                            <label class="label1">Ifsc Code</label><span class="style1"></span>
+                                            <label class="label1">IFSC Code</label><span class="style1"></span>
                                             <input type="text" class="form-control" name="register_number" placeholder="Enter Ifsc code">  
 	                                   </div>
 										</div><!--col-lg-5-->
 									</div><!--row -->
-								
+								              
+									<hr>
 									  <button type="submit" class="btn btn-primary" href="#" data-toggle="tab">Save & Proceed</button>
 									  
                         </div>
-						 
+						 		 
 									 
-						</div><!--Tab Main-->
+
+                                </div><!--Tab Education -->
+                                
+                            </div><!--Tab Main-->
 				 
 				</div><!--Col 12-->
 			</div><!-- Col row-->
-			
-			
-				</form>				
 
         </div>
         <!-- /#page-wrapper -->
@@ -516,9 +876,11 @@
 
     <!-- Core Scripts - Include with every page -->
    
-
-     <script type="text/javascript" src="js/jquery-1.7.min.js"></script> 
-
+ 
+     <script type="text/javascript" src="js/jquery-1.7.min.js"></script>  
+<!--	     <script src="js/jquery-1.10.2.js"></script>
+	     <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+	-->	 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -529,14 +891,41 @@
 
     <!-- Page-Level Demo Scripts - Blank - Use for reference -->
     
+    
+	
 
+<script type="text/javascript">
+			$(document).ready(function(){		
+				
+				$('.del').live('click',function(){
+					$(this).parent().parent().remove();
+				});
+				
+				$('.add').live('click',function(){
+					$(this).val('Delete');
+					$(this).attr('class','del');
+					var appendTxt = "<tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>";
+					$("tr:last").after(appendTxt);			
+				});        
+			});
+		</script>
 				
 <!-- Validation jquery plugin -->
+<script type="text/javascript" src="js/validate/jquery.validate.js">
+</script>
+<!--<script type="text/javascript" src="jquery/jquery.validate.min.js">
+</script>-->
+<script type="text/javascript" src="js/validate/admissionstudent.js">
+</script>
+<script>
+var checkboxes = $("input[type='checkbox']"),
+    submitButt = $("input[type='submit']");
 
-<script type="text/javascript" src="js/validate/jquery.validate.js"></script>
-<script type="text/javascript" src="js/validate/employeepage.js"></script>
-
-    <!-- tab -->
+checkboxes.click(function() {
+    submitButt.attr("disabled", !checkboxes.is(":checked"));
+});
+</script>
+ <!-- tab -->
     
 <script>
 $('#nxt').on('click', function () {
@@ -594,9 +983,6 @@ function moveTab(nextOrPrev)
 }
 
 </script>
-
 </body>
 
 </html>
-
-				 
