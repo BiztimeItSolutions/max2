@@ -35,10 +35,10 @@ ID:${c.candidate_id} --%>
 </c:choose> --%>
 
 
-Wel Come:
+<%-- Wel Come:
 <p>Name :<b>${name}</b></p>
 <p>Password :<b>${password}</b></p>
-<p>Privileges :<b>${privilege}</b></p>
+<p>Privileges :<b>${privilege}</b></p> --%>
 <%-- 
 <c:set var="dateParts" value="${privilege}"/>
 <c:set var="priv" value="${fn:split(msg,',')}"/>
@@ -58,13 +58,14 @@ Value:${dateParts[0]}
 </c:forEach>
 
  --%>
- <c:set var="msg" value="${privilege}"/>
+ <%-- <c:set var="msg" value="${privilege}"/>
  <c:set var="modules" value="${fn:split(msg, ',')}" />
 					<td><c:forEach items="${modules}" var="splitModule">
 							<a href="${splitModule}">${splitModule}</a>
 							<br />
 						</c:forEach>
 					</td>
-
+ --%>
+ <p>Success</p>
 </body>
 </html>

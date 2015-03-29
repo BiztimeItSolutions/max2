@@ -9,6 +9,7 @@ import com.biztime.campusg.model.Employee;
 import com.biztime.campusg.model.FeeCommand;
 import com.biztime.campusg.model.LoginCombined;
 import com.biztime.campusg.model.Module;
+import com.biztime.campusg.model.Privilege;
 import com.biztime.campusg.model.Role_module;
 import com.biztime.campusg.model.StudentDocument;
 
@@ -33,7 +34,7 @@ public interface StudentDAO {
 	public Integer Save_Candidate_Basic_GetId(Candidate b);
 	
 	//public List<Quota> get_quota();
-	
+
 	public String get_Course_level();
 	public String getProgram(String s);
 	public String getDepartment(String s);
@@ -102,7 +103,7 @@ public interface StudentDAO {
 	
 	public List <Create_user> Login_Info_priv(); //login
 	
-
+	public List<Privilege> get_privilege();
 
 //************************************ACCOUNT START*******************************************************************
 	/**

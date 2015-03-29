@@ -460,8 +460,15 @@
                   </div> --%>
 				  
 				  <div class="form-group">
-                    <label class="label1">User Name: </label><span class="style1"></span>
-						<form:select path="user_name" class="form-control" name="user" id="user_name">
+                    <label class="label1">Department: </label><span class="style1"></span>
+						<form:select path="department" class="form-control" name="department" id="department">
+							<form:option value="none" label="Select Department "/>
+                        </form:select>
+                  </div>
+                  
+                   <div class="form-group">
+                    <label class="label1">User: </label><span class="style1"></span>
+						<form:select path="user_name" class="form-control" name="user_name" id="user_name">
 							<form:option value="none" label="Select User "/>
                         </form:select>
                   </div>
@@ -477,10 +484,10 @@
 									<label class="label1">User Status</label><span class="style1"></span>
 									<%-- <form:input path="gender" type="text" class="form-control" name="gender" /> --%>
 									<div class="form-control-gender">&nbsp;
-	                                        <label1 for="male">Active</label1>     
+	                                        <label class="label1" for="male">Active</label>     
 	                                        	<form:radiobutton path="user_status" name="user_status" value="Active" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		      								 	
-		      								<label1 for="female">In Active</label1> 
+		      								<label class="label1" for="female">In Active</label> 
 		      								 	<form:radiobutton path="user_status" name="user_status" value="InActive" />
                                    </div>
 								</div>

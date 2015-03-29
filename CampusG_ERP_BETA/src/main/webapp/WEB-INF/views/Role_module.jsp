@@ -466,7 +466,27 @@
 			<div class="row">
                 <div class="col-lg-4">
                 
-                	 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                 	<thead>
+                    	<tr>
+                        	<th><input type="checkbox" id="selectall"/></th>
+                            <th>Privilege</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                   <c:forEach items="${p}" var="d">
+                   		<tr class="odd gradeX">
+                        	<td><form:checkbox path="privilege" class="case" value="${d.privilege_shortname}"/></td>
+                        	<td><c:out value="${d.privilege_name}"/></td>
+                        </tr> 
+                   </c:forEach>
+                   </tbody>
+                </table>
+                
+                	
+                	
+                	
+                	<%--  <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th><input type="checkbox" id="selectall"/>&nbsp;Select All</th>
@@ -545,7 +565,7 @@
                                             <td>HR Create</td>
                                         </tr>
                                     </tbody>
-                      </table>
+                      </table> --%>
                 
 			    </div> <!-- /.col-lg-4 -->
 			</div> <!-- /.row -->
@@ -601,7 +621,7 @@
         }
     });
     
-    $('#selectall1').click(function(event) {  //on click 
+ /*    $('#selectall1').click(function(event) {  //on click 
         if(this.checked) { // check select status
             $('.case1').each(function() { //loop through each checkbox
                 this.checked = true;  //select all checkboxes with class "checkbox1"               
@@ -611,9 +631,7 @@
                 this.checked = false; //deselect all checkboxes with class "checkbox1"                       
             });         
         }
-    });
-    
-    
+    }); */  
     
 });
 	

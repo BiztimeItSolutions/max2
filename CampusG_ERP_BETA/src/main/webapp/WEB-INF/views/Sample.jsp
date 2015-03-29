@@ -282,14 +282,14 @@
                       
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level dyn">
-                            <li id="Admission_admin">
-                                <a href="#">Admission_admin</a>
+                            <li id="ad_adm_001">
+                                <a href="#">Admission Admin</a>
                             </li>
-                            <li id="Office_admin">
-                                <a href="#">Office_admin</a>
+                            <li id="of_adm_002">
+                                <a href="#">Office Admin</a>
                             </li>
-							<li id="Account_admin">
-                                <a href="#">Account_admin</a>
+							<li id="ac_adm_003">
+                                <a href="#">Account Admin</a>
                             </li>
                         </ul>
                         
@@ -300,14 +300,44 @@
 					  
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Transport <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level dyn">
-                            <li id="Transport_manage">
-                                <a href="Transport_manage">Transport_manage</a>
+                            <li id="tr_001">
+                                <a href="Transport_manage">Transport Manage</a>
                             </li>
-                            <li id="Transport_view">
-                                <a href="Transport_view">Transport_view</a>
+                            <li id="tr_002">
+                                <a href="Transport_view">Transport View</a>
                             </li>
 							<li id="Transport_delete">
-                                <a href="Transport_delete">Transport_delete</a>
+                                <a href="Transport_delete">Transport Delete</a>
+                            </li>
+                        </ul>
+                      
+                        <!-- /.nav-second-level -->
+                    </li>
+                    
+                    <li style="display:none">
+					  
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Hostel <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level dyn">
+                            <li id="ho_001">
+                                <a href="#">Hostel Manage</a>
+                            </li>
+                            <li id="ho_002">
+                                <a href="#">Hostel View</a>
+                            </li>
+                        </ul>
+                      
+                        <!-- /.nav-second-level -->
+                    </li>
+                    
+                    <li style="display:none">
+					  
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> HR <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level dyn">
+                            <li id="hr_001">
+                                <a href="#">HR Manage</a>
+                            </li>
+                            <li id="hr_001">
+                                <a href="#">HR View</a>
                             </li>
                         </ul>
                       

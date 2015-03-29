@@ -852,18 +852,30 @@ public class StudentController {
 			return "hello";			
 			}
 		
+		@SuppressWarnings("unchecked")
+		@Transactional
 		@RequestMapping(value = "/rolemod", method = RequestMethod.GET)
-		public String demo(Model model) {
+		public ModelAndView rolemod(Model model) {
+			
 			model.addAttribute("Role_module", new Role_module());
-			return "Role_module";
+			((Map<String, Object>) model).put("p", this.studentDaoImpl.get_privilege());
+			return new ModelAndView("Role_module");
 		}
-		
+
+
+
+
+
+
+	@SuppressWarnings("unchecked")
+		@Transactional
 		@RequestMapping(value = "/urm", method = RequestMethod.GET)
-		public String roleusermod(Model model) {
+		public ModelAndView roleusermod(Model model) {
+			
 			model.addAttribute("urm", new User_role_module());
-			return "User_Role_Module";
+			((Map<String, Object>) model).put("p", this.studentDaoImpl.get_privilege());
+			return new ModelAndView("User_Role_Module");
 		}
-		
 		@Transactional
 		@RequestMapping(value= "/Role_module", method = RequestMethod.POST)
 		public String Privalage_mapping(@ModelAttribute("Role_module") Role_module p,Model model){

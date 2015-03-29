@@ -3,6 +3,100 @@ $(document).ready(function(){
 	//drop down department
 	$.ajax({
 	    type:"GET",
+	    url:"get_department.html",
+	    success:function(data)
+	            {
+	            console.log(data);
+	           // alert(data);
+	            var u=data.slice(1, -1);//data sliced to remove parenthesis
+	           // alert(u);
+	            var dept=u.split(',');//data split on comma
+	          //  alert(user);
+	            $('#department').empty();//drop down made empty
+	            //add default value to drop down
+	            
+	            //$('#program').empty(); //drop down made empty to fill in new data
+	            //$('#department').empty();
+	            //$('#course_name').empty();
+	            
+	            
+	            $('#department').append($('<option>', { 
+			        value: " ",
+			        text : "Select Department" 
+			    }));
+	          //add values to drop down fetched from data base
+	            for(var r in dept)
+	            {
+	            	$('#department').append($('<option>', { 
+				        value: dept[r],
+				        text : dept[r] 
+				    }));
+	            }
+	            
+	            
+	            },
+
+	    error:function(){
+	            alert("failed");
+	    },
+	});//end of department
+	
+	
+	//drop down course
+	
+	//called while drop down user_type changes
+	$('#department').change(function(){
+		//to get the selected value in the department drop down
+		var selecteditem = $("#department option:selected").text();
+		//alert(selecteditem);
+		console.log("selected item from department: " + selecteditem);
+		$.ajax({
+	    type:"GET", 
+	    url:"get_users_f.html",
+	    data : {
+			"selecteditem" : selecteditem
+		},
+	    success:function(data)
+	            {
+	    		//alert(data);
+	            var uu=data.slice(1, -1);//data sliced to remove parenthesis
+	            var usr=uu.replace(/\s/g, "");
+	            var usrs=usr.split(',');//data split to remove commas
+	          //  alert(usrs);
+	            $('#user_name').empty(); //drop down made empty to fill in new data
+	           // $('#department').empty();
+	           // $('#course_name').empty();
+	            
+	            //to add a default value in the dropdown fetched from data base
+	            $('#user_name').append($('<option>', { 
+			        value: " ",
+			        text : "Select User" 
+			    }));
+	            
+	            // to add the values to the drop down
+	            for(var s in usrs)
+	            {
+	            	$('#user_name').append($('<option>', { 
+				        value: usrs[s],
+				        text : usrs[s] 
+				    }));
+	            }	           
+	            },
+
+	    error:function(){
+	            alert("failed");
+	    },
+	});	
+	});	//end of drop down users
+});
+
+
+/*
+$(document).ready(function(){
+	
+	//drop down department
+	$.ajax({
+	    type:"GET",
 	    url:"get_user_create.html",
 	    success:function(data)
 	            {
@@ -41,7 +135,7 @@ $(document).ready(function(){
 	            alert("failed");
 	    },
 	});//end of department
-	
+	*/
 /*	
 	//drop down course
 	
@@ -91,8 +185,8 @@ $(document).ready(function(){
 	});	//end of drop down users
 		*/
 //end of ready	
-});
 
+/*
 function searchOnUser(){
 	
 	alert("search me called");
@@ -123,8 +217,8 @@ function searchOnUser(){
 				tableData = tableData + "<tr>" + "<td>" + element.id
 						+ "</td>" + "<td>" + element.dept + "</td>"
 						+ "<td>" + element.prog + "</td>"+ "</tr>";
-						/*+ "<td>" + element.dob + "</td>" + "<td>"
-						+ element.phone + "</td>" + "</tr>";*/
+						+ "<td>" + element.dob + "</td>" + "<td>"
+						+ element.phone + "</td>" + "</tr>";
 
 			});
 			//replace table body
@@ -136,4 +230,4 @@ function searchOnUser(){
 			alert("ajax failure");
 		},
 	});	
-}
+}*/

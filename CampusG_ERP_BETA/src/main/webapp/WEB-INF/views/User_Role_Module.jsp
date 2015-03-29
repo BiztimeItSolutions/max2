@@ -480,7 +480,24 @@
 			<div class="row">
                 <div class="col-lg-4">
                 
-                	 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                 	<thead>
+                    	<tr>
+                        	<th>chk</th>
+                            <th>Privilege</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                   <c:forEach items="${p}" var="d">
+                   		<tr class="odd gradeX">
+                        	<td align="center"><form:checkbox path="privilege"  value="${d.privilege_shortname}"/></td>
+                        	<td><c:out value="${d.privilege_name}"/></td>
+                        </tr> 
+                   </c:forEach>
+                   </tbody>
+                </table>
+                
+                	<%--  <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
                                             <th id="checkAll">Check All</th>
@@ -563,7 +580,7 @@
                 
 			    </div> <!-- /.col-lg-4 -->
 			</div> <!-- /.row -->
-			
+			 --%>
                  
 				<br>
                   <button type="submit" class="btn btn-primary">Create</button>				

@@ -17,6 +17,7 @@ import com.biztime.campusg.model.FeeType;
 import com.biztime.campusg.model.LoginCombined;
 import com.biztime.campusg.model.ModeOfPayment;
 import com.biztime.campusg.model.Module;
+import com.biztime.campusg.model.Privilege;
 import com.biztime.campusg.model.ReceiptBook;
 import com.biztime.campusg.model.Role_module;
 import com.biztime.campusg.model.StudentDocument;
@@ -608,6 +609,18 @@ public class StudentDAOImpl implements StudentDAO {
 		Query query=session.createQuery(hql);
 		List<Create_user> Create_user=(List<Create_user>)query.list();	
 		return Create_user;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Privilege> get_privilege() {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		String hql="FROM Privilege";
+		Query query=session.createQuery(hql);
+		List<Privilege> m=query.list();
+		//System.out.println("query returned:  "+module);
+		return m;
 	}
 
 

@@ -492,6 +492,7 @@
      <script src="<c:url value="/resources/js/plugins/dataTables/jquery.dataTables.js"/>"></script>
      <script src="<c:url value="/resources/js/plugins/dataTables/dataTables.bootstrap.js"/>"></script>
  	 <script src="<c:url value="/resources/js/Leftmenu_Generator.js" />"></script>  	 
+  
    <c:set var="privfromsession" value="${sessionScope.privText}"/>
    <input type="text" value="${privfromsession}" id="privText"/>
    
