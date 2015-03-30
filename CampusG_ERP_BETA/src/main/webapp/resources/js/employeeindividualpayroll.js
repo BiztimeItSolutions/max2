@@ -117,6 +117,43 @@ $.ajax({
 });	
 });	
 $('#employeeId').change(function(){
+	var employeeid = $("#employeeId option:selected")
+	.text();
+console.log("selected item from employeeId for ctc: " + employeeid);
+	
+$.ajax({
+    type:"GET",
+     
+    url:"get_employee_ctc.html",
+    dataType:"html",
+    data : {
+		"employeeid" : employeeid
+
+	       },
+
+    success:function(data)
+            {
+    		
+            var name=data.slice(1, -1);
+            
+            var ctc=name.split(',');
+         
+            $('#ctc').empty();
+            
+            for(var l in ctc)
+            {
+            	$("input[name*='ctc']" ).val(ctc[l]);
+            	
+            }
+           
+            },
+
+    error:function(){
+            alert("employee ctc failed");
+    },
+});	
+});	
+$('#employeeId').change(function(){
 	//to get the selected value in the department drop down
 	var employeeid = $("#employeeId option:selected")
 	.text();
@@ -350,20 +387,25 @@ $.ajax({
     },
 });	
 });	
-$('#employeeId').change(function(){
+
+
+$('#month').change(function(){
 	//to get the selected value in the department drop down
+var month = $("#month option:selected")
+.text();
+console.log("selected item from month: " + month);
 	
 var employeeid = $("#employeeId option:selected")
 .text();
 console.log("selected item from employeeId: " + employeeid);
-
 	
 $.ajax({
 	 type:"GET",
 	    dataType: "json",
 	    url:"get_absent_days.html",
 	    data : {
-			"employeeid" : employeeid
+			"employeeid" : employeeid,
+			"month" : month
 	           },
 
 	       
@@ -382,12 +424,16 @@ $.ajax({
     },
 });	
 });	
-$('#employeeId').change(function(){
+$('#month').change(function(){
 	//to get the selected value in the department drop down
+var month = $("#month option:selected")
+.text();
+console.log("selected item from month: " + month);
 	
 var employeeid = $("#employeeId option:selected")
 .text();
 console.log("selected item from employeeId: " + employeeid);
+
 
 	
 $.ajax({
@@ -395,8 +441,9 @@ $.ajax({
 	    dataType: "json",
 	    url:"get_payable_days.html",
 	    data : {
-			"employeeid" : employeeid
-	           },
+			"employeeid" : employeeid,
+			"month" : month
+			},
 
 	       
            success:function(data)

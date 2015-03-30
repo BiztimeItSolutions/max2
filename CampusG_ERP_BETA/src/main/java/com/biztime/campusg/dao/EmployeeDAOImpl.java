@@ -124,6 +124,7 @@ public int saveEmployeeLeave(EmployeeLeave leave) {
 				    "startDate='"+leave.getStartDate()+"'," +
 					"endDate='"+leave.getEndDate()+"'," +
 					"daysRequest='"+leave.getDaysRequest()+"'," +
+					"appliedMonth='"+leave.getAppliedMonth()+"',"+
 					"appliedDate='"+leave.getAppliedDate()+"' WHERE employeeId="+eid);
 
 	    Query query = session.createQuery(hql);
@@ -409,6 +410,20 @@ public void saveEmployeeDocumentName(EmployeeCommand command) {
 		System.out.println("query designation returned:  "+designation);
 		return designation;
 	}
+	
+	public String getEmployeeCtc(String e) {
+		// TODO Auto-generated method stub
+		String p=e.trim();
+		System.out.println("check ctc dao ");
+		Session session = this.sessionFactory.getCurrentSession();
+		String hql="SELECT e.ctc FROM Employee e WHERE e.employeeId=:p";
+		
+		Query query=session.createQuery(hql);
+		query.setString("p", p);
+		String ctc=query.list().toString();
+		System.out.println("query ctc returned:  "+ctc);
+		return ctc;
+	}
 
 	@Override
 	public String getMonth() {
@@ -488,16 +503,17 @@ public String getTotalDays(String m) {
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<EmployeeLeave> getAbsentDays(String e) {
+	public List<EmployeeLeave> getAbsentDays(String e,String m) {
 		// TODO Auto-generated method stub
 		String p=e.trim();
 		System.out.println("employee id for absent days"+p);
+		String q=m.trim();
 		Session session = this.sessionFactory.getCurrentSession();
-		String hql="FROM EmployeeLeave e WHERE e.employeeId=:p AND e.leaveStatus='Approved' AND e.leaveCode != 'PL'";
+		String hql="FROM EmployeeLeave e WHERE e.employeeId=:p AND e.leaveStatus='Approved' AND e.appliedMonth=:q AND e.leaveCode != 'PL'";
 		
 		Query query=session.createQuery(hql);
 		query.setString("p", p);
-		
+		query.setString("q", q);
 		List<EmployeeLeave> absentdays=(List<EmployeeLeave>)query.list();
 		System.out.println("printing absent days: "+absentdays.toString());
 	
@@ -505,22 +521,26 @@ public String getTotalDays(String m) {
 	
 	}
 
+	@Override
 	@SuppressWarnings("unchecked")
-	public List<EmployeeLeave> getPayableDays(String e) {
+	public List<EmployeeLeave> getPayableDays(String e,String m) {
 		// TODO Auto-generated method stub
 		String p=e.trim();
 		System.out.println("employee id for absent days"+p);
+		String q=m.trim();
 		Session session = this.sessionFactory.getCurrentSession();
-		String hql="FROM EmployeeLeave e WHERE e.employeeId=:p AND e.leaveStatus='Approved' AND e.leaveCode= 'PL'";
+		String hql="FROM EmployeeLeave e WHERE e.employeeId=:p AND e.appliedMonth=:q AND e.leaveStatus='Approved' AND e.leaveCode= 'PL'";
 		
 		Query query=session.createQuery(hql);
 		query.setString("p", p);
-		
+		query.setString("q", q);
 		List<EmployeeLeave> payableDays=(List<EmployeeLeave>)query.list();
 		System.out.println("printing absent days: "+payableDays.toString());
 	
 		return payableDays;
 	}
+
+	
 
 	
 

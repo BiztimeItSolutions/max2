@@ -62,6 +62,9 @@ public class EmployeeLeave implements Serializable {
 			@Column(name="applied_date")
 			private String appliedDate;
 			
+			@Column(name="applied_month")
+			private String appliedMonth;
+			
 			@Column(name = "leave_status")
 			private String leaveStatus;
 			
@@ -73,6 +76,14 @@ public class EmployeeLeave implements Serializable {
 			
 			public String getReason() {
 				return reason;
+			}
+
+			public String getAppliedMonth() {
+				return appliedMonth;
+			}
+
+			public void setAppliedMonth(String appliedMonth) {
+				this.appliedMonth = appliedMonth;
 			}
 
 			public void setReason(String reason) {

@@ -46,7 +46,7 @@
 			<div class="col-lg-12">
 
 				<h4 class="page-header">
-					Employee Leave Management | <span class="style2"> Leave</span>
+					Payslip generation | <span class="style2"> Individual Employees</span>
 				</h4>
 			</div>
 			<!-- /.col-lg-12 -->
@@ -55,7 +55,7 @@
 		
 <div class="row">
 	 <div class="col-lg-6">
-		  <h6>Home > Employee Leave Management > <b>Apply Leave</b></h6>
+		  <h6>Home > HR > Create Payslip<b>select employee</b></h6>
 	</div><!--col 6 -->
 </div><!--row -->
 	  <br />
@@ -102,6 +102,13 @@
                                 <form:input type="text" path="employee.designation" readonly = "true" name="designation" class="form-control"  />
 				
                    </div>
+                      
+                     <div class="form-group">
+                     <label class="label1">CTC: </label><span class="style1"></span>
+						  
+                                <form:input type="text" path="employee.ctc" readonly = "true" name="ctc" id="ctc" class="form-control"  />
+				
+                   </div>
 								  
 				   <div class="form-group">
                      <label class="label1">Month: </label><span class="style1"></span>
@@ -114,7 +121,7 @@
 								
 				 <div class="form-group">
 					  <label class="label1">Total Days</label> <span class="style1"></span>
-			<form:input type="text" path="collegeCalendar.totalDays" readonly = "true" name="totalDays" class="form-control"  />
+			<form:input type="text" path="collegeCalendar.totalDays" readonly = "true" name="totalDays" id="totalDays" class="form-control"  />
 				
 				</div>
 								
@@ -122,38 +129,39 @@
 								
 				<div class="form-group">
 					 <label class="label1">Holidays</label> <span class="style1"></span>
-						    <form:input path="collegeCalendar.holidays" name="holidays" readonly = "true" type="text" class="form-control"  />
+						    <form:input path="collegeCalendar.holidays" name="holidays" id="holidays" readonly = "true" type="text" class="form-control"  />
 				</div>
 				
 					<div class="form-group">
 					 <label class="label1">Working Days</label> <span class="style1"></span>
-						    <form:input path="collegeCalendar.workingDays" name="workingDays" readonly = "true" type="text" class="form-control"  />
+						    <form:input path="collegeCalendar.workingDays" name="workingDays" id="workingDays" readonly = "true" type="text" class="form-control"  />
 				   </div>
 				   
 				   	<div class="form-group">
 					 <label class="label1">Employee Working Days</label> <span class="style1"></span>
-						    <form:input path="employeeAttendance.totalWorkingDays" name="totalWorkingDays" readonly = "true" type="text" class="form-control"  />
+						    <form:input path="employeeAttendance.totalWorkingDays" id="totalWorkingDays" name="totalWorkingDays" readonly = "true" type="text" class="form-control"  />
 				   </div>
 				   
 				   <div class="form-group">
 					 <label class="label1">Employee Absent Days</label> <span class="style1"></span>
-						    <form:input path="employeeLeave.daysRequest" name="daysRequest"  readonly = "true" type="text" class="form-control"  />
+						    <form:input path="employeeLeave.daysRequest" name="daysRequest" id="daysRequest" readonly = "true" type="text" class="form-control"  />
 				   </div>
 				   
 				   <div class="form-group">
 					 <label class="label1">Employee payable Days</label> <span class="style1"></span>
-						    <form:input path="" name="payableDays"  readonly = "true" type="text" class="form-control"  />
+						    <form:input path="" name="payableDays" id="payableDays" readonly = "true" type="text" class="form-control"  />
 				   </div>
 				
 				
 				
 				
-				<%-- <div class="form-group">
-					 <form:input path="appliedDate" name="appliedDate" id="appliedDate" type="hidden" class="form-control"/>
-				</div> --%>
+				 <div class="form-group">
+				  <label class="label1">Salary</label> <span class="style1"></span>
+					 <form:input path="" type="text" name="salary" id="salary" onClick="calcutale()" class="form-control"/>
+				</div> 
 				
 				
-			
+			<br/><br/>
               <button type="submit" class="btn btn-primary"> Submit</button>
 			</div>
 	</form:form>
@@ -197,7 +205,26 @@
 
 
 
+<script type="text/javascript">
+	function calcutale() {
+		var totalDays = document.getElementById('totalDays').value;
+		var workingDays = document.getElementById('workingDays').value;
+	    var payableDays = document.getElementById('payableDays').value;
+	    var ctc = document.getElementById('ctc').value;
+        var totalWorkingDays = document.getElementById('totalWorkingDays').value;
+        var monthly=ctc/12;
+       
+        var daily=monthly/totalDays;
+		var days=Number(totalWorkingDays)+Number(payableDays);
+		
+		var empdays=Number(workingDays)-Number(days);
+		
+        var w=Number(totalDays)-Number(empdays);
 
+        var salary=Number(daily)*Number(w);	
+        document.getElementById("salary").value = salary.toFixed();
+	}
+</script>
 
 
 </body>

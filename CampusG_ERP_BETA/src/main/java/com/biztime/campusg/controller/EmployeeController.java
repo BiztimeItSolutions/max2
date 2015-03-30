@@ -465,7 +465,24 @@ public void leavestatus(HttpServletRequest req,HttpServletResponse resp)
   		
    }
    
-   
+
+  @Transactional
+  @RequestMapping("/get_employee_ctc")
+  public void employeeCtc(HttpServletRequest req,HttpServletResponse resp)
+   {
+  	String employeeid=req.getParameter("employeeid");
+  	System.out.println("check ctc controller ");
+      String ctc=this.employeeDaoImpl.getEmployeeCtc(employeeid); //get data for first drop down
+  	try {
+  		 resp.getWriter().write(ctc);
+  		} 
+  	catch (IOException e)
+  		{
+  	     // TODO Auto-generated catch block
+  		 e.printStackTrace();
+  		}
+  		
+   }
    @Transactional
    @RequestMapping("/get_college_calendar")
    public void collegeCalendar(HttpServletRequest req,HttpServletResponse resp)
@@ -564,9 +581,9 @@ public void leavestatus(HttpServletRequest req,HttpServletResponse resp)
     {
    	String employeeid=req.getParameter("employeeid");
    	System.out.println("employeeid"+employeeid);
-   
+   	String month=req.getParameter("month");
    	
-       List<EmployeeLeave> absentdays=this.employeeDaoImpl.getAbsentDays(employeeid);
+       List<EmployeeLeave> absentdays=this.employeeDaoImpl.getAbsentDays(employeeid,month);
        
        JsonArray jArray=new JsonArray();
        JsonObject jObj=new JsonObject();
@@ -599,9 +616,9 @@ public void leavestatus(HttpServletRequest req,HttpServletResponse resp)
     {
    	String employeeid=req.getParameter("employeeid");
    	System.out.println("employeeid"+employeeid);
-   
+  	String month=req.getParameter("month");
    	
-       List<EmployeeLeave> payableDays=this.employeeDaoImpl.getPayableDays(employeeid);
+       List<EmployeeLeave> payableDays=this.employeeDaoImpl.getPayableDays(employeeid,month);
        
        JsonArray jArray=new JsonArray();
        JsonObject jObj=new JsonObject();

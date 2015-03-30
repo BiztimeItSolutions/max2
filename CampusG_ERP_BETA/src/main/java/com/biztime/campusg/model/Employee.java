@@ -222,8 +222,23 @@ public class Employee implements Serializable {
 		
 		@Column(name = "ifsc_code")
 		private String ifscCode;
+		
+		@Column(name = "ctc")
+		private String ctc;
+		
+		
 
 	
+
+
+		public String getCtc() {
+			return ctc;
+		}
+
+
+		public void setCtc(String ctc) {
+			this.ctc = ctc;
+		}
 
 
 		public String getAccountNumber() {

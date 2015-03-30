@@ -78,7 +78,9 @@ public String getWorkingDays(String m);
 
 public String getTotalWorkingDays(String e, String m);
 
-public List<EmployeeLeave> getAbsentDays(String e);
+public List<EmployeeLeave> getAbsentDays(String e, String m);
+
+public List<EmployeeLeave> getPayableDays(String e, String m);
 
 
 

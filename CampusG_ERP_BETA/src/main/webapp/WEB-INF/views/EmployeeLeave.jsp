@@ -127,6 +127,10 @@
 				</div>
 				
 				<div class="form-group">
+					 <form:input path="appliedMonth" name="appliedMonth" id="appliedMonth" type="hidden" class="form-control"/>
+				</div>
+				
+				<div class="form-group">
 					 <form:input path="leaveStatus" name="leaveStatus" value="Applied" type="hidden" class="form-control"/>
 				</div>
 			
@@ -214,7 +218,13 @@ function calculate() {
 <!-- system date -->
 <script type="text/javascript">
 	 var now = new Date();
-      document.getElementById("appliedDate").value=now.getFullYear()+'-'+0+(now.getMonth()+1)+'-'+0+now.getDate();
+      document.getElementById("appliedDate").value=now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+      var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+ document.getElementById("appliedMonth").value=monthNames[now.getMonth()];
+
 </script>
 
 
