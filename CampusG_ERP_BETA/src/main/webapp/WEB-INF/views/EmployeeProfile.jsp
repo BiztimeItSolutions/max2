@@ -565,7 +565,21 @@
             <div class="row">
 			     
 			     <div class="col-lg-5">
-				      
+				       <div class="form-group">
+					       <label class="label">Salary Details</label>
+					  </div>
+					  <br/>
+					  <div class="form-group">
+					       <label class="label1">CTC</label><span class="style1">*</span>
+					              <form:input path="ctc" type="text" class="form-control" name="ctc"
+						                      placeholder="ctc"/>
+				      </div>
+				    <br/>
+					   <div class="form-group">
+					       <label class="label">Bank Details</label>
+					  </div>
+					  
+					     <br/>
 				      <div class="form-group">
 					       <label class="label1">Account Number</label><span class="style1">*</span>
 					              <form:input path="accountNumber" type="text" class="form-control" name="accountNumber"
