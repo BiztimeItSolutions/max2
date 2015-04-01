@@ -82,11 +82,12 @@ public class StudentController {
 	
 	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
-	    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-	    binder.registerCustomEditor(Date.class, new CustomDateEditor(
-	            dateFormat, false));
+	   SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+	   binder.registerCustomEditor(Date.class, new CustomDateEditor(
+	           dateFormat, false));
 	}
 
+	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
@@ -223,9 +224,10 @@ public class StudentController {
 		 model.addAttribute("q",q);
 		 model.addAttribute("em",em);
 		 
-		 model.addAttribute("Candidate_registration", new Candidate());
+		 //model.addAttribute("Candidate_registration", new Candidate());
+		 model.addAttribute("C_Registration", new Candidate());
 		 
-		return "Candidate_registration";
+		return "C_Registration";
 	}//
 	
 	@Transactional
@@ -301,11 +303,15 @@ public class StudentController {
 		
 		this.studentDaoImpl.Update_Candidate(c);
 		Map<String, Object> model = new HashMap<String, Object>();
+		return new ModelAndView("hello", model);
+		
+		
+		/*Map<String, Object> model = new HashMap<String, Object>();
 		model.put("p", this.studentDaoImpl.get_Candidate_first_adm());
 		
 		return new ModelAndView("View_Candidate_Basic_Admission", model);
 		//return "hello";
-		
+*/		
 		}
 	
 	
@@ -313,7 +319,7 @@ public class StudentController {
 	
 	
 	@Transactional
-	@RequestMapping(value = "/view_candidate_detail_admission", method = RequestMethod.GET)
+	@RequestMapping(value = "/view_candidate_detail_admission1", method = RequestMethod.GET)
 	public String list(Model model,HttpServletRequest req) {
 
 		//String candidate_id=req.getParameter("candidate_id");
@@ -322,6 +328,7 @@ public class StudentController {
 	
 		model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
 		model.addAttribute("View_Candidate_All_Details_Admission", new Candidate());
+		model.addAttribute("ShowForm", "admission");
 		
 		return "View_Candidate_All_Details_Admission";
 		
@@ -341,7 +348,7 @@ public class StudentController {
 
 	
 	@Transactional
-	@RequestMapping(value = "/view_candidate_detail_office", method = RequestMethod.GET)
+	@RequestMapping(value = "/view_candidate_detail_office1", method = RequestMethod.GET)
 	public String list1(Model model,HttpServletRequest req) {
 
 		int candidate_id=Integer.parseInt(req.getParameter("candidate_id"));
@@ -349,10 +356,61 @@ public class StudentController {
 	
 		model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
 		model.addAttribute("View_Candidate_All_Details_Admission", new Candidate());
+		model.addAttribute("ShowForm", "office");
 		
-		return "View_Candidate_All_Details_Office";
-		
+		//return "View_Candidate_All_Details_Office";
+		return "View_Candidate_All_Details_Admission";
 	}
+	
+	
+	@Transactional
+	@RequestMapping({"/view_candidate_detail_admission", "/view_candidate_detail_office", "/view_candidate_detail_account"})
+	public String View(HttpServletRequest req, Model model){
+		
+		String s=req.getRequestURI();
+		String[] sArray=s.split("/");
+		int i=sArray.length;
+	
+		String url_val=sArray[i-1];
+		System.out.println("URL VAL FROM FUNCT :"+url_val);
+		
+		int candidate_id=Integer.parseInt(req.getParameter("candidate_id"));
+		System.out.println("candidate_id FROM MIX Controller:"+candidate_id);
+		
+		
+		if(url_val.equals("view_candidate_detail_admission"))
+		{
+			
+			model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
+			model.addAttribute("Adm", new Candidate());
+			model.addAttribute("ShowForm", "admission");
+			
+		}
+		else if(url_val.equals("view_candidate_detail_office"))
+		{
+			model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
+			model.addAttribute("Adm", new Candidate());
+			model.addAttribute("ShowForm", "office");
+		}
+		else if(url_val.equals("view_candidate_detail_account"))
+		{
+			model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
+			model.addAttribute("Adm", new Candidate());
+			model.addAttribute("ShowForm", "account");
+		}
+		return "View_Candidate_All_Details_Admission";
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	@Transactional
@@ -1150,14 +1208,19 @@ public String listAccount(Model model,HttpServletRequest req)
 	
 	model.addAttribute("p", this.studentDaoImpl.getCandidate(candidate_id));
 	model.addAttribute("View_Candidate_All_Details_Admission", new Candidate());
-		
-	return "View_Candidate_All_Details_Account";
+	
+	model.addAttribute("ShowForm", "account");
+	
+	return "View_Candidate_All_Details_Admission";
+	
+	
+	//return "View_Candidate_All_Details_Account";
 		
  }
 	
 @SuppressWarnings("unchecked")
 @Transactional
-@RequestMapping(value = "/view_candidate_account_detail", method = RequestMethod.GET)
+@RequestMapping(value = "/view_candidate_account_detail1", method = RequestMethod.GET)
 public ModelAndView listAccount(@ModelAttribute("feeCommand") FeeCommand command,Model model,HttpServletRequest req)
   {
 
