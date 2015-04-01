@@ -74,6 +74,7 @@
 			    			        
 	             <beans:value>com.biztime.campusg.model.Category</beans:value>
 			     <beans:value>com.biztime.campusg.model.StudentFee</beans:value>
+			      <beans:value>com.biztime.campusg.model.FeeCommand</beans:value>
 			     <beans:value>com.biztime.campusg.model.ModeOfPayment</beans:value>
 			     <beans:value>com.biztime.campusg.model.ReceiptBook</beans:value>
 			     <beans:value>com.biztime.campusg.model.FeeType</beans:value>  
