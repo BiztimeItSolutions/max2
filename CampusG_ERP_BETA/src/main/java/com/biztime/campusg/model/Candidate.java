@@ -283,18 +283,33 @@ public class Candidate {
 	@Column(name = "avg_percentage")
 	private String avgpercentage;
 	
-	/*@Column(name = "year")
-	private String year;
 	
-	@Column(name = "institution")
-	private String institution;
+	/*@Column(name = "year1")
+	private String year1;
 	
-	@Column(name = "clas")
-	private String clas;
+	@Column(name = "institution1")
+	private String institution1;
 	
-	@Column(name = "remarks")
-	private String remarks;
-*/
+	@Column(name = "clas1")
+	private String clas1;
+	
+	@Column(name = "remarks1")
+	private String remarks1;
+	
+	@Column(name = "year2")
+	private String year2;
+	
+	@Column(name = "institution2")
+	private String institution2;
+	
+	@Column(name = "clas2")
+	private String clas2;
+	
+	@Column(name = "remarks2")
+	private String remarks2;*/
+
+
+	
 	private String admission_status;
 	private String admission_status_remarks;
 	
@@ -1027,11 +1042,72 @@ public class Candidate {
 	public void setOffice_status_remark(String office_status_remark) {
 		this.office_status_remark = office_status_remark;
 	}
+
+/*	public String getYear1() {
+		return year1;
+	}
+
+	public void setYear1(String year1) {
+		this.year1 = year1;
+	}
+
+	public String getInstitution1() {
+		return institution1;
+	}
+
+	public void setInstitution1(String institution1) {
+		this.institution1 = institution1;
+	}
+
+	public String getClas1() {
+		return clas1;
+	}
+
+	public void setClas1(String clas1) {
+		this.clas1 = clas1;
+	}
+
+	public String getRemarks1() {
+		return remarks1;
+	}
+
+	public void setRemarks1(String remarks1) {
+		this.remarks1 = remarks1;
+	}
+
+	public String getYear2() {
+		return year2;
+	}
+
+	public void setYear2(String year2) {
+		this.year2 = year2;
+	}
+
+	public String getInstitution2() {
+		return institution2;
+	}
+
+	public void setInstitution2(String institution2) {
+		this.institution2 = institution2;
+	}
+
+	public String getClas2() {
+		return clas2;
+	}
+
+	public void setClas2(String clas2) {
+		this.clas2 = clas2;
+	}
+
+	public String getRemarks2() {
+		return remarks2;
+	}
+
+	public void setRemarks2(String remarks2) {
+		this.remarks2 = remarks2;
+	}
 	
 	
-	
-	
-	
-	
+	*/
 
 }
