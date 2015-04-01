@@ -21,7 +21,7 @@
 	rel="stylesheet">
 
 <script src="<c:url value="/resources/js/validate/countries.js" />"></script>
-<%-- <link href="<c:url value="/resources/css/jquery-ui.css"/>" rel="stylesheet"> --%>
+<link href="<c:url value="/resources/css/jquery-ui.css"/>" rel="stylesheet">
 
 
 
@@ -264,7 +264,7 @@
 
 	<!--Start of Main page-->
 
-	<div id="page-wrapper">
+	<div id="page-wrapper1">
 		<div class="row">
 			<div class="col-lg-12">
 
@@ -313,7 +313,7 @@
 		 <div class="row">
                 <div class="col-lg-12">
                 
-                <form:form method="POST" commandName="Adm" id="f"
+                <form:form method="POST" commandName="View_Candidate_All_Details_Admission" id="f"
 						action="${pageContext.request.contextPath}/Update_Candidate_admission">
 
                             <!-- Nav tabs -->
@@ -322,28 +322,7 @@
                                 <li><a href="#contact" data-toggle="tab">Contact</a></li>
                                 <li><a href="#parent" data-toggle="tab">Parent</a></li>
                                 <li><a href="#education" data-toggle="tab">Education</a></li>
-                           <c:choose>
-								
-								<c:when test="${ShowForm eq 'admission'}">
-								<li><a href="#status" data-toggle="tab">Status</a></li>
-								</c:when>
-								
-								<c:when test="${ShowForm eq 'office'}">
-								<li><a href="#off_status" data-toggle="tab">Status</a></li>
-								</c:when>
-								
-								<c:when test="${ShowForm eq 'account'}">
-								
-								</c:when>
-								
-								<c:otherwise>
-								
-								</c:otherwise>
-								
-						</c:choose>
-                                
-                                
-                                <li><a href="#off_status" data-toggle="tab">Status Office</a></li>
+                                <li><a href="#status" data-toggle="tab">Status</a></li>
                             </ul>
 
                             <!-- Tab panes -->
@@ -389,7 +368,7 @@
 								<div class="form-group">
 									<label class="label1">Date of Birth</label><span class="style1">*</span>
 								   
-								   <form:input path="dateofbirth" value="${p.dateofbirth}" name="dateofbirth" type="date" class="form-control" id="dob" placeholder="Select Date of birth"/>
+								   <form:input path="dateofbirth" value="${p.dateofbirth}" name="dateofbirth" type="text" class="form-control" id="dob" placeholder="Select Date of birth"/>
 								</div>
 
 								<div class="form-group">
@@ -423,9 +402,8 @@
 
 								<div class="form-group">
 									<label class="label1">Blood Group</label>
-									<input type="hidden" value="${p.bloodgroup}" id="bgD"/>
 									
-									<form:select path="bloodgroup" class="form-control" id="bgE">
+									<form:select path="bloodgroup" class="form-control">
 												<form:option value="None" label="--Select Blood Group--"/>
 												<form:option value="A-" label="A-"/>
 												<form:option value="A+" label="A+"/>
@@ -458,8 +436,8 @@
 
 								<div class="form-group">
 									<label class="label1">Category</label><span class="style1"></span>
-									<input type="hidden" value="${p.category}" id="catD"/>
-									<form:select path="category" class="form-control" id="catE">
+								
+									<form:select path="category" class="form-control">
 												<form:option value="None" label="--Select Category--"/>
 												<form:option value="SC" label="SC"/>
 												<form:option value="ST" label="ST"/>
@@ -523,27 +501,7 @@
 							<form:input path="presentaddresspincode" class="form-control" value="${p.presentaddresspincode}"
 								name="presentaddresspincode" placeholder="Present address pincode"/>
 						</div>
-						
-						
 						<div class="form-group">
-							<label class="label1">Country</label><span class="style1">*</span>
-							<form:select path="presentaddresscountry" id="presentaddresscountry" class="form-control"
-									name="presentaddresscountry">
-								<!-- <option>Select Country</option> -->
-							</form:select>
-							<input type="hidden" value="${p.presentaddresscountry}" id="countryId">
-						</div>
-						<div class="form-group">
-							<label class="label1">State</label><span class="style1">*</span>
-							<form:select path="presentaddressstate" id="presentaddressstate" class="form-control" name="presentaddressstate">
-									<!-- <option>Select State</option> -->
-							</form:select>
-							<input type="hidden" value="${p.presentaddressstate}" id="stateId">  
-						</div>
-						
-						
-						
-						<%-- <div class="form-group">
 							<label class="label1">Country</label><span class="style1">*</span>
 							<form:select path="presentaddresscountry" class="form-control"
 								onChange="print_state('presentaddressstate',this.selectedIndex);"
@@ -560,7 +518,7 @@
 
 						<script language="javascript">
 							print_country("presentaddresscountry");
-						</script> --%>
+						</script>
 
 						<hr>
 					</div>
@@ -593,25 +551,7 @@
 							<form:input path="permanentaddresspincode" class="form-control" value="${p.permanentaddresspincode}"
 								name="permanentaddresspincode" placeholder="Permanent address pincode"/>
 						</div>
-						
 						<div class="form-group">
-							<label class="label1">Country</label><span class="style1">*</span>
-							<form:select path="permanentaddresscountry" id="permanentaddresscountry" class="form-control"
-									name="permanentaddresscountry">
-									<!-- <option>Select Country</option> -->
-									</form:select> 
-							<input type="hidden" value="${p.permanentaddresscountry}" id="PcountryId">
-						</div>
-						<div class="form-group">
-							<label class="label1">State</label><span class="style1">*</span>
-							<form:select path="permanentaddressstate" id="permanentaddressstate" class="form-control" name="permanentaddressstate">
-									<!-- <option>Select State</option> -->
-									</form:select>
-							<input type="hidden" value="${p.permanentaddressstate}" id="PstateId"> 
-						</div>
-						
-						
-						<%-- <div class="form-group">
 							<label class="label1">Country</label><span class="style1">*</span>
 							<form:select path="permanentaddresscountry" class="form-control"
 								onChange="print_state('permanentaddressstate',this.selectedIndex);"
@@ -628,7 +568,7 @@
 
 						<script language="javascript">
 							print_country("permanentaddresscountry");
-						</script> --%>
+						</script>
 						<hr>
 					</div>
 					<!--col 5 -->
@@ -662,25 +602,7 @@
 						<form:input path="emergencyaddresspincode" class="form-control" value="${p.emergencyaddresspincode}"
 							name="emergencyaddresspincode" placeholder="Emergency address  pincode"/>
 					</div>
-					
 					<div class="form-group">
-						<label class="label1">Country</label><span class="style1">*</span>
-						<form:select  path="emergencyaddresscountry" id="emergencyaddresscountry" class="form-control"
-									name="emergencyaddresscountry">
-									<!-- <option>Select Country</option> -->
-									</form:select>
-						<input type="hidden" value="${p.emergencyaddresscountry}" id="EcountryId">
-					</div>
-					<div class="form-group">
-						<label class="label1">State</label><span class="style1">*</span> 
-						<form:select path="emergencyaddressstate" id="emergencyaddressstate" class="form-control" name="emergencyaddressstate">
-									<!-- <option>Select State</option> -->
-									</form:select>
-						<input type="hidden" value="${p.emergencyaddressstate}" id="EstateId">
-					</div>
-					
-					
-					<%-- <div class="form-group">
 						<label class="label1">Country</label><span class="style1">*</span>
 						<form:select path="emergencyaddresscountry" class="form-control"
 							onChange="print_state('emergencyaddressstate',this.selectedIndex);"
@@ -696,7 +618,7 @@
 					</div>
 
 					<script language="javascript">print_country("emergencyaddresscountry");
-					</script> --%>
+					</script>
 					<hr>
 				</div>
 				<!--col 5-->
@@ -973,12 +895,12 @@
 				</div>
 				<div class="form-group">
 					<label class="label1">Date of Entering</label><span class="style1"></span>
-					<form:input path="dateofentry" type="date" class="form-control" id="doe" value="${p.dateofentry}"
+					<form:input path="dateofentry" type="text" class="form-control" id="doe" value="${p.dateofentry}"
 					 placeholder="Select Date of entry"/>
 				</div>
 				<div class="form-group">
 					<label class="label1">Date of Leaving</label><span class="style1"></span>
-					<form:input path="dateofleaving" type="date" class="form-control" id="dol" value="${p.dateofleaving}"
+					<form:input path="dateofleaving" type="text" class="form-control" id="dol" value="${p.dateofleaving}"
 					placeholder="Select Date of leaving"/>
 				</div>
 				<div class="form-group">
@@ -988,12 +910,12 @@
 				</div>
 				<div class="form-group">
 					<label class="label1">Date of Entering</label><span class="style1"></span>
-					<form:input path="dateofentryuniversity" type="date" class="form-control" id="doeu" value="${p.dateofentryuniversity}"
+					<form:input path="dateofentryuniversity" type="text" class="form-control" id="doeu" value="${p.dateofentryuniversity}"
 					placeholder="Select Date of entry"/>
 				</div>
 				<div class="form-group">
 					<label class="label1">Date of Leaving</label><span class="style1"></span>
-					<form:input path="dateofleavinguniversity" type="date" class="form-control" id="doel" value="${p.dateofleavinguniversity}"
+					<form:input path="dateofleavinguniversity" type="text" class="form-control" id="doel" value="${p.dateofleavinguniversity}"
 					placeholder="Select Date of leaving"/>
 				</div>
 				<div class="form-group">
@@ -1114,7 +1036,7 @@
 					<td>Remarks</td>
 					<td>Add/Delete</td>
 				</tr>
-				<!-- <tr>
+				<tr>
 					<td><input type="text" name="input_box_one[]"
 						class="form-control" /></td>
 					<td><input type="text" name="input_box_one[]"
@@ -1135,20 +1057,18 @@
 					<td><input type="text" name="input_box_two[]"
 						class="form-control" /></td>
 					<td><input type="button" class="add" value="Add More" /></td>
-				</tr> -->
+				</tr>
 			</table>
 			<br>
 	
 	</div><!-- /.col-lg-12 -->
 	</div> <!-- row -->
-
+	
+	
+	
 	</div> <!-- panel education -->
 	
-	
-	<c:choose>
-	<c:when test="${ShowForm eq 'admission'}">
-	
-	<div class="tab-pane fade" id="status">
+<div class="tab-pane fade in active" id="status">
 <br>
 <div class="row">
 	
@@ -1156,7 +1076,7 @@
 			<div class="form-group">
 				<label class="label1">Status</label><span class="style1"></span>
 				<form:select path="admission_status" class="form-control">
-					<form:option value="None" label="--Select Category admin--"/>
+					<form:option value="None" label="--Select Category--"/>
 					<form:option value="Pending" label="PENDING"/>
 					<form:option value="Accept" label="ACCEPT"/>
 					<form:option value="Reject" label="REJECT"/>
@@ -1172,66 +1092,12 @@
 		</div>
 	</div><!-- row -->
 
-<!-- <div>
-<input type="button" name="admin" id="admission" value="Admin"/>
-<input type="button" name="office" id="office" value="Office"/>
-<input type="button" name="account" id="account" value="account"/>
-</div> -->
-<input type="submit" value="Save Admin" class="btn btn-primary">
+<input type="submit" value="Save" class="btn btn-primary">	
 
 </div> <!-- status tab -->
-	</c:when>
-	
-	<c:when test="${ShowForm eq 'office'}">
-	
-<div class="tab-pane fade" id="off_status">
-<br>
-<div class="row">
-		<div class="col-lg-5">
-			<div class="form-group">
-				<label class="label1">Status</label><span class="style1"></span>
-				<form:select path="office_status" class="form-control">
-					<form:option value="None" label="--Select Category office--"/>
-					<form:option value="Pending" label="PENDING"/>
-					<form:option value="Accept" label="ACCEPT"/>
-					<form:option value="Reject" label="REJECT"/>
-				</form:select>
-			</div>
-		
-			<div class="form-group">
-				<label class="label1">Remarks</label><span class="style1">*</span>
-				<form:textarea path="office_status_remark" class="form-control"
-				rows="8" placeholder="Enter office Remarks"/>
-				</textarea>
-				
-						
-				
-			</div>
-		</div>
-	</div><!-- row -->
-<input type="submit" value="Save Office" class="btn btn-primary">
-</div> <!-- status tab -->
-	
-	</c:when>
-	
-	<c:when test="${ShowForm eq 'account'}">
-								
-	</c:when>
-	
-	<c:otherwise>
-		
-	</c:otherwise>
-	
-	
-	
-	</c:choose>
-
-
-
-
-
-</div> <!--tab-content-->
+ 
 </form:form>
+</div> <!--tab-content-->
 </div><!-- 12 -->
                                 
 </div><!-- roww -->
@@ -1239,27 +1105,48 @@
 <!-- end of main page -->
 	</div>	<!-- /.page wrapper -->
 	</div>	<!-- /.wrapper -->
-	<!-- Core Scripts - Include with every page -->
-	
 
-	<script src="<c:url value="/resources/js/jquery-1.10.2.js" />"></script>
+
+
+
+
+	<!-- Core Scripts - Include with every page -->
+	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>
+	<script src ="<c:url value="/resources/js/jquery-ui.js"/>"></script>
 	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 	<script src="<c:url value="/resources/js/plugins/metisMenu/jquery.metisMenu.js" />"></script>
 	<script src="<c:url value="/resources/js/sb-admin.js" />"></script>
 
+	<script
+		src="<c:url value="/resources/js/validate/jquery.validatp.js" />"></script>
+	<script
+		src="<c:url value="/resources/js/validate/admissionstudent.js" />"></script>
 
-<script src="<c:url value="/resources/js/Leftmenu_Generator.js" />"></script>
-<script src="<c:url value="/resources/js/locationView.js" />"></script>
 
-
-
- <c:set var="privfromsession" value="${applicationScope.privText}"/>
- <input type="text" value="${privfromsession}" id="privText"/>
- 
-</body>
-<script>
-
+ <script type="text/javascript">
+       $(function() {
+             $("#dob").datepicker({ dateFormat: "yy-mm-dd" }).val()
+               $("#doe").datepicker({ dateFormat: "yy-mm-dd" }).val()
+                  $("#dol").datepicker({ dateFormat: "yy-mm-dd" }).val()
+                     $("#doeu").datepicker({ dateFormat: "yy-mm-dd" }).val()
+                        $("#dolu").datepicker({ dateFormat: "yy-mm-dd" }).val()
+                  
+       });
 </script>
+
+	<script>
+		var checkboxes = $("input[type='checkbox']"), submitButt = $("input[type='submit']");
+
+		checkboxes.click(function() {
+			submitButt.attr("disabled", !checkboxes.is(":checked"));
+		});
+	</script>
+	
+<script src="<c:url value="/resources/js/Leftmenu_Generator.js" />"></script> 
+ <c:set var="privfromsession" value="${sessionScope.privText}"/>
+   <input type="text" value="${privfromsession}" id="privText"/>
+   
+</body>
 
 </html>
 

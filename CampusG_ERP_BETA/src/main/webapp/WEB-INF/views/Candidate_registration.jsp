@@ -112,8 +112,9 @@
                                     <form:input path="quota" type="hidden" value="${q}"/>
                                     <form:input path="mobile" type="hidden" value="${m}"/>
                                     <form:input path="email" type="hidden" value="${em}"/>
-                                    <div class="row">
-                                    <div class="col-lg-5">
+                                   
+                            <div class="row">
+                              <div class="col-lg-5">
 								<div class="form-group">
 									<label class="label1">Full Name</label><span class="style1">*</span>
 									<form:input path="firstname" name="firstname" id="firstname" type="text" class="form-control" placeholder="First Name" />
