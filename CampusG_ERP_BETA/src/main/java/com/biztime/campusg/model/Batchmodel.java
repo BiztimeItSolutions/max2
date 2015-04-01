@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@SuppressWarnings("serial")
 @Entity  
 @Table(name="batch")
 public class Batchmodel implements Serializable {
@@ -26,19 +25,17 @@ public class Batchmodel implements Serializable {
 		private String batchName;
 	 
 	 
-	 @Column(name = "college_id")
-		private Integer collegeId;
-	 
-	 
+	
 	 @Column(name = "course_id")
-		private Integer courseId;
+		private String courseId;
 	 
+	 @Column(name = "start_date")
+		private String startDate;
 	 
-	 @Column(name = "academic_year_id")
-		private Integer academicyearId;
-	 
-	 
-	 @Column(name = "deleted")
+	 @Column(name = "end_date")
+		private String endDate;
+	
+	@Column(name = "deleted")
 		private String deleted;
 		
 		@Column(name = "version")
@@ -82,57 +79,42 @@ public class Batchmodel implements Serializable {
 		}
 
 
-
-		public int getCollegeId() {
-			return collegeId;
-		}
-
-
-
-		public void setCollegeId(int collegeId) {
-			this.collegeId = collegeId;
-		}
-
-
-
-
-
 		
-
-
-
-		public Integer getCourseId() {
+		public String getCourseId() {
 			return courseId;
 		}
 
 
 
-		public void setCourseId(Integer courseId) {
+		public void setCourseId(String courseId) {
 			this.courseId = courseId;
 		}
 
 
 
-		public Integer getAcademicyearId() {
-			return academicyearId;
+		public String getStartDate() {
+			return startDate;
 		}
 
 
 
-		public void setAcademicyearId(Integer academicyearId) {
-			this.academicyearId = academicyearId;
+		public void setStartDate(String startDate) {
+			this.startDate = startDate;
 		}
 
 
 
-		public void setCollegeId(Integer collegeId) {
-			this.collegeId = collegeId;
+		public String getEndDate() {
+			return endDate;
 		}
 
 
 
+		public void setEndDate(String endDate) {
+			this.endDate = endDate;
+		}
 
-	
+
 
 		public String getBatchName() {
 			return batchName;

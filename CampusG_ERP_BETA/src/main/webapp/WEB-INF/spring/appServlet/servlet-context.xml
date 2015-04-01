@@ -125,6 +125,8 @@
 		          <beans:value>com.biztime.campusg.model.Batchmodel</beans:value>
 		          <beans:value>com.biztime.campusg.model.Employeemodel</beans:value>
 		           <beans:value>com.biztime.campusg.model.Mapmodel</beans:value>
+		           <beans:value>com.biztime.campusg.model.Semester</beans:value>
+		           <beans:value>com.biztime.campusg.model.Candidate</beans:value>
 		   
 			</beans:list>
 		</beans:property>

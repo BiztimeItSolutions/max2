@@ -67,31 +67,84 @@
 <br/>
 <div class="row">
      <form:form method="POST" commandName="manage" id="validate"
-						action="${pageContext.request.contextPath}/">
+						action="${pageContext.request.contextPath}/saveManageDetails">
 	   <div class="row">			
 			    
 			
                 
                  <label class="label1">Course Name:  </label><span class="style1">*</span>
                  
-              <form:select path="courseCodefk" class="form-control" name="courseCodefk" id="courseCodefk">
+              <form:select path=
+              "courseId" class="form-control" name="courseId" id="courseCodefk">
 							    
 							      <form:option value="" label="Select Program "/>
                             </form:select> 
                </div>
                
+                  <div class="row">			
+			    
+			
+                
+                 <label class="label1">Batch Name:  </label><span class="style1">*</span>
+                 
+              <form:select path=
+              "batchName" class="form-control" name="batchName" id="batchName">
+							    
+							      <form:option value="" label="Select Program "/>
+                            </form:select> 
+               </div>
                
-               <div class="form-group">
-                    
-                            <form:input type="text" path="batchName"  class="form-control" name="batchName" id="batchName"  /> 
+               <div class="row">			
+			    
+			
+                
+                 <label class="label1">Student List:  </label><span class="style1">*</span>
+                 
+              <form:select path=
+              "firstName" class="form-control" name="firstName" id="studentName">
+							    
+							      <form:option value="" label="Select Student "/>
+                            </form:select> 
+             <div class="form-group">
+                     <label hidden class="label1">Deleted: </label><span class="style1"></span>
+                            <form:input type="hidden" path="deleted"  class="form-control" name="deleted" value="0"  /> 
                 </div> 
- 			                
-	</form:form>
-</div><!-- row -->
-</div>
+                
+           
+					 <div class="form-group">
+                     <label hidden class="label1">Version: </label><span class="style1"></span>
+                            <form:input type="hidden" path="version"  class="form-control" name="version" value="0"  /> 
+                </div> 
+                
+             
+					 <div class="form-group">
+                     <label hidden class="label1">Created By: </label><span class="style1"></span>
+                            <form:input type="hidden" path="createdBy"  class="form-control" name="createdBy" value="1"  /> 
+                </div> 
+                
+					 <div class="form-group">
+                     <label hidden class="label1">Created On: </label><span class="style1"></span>
+                            <form:input type="hidden" path="createdOn"  class="form-control" name="createdOn"  id="fname"  /> 
+                </div> 
+                
+                
+					 <div class="form-group">
+                     <label hidden class="label1">Modified By: </label><span class="style1"></span>
+                            <form:input type="hidden" path="modifiedBy"  class="form-control" name="modifiedBy" value="1"   /> 
+                </div>
+                
+                
+					 <div class="form-group">
+                     <label hidden class="label1">Modified On: </label><span class="style1"></span>
+                            <form:input type="hidden" path="modifiedOn"  class="form-control" name="modifiedOn" value="0"   /> 
+                </div> 
+                <div>
+			    <button type="submit" class="btn btn-primary"> Submit</button>
+			</div></div>
+
 <!--End of Main page-->
 
-</div>
+</form:form>
 
 <!-- Core Scripts - Include with every page -->
 	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>

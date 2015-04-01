@@ -6,11 +6,9 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-
 import com.biztime.campusg.model.ApplicantStatusmodel;
 import com.biztime.campusg.model.BloodGroupmodel;
 import com.biztime.campusg.model.Categorymodel;
@@ -19,11 +17,11 @@ import com.biztime.campusg.model.CourseLevelmodel;
 import com.biztime.campusg.model.Coursemodel;
 import com.biztime.campusg.model.Departmentmodel;
 import com.biztime.campusg.model.Documentmodel;
-
 import com.biztime.campusg.model.AcademicYearmodel;
 import com.biztime.campusg.model.Batchmodel;
 import com.biztime.campusg.model.Gradingmodel;
 import com.biztime.campusg.model.LeaveTypemodel;
+import com.biztime.campusg.model.ManageBatchmodel;
 import com.biztime.campusg.model.Mapmodel;
 import com.biztime.campusg.model.Modulemodel;
 import com.biztime.campusg.model.Optionalmodel;
@@ -32,6 +30,8 @@ import com.biztime.campusg.model.Permissionmodel;
 import com.biztime.campusg.model.Programmodel;
 import com.biztime.campusg.model.Receiptmodel;
 import com.biztime.campusg.model.Rolemodel;
+import com.biztime.campusg.model.Semester;
+import com.biztime.campusg.model.SemesterSubjectMap;
 import com.biztime.campusg.model.Subjectmodel;
 import com.biztime.campusg.model.Usertypemodel;
 
@@ -1054,6 +1054,17 @@ public int savemapDetail(Mapmodel map) {
 	return returnstatement;
 }
 
+
+public int savemanageDetail(ManageBatchmodel manage) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	int returnstatement=(Integer) session.save(manage);
+	System.out.println("returning: "+returnstatement);
+	logger.info("Student saved successfully, college Details="+manage);
+	return returnstatement;
+}
+
+
 public Object get_map_detail() {
 	// TODO Auto-generated method stub
 	Session session = this.sessionFactory.getCurrentSession();
@@ -1066,8 +1077,57 @@ public Object get_map_detail() {
 
   		
 
+public int saveSemesterDetail(Semester semester) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	int returnstatement=(Integer) session.save(semester);
+	System.out.println("returning: "+returnstatement);
+	logger.info("Student saved successfully, college Details="+semester);
+	return returnstatement;
+	
+}
+
+
+
+public Object get_Semester_detail() {
+	// TODO Auto-generated method stub
+	
+	Session session = this.sessionFactory.getCurrentSession();
+	String hql="FROM Semester";
+	Query query=session.createQuery(hql);
+	List<Semester> Semester= query.list();	
+	//List<Student> student= session.createCriteria(Student.class).list();
+	return Semester;
+	
+}
 
 	
+
+public Object get_Semester_detailedit(int semesterId) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	return (Semester) session.get(Semester.class, semesterId);
+}
+
+
+
+public void Update_Semester_view(Semester semester) {
+	// TODO Auto-generated method stub
+	
+	Session session = this.sessionFactory.getCurrentSession();
+	session.update(semester);
+	session.flush();
+}
+
+public void Delete_Semester_view(Semester semester) {
+	// TODO Auto-generated method stub
+	
+	Session session = this.sessionFactory.getCurrentSession();
+	session.delete(semester);
+	session.flush();
+	
+}
+
 	
 	/******************************************************Dropdown***********************************************************************************/
 	
@@ -1137,7 +1197,7 @@ public String getCoursecodelist() {
 	// TODO Auto-generated method stub
 	// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
-		String hql="SELECT courseCodefk FROM Batchmodel";
+		String hql="SELECT courseName FROM Coursemodel";
 		
 		Query query=session.createQuery(hql);
 		String coursecodelist=query.list().toString();
@@ -1153,9 +1213,11 @@ public String getCoursecodetype(String s) {
 	Session session = this.sessionFactory.getCurrentSession();
 	String p=s.trim();
 	System.out.println("p="+p);
-	String hql="SELECT b.batchName FROM Batchmodel b WHERE b.courseCodefk=p";/**/
+	
+	
+	String hql="SELECT b.batchName FROM Batchmodel b WHERE b.courseId=(SELECT c.courseName FROM Coursemodel c WHERE c.courseName=:p) ";/**/
 	Query query=session.createQuery(hql);
-	query.setString(0, p);
+	query.setString("p", p);
 	String batchname=query.list().toString();
 	System.out.println("query batchname:"+batchname);
 	return batchname;
@@ -1203,7 +1265,32 @@ public String getEmployeeNamelist() {
 
 
 
+public String getSemesterIdlist() {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+    String hql="SELECT semesterName FROM Semester";
+	
+	Query query=session.createQuery(hql);
+	String SemesterIdlist=query.list().toString();
+	
+	System.out.println("query returned semester list:  "+SemesterIdlist);
+	return SemesterIdlist;
+}
 
+public String getCoursecodestudentbatchtype(String selecteditem) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	String p=selecteditem.trim();
+	System.out.println("p="+p);
+	
+	
+	String hql="SELECT candidate.firstname FROM Candidate candidate WHERE candidate.course_name=(SELECT c.courseName FROM Coursemodel c WHERE c.courseName=:p) ";/**/
+	Query query=session.createQuery(hql);
+	query.setString("p", p);
+	String studentname=query.list().toString();
+	System.out.println("query studennt name:"+studentname);
+	return studentname;
+}
 
 
 /*public String getStudentNamelist() {
@@ -1220,16 +1307,360 @@ public String getEmployeeNamelist() {
 */
 
 
+/*************************************************************redundancy check***************************************/
 
 
-
-
-
-
+public Boolean getCollegeByName(String collegeNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String CollegeName=collegeNamefromUser.trim();
+	String hql="FROM CollegeDetail where collegeName=:CollegeName";
+	Query query=session.createQuery(hql);
+	query.setParameter("CollegeName", CollegeName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
 	}
+	return flag;
+}
 
+
+public Boolean getLeaveName(String leaveNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String LeaveName=leaveNamefromUser.trim();
+	String hql="FROM LeaveTypemodel where leaveName=:LeaveName";
+	Query query=session.createQuery(hql);
+	query.setParameter("LeaveName", LeaveName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getCategoryName(String categoryNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String CategoryName=categoryNamefromUser.trim();
+	String hql="FROM Categorymodel where categoryName=:CategoryName";
+	Query query=session.createQuery(hql);
+	query.setParameter("CategoryName", CategoryName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getPaymentmodeName(String paymentModefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String paymentMode=paymentModefromUser.trim();
+	String hql="FROM Paymentmodemodel where paymentMode=:paymentMode";
+	Query query=session.createQuery(hql);
+	query.setParameter("paymentMode", paymentMode);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getstatsuName(String statusNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String status=statusNamefromUser.trim();
+	String hql="FROM ApplicantStatusmodel where statusName=:status";
+	Query query=session.createQuery(hql);
+	query.setParameter("status", status);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getprogramName(String programNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String programName=programNamefromUser.trim();
+	String hql="FROM Programmodel where programName=:programName";
+	Query query=session.createQuery(hql);
+	query.setParameter("programName", programName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getcourseName(String courseNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String courseName=courseNamefromUser.trim();
+	String hql="FROM Coursemodel where courseName=:courseName";
+	Query query=session.createQuery(hql);
+	query.setParameter("courseName", courseName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getcourselevelName(String courselevelNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String courselevelName=courselevelNamefromUser.trim();
+	String hql="FROM CourseLevelmodel where courselevelName=:courselevelName";
+	Query query=session.createQuery(hql);
+	query.setParameter("courselevelName", courselevelName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getdepartmentName(String departmentNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String departmentName=departmentNamefromUser.trim();
+	String hql="FROM Departmentmodel where departmentName=:departmentName";
+	Query query=session.createQuery(hql);
+	query.setParameter("departmentName", departmentName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getreceiptName(String receiptNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String receiptName=receiptNamefromUser.trim();
+	String hql="FROM Receiptmodel where receiptName=:receiptName";
+	Query query=session.createQuery(hql);
+	query.setParameter("receiptName", receiptName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getoptionalName(String optionalNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String optionalName=optionalNamefromUser.trim();
+	String hql="FROM Optionalmodel where optionalName=:optionalName";
+	Query query=session.createQuery(hql);
+	query.setParameter("optionalName", optionalName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getroleName(String roleNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String roleName=roleNamefromUser.trim();
+	String hql="FROM Rolemodel where roleName=:roleName";
+	Query query=session.createQuery(hql);
+	query.setParameter("roleName", roleName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getbatchName(String batchNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String batchName=batchNamefromUser.trim();
+	String hql="FROM Batchmodel where batchName=:batchName";
+	Query query=session.createQuery(hql);
+	query.setParameter("batchName", batchName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getsubjectName(String subjectNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String subjectName=subjectNamefromUser.trim();
+	String hql="FROM Subjectmodel where subjectName=:subjectName";
+	Query query=session.createQuery(hql);
+	query.setParameter("subjectName", subjectName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getusertypeName(String usertypefromUser) {
+	// TODO Auto-generated method stub
 	
-		
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String usertypeName=usertypefromUser.trim();
+	String hql="FROM Usertypemodel where usertypeName=:usertypeName";
+	Query query=session.createQuery(hql);
+	query.setParameter("usertypeName", usertypeName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+	
+}
+
+
+public Boolean getbloodgroupName(String bloodgroupfromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String groupName=bloodgroupfromUser.trim();
+	String hql="FROM BloodGroupmodel where groupName=:groupName";
+	Query query=session.createQuery(hql);
+	query.setParameter("groupName", groupName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+public Boolean getSemesterName(String semesterNameUser) {
+	// TODO Auto-generated method stub
+	
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String semesterName=semesterNameUser.trim();
+	String hql="FROM Semester where semesterName=:semesterName";
+	Query query=session.createQuery(hql);
+	query.setParameter("semesterName", semesterName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+	
+}
+
+
+public Boolean savesemsubmapDetails(String semesterNamefromUser) {
+	// TODO Auto-generated method stub
+	Session session = this.sessionFactory.getCurrentSession();
+	Boolean flag=false;
+	String semesterName=semesterNamefromUser.trim();
+	String hql="FROM Semester where semesterName=:semesterName";
+	Query query=session.createQuery(hql);
+	query.setParameter("semesterName", semesterName);
+	@SuppressWarnings("unchecked")
+	List<Object> checkRedundancy=(List<Object>) query.list();
+	if(checkRedundancy.isEmpty()){
+		flag=true;
+	}else{
+		flag=false;
+	}
+	return flag;
+}
+
+
+
+
+
+}
+
 	
 
 	

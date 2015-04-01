@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@SuppressWarnings("serial")
 @Entity  
 @Table(name="subject_detail")
 public class Subjectmodel implements Serializable {
@@ -27,21 +26,8 @@ public class Subjectmodel implements Serializable {
 	
 	@Column(name = "subject_code")
 	private String subjectCode;
-	
-	
-	@Column(name = "semester_subject_map_id")  
-	private Integer mapId;
-	
-	
-	
 
-	public Integer getMapId() {
-		return mapId;
-	}
-
-	public void setMapId(Integer mapId) {
-		this.mapId = mapId;
-	}
+	
 
 	public static long getSerialVersionUID() {
 		return serialVersionUID;

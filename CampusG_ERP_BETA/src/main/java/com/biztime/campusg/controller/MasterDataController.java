@@ -6,7 +6,7 @@ package com.biztime.campusg.controller;
  * @Purpose    Data Entry
  *
  */
-
+  
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,6 +41,7 @@ import com.biztime.campusg.model.Coursemodel;
 import com.biztime.campusg.model.Departmentmodel;
 import com.biztime.campusg.model.Documentmodel;
 import com.biztime.campusg.model.LeaveTypemodel;
+import com.biztime.campusg.model.ManageBatchmodel;
 import com.biztime.campusg.model.Mapmodel;
 import com.biztime.campusg.model.Modulemodel;
 import com.biztime.campusg.model.Optionalmodel;
@@ -49,6 +50,8 @@ import com.biztime.campusg.model.Permissionmodel;
 import com.biztime.campusg.model.Programmodel;
 import com.biztime.campusg.model.Receiptmodel;
 import com.biztime.campusg.model.Rolemodel;
+import com.biztime.campusg.model.Semester;
+import com.biztime.campusg.model.SemesterSubjectMap;
 import com.biztime.campusg.model.Subjectmodel;
 import com.biztime.campusg.model.Usertypemodel;
 
@@ -77,17 +80,150 @@ public class MasterDataController {
 		return "LeaveType";
 	}
 
-
-
+	/*  Semester Insert*/
 	@Transactional
-	@RequestMapping(value= "/saveLeaveDetail", method = RequestMethod.POST)
-	public ModelAndView add(@ModelAttribute("leave") LeaveTypemodel leave,Model model)
+	@RequestMapping(value = "/mastersemesterpage", method = RequestMethod.GET)
+	public String mastersemesterpage(@ModelAttribute("semester") Semester semester,Model model) {
+		
+		model.addAttribute("semester", new Semester());
+		
+		return "SemesterDetailpage";
+	}
+
+
+	
+	
+	
+	@Transactional
+	@RequestMapping(value= "/saveSemesterDetail", method = RequestMethod.POST)
+	public ModelAndView add(@ModelAttribute("semester") Semester semester,Model model,HttpServletRequest req)
 		{
 		
 		
-		int success=this.masterDataDAOImpl.saveLeaveDetail(leave);
-		model.addAttribute("success", success);
-		    return getLeaveDetail();
+		String SemesterNameUser=req.getParameter("semesterName");
+		System.out.println("leaveNamefromUser: "+SemesterNameUser);
+		Boolean flag=this.masterDataDAOImpl.getSemesterName(SemesterNameUser);
+		if(flag){
+			int success=this.masterDataDAOImpl.saveSemesterDetail(semester);
+			model.addAttribute("success", success);
+			return getSemesterDetail();
+		}else{
+			int success=0;
+			model.addAttribute("success", success);
+			return new ModelAndView("SemesterDetailpage");
+			
+			
+		}
+		
+		
+		}
+	
+	
+	
+	/*  Semester View*/
+	@Transactional
+	@RequestMapping(value = "/viewsemester", method = RequestMethod.GET)
+	public ModelAndView getSemesterDetail()
+	 {
+			
+	   Map<String, Object> model = new HashMap<String, Object>();
+		model.put("p", this.masterDataDAOImpl.get_Semester_detail());
+		return new ModelAndView("Semesterview", model);
+			
+	 }
+	
+	/*View Complete semester*/
+	@Transactional
+	@RequestMapping(value = "/toviewcompletesemesterDetail", method = RequestMethod.GET)
+	public String getSemesterComplete(@ModelAttribute("semester") Semester semester,Model model,HttpServletRequest req)
+	 {
+		int semesterId=Integer.parseInt(req.getParameter("semesterId"));
+		System.out.println("semesterId:"+semesterId);	
+		model.addAttribute("p", this.masterDataDAOImpl.get_Semester_detailedit(semesterId));
+		//model.addAttribute("edit_college_detail", new CollegeDetail());
+		return "Semestercompleteview";
+			
+	 }
+	
+	
+	
+	@Transactional
+	@RequestMapping(value = "/viewsemesterback", method = RequestMethod.POST)
+	public ModelAndView getSemesterback()
+	 {
+			
+	   Map<String, Object> model = new HashMap<String, Object>();
+		model.put("p", this.masterDataDAOImpl.get_Semester_detail());
+		return new ModelAndView("Semesterview", model);
+			
+	 }
+	
+
+	
+	
+	
+	/* leave Detail Edit*/
+	@Transactional
+	@RequestMapping(value = "/toeditsemesterDetail", method = RequestMethod.GET)
+	public String getToeditsemesterDetail(@ModelAttribute("semester") Semester semester,Model model,HttpServletRequest req)
+	
+	 {
+		int semesterId=Integer.parseInt(req.getParameter("semesterId"));
+		System.out.println("semesterId:"+semesterId);	
+		model.addAttribute("p", this.masterDataDAOImpl.get_Semester_detailedit(semesterId));
+		
+		return "edit_semester";
+		
+		
+	 }
+	
+	/*leave detail update*/
+	@Transactional
+	@RequestMapping(value= "/Update_Semester_view", method = RequestMethod.POST)
+	public ModelAndView Update_semester_view(@ModelAttribute("semester") Semester semester,HttpServletRequest req){
+		
+		this.masterDataDAOImpl.Update_Semester_view(semester);
+		Map<String, Object> model = new HashMap<String, Object>();
+		model.put("p", this.masterDataDAOImpl.get_Semester_detail());
+		
+		return new ModelAndView("Semesterview", model);
+		//return "hello";
+		
+		}
+	
+	/*Category detail delete*/
+	@Transactional
+	@RequestMapping(value= "/todeletesemesterDetail", method = RequestMethod.GET)
+	public ModelAndView Delete_Semester_view(@ModelAttribute("semester") Semester semester,HttpServletRequest req){
+		
+		this.masterDataDAOImpl.Delete_Semester_view(semester);
+		Map<String, Object> model = new HashMap<String, Object>();
+		model.put("p", this.masterDataDAOImpl.get_Semester_detail());
+		
+		return new ModelAndView("SemesterDetailpage", model);
+		//return "hello";
+	}
+
+	@Transactional
+	@RequestMapping(value= "/saveLeaveDetail", method = RequestMethod.POST)
+	public ModelAndView add(@ModelAttribute("leave") LeaveTypemodel leave,Model model,HttpServletRequest req)
+		{
+		
+		
+		String leaveNamefromUser=req.getParameter("leaveName");
+		System.out.println("leaveNamefromUser: "+leaveNamefromUser);
+		Boolean flag=this.masterDataDAOImpl.getLeaveName(leaveNamefromUser);
+		if(flag){
+			int success=this.masterDataDAOImpl.saveLeaveDetail(leave);
+			model.addAttribute("success", success);
+			return getLeaveDetail();
+		}else{
+			int success=0;
+			model.addAttribute("success", success);
+			return new ModelAndView("LeaveType");
+			
+			
+		}
 		
 		
 	}
@@ -193,17 +329,28 @@ public class MasterDataController {
 
 	@Transactional
 	@RequestMapping(value= "/saveCollegeDetail", method = RequestMethod.POST)
-	public ModelAndView addcollege(@ModelAttribute("college") CollegeDetail m,Model model)
+	public ModelAndView addcollege(@ModelAttribute("college") CollegeDetail m,Model model,HttpServletRequest req)
 		{
 		
-		
-		int success=this.masterDataDAOImpl.saveCollegedetail(m);
-		model.addAttribute("success", success);
-		    return getCollegeDetail();
-		
-		
+		String collegeNamefromUser=req.getParameter("collegeName");
+		System.out.println("collegeNamefromUser: "+collegeNamefromUser);
+		Boolean flag=this.masterDataDAOImpl.getCollegeByName(collegeNamefromUser);
+		if(flag){
+			int success=this.masterDataDAOImpl.saveCollegedetail(m);
+			model.addAttribute("success", success);
+			return getCollegeDetail();
+		}else{
+			int success=0;
+			model.addAttribute("success", success);
+			return new ModelAndView("CollegeDetailPage");
+			
+			
+		}
+		    
+
+
+
 	}
-	 
 	
 	/*  College Detail View*/
 	@Transactional
@@ -213,6 +360,7 @@ public class MasterDataController {
 			
 	   Map<String, Object> model = new HashMap<String, Object>();
 		model.put("p", this.masterDataDAOImpl.get_College_detail());
+		
 		return new ModelAndView("CollegeDetailDisplay", model);
 			
 	 }
@@ -299,11 +447,26 @@ public class MasterDataController {
 
 	@Transactional
 	@RequestMapping(value= "/saveCategoryDetail", method = RequestMethod.POST)
-	public ModelAndView addcategory(@ModelAttribute("category") Categorymodel category,Model model){
+	public ModelAndView addcategory(@ModelAttribute("category") Categorymodel category,Model model,HttpServletRequest req){
 		
-		int success=this.masterDataDAOImpl.saveCategoryDetail(category);
+		
+		
+		String categoryNamefromUser=req.getParameter("categoryName");
+		System.out.println("leaveNamefromUser: "+categoryNamefromUser);
+		Boolean flag=this.masterDataDAOImpl.getCategoryName(categoryNamefromUser);
+
+		if(flag){
+			
+			int success=this.masterDataDAOImpl.saveCategoryDetail(category);
 		model.addAttribute("success",success);
 	    return getCategoryDetail();
+	}else{
+		int success=0;
+		model.addAttribute("success", success);
+		return new ModelAndView("CategoryDetailpage");
+		
+		
+	}
 
 	}
 	
@@ -402,11 +565,24 @@ public class MasterDataController {
 
 	@Transactional
 	@RequestMapping(value= "/savePaymentDetail", method = RequestMethod.POST)
-	public ModelAndView addpaymentmode(@ModelAttribute("payment") Paymentmodemodel payment,Model model){
+	public ModelAndView addpaymentmode(@ModelAttribute("payment") Paymentmodemodel payment,Model model,HttpServletRequest req){
 		
-		int success=this.masterDataDAOImpl.savePaymentDetail(payment);
+		String paymentModefromUser=req.getParameter("paymentMode");
+		System.out.println("paymentModefromUser: "+paymentModefromUser);
+		Boolean flag=this.masterDataDAOImpl.getPaymentmodeName(paymentModefromUser);
+
+		if(flag){
+			
+			int success=this.masterDataDAOImpl.savePaymentDetail(payment);
 		model.addAttribute("success",success);
 	    return getPaymentmodeDetail();
+	}else{
+		int success=0;
+		model.addAttribute("success", success);
+		return new ModelAndView("PaymentmodeDetailPage");
+		
+		
+	}
 
 	}
 	
@@ -504,14 +680,28 @@ public class MasterDataController {
 						return "ApplicantStatusDetailPage";
 		}
 		
-		/*Save for status*/
+		
+/*Save for status*/
 		@Transactional
 		@RequestMapping(value= "/saveStatusDetail", method = RequestMethod.POST)
-		public ModelAndView addstatus(@ModelAttribute("status") ApplicantStatusmodel status,Model model){
+		public ModelAndView addstatus(@ModelAttribute("status") ApplicantStatusmodel status,Model model,HttpServletRequest req){
 			
-			int success=this.masterDataDAOImpl.saveStatusDetail(status);
+			String statusNamefromUser=req.getParameter("statusName");
+			System.out.println("statusNamefromUser: "+statusNamefromUser);
+			Boolean flag=this.masterDataDAOImpl.getstatsuName(statusNamefromUser);
+
+			if(flag){
+				
+				int success=this.masterDataDAOImpl.saveStatusDetail(status);
 			model.addAttribute("success",success);
 		    return getStatusDetail();
+		}else{
+			int success=0;
+			model.addAttribute("success", success);
+			return new ModelAndView("ApplicantStatusDetailPage");
+			
+			
+		}
 
 		}
 		
@@ -609,15 +799,29 @@ public class MasterDataController {
 			return "ProgramDetailPage";
 		}
 		
-		/*Save for program*/
+/*Save for program*/
+		
+		
 		@Transactional
 		@RequestMapping(value= "/saveProgramDetail", method = RequestMethod.POST)
-		public ModelAndView addstatus(@ModelAttribute("program") Programmodel program,Model model){
+		public ModelAndView addstatus(@ModelAttribute("program") Programmodel program,Model model,HttpServletRequest req){
 			
-			int success=this.masterDataDAOImpl.saveProgramDetail(program);
-			
-		    return getProgramDetail();
+			String programNamefromUser=req.getParameter("programName");
+			System.out.println("statusNamefromUser: "+programNamefromUser);
+			Boolean flag=this.masterDataDAOImpl.getprogramName(programNamefromUser);
 
+			if(flag){
+				
+				int success=this.masterDataDAOImpl.saveProgramDetail(program);
+			model.addAttribute("success",success);
+		    return getProgramDetail();
+		}else{
+			int success=0;
+			model.addAttribute("success", success);
+			return new ModelAndView("ProgramDetailPage");
+			
+			
+		}
 		}
 		
 
@@ -718,22 +922,33 @@ public class MasterDataController {
 					return "CourseDetailPage";
 				}
 				
-				/*Save for course*/
+/*Save for course*/
 				
 				
 				@Transactional
 				@RequestMapping(value= "/saveCourseDetails", method = RequestMethod.POST)
-				public ModelAndView addstatus(@ModelAttribute("course") Coursemodel course,Model model){
+				public ModelAndView addstatus(@ModelAttribute("course") Coursemodel course,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.saveCourseDetails(course);
-					
+					String courseNamefromUser=req.getParameter("courseName");
+					System.out.println("statusNamefromUser: "+courseNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getcourseName(courseNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.saveCourseDetails(course);
 					model.addAttribute("success",success);
 				    return getCourseDetail();
-
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("CourseDetailPage");
+					
+					
+				}
 				}
 				
 				
-				/*View course*/
+/*View course*/
 				
 				@Transactional
 				@RequestMapping(value = "/viewcourse", method = RequestMethod.GET)
@@ -830,11 +1045,24 @@ public class MasterDataController {
 				/*Save for course*/
 				@Transactional
 				@RequestMapping(value= "/saveCourselevelDetail", method = RequestMethod.POST)
-				public ModelAndView addcourselevel(@ModelAttribute("courselevel") CourseLevelmodel courselevel,Model model){
+				public ModelAndView addcourselevel(@ModelAttribute("courselevel") CourseLevelmodel courselevel,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.saveCourselevelDetail(courselevel);
-				    model.addAttribute("success", success);
+					String courselevelNamefromUser=req.getParameter("courselevelName");
+					System.out.println("statusNamefromUser: "+courselevelNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getcourselevelName(courselevelNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.saveCourselevelDetail(courselevel);
+					model.addAttribute("success",success);
 				    return getCourselevelDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("CourselevelDetailPage");
+					
+					
+				}
 
 				}
 				
@@ -922,8 +1150,7 @@ public class MasterDataController {
 				
 				
 /*Save department*/
-				
-				
+			
 				@Transactional
 				@RequestMapping(value = "/masterdepartmentpage", method = RequestMethod.GET)
 				public String mastercoursePage(@ModelAttribute("department") Departmentmodel department,Model model) {
@@ -933,15 +1160,27 @@ public class MasterDataController {
 					return "DepartmentDetailpage";
 				}
 				
-				/*Save for course*/
+				/*Save for department*/
 				@Transactional
 				@RequestMapping(value= "/saveDepartmentDetail", method = RequestMethod.POST)
-				public ModelAndView addcourselevel(@ModelAttribute("department") Departmentmodel department,Model model){
+				public ModelAndView addcourselevel(@ModelAttribute("department") Departmentmodel department,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.savedepartmentDetail(department);
+					String departmentNamefromUser=req.getParameter("departmentName");
+					System.out.println("departmentNamefromUser: "+departmentNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getdepartmentName(departmentNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savedepartmentDetail(department);
 					model.addAttribute("success",success);
 				    return getDepartmentDetail();
-
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("DepartmentDetailpage");
+					
+					
+				}
 				}
 				
 				
@@ -1098,7 +1337,7 @@ public class MasterDataController {
 				 }
 				
 				
-				/*courselevel update*/
+/*courselevel update*/
 				@Transactional
 				@RequestMapping(value= "/Update_Permission_view", method = RequestMethod.POST)
 				public ModelAndView Update_Permission_view(@ModelAttribute("permission") Permissionmodel permission,HttpServletRequest req){
@@ -1113,7 +1352,7 @@ public class MasterDataController {
 					}
 				
 				
-				/*delete departnet*/
+/*delete department*/
 				@Transactional
 				@RequestMapping(value= "/todeletedepartmentDetail", method = RequestMethod.GET)
 				public ModelAndView Delete_Department_view(@ModelAttribute("department") Departmentmodel department,HttpServletRequest req){
@@ -1156,11 +1395,24 @@ public class MasterDataController {
 				/*Save for Receipt*/
 				@Transactional
 				@RequestMapping(value= "/saveReceiptDetail", method = RequestMethod.POST)
-				public ModelAndView addreceipt(@ModelAttribute("receipt") Receiptmodel receipt,Model model){
+				public ModelAndView addreceipt(@ModelAttribute("receipt") Receiptmodel receipt,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.savereceiptDetail(receipt);
-					model.addAttribute("success", success);
+					String receiptNamefromUser=req.getParameter("receiptName");
+					System.out.println("statusNamefromUser: "+receiptNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getreceiptName(receiptNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savereceiptDetail(receipt);
+					model.addAttribute("success",success);
 				    return getreceiptDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("ReceiptDetailpage");
+					
+					
+				}
 
 				}
 				
@@ -1180,11 +1432,24 @@ public class MasterDataController {
 				/*Save for optional*/
 				@Transactional
 				@RequestMapping(value= "/saveOptionalDetail", method = RequestMethod.POST)
-				public ModelAndView addoptional(@ModelAttribute("optional") Optionalmodel optional,Model model){
+				public ModelAndView addoptional(@ModelAttribute("optional") Optionalmodel optional,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.saveOptionalDetail(optional);
+					String optionalNamefromUser=req.getParameter("optionalName");
+					System.out.println("optionalNamefromUser: "+optionalNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getoptionalName(optionalNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.saveOptionalDetail(optional);
 					model.addAttribute("success",success);
 				    return getOptionalDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("OptionalDetailpage");
+					
+					
+				}
 
 				}
 				
@@ -1267,7 +1532,7 @@ public class MasterDataController {
 				 }
 				
 				
-				/*Edit optional*/
+/*Edit optional*/
 				
 				
 				@Transactional
@@ -1285,7 +1550,7 @@ public class MasterDataController {
 				 }
 				
 				
-				/*optional update*/
+/*optional update*/
 				@Transactional
 				@RequestMapping(value= "/Update_Optional_view", method = RequestMethod.POST)
 				public ModelAndView Update_Optional_view(@ModelAttribute("optional") Optionalmodel optional,HttpServletRequest req){
@@ -1317,8 +1582,7 @@ public class MasterDataController {
 					
 				 }
 				
-				
-				/*receipt update*/
+/*receipt update*/
 				@Transactional
 				@RequestMapping(value= "/Update_Receipt_view", method = RequestMethod.POST)
 				public ModelAndView Update_Receipt_view(@ModelAttribute("receipt") Receiptmodel receipt,HttpServletRequest req){
@@ -1333,7 +1597,7 @@ public class MasterDataController {
 					}
 				
 				
-				/*delete optional*/
+/*delete optional*/
 				
 				
 				@Transactional
@@ -1349,7 +1613,7 @@ public class MasterDataController {
 					}
 				
 				
-				/*delete receipt*/
+/*delete receipt*/
 				
 				@Transactional
 				@RequestMapping(value= "/todeletereceiptDetail", method = RequestMethod.GET)
@@ -1365,7 +1629,7 @@ public class MasterDataController {
 				
 				
 				
-				/*Save role*/
+/*Save role*/
 				
 				
 				@Transactional
@@ -1377,16 +1641,30 @@ public class MasterDataController {
 					return "RoleDetailpage";
 				}
 				
-				/*Save for role*/
+/*Save for role*/
 				
 				
 				@Transactional
 				@RequestMapping(value= "/saveRoleDetail", method = RequestMethod.POST)
-				public ModelAndView addrole(@ModelAttribute("role") Rolemodel role,Model model){
+				public ModelAndView addrole(@ModelAttribute("role") Rolemodel role,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.saveroleDetail(role);
+					String roleNamefromUser=req.getParameter("roleName");
+					System.out.println("optionalNamefromUser: "+roleNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getroleName(roleNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.saveroleDetail(role);
 					model.addAttribute("success",success);
 				    return getRoleDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("RoleDetailpage");
+					
+					
+				}
+
 
 				}
 
@@ -1446,7 +1724,7 @@ public class MasterDataController {
 				 }
 				
 				
-				/*role update*/
+/*role update*/
 				@Transactional
 				@RequestMapping(value= "/Update_Role_view", method = RequestMethod.POST)
 				public ModelAndView Update_Role_view(@ModelAttribute("role") Rolemodel role,HttpServletRequest req){
@@ -1486,11 +1764,25 @@ public class MasterDataController {
 				/*Save for doc*/
 				@Transactional
 				@RequestMapping(value= "/saveDocumentDetail", method = RequestMethod.POST)
-				public ModelAndView adddocument(@ModelAttribute("document") Documentmodel document,Model model){
+				public ModelAndView adddocument(@ModelAttribute("document") Documentmodel document,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.savedocumentDetail(document);
+
+					String documentName=req.getParameter("documentName");
+					System.out.println("optionalNamefromUser: "+documentName);
+					Boolean flag=this.masterDataDAOImpl.getroleName(documentName);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savedocumentDetail(document);
 					model.addAttribute("success",success);
 				    return getDocumentDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("DocumentDetailpage");
+					
+					
+				}
 
 				}
 
@@ -1550,7 +1842,7 @@ public class MasterDataController {
 				 }
 				
 				
-				/*doc update*/
+/*doc update*/
 				@Transactional
 				@RequestMapping(value= "/Update_Document_view", method = RequestMethod.POST)
 				public ModelAndView Update_Document_view(@ModelAttribute("document") Documentmodel document,HttpServletRequest req){
@@ -1576,11 +1868,10 @@ public class MasterDataController {
 					return new ModelAndView("DocumentDetailview", model);
 					
 					}
+		
 				
+/*save batch*/
 				
-
-				
-			/*save batch*/
 				@Transactional
 				@RequestMapping(value = "/masterbatchpage", method = RequestMethod.GET)
 				public String masterbatchPage(@ModelAttribute("batch") Batchmodel batch,Model model) {
@@ -1590,14 +1881,29 @@ public class MasterDataController {
 					return "BatchDetailpage";
 				}
 				
-				/*save batch*/
+				
+/*save batch*/
+				
 				@Transactional
 				@RequestMapping(value= "/saveBatchDetails", method = RequestMethod.POST)
-				public ModelAndView addbatch(@ModelAttribute("batch") Batchmodel batch,Model model){
-					
-					int success=this.masterDataDAOImpl.savebatchDetail(batch);
+				public ModelAndView addbatch(@ModelAttribute("batch") Batchmodel batch,Model model,HttpServletRequest req){
+
+					String batchNamefromUser=req.getParameter("batchName");
+					System.out.println("batchNamefromUser: "+batchNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getbatchName(batchNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savebatchDetail(batch);
 					model.addAttribute("success",success);
 				    return getBatchDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("BatchDetailpage");
+					
+					
+				}
 
 				}
 				
@@ -1690,6 +1996,16 @@ public class MasterDataController {
 					}
 				
 				
+				/*Save sem sub map*/
+				@Transactional
+				@RequestMapping(value = "/mastersemsubpage", method = RequestMethod.GET)
+				public String semsubPage(@ModelAttribute("semsubmap") SemesterSubjectMap semsubmap,Model model) {
+			    
+					model.addAttribute("subject", new Subjectmodel());
+					
+					return "SemesterSubjectMap";
+				}
+				
 				
 				/*Save sub*/
 				@Transactional
@@ -1701,14 +2017,51 @@ public class MasterDataController {
 					return "SubjectDetailpage";
 				}
 				
+				/*Save for semsubmap*/
+				@Transactional
+				@RequestMapping(value= "/savesemsubmapDetails", method = RequestMethod.POST)
+				public ModelAndView addsemester(@ModelAttribute("semsubmap") SemesterSubjectMap semsubmap,Model model,HttpServletRequest req){
+				/*	
+					String semesterNamefromUser=req.getParameter("semesterId");
+					System.out.println("semesterNamefromUser: "+semesterNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getSemesterName(semesterNamefromUser);
+
+					if(flag){
+						
+					Boolean success=this.masterDataDAOImpl.savesemsubmapDetails(semesterNamefromUser);
+					model.addAttribute("success",success);
+				    return new ModelAndView("SubjectDetailpage");
+				}else{*/
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("SubjectDetailpage");
+					
+					
+				}
+
+				
+				
 				/*Save for sub*/
 				@Transactional
 				@RequestMapping(value= "/saveSubjectDetail", method = RequestMethod.POST)
-				public ModelAndView addsubject(@ModelAttribute("subject") Subjectmodel subject,Model model){
+				public ModelAndView addsubject(@ModelAttribute("subject") Subjectmodel subject,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.savesubjectDetail(subject);
+					String subjectNamefromUser=req.getParameter("subjectName");
+					System.out.println("batchNamefromUser: "+subjectNamefromUser);
+					Boolean flag=this.masterDataDAOImpl.getsubjectName(subjectNamefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savesubjectDetail(subject);
 					model.addAttribute("success",success);
 				    return getSubjectDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("SubjectDetailpage");
+					
+					
+				}
 
 				}
 				
@@ -1806,14 +2159,27 @@ public class MasterDataController {
 					return "UsertypeDetailpage";
 				}
 				
-				/*Save for doc*/
+				/*Save for usertype*/
 				@Transactional
 				@RequestMapping(value= "/saveUsertypeDetail", method = RequestMethod.POST)
-				public ModelAndView addusertype(@ModelAttribute("usertype") Usertypemodel usertype,Model model){
+				public ModelAndView addusertype(@ModelAttribute("usertype") Usertypemodel usertype,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.saveusertypeDetail(usertype);
+					String usertypefromUser=req.getParameter("subjectName");
+					System.out.println("batchNamefromUser: "+usertypefromUser);
+					Boolean flag=this.masterDataDAOImpl.getusertypeName(usertypefromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.saveusertypeDetail(usertype);
 					model.addAttribute("success",success);
 				    return getUsertypeDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("SubjectDetailpage");
+					
+					
+				}
 
 				}
 
@@ -1918,13 +2284,27 @@ public class MasterDataController {
 				
 				@Transactional
 				@RequestMapping(value= "/saveBloodDetail", method = RequestMethod.POST)
-				public ModelAndView addblood(@ModelAttribute("blood") BloodGroupmodel blood,Model model){
+				public ModelAndView addblood(@ModelAttribute("blood") BloodGroupmodel blood,Model model,HttpServletRequest req){
 					
-					int success=this.masterDataDAOImpl.savebloodDetail(blood);
+					String bloodgroupfromUser=req.getParameter("groupName");
+					System.out.println("batchNamefromUser: "+bloodgroupfromUser);
+					Boolean flag=this.masterDataDAOImpl.getbloodgroupName(bloodgroupfromUser);
+
+					if(flag){
+						
+						int success=this.masterDataDAOImpl.savebloodDetail(blood);
 					model.addAttribute("success",success);
 				    return getBloodDetail();
+				}else{
+					int success=0;
+					model.addAttribute("success", success);
+					return new ModelAndView("BloodGroupDetailPage");
+					
+					
+				}
 
 				}
+				
 
 				
 /*View blood */
@@ -2237,9 +2617,9 @@ public class MasterDataController {
 				
 				@Transactional
 				@RequestMapping(value = "/mastermanagepage", method = RequestMethod.GET)
-				public String mastermanagePage(@ModelAttribute("manage") Batchmodel module,Model model) {
+				public String mastermanagePage(@ModelAttribute("manage") ManageBatchmodel module,Model model) {
 			    
-					model.addAttribute("manage", new Batchmodel());
+					model.addAttribute("manage", new ManageBatchmodel());
 					
 					return "Coursemanage";
 				}
@@ -2254,12 +2634,20 @@ public class MasterDataController {
 					return "BatchStudentEmployeemap";
 				}
 				
-				
-				
-				
-				
+				@Transactional
+				@RequestMapping(value= "/saveManageDetails", method = RequestMethod.POST)
+				public ModelAndView addmap(@ModelAttribute("manage") ManageBatchmodel manage,Model model){
+					
+					int success= this.masterDataDAOImpl.savemanageDetail(manage);
+					
+					model.addAttribute("success", success);
+				   
+					return getmapDetail();
 
+				}
 				
+				
+		
 				/*Save for map*/
 				
 				
@@ -2288,7 +2676,11 @@ public class MasterDataController {
 				
 				
 				
-				/*****************************************************Dropdown******************************************************/
+				/*********************************************************Dropdown******************************************************/
+				
+				
+				
+				
 				
 				@Transactional
 				@RequestMapping("/get_college_id")
@@ -2307,6 +2699,23 @@ public class MasterDataController {
 						
 				 }
 				
+				
+				@Transactional
+				@RequestMapping("/get_semester_id")
+				public void semester(HttpServletRequest req,HttpServletResponse resp)
+				 {
+					String SemesterIdlist=this.masterDataDAOImpl.getSemesterIdlist();
+					//get data for first drop down
+					try {
+						 resp.getWriter().write(SemesterIdlist);
+						} 
+					catch (IOException e)
+						{
+						// TODO Auto-generated catch block
+						  e.printStackTrace();
+						}
+						
+				 }
 				@Transactional
 				@RequestMapping("/get_courselevel_name")
 				public void courselevel(HttpServletRequest req,HttpServletResponse resp)
@@ -2415,7 +2824,7 @@ public class MasterDataController {
 				 
 				 
 				 @Transactional
-					@RequestMapping("/get_employeename")
+					@RequestMapping("/get_employee_name")
 				 public void studentname(HttpServletRequest req,HttpServletResponse resp)
 				 {
 					String Employeenamelist=this.masterDataDAOImpl.getEmployeeNamelist();
@@ -2451,8 +2860,24 @@ public class MasterDataController {
 				 
 				 
 				 
-				 /************************************************Left menu*****************************************************/
-				
+				 @Transactional
+					@RequestMapping("/get_coursecode_studentbatch_type")
+				 public void coursecodestudentbatchtype(HttpServletRequest req,HttpServletResponse resp)
+				 {   
+					 
+					String selecteditemstu=req.getParameter("selecteditemstu");
+					String Coursecodestudentbatchlist=this.masterDataDAOImpl.getCoursecodestudentbatchtype(selecteditemstu);
+					//get data for first drop down
+					try {
+						 resp.getWriter().write(Coursecodestudentbatchlist);
+						} 
+					catch (IOException e)
+						{
+						// TODO Auto-generated catch block
+						  e.printStackTrace();
+						}
+						
+				 } 
 				 
 				
 					
