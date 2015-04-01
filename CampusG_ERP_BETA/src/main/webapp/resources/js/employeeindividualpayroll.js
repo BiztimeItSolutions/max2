@@ -191,7 +191,117 @@ $.ajax({
     },
 });	
 });
+$('#employeeId').change(function(){
+	var employeeid = $("#employeeId option:selected")
+	.text();
+console.log("selected item from employeeId for ctc: " + employeeid);
 	
+$.ajax({
+    type:"GET",
+     
+    url:"get_employee_tds.html",
+    dataType:"html",
+    data : {
+		"employeeid" : employeeid
+
+	       },
+
+    success:function(data)
+            {
+    		
+            var name=data.slice(1, -1);
+            
+            var tds=name.split(',');
+         
+            $('#tds').empty();
+            
+            for(var l in tds)
+            {
+            	$("input[name*='tds']" ).val(tds[l]);
+            	
+            }
+           
+            },
+
+    error:function(){
+            alert("employee tds failed");
+    },
+});	
+});	
+$('#employeeId').change(function(){
+	var employeeid = $("#employeeId option:selected")
+	.text();
+console.log("selected item from employeeId for pf: " + employeeid);
+	
+$.ajax({
+    type:"GET",
+     
+    url:"get_employee_pf.html",
+    dataType:"html",
+    data : {
+		"employeeid" : employeeid
+
+	       },
+
+    success:function(data)
+            {
+    		
+            var name=data.slice(1, -1);
+            
+            var pf=name.split(',');
+         
+            $('#pf').empty();
+            
+            for(var l in pf)
+            {
+            	$("input[name*='pf']" ).val(pf[l]);
+            	
+            }
+           
+            },
+
+    error:function(){
+            alert("employee pf failed");
+    },
+});	
+});	
+$('#employeeId').change(function(){
+	var employeeid = $("#employeeId option:selected")
+	.text();
+console.log("selected item from employeeId for ctc: " + employeeid);
+	
+$.ajax({
+    type:"GET",
+     
+    url:"get_employee_allowance.html",
+    dataType:"html",
+    data : {
+		"employeeid" : employeeid
+
+	       },
+
+    success:function(data)
+            {
+    		
+            var name=data.slice(1, -1);
+            
+            var allowance=name.split(',');
+         
+            $('#allowance').empty();
+            
+            for(var l in allowance)
+            {
+            	$("input[name*='allowance']" ).val(allowance[l]);
+            	
+            }
+           
+            },
+
+    error:function(){
+            alert("employee allowance failed");
+    },
+});	
+});	
 $.ajax({
     type:"GET",
      

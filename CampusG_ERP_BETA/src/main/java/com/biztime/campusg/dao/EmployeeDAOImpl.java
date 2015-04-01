@@ -424,6 +424,48 @@ public void saveEmployeeDocumentName(EmployeeCommand command) {
 		System.out.println("query ctc returned:  "+ctc);
 		return ctc;
 	}
+	
+	public String getEmployeeAllowance(String e) {
+		// TODO Auto-generated method stub
+		String p=e.trim();
+		System.out.println("check ctc dao ");
+		Session session = this.sessionFactory.getCurrentSession();
+		String hql="SELECT e.allowance FROM Employee e WHERE e.employeeId=:p";
+		
+		Query query=session.createQuery(hql);
+		query.setString("p", p);
+		String ctc=query.list().toString();
+		System.out.println("query ctc returned:  "+ctc);
+		return ctc;
+	}
+
+	public String getEmployeeTds(String e) {
+		// TODO Auto-generated method stub
+		String p=e.trim();
+		System.out.println("check ctc dao ");
+		Session session = this.sessionFactory.getCurrentSession();
+		String hql="SELECT e.tds FROM Employee e WHERE e.employeeId=:p";
+		
+		Query query=session.createQuery(hql);
+		query.setString("p", p);
+		String ctc=query.list().toString();
+		System.out.println("query ctc returned:  "+ctc);
+		return ctc;
+	}
+
+	public String getEmployeePf(String e) {
+		// TODO Auto-generated method stub
+		String p=e.trim();
+		System.out.println("check ctc dao ");
+		Session session = this.sessionFactory.getCurrentSession();
+		String hql="SELECT e.pf FROM Employee e WHERE e.employeeId=:p";
+		
+		Query query=session.createQuery(hql);
+		query.setString("p", p);
+		String ctc=query.list().toString();
+		System.out.println("query ctc returned:  "+ctc);
+		return ctc;
+	}
 
 	@Override
 	public String getMonth() {
@@ -539,6 +581,7 @@ public String getTotalDays(String m) {
 	
 		return payableDays;
 	}
+
 
 	
 

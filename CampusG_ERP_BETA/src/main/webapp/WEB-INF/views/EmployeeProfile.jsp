@@ -566,7 +566,7 @@
 			     
 			     <div class="col-lg-5">
 				       <div class="form-group">
-					       <label class="label">Salary Details</label>
+					       <label class="label1"><b>Salary Details</b></label>
 					  </div>
 					  <br/>
 					  <div class="form-group">
@@ -574,9 +574,24 @@
 					              <form:input path="ctc" type="text" class="form-control" name="ctc"
 						                      placeholder="ctc"/>
 				      </div>
+				       <div class="form-group">
+					       <label class="label1">PF</label><span class="style1">*</span>
+					              <form:input path="pf" type="text" class="form-control" name="pf"
+						                      placeholder="pf"/>
+				      </div>
+				        <div class="form-group">
+					       <label class="label1">TDS</label><span class="style1">*</span>
+					              <form:input path="tds" type="text" class="form-control" name="tds"
+						                      placeholder="tds"/>
+				      </div>
+				        <div class="form-group">
+					       <label class="label1">Transport Allowance</label><span class="style1">*</span>
+					              <form:input path="allowance" type="text" class="form-control" name="allowance"
+						                      placeholder="allowance"/>
+				      </div>
 				    <br/>
 					   <div class="form-group">
-					       <label class="label">Bank Details</label>
+					       <label class="label1"><b>Bank Details</b></label>
 					  </div>
 					  
 					     <br/>

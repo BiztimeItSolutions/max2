@@ -226,9 +226,46 @@ public class Employee implements Serializable {
 		@Column(name = "ctc")
 		private String ctc;
 		
-		
+		@Column(name = "PF")
+		private String pf;
 
-	
+		@Column(name = "TDS")
+		private String tds;
+		
+		@Column(name = "allowance")
+		private String allowance;
+		
+		
+     public String getPf() {
+			return pf;
+		}
+
+
+		public void setPf(String pf) {
+			this.pf = pf;
+		}
+
+
+		public String getTds() {
+			return tds;
+		}
+
+
+		public void setTds(String tds) {
+			this.tds = tds;
+		}
+
+
+
+
+		public String getAllowance() {
+			return allowance;
+		}
+
+
+		public void setAllowance(String allowance) {
+			this.allowance = allowance;
+		}
 
 
 		public String getCtc() {

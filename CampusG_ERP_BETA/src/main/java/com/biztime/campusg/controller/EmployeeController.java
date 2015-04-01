@@ -483,6 +483,58 @@ public void leavestatus(HttpServletRequest req,HttpServletResponse resp)
   		}
   		
    }
+  @Transactional
+  @RequestMapping("/get_employee_pf")
+  public void employeePf(HttpServletRequest req,HttpServletResponse resp)
+   {
+  	String employeeid=req.getParameter("employeeid");
+  	System.out.println("check ctc controller ");
+      String ctc=this.employeeDaoImpl.getEmployeePf(employeeid); //get data for first drop down
+  	try {
+  		 resp.getWriter().write(ctc);
+  		} 
+  	catch (IOException e)
+  		{
+  	     // TODO Auto-generated catch block
+  		 e.printStackTrace();
+  		}
+  		
+   }
+  @Transactional
+  @RequestMapping("/get_employee_tds")
+  public void employeeTds(HttpServletRequest req,HttpServletResponse resp)
+   {
+  	String employeeid=req.getParameter("employeeid");
+  	System.out.println("check ctc controller ");
+      String ctc=this.employeeDaoImpl.getEmployeeTds(employeeid); //get data for first drop down
+  	try {
+  		 resp.getWriter().write(ctc);
+  		} 
+  	catch (IOException e)
+  		{
+  	     // TODO Auto-generated catch block
+  		 e.printStackTrace();
+  		}
+  		
+   }
+  
+  @Transactional
+  @RequestMapping("/get_employee_allowance")
+  public void employeeAllowance(HttpServletRequest req,HttpServletResponse resp)
+   {
+  	String employeeid=req.getParameter("employeeid");
+  	System.out.println("check ctc controller ");
+      String ctc=this.employeeDaoImpl.getEmployeeAllowance(employeeid); //get data for first drop down
+  	try {
+  		 resp.getWriter().write(ctc);
+  		} 
+  	catch (IOException e)
+  		{
+  	     // TODO Auto-generated catch block
+  		 e.printStackTrace();
+  		}
+  		
+   }
    @Transactional
    @RequestMapping("/get_college_calendar")
    public void collegeCalendar(HttpServletRequest req,HttpServletResponse resp)

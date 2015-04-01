@@ -55,7 +55,7 @@
 		
 <div class="row">
 	 <div class="col-lg-6">
-		  <h6>Home > HR > Create Payslip<b>select employee</b></h6>
+		  <h6>Home > HR > Create Payslip > <b>select employee</b></h6>
 	</div><!--col 6 -->
 </div><!--row -->
 	  <br />
@@ -68,50 +68,74 @@
      </div>
 </div>
 <br/>
-<div class="row">
+ <!-- <div class="row">  -->
      <form:form method="POST" commandName="employeeCommand" id=""
 						action="${pageContext.request.contextPath}/saveEmployeeIndividualPayroll">
 	  			
-			    
+			 <div class="row">
 			<div class="col-lg-5">
 			
 				    <div class="form-group">
-                     <label class="label1">Department: </label><span class="style1"></span>
+                     <label class="label1">Department </label><span class="style1"></span>
 						    <form:select path="departmentmodel.departmentName" class="form-control" name="departmentName" id="departmentName">
 							      <form:option value="none" label="Select Department"/>
                             </form:select>
                     </div>
 				 
 				   <div class="form-group">
-                     <label class="label1">Employee ID: </label><span class="style1"></span>
+                     <label class="label1">Employee ID </label><span class="style1"></span>
 						    <form:select path="employee.employeeId" class="form-control" name="employeeId" id="employeeId">
 							      <form:option value="none" label="Select Employee ID"/>
                             </form:select>
                   </div>
                   
                    <div class="form-group">
-                     <label class="label1">Employee Name: </label><span class="style1"></span>
+                     <label class="label1">Employee Name </label><span class="style1"></span>
 						  
                                 <form:input type="text" path="employee.firstName" readonly = "true" name="firstName" class="form-control"  />
 				
                    </div> 
                    
                      <div class="form-group">
-                     <label class="label1">Designation: </label><span class="style1"></span>
+                     <label class="label1">Designation </label><span class="style1"></span>
 						  
                                 <form:input type="text" path="employee.designation" readonly = "true" name="designation" class="form-control"  />
 				
                    </div>
                       
                      <div class="form-group">
-                     <label class="label1">CTC: </label><span class="style1"></span>
+                     <label class="label1">CTC </label><span class="style1"></span>
 						  
                                 <form:input type="text" path="employee.ctc" readonly = "true" name="ctc" id="ctc" class="form-control"  />
 				
                    </div>
-								  
+                   
+                    <div class="form-group">
+                     <label class="label1">PF % </label><span class="style1"></span>
+						  
+                                <form:input type="text" path="employee.pf" readonly = "true" name="pf" id="pf" class="form-control"  />
+				
+                   </div>
+                   
+                    <div class="form-group">
+                     <label class="label1">TDS % </label><span class="style1"></span>
+						  
+                                <form:input type="text" path="employee.tds" readonly = "true" name="tds" id="tds" class="form-control"  />
+				
+                   </div>
+                   
+                      <div class="form-group">
+                     <label class="label1">Allowance </label><span class="style1"></span>
+						  
+                                <form:input type="text" path="employee.allowance" readonly = "true" name="allowance" id="allowance" class="form-control"  />
+				
+                   </div>
+                   <hr>
+					</div><!-- col5 -->
+					
+					<div class="col-lg-5">			  
 				   <div class="form-group">
-                     <label class="label1">Month: </label><span class="style1"></span>
+                     <label class="label1">Month </label><span class="style1"></span>
 						    <form:select path="collegeCalendar.month" class="form-control" name="month" id="month">
 							      <form:option value="none" label="Select Leave Type"/>
                             </form:select>
@@ -151,19 +175,24 @@
 					 <label class="label1">Employee payable Days</label> <span class="style1"></span>
 						    <form:input path="" name="payableDays" id="payableDays" readonly = "true" type="text" class="form-control"  />
 				   </div>
+	        <hr>
+		</div></div>
+		<div class="row">
+				<div class="col-lg-5">
 				
-				
-				
+			  <div class="form-group">
+				  <label class="label1">Basic Pay</label> <span class="style1"></span>
+					 <form:input path="" type="text" name="basicpay" id="basicpay" onClick="calcutale()" class="form-control"/>
+				</div> 
 				
 				 <div class="form-group">
 				  <label class="label1">Salary</label> <span class="style1"></span>
 					 <form:input path="" type="text" name="salary" id="salary" onClick="calcutale()" class="form-control"/>
 				</div> 
 				
-				
 			<br/><br/>
               <button type="submit" class="btn btn-primary"> Submit</button>
-			</div>
+			</div></div>
 	</form:form>
 	<div style="float:right;width:20%;height:20%" id="messageDiv">
 		<c:set var="success" value="${success}"/>
@@ -182,7 +211,7 @@
         	    </div>
 	</c:if>	
 		
-</div><!-- row -->
+<!-- </div>row -->
 
 </div>
 <!--End of Main page-->
@@ -212,8 +241,11 @@
 	    var payableDays = document.getElementById('payableDays').value;
 	    var ctc = document.getElementById('ctc').value;
         var totalWorkingDays = document.getElementById('totalWorkingDays').value;
+         var pf = document.getElementById('pf').value;
+          var tds = document.getElementById('tds').value;
+           var allowance = document.getElementById('allowance').value;
         var monthly=ctc/12;
-       
+        document.getElementById("basicpay").value = monthly;
         var daily=monthly/totalDays;
 		var days=Number(totalWorkingDays)+Number(payableDays);
 		
@@ -221,8 +253,20 @@
 		
         var w=Number(totalDays)-Number(empdays);
 
-        var salary=Number(daily)*Number(w);	
-        document.getElementById("salary").value = salary.toFixed();
+        var attendancededuction=(Number(daily)*Number(w)).toFixed();	
+       
+        //document.getElementById("basicpay").value = basicpay;
+        
+        var pfdeduction=Number(attendancededuction)-(Number(pf)/100);
+    
+       var tdsdeduction=Number(pfdeduction)-(Number(tds)/100);
+            
+        
+        var salary=(Number(tdsdeduction)-Number(allowance)).toFixed();	
+        document.getElementById("salary").value = salary;
+        
+        
+        
 	}
 </script>
 
