@@ -4862,7 +4862,7 @@ a.list-group-item-danger.active:focus {
 	/*width:975px;*/
 	widows:100%;
   	padding: 10px;
-	overflow-x: auto;
+	/*overflow-x: auto;*/
 
 }
 .panel > .list-group {
@@ -5006,8 +5006,8 @@ a.list-group-item-danger.active:focus {
   border: 0;
 }
 .panel-heading {
-  /*padding: 7px 10px;*/
-  border-bottom: 1px solid transparent;
+  padding: 5px 5px;
+  border-bottom: 8px solid transparent;
  /* border-top-left-radius: 3px;
   border-top-right-radius: 3px;*/
   text-color:#3c763d;
