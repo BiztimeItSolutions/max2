@@ -1,9 +1,10 @@
 $(document).ready(function(){
-	//alert("ready");
+	alert("ready");
 	
 	
 	var privileges=$("#privText").val();
     var privilegeArray=privileges.split(",");
+    alert(privilegeArray);
     var liArray=$(".dyn").find("li");
 
         $.each(liArray,function(i,val){
