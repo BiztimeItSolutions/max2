@@ -255,6 +255,44 @@ public class StudentController {
 		return new ModelAndView("View_Candidate_Basic_Admission", model);
 		
 	}//
+	@Transactional
+	@RequestMapping({"/ad_adm_001", "/of_adm_002", "/ac_adm_003"})
+	public String Admission(HttpServletRequest request, Model model){
+		
+		String s=request.getRequestURI();
+		String[] sArray=s.split("/");
+		int i=sArray.length;
+	
+		String url_val=sArray[i-1];
+		System.out.println("URL VAL FROM FUNCT :"+url_val);
+		
+		if(url_val.equals("ad_adm_001"))
+		{
+			
+			model.addAttribute("p", this.studentDaoImpl.get_Candidate_first_adm());
+			model.addAttribute("ShowForm", "admission");
+			
+		}
+		else if(url_val.equals("of_adm_002"))
+		{
+			model.addAttribute("p", this.studentDaoImpl.get_Candidate_first_office());
+			model.addAttribute("ShowForm", "office");
+		}
+		else if(url_val.equals("ac_adm_003"))
+		{
+			model.addAttribute("p", this.studentDaoImpl.get_Candidate_first_office());
+			model.addAttribute("ShowForm", "account");
+		}
+		return "Admission";
+	
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	@Transactional
@@ -1025,7 +1063,7 @@ public class StudentController {
 				 m.addAttribute("name",name);
 				 m.addAttribute("passsword",passsword);
 				 m.addAttribute("privilege",privilege);
-				return "Sample";
+				return "Home";
 			}
 			else
 			{
