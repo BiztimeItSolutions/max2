@@ -32,13 +32,13 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level dyn">
                             <li id="ad_adm_001">
-                                <a href="#">Admission Admin</a>
+                                <a href="ad_adm_001">Admission Admin</a>
                             </li>
                             <li id="of_adm_002">
-                                <a href="#">Office Admin</a>
+                                <a href="of_adm_002">Office Admin</a>
                             </li>
 							<li id="ac_adm_003">
-                                <a href="#">Account Admin</a>
+                                <a href="ac_adm_003">Account Admin</a>
                             </li>
                         </ul>
                         

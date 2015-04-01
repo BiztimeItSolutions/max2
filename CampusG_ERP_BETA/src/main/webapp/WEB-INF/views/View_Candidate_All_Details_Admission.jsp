@@ -30,9 +30,10 @@
 
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+<%-- <%@ include file="Header.jsp" %> --%>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -258,180 +259,12 @@
         </nav>
         <!-- /.navbar-static-top -->
 
-     <!--    <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu">
-                   <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
 
-                    </li>   /input-group
-                    <li  class="active">
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administration<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-					
-					<li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Academics <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="#">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-                   
-                   
-				   
-				    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Data and Exports <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="#">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="#">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="#">Typography</a>
-                            </li>
-                            <li>
-                                <a href="#">Grid</a>
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-                    
-					
-					
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                /.nav-third-level
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-					
+<%@ include file="Left_menu.jsp" %>
 
-
-					<li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Collaborations_1 <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-							<li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Fourth Level Item<span class="fa arrow"></span></a>
-										<ul class="nav nav-fourth-level">
-                                   		 	<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-                                    		<li>
-                                        		<a href="#">Fourth Level Item</a>
-                                    		</li>
-										</ul>
-										/.nav-fourth-level										
-                                    </li>
-                                </ul>
-                                /.nav-third-level
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-
-					
-					
-					
-					<li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Extra <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="#">Login Page</a>
-                            </li>
-                        </ul>
-                        /.nav-second-level
-                    </li>
-                </ul>
-                /#side-menu
-            </div>
-            /.sidebar-collapse
-        </nav>
-        /.navbar-static-side
- -->
 	<!--Start of Main page-->
 
-	<div id="page-wrapper1">
+	<div id="page-wrapper">
 		<div class="row">
 			<div class="col-lg-12">
 
@@ -697,9 +530,6 @@
 							<label class="label1"><b>Permanent Contact Address</b></label><span
 								class="style1"></span>
 						</div>
-						
-						
-						
 						
 						<div class="form-group">
 							<label class="label1">Address Line1</label><span class="style1">*</span>
@@ -1262,7 +1092,10 @@
 		</div>
 	</div><!-- row -->
 
-<input type="submit" value="Save" class="btn btn-primary">	
+<input type="submit" value="Save" class="btn btn-primary">
+<input type="button" name="admin" id="admin"/>
+<input type="button" name="office" id="office"/>
+<input type="button" name="acc" id="acc"/>
 
 </div> <!-- status tab -->
  
@@ -1281,19 +1114,18 @@
 
 
 	<!-- Core Scripts - Include with every page -->
-	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>
+	<%-- <script src="<c:url value="/resources/js/jquery-1.10.2.min.js" />"></script>
 	<script src ="<c:url value="/resources/js/jquery-ui.js"/>"></script>
+	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+	<script src="<c:url value="/resources/js/plugins/metisMenu/jquery.metisMenu.js" />"></script>
+	<script src="<c:url value="/resources/js/sb-admin.js" />"></script> --%>
+
+	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>
 	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 	<script src="<c:url value="/resources/js/plugins/metisMenu/jquery.metisMenu.js" />"></script>
 	<script src="<c:url value="/resources/js/sb-admin.js" />"></script>
 
-	<script
-		src="<c:url value="/resources/js/validate/jquery.validatp.js" />"></script>
-	<script
-		src="<c:url value="/resources/js/validate/admissionstudent.js" />"></script>
-
-
- <script type="text/javascript">
+<!--  <script type="text/javascript">
        $(function() {
              $("#dob").datepicker({ dateFormat: "yy-mm-dd" }).val()
                $("#doe").datepicker({ dateFormat: "yy-mm-dd" }).val()
@@ -1302,87 +1134,15 @@
                         $("#dolu").datepicker({ dateFormat: "yy-mm-dd" }).val()
                   
        });
-</script>
-
-
-<!-- 
- <script>
-$(function() {
-$( "#datepicker" ).datepicker({
-changeMonth: true,
-changeYear: true
-});
-});
-</script>
-
+</script> -->
 <script>
-$(function() {
-$( "#datepickere" ).datepicker({
-changeMonth: true,
-changeYear: true
-});
-});
-</script>
-
-<script>
-$(function() {
-$( "#datepickerl" ).datepicker({
-changeMonth: true,
-changeYear: true
-});
-});
-</script>
-
-<script>
-$(function() {
-$( "#datepickeree" ).datepicker({
-changeMonth: true,
-changeYear: true
-});
-});
-</script>
-
-<script>
-$(function() {
-$( "#datepickerll" ).datepicker({
-changeMonth: true,
-changeYear: true
-});
-});
-</script>
- -->
-
-
-	<script type="text/javascript">
-		$(document)
-				.ready(
-						function() {
-
-							$('.del').live('click', function() {
-								$(this).parent().parent().remove();
-							});
-
-							$('.add')
-									.live(
-											'click',
-											function() {
-												$(this).val('Delete');
-												$(this).attr('class', 'del');
-												var appendTxt = "<tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>";
-												$("tr:last").after(appendTxt);
-											});
-						});
+	$("#admin").click(function(){
+	alert("Hello");
+	//	alert("action:"+$("#f").attr("action"));
+	//	var action=$("#admin").attr("name")
+		
+	});
 	</script>
-
-<!-- 	Validation jquery plugin 
-<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>-->
-
-
-<%-- <script src="<c:url value="/resources/js/validate/jquery.validatp.js"/>"></script>
-<script src="<c:url value="/resources/js/validate/admissionpersonal.js"/>"></script>
-<script src="<c:url value="/resources/js/validate/admissioncontact.js"/>"></script>
-<script src="<c:url value="/resources/js/validate/admissionparent.js"/>"></script>
- --%>
 
 	<script>
 		var checkboxes = $("input[type='checkbox']"), submitButt = $("input[type='submit']");
@@ -1391,23 +1151,15 @@ changeYear: true
 			submitButt.attr("disabled", !checkboxes.is(":checked"));
 		});
 	</script>
-	
-	
-	<!-- to Calculate avg percentage for marks entered in the education tab -->
-	<script type="text/javascript">
-	function calcutale() {
-		var a = document.getElementById('optional_subject_physics_avg_marks').value;
-		var b = document.getElementById('optional_subject_maths_avg_marks').value;
-		var c = document.getElementById('optional_subject_opt_avg_marks').value;
-		var d = (a*b*c)/3;
-		//float var e = (d/3).toFixed(2);
-		
-		//var num = parseFloat(d/3).toFixed(2);
-		
-		document.getElementById("avg_percentage").value = d;
-	}
-</script>
+<script src="<c:url value="/resources/js/Leftmenu_Generator.js" />"></script>
+
+ <c:set var="privfromsession" value="${applicationScope.privText}"/>
+ <input type="text" value="${privfromsession}" id="privText"/>
+ 
 </body>
+<script>
+
+</script>
 
 </html>
 

@@ -20,12 +20,11 @@
 <link href="<c:url value="/resources/css/sb-admin.css"/>"
 	rel="stylesheet">
 
-<script src="<c:url value="/resources/js/validate/countries.js" />"></script>
-<link href="<c:url value="/resources/css/jquery-ui.css"/>" rel="stylesheet">
-
-
-
-
+<%-- <script src="<c:url value="/resources/js/validate/countries.js" />"></script> --%>
+<script src="<c:url value="/resources/js/jquery-1.10.2.js" />"></script>
+<link href="<c:url value="/resources/css/jquery-ui-1.10.0.custom.css"/>" rel="stylesheet">
+<link href="<c:url value="/resources/css/tabs.css"/>" rel="stylesheet">
+<%-- <link href="<c:url value="/resources/css/jquery-ui.css"/>" rel="stylesheet"> --%>
 </head>
 
 <body>
@@ -51,8 +50,15 @@
 			</div>
 			<!--col 6 -->
 		</div>
+		<div class="alert alert-danger alert-dismissable" id="divErr" style="display:none">
+			
+		</div>
+		
+		<br/>
+		
 		<!--row -->
 		<br />
+		
 		<div class="row">
 			<div class="col-lg-12">
 
@@ -80,21 +86,22 @@
 		 <div class="row">
                 <div class="col-lg-12">
                 
-                <form:form method="POST" commandName="Candidate_registration" id="f"
-						action="${pageContext.request.contextPath}/Save_Candidate_All">
-
+                <form:form method="POST" commandName="Candidate_registration" id="admissionForm"
+                action="${pageContext.request.contextPath}/Save_Candidate_All">
+					<div id="tabs">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
-                                <li><a href="#contact" data-toggle="tab">Contact</a></li>
-                                <li><a href="#parent" data-toggle="tab">Parent</a></li>
-                                <li><a href="#education" data-toggle="tab">education</a></li>
+                                <li id="con" class="info"><a href="#contact" data-toggle="tab">Contact</a></li>
+<!--                                    -->
+                                <li class="info"><a  href="#Parent" data-toggle="tab">Parent</a></li>
+                                <li class="info"><a  href="#education" data-toggle="tab">education</a></li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
                                
-                                <div class="tab-pane fade in active" id="personal">
+                                <div class="tab-pane fade in personal" id="personal">
                                     <h4>Personal Tab</h4>
                                     
                                     <form:input path="candidate_id" type="hidden" name="candidate_id" value="${i}"/>
@@ -105,14 +112,11 @@
                                     <form:input path="quota" type="hidden" value="${q}"/>
                                     <form:input path="mobile" type="hidden" value="${m}"/>
                                     <form:input path="email" type="hidden" value="${em}"/>
-                                    
-                                    
-                                  	
-                                  	<div class="row">
+                                    <div class="row">
                                     <div class="col-lg-5">
 								<div class="form-group">
 									<label class="label1">Full Name</label><span class="style1">*</span>
-									<form:input path="firstname" name="firstname" type="text" class="form-control" placeholder="First Name" />
+									<form:input path="firstname" name="firstname" id="firstname" type="text" class="form-control" placeholder="First Name" />
 									<%-- <form:input path="firstname" />   --%>
 								</div>
 							</div>
@@ -138,7 +142,7 @@
 								<div class="form-group">
 									<label class="label1">Date of Birth</label><span class="style1">*</span>
 								   
-								   <form:input path="dateofbirth" name="dateofbirth" type="text" class="form-control" id="dob" placeholder="Select Date of birth"/>
+								   <form:input path="dateofbirth" name="dateofbirth" type="text" class="form-control" id="dob" lostFocus="parseDate()" placeholder="Select Date of birth"/>
 								</div>
 
 								<div class="form-group">
@@ -172,7 +176,7 @@
 
 								<div class="form-group">
 									<label class="label1">Birth Place</label> <span class="style1"></span>
-									<form:input path="birthplace" type="text" class="form-control"
+									<form:input path="birthplace" name="birthplace" type="text" class="form-control"
 										placeholder="Enter your birth place" />
 								</div>
 								<div class="form-group">
@@ -183,7 +187,7 @@
 								<div class="form-group">
 									<label class="label1">Mother Tounge</label> <span
 										class="style1"></span>
-									<form:input path="mothertongue" type="text"
+									<form:input path="mothertongue" type="text" name="mothertongue"
 										class="form-control" placeholder="Enter your mother tounge" />
 								</div>
 
@@ -227,8 +231,8 @@
                          </div> <!-- personal tab -->
 
                                 
-                 <div class="tab-pane fade" id="contact">
-                 <h4>Profile Tab</h4>
+                 <div class="tab-pane" id="contact">
+                	<h4>Profile Tab</h4>
                  
                  	<div class="row">
 					<div class="col-lg-5">
@@ -257,15 +261,14 @@
 						</div>
 						<div class="form-group">
 							<label class="label1">Country</label><span class="style1">*</span>
-							<form:select path="presentaddresscountry" class="form-control"
-								onChange="print_state('presentaddressstate',this.selectedIndex);"
+							<form:select path="presentaddresscountry" id="presentaddresscountry" class="form-control"
 								name="presentaddresscountry">
 								<%-- <form:option label="Select State" value="none"/> --%>
 							</form:select>
 						</div>
 						<div class="form-group">
 							<label class="label1">State</label><span class="style1">*</span>
-							<form:select path="presentaddressstate" class="form-control" name="presentaddressstate">
+							<form:select path="presentaddressstate" id="presentaddressstate" class="form-control" name="presentaddressstate">
 								<!-- <option>Select State</option> -->
 							</form:select>
 						</div>
@@ -310,15 +313,15 @@
 						</div>
 						<div class="form-group">
 							<label class="label1">Country</label><span class="style1">*</span>
-							<form:select path="permanentaddresscountry" class="form-control"
-								onChange="print_state('permanentaddressstate',this.selectedIndex);"
+							<form:select path="permanentaddresscountry" id="permanentaddresscountry" class="form-control"
+								
 								name="permanentaddresscountry">
 								<!-- <option>Select Country</option> -->
 							</form:select>
 						</div>
 						<div class="form-group">
 							<label class="label1">State</label><span class="style1">*</span>
-							<form:select path="permanentaddressstate" class="form-control" name="permanentaddressstate">
+							<form:select path="permanentaddressstate" id="permanentaddressstate" class="form-control" name="permanentaddressstate">
 								<!-- <option>Select State</option> -->
 							</form:select>
 						</div>
@@ -361,15 +364,14 @@
 					</div>
 					<div class="form-group">
 						<label class="label1">Country</label><span class="style1">*</span>
-						<form:select path="emergencyaddresscountry" class="form-control"
-							onChange="print_state('emergencyaddressstate',this.selectedIndex);"
+						<form:select path="emergencyaddresscountry" id="emergencyaddresscountry" class="form-control"
 							name="emergencyaddresscountry">
 							<!-- <option>Select Country</option> -->
 						</form:select>
 					</div>
 					<div class="form-group">
 						<label class="label1">State</label><span class="style1">*</span> 
-						<form:select path="emergencyaddressstate" class="form-control" name="emergencyaddressstate">
+						<form:select path="emergencyaddressstate" id="emergencyaddressstate" class="form-control" name="emergencyaddressstate">
 							<!-- <option>Select State</option> -->
 						</form:select>
 					</div>
@@ -402,7 +404,7 @@
 		</div> <!-- contact panel -->
                                    
          
-         <div class="tab-pane fade" id="parent">
+         <div class="tab-pane" id="parent">
          <h4>Messages Tab</h4>
            			<div class="row">
 					   <div class="col-lg-5">	
@@ -600,7 +602,7 @@
            
            
            
-           <div class="tab-pane fade" id="education">
+           <div class="tab-pane" id="education">
              <h4>Education Tab</h4>
             <div class="row">
 			<div class="col-lg-5">
@@ -856,10 +858,16 @@
 	
 	<hr>
 	
-	<input type="submit" value="Save" class="btn btn-primary" disabled>
+	<input type="button" value="Save" id="saveMe" class="btn btn-primary">
+	<br/>
+	<div class="alert alert-danger alert-dismissable" style="display:none">
+			<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>			
+	</div>
+	
 	
 	</div> <!-- panel education -->
 	</div><!--tab-content-->
+ </div><!-- #tabs -->	
 </form:form>
 	</div>	<!-- /.col-lg-12 -->
 	</div>	<!-- /.row -->
@@ -869,8 +877,9 @@
 	</div>  <!-- page wrapper1 -->
 
 	<!-- Core Scripts - Include with every page -->
-	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>
+<%-- 	<script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script> --%>
 	<script src ="<c:url value="/resources/js/jquery-ui.js"/>"></script>
+	<script src ="<c:url value="/resources/js/myFormValidator.js"/>"></script>
 	<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 	<script src="<c:url value="/resources/js/plugins/metisMenu/jquery.metisMenu.js" />"></script>
 	<script src="<c:url value="/resources/js/sb-admin.js" />"></script>
@@ -942,26 +951,27 @@ changeYear: true
 
  -->
 
-	<script type="text/javascript">
-		$(document)
-				.ready(
-						function() {
+<!-- 	<script type="text/javascript"> -->
+// 		$(document)
+// 				.ready(
+// 						function() {
 
-							$('.del').live('click', function() {
-								$(this).parent().parent().remove();
-							});
+// 							$('.del').live('click', function() {
+// 								$(this).parent().parent().remove();
+// 							});
 
-							$('.add')
-									.live(
-											'click',
-											function() {
-												$(this).val('Delete');
-												$(this).attr('class', 'del');
-												var appendTxt = "<tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>";
-												$("tr:last").after(appendTxt);
-											});
-						});
-	</script>
+// 							$('.add')
+// 									.live(
+// 											'click',
+// 											function() {
+// 												$(this).val('Delete');
+// 												$(this).attr('class', 'del');
+// 												var appendTxt = "
+<!-- <tr><td><input type='text' name='input_box_one[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='text' name='input_box_two[]' class='form-control'/></td> <td><input type='button' class='add' value='Add More' /></td></tr>"; -->
+// 												$("tr:last").after(appendTxt);
+// 											});
+// 						});
+<!-- 	</script> -->
 
 <!-- 	Validation jquery plugin 
 <script src="<c:url value="/resources/js/jquery-1.7.min.js" />"></script>-->
@@ -984,6 +994,45 @@ changeYear: true
 	
 	<!-- to Calculate avg percentage for marks entered in the education tab -->
 	<script type="text/javascript">
+	$(function() {
+		alert("in tabs ready");
+				var $tabs = $('#tabs').tabs();
+		
+				$(".tab-pane").each(function(i){
+					//alert("in each");
+				
+				  var totalSize = $(".tab-pane").size() - 1;
+				  if (i != totalSize) {
+				      next = i + 1;
+				      
+			   		  $(this).append("<a name='navBtn' href='#' class='btn btn-primary mover next-tab' rel='" + next + "'>Next Page &#187;</a>");
+			   		  
+				  }
+				  if (i != 0) { 
+				      prev = i-1;
+			   		  $(this).append("<a name='navBtn' href='#' class='btn btn-primary mover prev-tab' rel='" + prev + "'>&#171; Prev Page</a>");
+				  }
+				
+				});
+				$('.next-tab').click(function() { 
+					//alert("rel: "+$(this).attr("rel"));
+					if(!findError($(this).attr("rel"))){
+						//alert("error");
+						//$("#divErr").show();
+						
+					}else{
+						$("#divErr").hide();
+					 $tabs.tabs( "option", "active", $(this).attr("rel") );
+					}
+				    
+		    });
+				 $('.prev-tab').click(function() { 
+					 $("#divErr").hide();
+				     $tabs.tabs( "option", "active", $(this).attr("rel") );
+		    });
+				
+				
+			
 	function calcutale() {
 		var a = document.getElementById('optional_subject_physics_avg_marks').value;
 		var b = document.getElementById('optional_subject_maths_avg_marks').value;
@@ -995,6 +1044,55 @@ changeYear: true
 		
 		document.getElementById("avg_percentage").value = d;
 	}
+	
+	$("#admissionForm").validate({		
+	 		rules:{
+	 			firstname:{
+	 				required:true,
+	 				minlength: 3
+	 			},
+	 			middlename:{
+					maxlength: 50
+	 			},
+	 			lastname: {
+	 				required: true,
+	 				maxlength: 50
+	 			},
+	 			birthplace:{
+	 				required: true,
+	 				maxlength: 50
+	 			},
+ 			nationality:{
+	 				required: true,
+	 				maxlength: 50
+ 			},
+	 			mothertongue:{
+	 				required: true,
+	 				maxlength: 50
+	 			},
+	 			religion:{
+	 				required: true,
+	 				maxlength: 50
+	 			},
+	 			invalidHandler: function(event, validator) {
+	 			    // 'this' refers to the form
+	 			    var errors = validator.numberOfInvalids();
+	 			    if (errors) {
+	 			      var message = errors == 1
+	 			        ? 'You missed 1 field. It has been highlighted'
+	 			        : "<button class='close' aria-hidden='true' data-dismiss='alert' type='button'>×</button>"+"The submitted form has the mandatory data that has to be filled,"+'You missed ' + errors + ' fields. They have been highlighted';
+	 			      $("div.alert-danger").html(message);
+	 			      $("div.alert-danger").show();
+	 			    } else {
+	 			      $("div.alert-danger").hide();
+	 			    }
+	 			  }
+	 		}
+	 	});
+	 });
+
+	
+	
 </script>
 </body>
 

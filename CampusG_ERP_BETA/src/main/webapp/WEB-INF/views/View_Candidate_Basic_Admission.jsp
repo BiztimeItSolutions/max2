@@ -594,7 +594,7 @@
     	alert("check box checked"+this.id);
     	$( "#x" ).prop( "checked", false );  -->
        
-    <script>
+  <!--   <script>
      $("#ad_checkbox").click(function() {  
     var $checkbox = jQuery(this);
     var checkboxData = $checkbox.val();
@@ -612,7 +612,7 @@
 });
     
     </script>
-    
+     -->
 
 
 
