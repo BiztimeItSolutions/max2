@@ -179,7 +179,7 @@
 								
 								<div class="col-lg-3">
 								<div class="form-group">
-									<label class="label1">Mother Tounge</label> <span class="style1"></span>
+									<label class="label1">Language</label> <span class="style1"></span>
 									<form:input path="mothertongue" type="text" name="mothertongue"
 										class="form-control" placeholder="Enter your mother tounge" /> 
 								</div>
@@ -218,7 +218,7 @@
 								
 								<div class="col-lg-3">
 								<div class="form-group">
-									<label class="label1">Extra Curricular</label>
+									<label class="label1">Curricular</label>
 									<%-- <form:input path="extracurricular" type="text" class="form-control" /> --%>
 									<form:textarea path="extracurricular" class="form-control"
 										rows="5" placeholder="Enter your extra curricular activities" />
@@ -261,13 +261,13 @@
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line1</label><span class="style1">*</span>
+									<label class="label1">Addres Line1</label><span class="style1">*</span>
 									<form:input path="presentaddressline1" class="form-control" 
 									name="presentaddressline1" placeholder="Present address line1"/> 
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line2</label><span class="style1"></span>
+									<label class="label1">Addres Line2</label><span class="style1"></span>
 									<form:input path="presentaddressline2" class="form-control"
 									name="presentaddressline2" placeholder="Present address line2"/>  
 									</div>
@@ -311,13 +311,13 @@
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line1</label><span class="style1">*</span>
+									<label class="label1">Addres Line1</label><span class="style1">*</span>
 									<form:input path="permanentaddressline1" class="form-control"
 									name="permanentaddressline1" placeholder="Permanent address line1"/>
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line2</label><span class="style1"></span>
+									<label class="label1">Addres Line2</label><span class="style1"></span>
 									<form:input path="permanentaddressline2" class="form-control"
 									id="PermanentAddressLine2" placeholder="Permanent address line2"/> 
 									</div>
@@ -360,13 +360,13 @@
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line1</label><span class="style1">*</span>
+									<label class="label1">Addres Line1</label><span class="style1">*</span>
 									<form:input path="emergencyaddressline1" name="emergencyaddressline1" class="form-control"
 									placeholder="Emergency address line1"/> 
 									</div>
 									
 									<div class="form-group">
-									<label class="label1">Address Line2</label><span class="style1"></span>
+									<label class="label1">Addres Line2</label><span class="style1"></span>
 									<form:input path="emergencyaddressline2" class="form-control"
 									id="EmergencyAddressLine2" placeholder="Emergency address line2"/>  
 									</div>
